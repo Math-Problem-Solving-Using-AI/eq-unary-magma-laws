@@ -37,6 +37,10 @@ Only the last one may be called a result. `known` means already in the literatur
   table is stored. `src/check_status_matrix.py` checks codes 1 and 2 against what is regenerated.
 - `witnesses_larger_models.json`: the 708 certificates of code 2 (plus the 894 pairs where none was
   found up to size 5). Re-check with `src/verify_witnesses.py`.
+- `etp_crosscheck.json`: comparison of every pair of laws without `f` with the Equational Theories
+  Project data (`steps/08-etp-crosscheck.md`). It holds the mapping of our law ids to ETP equation
+  numbers, the counts (0 disagreements), and the 1,256 pairs that are open in `status_matrix.npz`
+  together with the ETP's answer (label `known (ETP)`). Produced by `src/etp_crosscheck.py`.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
