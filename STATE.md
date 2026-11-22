@@ -16,7 +16,7 @@ Settle the 894 open pairs and make the implication claims independently checkabl
 2. **Derivations for implications (codes 3 and 4).** Replace "z3 said unsat" by a stored chain of
    rewriting steps and write a tiny independent checker with mutation tests. Start with the
    collapse laws (207), then the 15,877 others.
-3. **The nine laws with no small model**: see https://github.com/MauroBCardoso/eq-laws-without-small-models. When it is settled, update codes 5 and
+3. **The nine laws with no small model**: see https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models. When it is settled, update codes 5 and
    re-export the table.
 4. **Literature check.** Extended search on algebras of type (2,1) / identities / varieties. Record
    queries and dates in `docs/PRIOR_WORK.md`. Until then make no novelty claim.

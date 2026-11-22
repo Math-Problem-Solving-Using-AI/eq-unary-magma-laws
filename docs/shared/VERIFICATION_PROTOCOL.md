@@ -1,4 +1,4 @@
-<!-- Canonical copy: https://github.com/MauroBCardoso/math-curiosity (docs/). Synced by tools/sync_shared_docs.sh.
+<!-- Canonical copy: https://github.com/Math-Problem-Solving-Using-AI/math-curiosity (docs/). Synced by tools/sync_shared_docs.sh.
      Do not edit this copy, change the hub and sync. -->
 
 > Script names below (`check_laws_text.py`, `check_laws_count.py`, `selftest_verifiers.py`) come from the `eq-unary-magma-laws` repository. Other problems provide their own equivalents.

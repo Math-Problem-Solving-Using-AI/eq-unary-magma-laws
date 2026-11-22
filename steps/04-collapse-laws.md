@@ -29,7 +29,7 @@ Run several times: proofs accumulate (see lessons).
 ## NOT verified
 - All 207 collapse claims. Status stays `z3-only` until a derivation is stored and checked by an
   independent tiny checker, and later in Lean (see `docs/shared/VERIFICATION_PROTOCOL.md`).
-- That the 9 unresolved laws do or do not collapse: see [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models).
+- That the 9 unresolved laws do or do not collapse: see [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models).
 
 ## Surprises, errors, dead ends
 - **Assumption broken:** "no model of size 2 or 3" does not mean "collapses". Two of the nine

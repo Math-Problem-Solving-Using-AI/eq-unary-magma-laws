@@ -1,6 +1,6 @@
 # Which short laws imply which? One binary and one unary operation
 
-> Part of [math-curiosity](https://github.com/MauroBCardoso/math-curiosity): open, reproducible experiments on equational laws, one repository per problem.
+> Part of [math-curiosity](https://github.com/Math-Problem-Solving-Using-AI/math-curiosity): open, reproducible experiments on equational laws, one repository per problem.
 > **LLMs and tools:** read [`llms.txt`](llms.txt). **Autonomous sessions:** [`LOOP.md`](LOOP.md) and [`STATE.md`](STATE.md). License: Apache-2.0.
 > **Look up any pair of laws:** `python src/query.py "x*y = x" "x*(y*z) = x"`
 
@@ -27,7 +27,7 @@ in `docs/shared/VERIFICATION_PROTOCOL.md`. What we hold so far:
 |------|--------|
 | 712 laws up to size 3 (8,805 up to size 4) enumerated | independently recounted by a different algorithm, exact match. Law texts round-trip to stored terms. |
 | 207 of the 216 laws with no model of size 2 or 3 force a one-element structure | `z3-only` |
-| 9 laws with no small model, collapse unproven | open, own problem: [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models) |
+| 9 laws with no small model, collapse unproven | open, own problem: [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) |
 
 All 506,232 ordered pairs (A different from B) are accounted for, in exactly one row
 (details in `steps/05-edge-proofs.md`):
@@ -38,7 +38,7 @@ All 506,232 ordered pairs (A different from B) are accounted for, in exactly one
 | A does not imply B, refuted by a structure of size 4 or 5 | 708 | `model-verified`: certificates in `results/witnesses_larger_models.json`, re-checked by `src/verify_witnesses.py` |
 | A collapses every structure, so it implies B | 147,177 | `z3-only` |
 | A implies B, proved by z3 (with transitive closure) | 15,877 | `z3-only` |
-| A is one of the 9 open laws | 6,399 | open, see [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models) |
+| A is one of the 9 open laws | 6,399 | open, see [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) |
 | unresolved (no structure up to size 5, no proof in 1 s) | 894 | open, from 71 source laws |
 
 ## Steps (granular record)
@@ -57,7 +57,7 @@ Read in order, `steps/`:
 
 - `src/` code. `data/` generated data (large arrays and logs are git-ignored, regenerate).
 - `results/` claims with certificates. `steps/` the step records.
-- Related problem: [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models).
+- Related problem: [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models).
 
 ## Reproduce
 

@@ -50,4 +50,4 @@ refutations re-verified: 335177, failed: 0, time 5s
   self-contained.
 
 ## Next
-Work on the 894 open pairs and the six open laws of [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models).
+Work on the 894 open pairs and the six open laws of [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models).

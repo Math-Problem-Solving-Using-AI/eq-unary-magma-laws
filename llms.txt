@@ -48,4 +48,4 @@
 
 - [STATE.md](STATE.md) current queue, [LOOP.md](LOOP.md) protocol for autonomous sessions
 - [docs/LOG.md](docs/LOG.md) journal, [docs/PRIOR_WORK.md](docs/PRIOR_WORK.md) related work and what was not found
-- Hub: https://github.com/MauroBCardoso/math-curiosity. Related problem: https://github.com/MauroBCardoso/eq-laws-without-small-models
+- Hub: https://github.com/Math-Problem-Solving-Using-AI/math-curiosity. Related problem: https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models

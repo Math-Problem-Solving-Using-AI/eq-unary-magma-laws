@@ -20,7 +20,7 @@ python src/prove.py edges data/laws_3.json data/o3 1000
 - Cause of the slowness: the last sources were the 9 unresolved zero-model laws. Each has about
   700 candidate targets (nothing refutes them), so z3 spent up to 1 s on each, for no gain.
 - Fixes: save state every 10 sources and on exit, resume from saved state, skip sources with no
-  small model (they belong to [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models)).
+  small model (they belong to [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models)).
 
 ## Attempt 2 (after the fixes)
 
@@ -41,7 +41,7 @@ Accounting of all 506,232 ordered pairs (A different from B), each in exactly on
 | not implications, refuted by a structure of size 2 or 3 | 335,177 | `model-verified (sampled)` |
 | A collapses every structure (207 laws, 711 targets each) | 147,177 | `z3-only` |
 | implications proved by z3 (with closure) | 15,877 | `z3-only` |
-| A is one of the 9 laws of [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models) | 6,399 | open, see that problem |
+| A is one of the 9 laws of [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) | 6,399 | open, see that problem |
 | unresolved | 1,602 | open |
 
 Check: 335,177 + 147,177 + 15,877 + 6,399 + 1,602 = 506,232.
