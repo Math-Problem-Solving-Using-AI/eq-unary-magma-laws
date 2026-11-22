@@ -1,0 +1,24 @@
+name: verify
+on: [push, pull_request]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - name: Regenerate the law list and require it to equal the committed one
+        run: |
+          python src/laws.py 3 "$RUNNER_TEMP/laws_3.json"
+          python -c "import json,sys,os; a=json.load(open(os.environ['RUNNER_TEMP']+'/laws_3.json')); b=json.load(open('data/laws_3.json')); sys.exit(0 if a==b else 1)"
+      - run: python src/check_laws_text.py data/laws_3.json
+      - run: python src/check_laws_count.py 3
+      - run: python src/models.py data/laws_3.json data/o3
+      - run: python src/check_catalogue.py data/laws_3.json data/o3 1000
+      - run: python src/verify_small_refutations.py data/laws_3.json data/o3
+      - run: python src/verify_witnesses.py results/witnesses_larger_models.json
+      - run: python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
+      - run: python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
+      - run: python src/query.py "x*y = x" "x*(y*z) = x"
