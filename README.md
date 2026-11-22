@@ -1,5 +1,9 @@
 # Which short laws imply which? One binary and one unary operation
 
+> Part of [math-curiosity](https://github.com/MauroBCardoso/math-curiosity): open, reproducible experiments on equational laws, one repository per problem.
+> **LLMs and tools:** read [`llms.txt`](llms.txt). **Autonomous sessions:** [`LOOP.md`](LOOP.md) and [`STATE.md`](STATE.md). License: Apache-2.0.
+> **Look up any pair of laws:** `python src/query.py "x*y = x" "x*(y*z) = x"`
+
 ## The problem
 
 A structure has a set, one binary operation `*`, and one unary (single-input) operation `f`,
@@ -57,22 +61,34 @@ Read in order, `steps/`:
 
 ## Reproduce
 
-From the repo root (Windows paths, use `.venv/bin/python` elsewhere):
-
 ```
 python -m venv .venv
-python -m pip install -r requirements.txt
-P=.
-python $P/src/laws.py 3 $P/data/laws_3.json
-python $P/src/models.py $P/data/laws_3.json $P/data/o3
-python $P/src/prove.py collapse $P/data/laws_3.json $P/data/o3 5000
-python $P/src/prove.py edges $P/data/laws_3.json $P/data/o3 1000
+.venv/bin/pip install -r requirements.txt            # Windows: .venv\Scripts\pip
+python src/laws.py 3 data/laws_3.json                # the 712 laws
+python src/models.py data/laws_3.json data/o3        # catalogue of structures with 2 and 3 elements
+python src/prove.py collapse data/laws_3.json data/o3 5000
+python src/prove.py edges data/laws_3.json data/o3 1000
+python src/resolve_open.py data/laws_3.json data/o3 5 5000 results/witnesses_larger_models.json
+python src/export_status.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
 ```
 
-Independent checks (run after the steps above):
+The two `prove.py` steps use z3, whose outcomes differ between runs (proofs accumulate across runs).
+That is why the outcome is stored in `results/status_matrix.npz` instead of being expected to
+regenerate exactly. Everything else is deterministic.
+
+Independent checks (CI runs them on every push, `.github/workflows/verify.yml`):
 
 ```
-python $P/src/check_laws_text.py $P/data/laws_3.json
-python $P/src/check_laws_count.py 3
-python $P/src/check_catalogue.py $P/data/laws_3.json $P/data/o3 3000
+python src/check_laws_text.py data/laws_3.json
+python src/check_laws_count.py 3
+python src/check_catalogue.py data/laws_3.json data/o3 1000
+python src/verify_small_refutations.py data/laws_3.json data/o3
+python src/verify_witnesses.py results/witnesses_larger_models.json
+python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
+python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
 ```
+
+## Contributing
+
+Open an issue with a reference if you know existing results. To work on a queue item see
+[`STATE.md`](STATE.md) and [`LOOP.md`](LOOP.md). Every claim keeps the label it earned.
