@@ -30,6 +30,12 @@ Background: `LEAN_CAVEATS.md`.
   of A, that a tiny separate checker can verify. A solver saying "unsat" is only a lead.
 - **Collapse (A forces x = y):** same as implication.
 
+## S2b. Test the verifier itself
+- A checker that cannot fail proves nothing. Feed it corrupted input (flip a table entry, swap
+  A and B, shift the law list) and confirm it reports failures. `src/selftest_verifiers.py`
+  does this for our verifiers.
+- If a run looks suspiciously fast or clean, measure it before believing it.
+
 ## S3. Second opinion from a different tool
 - A second prover or independent implementation reaches the same conclusion.
 
