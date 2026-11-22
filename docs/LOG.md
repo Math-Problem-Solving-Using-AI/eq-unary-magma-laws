@@ -64,3 +64,18 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 5. Deeper literature search (extended search, universal algebra of type (2,1)) before any
    novelty claim.
 6. Owner decisions: publish or not, license, author identity in commits.
+
+### Literature and ETP pass (2026-11-22, research branch)
+
+- Cross-checked every pair of laws without `f` against the Equational Theories Project data
+  (step 08): 408 laws map one-to-one to ETP laws 3-410. 164,800 decided pairs, 0 disagreements.
+  1,256 pairs open for us are settled by the ETP.
+- Found that `((x*y)*z)*x = w` collapses trivially. It had sat on the "open" list because z3 timed
+  out at 5 s. Lesson added to the hub.
+- Step 09: all 256 choices of `f` on the known 4-element tables of `(x*y)*(y*x) = y` and
+  `(x*y)*(y*z) = y` refute 1,417 of their 1,422 open targets. The 5 left are exactly the ETP's proved
+  implications.
+- Literature check (`PRIOR_WORK.md`): no table of type (2,1) laws found. The two `f`-free laws are
+  known (Stein's third law / centrist groupoids, OEIS A128934; central groupoids, Evans and Knuth).
+  The finite-versus-general leads are "candidate Austin laws".
+- erdosproblems.com disallows Claude agents (robots.txt). Not fetched. See the hub.
