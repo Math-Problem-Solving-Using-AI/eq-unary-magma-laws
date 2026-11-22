@@ -12,7 +12,8 @@ import sys
 
 import numpy as np
 
-sys.path.insert(0, __file__.rsplit("src", 1)[0] + "src")
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from findmodel import check_model  # noqa: E402
 from models import all_models, reduce_iso  # noqa: E402
 from prove import tuplify  # noqa: E402

@@ -10,7 +10,8 @@ import sys
 
 import z3
 
-sys.path.insert(0, __file__.rsplit("src", 1)[0] + "src")
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from laws import nvars  # noqa: E402
 
 

@@ -10,7 +10,8 @@ Usage: python src/check_laws_text.py data/laws_3.json
 import json
 import sys
 
-sys.path.insert(0, __file__.rsplit("src", 1)[0] + "src")
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from laws import VARS  # noqa: E402
 
 

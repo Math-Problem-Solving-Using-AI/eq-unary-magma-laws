@@ -11,7 +11,8 @@ import itertools
 import sys
 from functools import lru_cache
 
-sys.path.insert(0, __file__.rsplit("src", 1)[0] + "src")
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parent))
 from laws import enumerate_laws, ops  # noqa: E402
 
 
