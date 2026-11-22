@@ -126,7 +126,7 @@ def main():
         else:
             # Sources with NO small model are skipped here: their candidate list is every law
             # (nothing refuted them), so grinding z3 on it is waste. They are handled in
-            # problems/laws-without-small-models (collapse laws imply everything).
+            # the eq-laws-without-small-models repository (collapse laws imply everything).
             collapse = np.load(prefix + "_collapse.npy")
             cand = ~R
             np.fill_diagonal(cand, False)

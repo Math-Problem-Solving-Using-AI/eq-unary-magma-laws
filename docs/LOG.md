@@ -35,7 +35,7 @@ Newest entries at the bottom.
 - Added `VERIFICATION_PROTOCOL.md` and independent checks: law text round trip (712 ok), brute
   force recount of laws (exact match up to size 4), plain-Python spot-check of the model
   catalogue (0 disagreements).
-- Restructured into `problems/unary-magma-laws` and `problems/laws-without-small-models`.
+- Restructured the (then private) monorepo into one folder per problem. The second problem is now its own repository.
 - First edge-prover run lost (results only saved at the end). Prover rewritten to save and resume.
 - Hand proof that `f(x)*(y*z) = y` collapses, checked step by step by z3 (`z3-only`).
 
