@@ -50,6 +50,12 @@ magma laws, and they are exactly ETP laws 3 to 410. Of the 166,056 ordered pairs
 are proved in Lean in that project. We did not re-check them. `results/status_matrix.npz` is
 unchanged, and the ETP information is in `results/etp_crosscheck.json`.
 
+**The two `f`-free laws with 4-element models (step 09).** For `(x*y)*(y*x) = y` and `(x*y)*(y*z) = y`,
+trying all 256 choices of `f` on the known 4-element table refutes 1,417 of their 1,422 open
+targets (608 of them contain `f`; certificates in `results/witnesses_ffree_models.json`, re-checked
+by `src/verify_witnesses.py`). The 5 left are exactly the implications the ETP proves, so both rows
+are fully decided.
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -62,6 +68,7 @@ Read in order, `steps/`:
 6. `06-larger-counterexamples.md`
 7. `07-full-recheck-of-small-refutations.md`
 8. `08-etp-crosscheck.md`
+9. `09-ffree-models-with-f.md`
 
 ## Layout
 
@@ -94,6 +101,7 @@ python src/check_laws_count.py 3
 python src/check_catalogue.py data/laws_3.json data/o3 1000
 python src/verify_small_refutations.py data/laws_3.json data/o3
 python src/verify_witnesses.py results/witnesses_larger_models.json
+python src/verify_witnesses.py results/witnesses_ffree_models.json
 python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
 python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
 ```
