@@ -1,50 +1,78 @@
-# Math curiosity
+# Which short laws imply which? One binary and one unary operation
 
-Exploratory, reproducible computer experiments in the style of Terence Tao's
-[Equational Theories Project](https://teorth.github.io/equational_theories): decide which
-simple algebraic laws imply which, with every claim carrying a certificate that a reader can
-re-check without trusting this code.
+## The problem
 
-**Status: early and experimental. No result has passed the full verification protocol.**
-Lean acceptance alone is not treated as proof, see `docs/LEAN_CAVEATS.md`.
+A structure has a set, one binary operation `*`, and one unary (single-input) operation `f`,
+with no assumptions. A **law** is an equation such as `f(x*y) = f(x)*y`, required to hold for
+all values of its variables. Law A **implies** law B if every structure satisfying A also
+satisfies B.
 
-## Problems
+Question: for all laws up to a size limit, decide every implication. This is the same kind of
+question the Equational Theories Project answered for one binary operation, applied to a family
+we have not found studied (see `docs/PRIOR_WORK.md`, and note that "not found" is not proof).
 
-One folder per problem under `problems/`, each with its own README and a `steps/` record.
+Size of a law = number of `*` and `f` symbols on both sides. Laws are counted up to renaming
+variables and swapping sides. Current scope: size at most 3 (712 laws, 506,944 ordered pairs).
 
-| Problem | Question | State |
-|---------|----------|-------|
-| [unary-magma-laws](problems/unary-magma-laws) | Which short laws over one binary and one unary operation imply which? | in progress, 712 laws up to size 3 |
-| [laws-without-small-models](problems/laws-without-small-models) | Nine of those laws have no model of size 2 or 3. Do they collapse every structure to one element? | 1 collapse shown (`z3-only`), 2 have a size 4 model, 6 open |
+## Status
 
-## Shared documents (`docs/`)
+**Early. No result is Lean-checked or has passed the full protocol.** Status labels are defined
+in `docs/VERIFICATION_PROTOCOL.md`. What we hold so far:
 
-- `VERIFICATION_PROTOCOL.md`: the stages a claim must pass, and the status ladder.
-- `LEAN_CAVEATS.md`: documented cases where a Lean-accepted proof is not enough, each labeled by
-  how well we could confirm it.
-- `LESSONS.md`: mistakes and surprises, so they are not repeated.
-- `PRIOR_WORK.md`: related published work and what we did and did not find.
-- `LOG.md`: journal. `STEP_TEMPLATE.md`: format of the step records.
+| Item | Status |
+|------|--------|
+| 712 laws up to size 3 (8,805 up to size 4) enumerated | independently recounted by a different algorithm, exact match. Law texts round-trip to stored terms. |
+| 207 of the 216 laws with no model of size 2 or 3 force a one-element structure | `z3-only` |
+| 9 laws with no small model, collapse unproven | open, own problem: `../laws-without-small-models` |
 
-## Adding a problem
+All 506,232 ordered pairs (A different from B) are accounted for, in exactly one row
+(details in `steps/05-edge-proofs.md`):
 
-Create `problems/<short-name>/` with a `README.md` (question, status table, steps list, how to
-reproduce), a `steps/` folder with one record per step (`docs/STEP_TEMPLATE.md`), and its own
-code, data and results. Add it to the table above. Problem folders may depend on another
-problem's code, say so in the README.
+| Group | Pairs | Status |
+|-------|-------|--------|
+| A does not imply B, refuted by a structure of size 2 or 3 | 335,177 | `model-verified`: every pair re-checked by `src/verify_small_refutations.py` (step 07), verifier mutation-tested |
+| A does not imply B, refuted by a structure of size 4 or 5 | 708 | `model-verified`: certificates in `results/witnesses_larger_models.json`, re-checked by `src/verify_witnesses.py` |
+| A collapses every structure, so it implies B | 147,177 | `z3-only` |
+| A implies B, proved by z3 (with transitive closure) | 15,877 | `z3-only` |
+| A is one of the 9 open laws | 6,399 | open, see `../laws-without-small-models` |
+| unresolved (no structure up to size 5, no proof in 1 s) | 894 | open, from 71 source laws |
+
+## Steps (granular record)
+
+Read in order, `steps/`:
+
+1. `01-define-the-problem.md`
+2. `02-enumerate-laws.md`
+3. `03-small-model-catalogue.md`
+4. `04-collapse-laws.md`
+5. `05-edge-proofs.md`
+6. `06-larger-counterexamples.md`
+7. `07-full-recheck-of-small-refutations.md`
+
+## Layout
+
+- `src/` code. `data/` generated data (large arrays and logs are git-ignored, regenerate).
+- `results/` claims with certificates. `steps/` the step records.
+- Related problem: `../laws-without-small-models`.
 
 ## Reproduce
 
-Run from the repo root (Windows paths, use `.venv/bin/python` elsewhere):
+From the repo root (Windows paths, use `.venv/bin/python` elsewhere):
 
 ```
 python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
+P=problems/unary-magma-laws
+.venv/Scripts/python.exe $P/src/laws.py 3 $P/data/laws_3.json
+.venv/Scripts/python.exe $P/src/models.py $P/data/laws_3.json $P/data/o3
+.venv/Scripts/python.exe $P/src/prove.py collapse $P/data/laws_3.json $P/data/o3 5000
+.venv/Scripts/python.exe $P/src/prove.py edges $P/data/laws_3.json $P/data/o3 1000
 ```
 
-then follow the "Reproduce" section of the problem's README.
+Independent checks (run after the steps above):
 
-## Using this work
-
-If you know of existing results that cover any of this, please say so (an issue with a
-reference is ideal). We have not shown any of these families is unstudied.
+```
+.venv/Scripts/python.exe $P/src/check_laws_text.py $P/data/laws_3.json
+.venv/Scripts/python.exe $P/src/check_laws_count.py 3
+.venv/Scripts/python.exe $P/src/check_catalogue.py $P/data/laws_3.json $P/data/o3 3000
+```
