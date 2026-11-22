@@ -38,8 +38,8 @@ How to read this section:
   session did not re-fetch it. Treat it as reliable but single-checked.
 - **[not read]**: only seen in search results, or blocked. A lead, not a fact.
 
-Blocked for Claude agents by robots.txt, so not read: ams.org, link.springer.com,
-erdosproblems.com. Queries were run with extended web search. Exact query strings are listed per item.
+Blocked for Claude agents by robots.txt, so not read: ams.org, link.springer.com.
+Queries were run with extended web search. Exact query strings are listed per item.
 
 ## A1. Has the ETP idea been extended to a unary operation (type (2,1))?
 
@@ -183,3 +183,30 @@ open pairs (code 6) are not discussed anywhere we looked.
 - The two finite-versus-general leads should be called **candidate Austin laws**.
 - No novelty claim is made for the family. The search found nothing that covers it, and that is the
   only claim.
+
+---
+
+# Re-check of 2026-11-22 (evening): is anyone else working on this family?
+
+Asked after a crowding check in another line of work showed that literature searches had missed work
+published on trackers and GitHub.
+
+- **GitHub-wide repository search** (`gh search repos`): "unary magma laws", "equational theories
+  unary", "equational laws unary operation", "magma unary operation implications", "equational
+  theories project extension", "type (2,1) algebras", "involution magma laws", "equational
+  implications lean magma". Only hit: this repository.
+- **Web searches** (one extended, three standard): ETP follow-ups in 2026, the SAIR "Mathematics
+  Distillation Challenge" (stages 1 and 2), the Lean Zulip `Equational` stream, and arXiv 2026 papers on
+  identities with a binary and a unary operation. Everything found concerns magmas with one binary
+  operation. The SAIR challenge stage 2 judge works on ETP magma laws, according to the search summary
+  (its page was not read).
+- **Lean Zulip topic** "Proposing a universal algebra exploration using Lean" (2024-09-26, read): Tao
+  says "I'm just focusing for now on theories with a single relation ... expand later". This is the
+  ETP's origin and is not evidence of later work on other signatures.
+- **[not read]** the PyPI package `eqtheory` (its project page returned a JavaScript challenge). It
+  turned up in a search about the SAIR challenge, and its scope is unknown.
+- This repository and `eq-laws-without-small-models`: 0 stars, 0 forks, 0 issues.
+
+**Verdict: NOT-FOUND, again.** Nothing public that we can see covers laws with one binary and one unary
+operation. This cannot rule out private work, unindexed papers, Zulip threads that searches miss, or
+code made for the SAIR challenge.

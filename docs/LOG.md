@@ -78,4 +78,3 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Literature check (`PRIOR_WORK.md`): no table of type (2,1) laws found. The two `f`-free laws are
   known (Stein's third law / centrist groupoids, OEIS A128934; central groupoids, Evans and Knuth).
   The finite-versus-general leads are "candidate Austin laws".
-- erdosproblems.com disallows Claude agents (robots.txt). Not fetched. See the hub.

@@ -40,7 +40,7 @@ Settle the 894 open pairs and make the implication claims independently checkabl
 
 ## Last iteration
 
-2026-11-22, research session on branch `research/2026-11-22-literature-and-erdos`: steps 08 and 09,
+2026-11-22, research session: steps 08 and 09,
 literature check. Next: queue item 0 (make the table and `query.py` reflect steps 08 and 09).
 
 ## Blocked
