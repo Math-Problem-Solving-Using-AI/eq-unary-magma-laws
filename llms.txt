@@ -1,0 +1,51 @@
+# eq-unary-magma-laws
+
+> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open.
+
+## Start here
+
+- [README.md](README.md): problem statement and status table
+- [results/README.md](results/README.md): what each result file is, and the status codes
+- [steps/](steps): one record per step with commands, checks done and a "NOT verified" list
+- [docs/shared/VERIFICATION_PROTOCOL.md](docs/shared/VERIFICATION_PROTOCOL.md): stages and status labels
+- [docs/shared/LEAN_CAVEATS.md](docs/shared/LEAN_CAVEATS.md): why a Lean-accepted proof is not enough, with cited cases
+
+## Look things up
+
+- `python src/query.py "<law A>" "<law B>"` says whether A implies B and with which label.
+  `--witness` prints a structure for non-implications. `--list "<law>"` summarizes one law against all
+  others. Run `pip install -r requirements.txt` first.
+- Law syntax: variables are letters `x y z w u v a b`; `*` is the binary operation, `f(...)` the unary one;
+  a product inside a product needs parentheses, `x*(y*z) = x`. Laws are matched up to renaming of
+  variables and swapping sides. Only size 3 or less is in the table.
+- [results/status_matrix.npz](results/status_matrix.npz): array `codes[a][b]`, law index = id minus 1 in
+  [data/laws_3.json](data/laws_3.json). Codes: 1 and 2 not an implication (certified), 3 and 4 implication
+  (z3 only), 5 and 6 open.
+- [results/witnesses_larger_models.json](results/witnesses_larger_models.json): counterexample structures
+  (tables for `*` and `f`) with both laws as text.
+
+## How to trust it
+
+- `model-verified`: a finite structure satisfying A and failing B, re-checked by independent plain-Python code.
+- `z3-only`: z3 returned unsat, nothing else confirmed it, not Lean. Do not call it proved.
+- `open`: unknown.
+- Re-run the checks yourself: the commands in [README.md](README.md). CI runs them on every push.
+
+## Rules for any LLM or agent using or extending this repository
+
+1. Never state a result with a stronger label than the file gives it. `z3-only` is not proved.
+   Only `lean-checked + fidelity-reviewed + literature-checked` may be called a result, and
+   nothing here has reached that yet.
+2. If you do not know something, say it is unknown. Do not fill gaps from memory. Search
+   summaries and other agents' reports are leads: read the primary page.
+3. A Lean-accepted proof is not sufficient: statement fidelity, junk values, `native_decide`,
+   kernel bugs. See `docs/shared/LEAN_CAVEATS.md`.
+4. Do not claim novelty. No deep literature search has been done.
+5. Autonomous sessions follow `LOOP.md` and keep `STATE.md` current.
+6. Do not publish, push or change license without the owner.
+
+## Optional
+
+- [STATE.md](STATE.md) current queue, [LOOP.md](LOOP.md) protocol for autonomous sessions
+- [docs/LOG.md](docs/LOG.md) journal, [docs/PRIOR_WORK.md](docs/PRIOR_WORK.md) related work and what was not found
+- Hub: https://github.com/MauroBCardoso/math-curiosity. Related problem: https://github.com/MauroBCardoso/eq-laws-without-small-models
