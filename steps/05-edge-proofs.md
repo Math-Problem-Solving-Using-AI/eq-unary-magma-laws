@@ -2,7 +2,7 @@
 
 - Date: 2026-11-22
 - Status label: IN PROGRESS, nothing recorded yet
-- Commit(s): 3afde82 (first version), fix in a later commit
+- Commit(s): ebdb14f (first version), fix in a later commit
 
 ## Goal
 For the pairs (A, B) that no small structure refutes, try to prove A implies B with z3.
@@ -10,7 +10,7 @@ Pairs z3 cannot prove go to a larger-counterexample search.
 
 ## Command(s)
 ```
-python problems/unary-magma-laws/src/prove.py edges problems/unary-magma-laws/data/laws_3.json problems/unary-magma-laws/data/o3 1000
+python src/prove.py edges data/laws_3.json data/o3 1000
 ```
 
 ## Attempt 1 (stopped, wasted)
@@ -20,7 +20,7 @@ python problems/unary-magma-laws/src/prove.py edges problems/unary-magma-laws/da
 - Cause of the slowness: the last sources were the 9 unresolved zero-model laws. Each has about
   700 candidate targets (nothing refutes them), so z3 spent up to 1 s on each, for no gain.
 - Fixes: save state every 10 sources and on exit, resume from saved state, skip sources with no
-  small model (they belong to `../../laws-without-small-models`).
+  small model (they belong to [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models)).
 
 ## Attempt 2 (after the fixes)
 
@@ -41,7 +41,7 @@ Accounting of all 506,232 ordered pairs (A different from B), each in exactly on
 | not implications, refuted by a structure of size 2 or 3 | 335,177 | `model-verified (sampled)` |
 | A collapses every structure (207 laws, 711 targets each) | 147,177 | `z3-only` |
 | implications proved by z3 (with closure) | 15,877 | `z3-only` |
-| A is one of the 9 laws of `../../laws-without-small-models` | 6,399 | open, see that problem |
+| A is one of the 9 laws of [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models) | 6,399 | open, see that problem |
 | unresolved | 1,602 | open |
 
 Check: 335,177 + 147,177 + 15,877 + 6,399 + 1,602 = 506,232.
@@ -66,7 +66,7 @@ classes, the largest has 47 laws.
 - That 1 s timeouts say anything: z3 results vary between runs.
 
 ## Surprises, errors, dead ends
-- Attempt 1 lost, see above, and in `docs/LESSONS.md`.
+- Attempt 1 lost, see above, and in `docs/shared/LESSONS.md`.
 
 ## Next
 Step 06: for the 1,602 unresolved pairs, search structures of size 4 and 5, verify each by plain

@@ -2,7 +2,7 @@
 
 - Date: 2026-11-22
 - Status label: model-verified (sampled)
-- Commit(s): d1d5fca (code), f726881 (spot-check)
+- Commit(s): 010c71f (code), b344b53 (spot-check)
 
 ## Goal
 Find, for as many ordered pairs (A, B) as possible, a finite structure that satisfies A and
@@ -10,8 +10,8 @@ fails B. That proves A does not imply B with no prover involved.
 
 ## Command(s)
 ```
-python problems/unary-magma-laws/src/models.py problems/unary-magma-laws/data/laws_3.json problems/unary-magma-laws/data/o3
-python problems/unary-magma-laws/src/check_catalogue.py problems/unary-magma-laws/data/laws_3.json problems/unary-magma-laws/data/o3 3000
+python src/models.py data/laws_3.json data/o3
+python src/check_catalogue.py data/laws_3.json data/o3 3000
 ```
 
 ## Inputs
@@ -41,7 +41,7 @@ to 88,722 up to relabeling elements). Total 88,786 structures.
 
 ## Surprises, errors, dead ends
 - First run of `models.py` failed: numpy was missing from the virtual environment. Fixed,
-  recorded in `docs/LESSONS.md`.
+  recorded in `docs/shared/LESSONS.md`.
 - 216 laws have no model of size 2 or 3 and made 153,576 of the 171,055 candidates look open.
   That is an artifact, see step 04.
 

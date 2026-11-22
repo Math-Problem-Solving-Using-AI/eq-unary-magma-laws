@@ -42,7 +42,7 @@ Newest entries at the bottom.
 ### Results pass (same day, evening)
 
 - Edge prover rerun (259 s): every one of the 506,232 ordered pairs is now in exactly one group,
-  see `problems/unary-magma-laws/README.md`.
+  see `README.md`.
 - 708 pairs settled by certified structures of size 4 and 5 (`resolve_open.py`), all re-checked by
   an independent verifier. The 28 earlier z3 `sat` answers were all confirmed.
 - All 335,177 small-structure refutations re-verified, 0 failed. Verifiers mutation-tested.
@@ -60,7 +60,7 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 2. The six open laws, then use the two infinite models to refute more of their 711 targets each
    with explicit counterexample elements (needs a careful certificate format).
 3. Store derivations for implications, with a tiny independent checker, instead of trusting z3.
-4. Lean for anything that survives, following `docs/LEAN_CAVEATS.md`.
+4. Lean for anything that survives, following `docs/shared/LEAN_CAVEATS.md`.
 5. Deeper literature search (extended search, universal algebra of type (2,1)) before any
    novelty claim.
 6. Owner decisions: publish or not, license, author identity in commits.

@@ -1,7 +1,7 @@
 # Results
 
 Nothing here counts as a finding until it carries a certificate anyone can re-check, and has
-passed the stages in `docs/VERIFICATION_PROTOCOL.md`.
+passed the stages in `docs/shared/VERIFICATION_PROTOCOL.md`.
 
 ## Claim types and certificates
 

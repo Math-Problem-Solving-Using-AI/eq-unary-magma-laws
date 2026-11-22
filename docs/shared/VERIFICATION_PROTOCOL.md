@@ -1,3 +1,6 @@
+<!-- Canonical copy: https://github.com/MauroBCardoso/math-curiosity (docs/). Synced by tools/sync_shared_docs.sh.
+     Do not edit this copy, change the hub and sync. -->
+
 # Verification protocol
 
 A claim is a result only after every applicable stage below, in order. If a stage cannot be

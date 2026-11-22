@@ -17,13 +17,13 @@ variables and swapping sides. Current scope: size at most 3 (712 laws, 506,944 o
 ## Status
 
 **Early. No result is Lean-checked or has passed the full protocol.** Status labels are defined
-in `docs/VERIFICATION_PROTOCOL.md`. What we hold so far:
+in `docs/shared/VERIFICATION_PROTOCOL.md`. What we hold so far:
 
 | Item | Status |
 |------|--------|
 | 712 laws up to size 3 (8,805 up to size 4) enumerated | independently recounted by a different algorithm, exact match. Law texts round-trip to stored terms. |
 | 207 of the 216 laws with no model of size 2 or 3 force a one-element structure | `z3-only` |
-| 9 laws with no small model, collapse unproven | open, own problem: `../laws-without-small-models` |
+| 9 laws with no small model, collapse unproven | open, own problem: [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models) |
 
 All 506,232 ordered pairs (A different from B) are accounted for, in exactly one row
 (details in `steps/05-edge-proofs.md`):
@@ -34,7 +34,7 @@ All 506,232 ordered pairs (A different from B) are accounted for, in exactly one
 | A does not imply B, refuted by a structure of size 4 or 5 | 708 | `model-verified`: certificates in `results/witnesses_larger_models.json`, re-checked by `src/verify_witnesses.py` |
 | A collapses every structure, so it implies B | 147,177 | `z3-only` |
 | A implies B, proved by z3 (with transitive closure) | 15,877 | `z3-only` |
-| A is one of the 9 open laws | 6,399 | open, see `../laws-without-small-models` |
+| A is one of the 9 open laws | 6,399 | open, see [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models) |
 | unresolved (no structure up to size 5, no proof in 1 s) | 894 | open, from 71 source laws |
 
 ## Steps (granular record)
@@ -53,7 +53,7 @@ Read in order, `steps/`:
 
 - `src/` code. `data/` generated data (large arrays and logs are git-ignored, regenerate).
 - `results/` claims with certificates. `steps/` the step records.
-- Related problem: `../laws-without-small-models`.
+- Related problem: [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models).
 
 ## Reproduce
 
@@ -61,18 +61,18 @@ From the repo root (Windows paths, use `.venv/bin/python` elsewhere):
 
 ```
 python -m venv .venv
-.venv/Scripts/python.exe -m pip install -r requirements.txt
-P=problems/unary-magma-laws
-.venv/Scripts/python.exe $P/src/laws.py 3 $P/data/laws_3.json
-.venv/Scripts/python.exe $P/src/models.py $P/data/laws_3.json $P/data/o3
-.venv/Scripts/python.exe $P/src/prove.py collapse $P/data/laws_3.json $P/data/o3 5000
-.venv/Scripts/python.exe $P/src/prove.py edges $P/data/laws_3.json $P/data/o3 1000
+python -m pip install -r requirements.txt
+P=.
+python $P/src/laws.py 3 $P/data/laws_3.json
+python $P/src/models.py $P/data/laws_3.json $P/data/o3
+python $P/src/prove.py collapse $P/data/laws_3.json $P/data/o3 5000
+python $P/src/prove.py edges $P/data/laws_3.json $P/data/o3 1000
 ```
 
 Independent checks (run after the steps above):
 
 ```
-.venv/Scripts/python.exe $P/src/check_laws_text.py $P/data/laws_3.json
-.venv/Scripts/python.exe $P/src/check_laws_count.py 3
-.venv/Scripts/python.exe $P/src/check_catalogue.py $P/data/laws_3.json $P/data/o3 3000
+python $P/src/check_laws_text.py $P/data/laws_3.json
+python $P/src/check_laws_count.py 3
+python $P/src/check_catalogue.py $P/data/laws_3.json $P/data/o3 3000
 ```

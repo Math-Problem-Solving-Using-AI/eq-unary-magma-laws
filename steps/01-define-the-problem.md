@@ -2,7 +2,7 @@
 
 - Date: 2026-11-22
 - Status label: definitions only (protocol stage S0). Nothing is claimed here.
-- Commit(s): d1d5fca
+- Commit(s): 010c71f
 
 ## Goal
 Fix the exact meaning of every word before computing anything.

@@ -2,7 +2,7 @@
 
 - Date: 2026-11-22
 - Status label: `model-verified` (was `model-verified (sampled)`)
-- Commit(s): c02383a (verifiers), selftest and this record in later commits
+- Commit(s): 5686e7e (verifiers), selftest and this record in later commits
 
 ## Goal
 Step 03 only spot-checked the model catalogue. Re-check every refuted pair with code that shares
@@ -10,9 +10,9 @@ nothing with the numpy catalogue, and prove that the checker can actually fail.
 
 ## Command(s)
 ```
-P=problems/unary-magma-laws
-.venv/Scripts/python.exe $P/src/verify_small_refutations.py $P/data/laws_3.json $P/data/o3
-.venv/Scripts/python.exe $P/src/selftest_verifiers.py $P/data/laws_3.json $P/data/o3 $P/results/witnesses_larger_models.json
+P=.
+python $P/src/verify_small_refutations.py $P/data/laws_3.json $P/data/o3
+python $P/src/selftest_verifiers.py $P/data/laws_3.json $P/data/o3 $P/results/witnesses_larger_models.json
 ```
 
 ## What the verifier does
@@ -50,4 +50,4 @@ refutations re-verified: 335177, failed: 0, time 5s
   self-contained.
 
 ## Next
-Work on the 894 open pairs and the six open laws of `../../laws-without-small-models`.
+Work on the 894 open pairs and the six open laws of [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models).

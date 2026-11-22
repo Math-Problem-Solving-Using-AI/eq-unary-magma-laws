@@ -2,7 +2,7 @@
 
 - Date: 2026-11-22
 - Status label: `model-verified` for the 708 pairs settled here
-- Commit(s): 04f0409 (script), certificates in a later commit
+- Commit(s): 51459f3 (script), certificates in a later commit
 
 ## Goal
 For each of the 1,602 pairs left unresolved by step 05, look for a finite structure of size 4 or
@@ -11,9 +11,9 @@ imply B, with no prover to trust.
 
 ## Command(s)
 ```
-P=problems/unary-magma-laws
-.venv/Scripts/python.exe $P/src/resolve_open.py $P/data/laws_3.json $P/data/o3 5 5000 $P/results/witnesses_larger_models.json
-.venv/Scripts/python.exe $P/src/verify_witnesses.py $P/results/witnesses_larger_models.json
+P=.
+python $P/src/resolve_open.py $P/data/laws_3.json $P/data/o3 5 5000 $P/results/witnesses_larger_models.json
+python $P/src/verify_witnesses.py $P/results/witnesses_larger_models.json
 ```
 
 ## Inputs

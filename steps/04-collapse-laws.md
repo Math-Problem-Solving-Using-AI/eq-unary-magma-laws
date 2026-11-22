@@ -2,7 +2,7 @@
 
 - Date: 2026-11-22
 - Status label: z3-only
-- Commit(s): 3afde82
+- Commit(s): ebdb14f
 
 ## Goal
 A law with no model of size 2 or 3 might force every structure to have one element ("collapse",
@@ -10,7 +10,7 @@ the law proves `x = y`). Such a law implies every other law. Find out which ones
 
 ## Command(s)
 ```
-python problems/unary-magma-laws/src/prove.py collapse problems/unary-magma-laws/data/laws_3.json problems/unary-magma-laws/data/o3 5000
+python src/prove.py collapse data/laws_3.json data/o3 5000
 ```
 Run several times: proofs accumulate (see lessons).
 
@@ -28,14 +28,14 @@ Run several times: proofs accumulate (see lessons).
 
 ## NOT verified
 - All 207 collapse claims. Status stays `z3-only` until a derivation is stored and checked by an
-  independent tiny checker, and later in Lean (see `docs/VERIFICATION_PROTOCOL.md`).
-- That the 9 unresolved laws do or do not collapse: see `../../laws-without-small-models`.
+  independent tiny checker, and later in Lean (see `docs/shared/VERIFICATION_PROTOCOL.md`).
+- That the 9 unresolved laws do or do not collapse: see [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models).
 
 ## Surprises, errors, dead ends
 - **Assumption broken:** "no model of size 2 or 3" does not mean "collapses". Two of the nine
   have a model of size 4.
 - **z3 is not stable between runs:** 207 proofs at 5 s, 205 at 60 s (8 workers in parallel).
-  Fix: accumulate proofs, never overwrite. Recorded in `docs/LESSONS.md`.
+  Fix: accumulate proofs, never overwrite. Recorded in `docs/shared/LESSONS.md`.
 - `CheckSatResult` is unhashable in z3 (code bug, fixed).
 
 ## Next

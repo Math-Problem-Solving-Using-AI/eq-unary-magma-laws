@@ -2,14 +2,14 @@
 
 - Date: 2026-11-22
 - Status label: independently recounted (counts), no mathematical claim
-- Commit(s): d1d5fca (code), f726881 (checks)
+- Commit(s): 010c71f (code), b344b53 (checks)
 
 ## Goal
 List every law of size at most N up to renaming and side swap.
 
 ## Command(s)
 ```
-python problems/unary-magma-laws/src/laws.py 3 problems/unary-magma-laws/data/laws_3.json
+python src/laws.py 3 data/laws_3.json
 ```
 
 ## Inputs
@@ -31,7 +31,7 @@ Hand check of size 1 (7 laws): `x = f(x)`, `x = f(y)`, `x = x*x`, `x = x*y`, `x 
   canonicalization. Cannot catch: a shared misunderstanding of what "same law" means.
 - `check_laws_text.py`: the printed text of all 712 laws parses back to the stored term with a
   separate small parser, 0 mismatches. Catches: a text that does not mean the stored term
-  (the fidelity risk described in `docs/LEAN_CAVEATS.md`, C1). Run on size 3 only.
+  (the fidelity risk described in `docs/shared/LEAN_CAVEATS.md`, C1). Run on size 3 only.
 
 ## NOT verified
 - Text round trip was not run on the 8,093 size-4 laws (not generated to file yet).

@@ -1,3 +1,6 @@
+<!-- Canonical copy: https://github.com/MauroBCardoso/math-curiosity (docs/). Synced by tools/sync_shared_docs.sh.
+     Do not edit this copy, change the hub and sync. -->
+
 # Lean caveats: what a Lean-accepted proof does NOT guarantee
 
 Compiled 2026-11-22. Sources were read on their own pages, not taken from search summaries.

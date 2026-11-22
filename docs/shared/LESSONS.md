@@ -1,3 +1,6 @@
+<!-- Canonical copy: https://github.com/MauroBCardoso/math-curiosity (docs/). Synced by tools/sync_shared_docs.sh.
+     Do not edit this copy, change the hub and sync. -->
+
 # Lessons: do not repeat these
 
 Add an entry whenever something fails or surprises us. Format: what happened, why, rule.
@@ -9,7 +12,7 @@ Add an entry whenever something fails or surprises us. Format: what happened, wh
 - **`rmdir` failed with "Device or resource busy"** (2026-11-22). Shell working directory was
   inside the folder being removed, and a `&&` chain then skipped later steps silently.
   Rule: never remove the current directory, and check output of chained commands.
-- Windows: call the venv Python directly (`.venv/Scripts/python.exe`), not `python`.
+- Windows: call the venv Python directly (`python`), not `python`.
 
 ## Method
 
