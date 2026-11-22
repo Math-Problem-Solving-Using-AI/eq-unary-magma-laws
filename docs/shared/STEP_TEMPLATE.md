@@ -3,7 +3,7 @@
 
 # Step record template
 
-Copy into `problems/<slug>/steps/NN-short-title.md`. One file per step. Commit the step with
+Copy into `steps/NN-short-title.md`. One file per step. Commit the step with
 the code change that produced it. Fill every field, write "none" or "not done" instead of
 leaving blanks. A step that failed is still a step: record it.
 
