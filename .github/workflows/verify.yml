@@ -19,6 +19,7 @@ jobs:
       - run: python src/check_catalogue.py data/laws_3.json data/o3 1000
       - run: python src/verify_small_refutations.py data/laws_3.json data/o3
       - run: python src/verify_witnesses.py results/witnesses_larger_models.json
+      - run: python src/verify_witnesses.py results/witnesses_ffree_models.json
       - run: python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
       - run: python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
       - run: python src/query.py "x*y = x" "x*(y*z) = x"
