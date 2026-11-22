@@ -14,6 +14,18 @@ Newest entries at the bottom.
   Fixed, see `LESSONS.md`.
 - Repo created, folders match pipeline stages.
 
+### Model catalogue, size <= 3 (sizes 2 and 3 models, 88,786 total)
+
+- 335,177 of the ordered pairs refuted by a small model. 171,055 candidates left.
+- 216 laws have no model of size 2 or 3. z3 proved 207 of them force `x = y` (collapse), which
+  makes them imply every law. Nine unresolved. Of those nine, `(x*y)*(y*x) = y` and
+  `(x*y)*(y*z) = y` have size 4 models. The other seven have no model up to size 6 and z3
+  has not proved collapse yet. They could collapse with a harder proof, or have only infinite
+  models. Open, details in `results/zero_model_laws.json`.
+- Repo made public-ready: README states status honestly, `results/README.md` defines
+  certificate types and status labels. Publishing to a remote is not done, user decides.
+- Edge prover run started on the remaining candidates (1s timeout per pair, 8 workers).
+
 ## Next
 
 - Run `models.py` on size <= 3, record how many implications small models refute.
