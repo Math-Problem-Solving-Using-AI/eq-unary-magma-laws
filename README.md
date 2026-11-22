@@ -16,7 +16,8 @@ question the Equational Theories Project answered for one binary operation, appl
 we have not found studied (see `docs/PRIOR_WORK.md`, and note that "not found" is not proof).
 
 Size of a law = number of `*` and `f` symbols on both sides. Laws are counted up to renaming
-variables and swapping sides. Current scope: size at most 3 (712 laws, 506,944 ordered pairs).
+variables and swapping sides. Current scope: size 1 to 3 (712 laws, 506,944 ordered pairs including
+each law with itself). Size 0 (`x = y`, which collapses everything) is not in the list.
 
 ## Status
 
@@ -41,6 +42,14 @@ All 506,232 ordered pairs (A different from B) are accounted for, in exactly one
 | A is one of the 9 open laws | 6,399 | open, see [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) |
 | unresolved (no structure up to size 5, no proof in 1 s) | 894 | open, from 71 source laws |
 
+**Cross-check with the Equational Theories Project (step 08).** Our 408 laws without `f` are ordinary
+magma laws, and they are exactly ETP laws 3 to 410. Of the 166,056 ordered pairs among them, the
+164,800 that our table decides **all agree with the ETP data (0 disagreements)**. The remaining
+1,256 pairs, open for us (code 5 or 6), are settled by the ETP data and are labeled `known (ETP)`.
+`src/query.py` prints the ETP equation numbers and the ETP verdict for such pairs. The ETP's results
+are proved in Lean in that project. We did not re-check them. `results/status_matrix.npz` is
+unchanged, and the ETP information is in `results/etp_crosscheck.json`.
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -52,6 +61,7 @@ Read in order, `steps/`:
 5. `05-edge-proofs.md`
 6. `06-larger-counterexamples.md`
 7. `07-full-recheck-of-small-refutations.md`
+8. `08-etp-crosscheck.md`
 
 ## Layout
 
@@ -86,6 +96,12 @@ python src/verify_small_refutations.py data/laws_3.json data/o3
 python src/verify_witnesses.py results/witnesses_larger_models.json
 python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
 python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
+```
+
+ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):
+
+```
+python src/etp_crosscheck.py <ETP>/data/equations.txt general_outcomes.json.gz results/etp_crosscheck.json
 ```
 
 ## Contributing

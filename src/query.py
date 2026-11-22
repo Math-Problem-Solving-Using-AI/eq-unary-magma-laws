@@ -73,6 +73,28 @@ def tuple_law(e):
     return tuplify(e["law"])
 
 
+def etp_note(a, b, c):
+    """For two laws without f: what the Equational Theories Project data says (step 08)."""
+    path = ROOT / "results" / "etp_crosscheck.json"
+    if not path.exists():
+        return None
+    r = json.load(open(path, encoding="utf-8"))
+    num = {m["our_id"]: m["etp"] for m in r["mapping"]}
+    ia, ib = a + 1, b + 1
+    if ia not in num or ib not in num:
+        return None
+    head = f"ETP: A is Equation{num[ia]}, B is Equation{num[ib]} in the Equational Theories Project. "
+    for row in r["settled_open_pairs"]:
+        if row[0] == ia and row[1] == ib:
+            verdict = "implies" if row[3] else "does NOT imply"
+            return (head + f"Open in our table; the ETP data says A {verdict} B ({row[4]}). "
+                    "Label: known (ETP; proofs are Lean-checked there, not re-checked by us). "
+                    "See steps/08-etp-crosscheck.md")
+    if c == 0:
+        return head
+    return head + "Our answer agrees with the ETP data (steps/08-etp-crosscheck.md)."
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     flags = {a for a in sys.argv[1:] if a.startswith("--")}
@@ -96,6 +118,9 @@ def main():
     print(f"B = #{entries[b]['id']}: {entries[b]['text']}")
     print(f"code {c}: {MEANING[c][0]}")
     print(f"label: {MEANING[c][1]}  (labels are defined in docs/shared/VERIFICATION_PROTOCOL.md)")
+    etp = etp_note(a, b, c)
+    if etp:
+        print(etp)
     if "--witness" in flags and c in (1, 2):
         if c == 1:
             w = witness(a, b, entries)
