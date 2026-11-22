@@ -1,53 +1,50 @@
-# Implications between short equational laws, one binary and one unary operation
+# Math curiosity
 
-Exploratory, reproducible computation in the style of Terence Tao's
-[Equational Theories Project](https://teorth.github.io/equational_theories), applied to a
-different family: algebras of type (2,1), meaning one binary operation `*` and one unary
-operation `f`, with no assumptions.
+Exploratory, reproducible computer experiments in the style of Terence Tao's
+[Equational Theories Project](https://teorth.github.io/equational_theories): decide which
+simple algebraic laws imply which, with every claim carrying a certificate that a reader can
+re-check without trusting this code.
 
-Question: for short laws such as `f(x*y) = f(x)*y`, which laws imply which?
-`A => B` means every structure satisfying law A also satisfies law B.
+**Status: early and experimental. No result has passed the full verification protocol.**
+Lean acceptance alone is not treated as proof, see `docs/LEAN_CAVEATS.md`.
 
-Keywords: equational laws, universal algebra, magma with unary operation, implication
-graph, finite countermodels, automated theorem proving, z3.
+## Problems
 
-## Status
+One folder per problem under `problems/`, each with its own README and a `steps/` record.
 
-**Early, experimental. No result here is verified by Lean yet.** Read `results/README.md`
-for the exact status labels. Every claim is meant to ship with a certificate (a finite
-counterexample table or a proof) that you can re-check without trusting this code.
+| Problem | Question | State |
+|---------|----------|-------|
+| [unary-magma-laws](problems/unary-magma-laws) | Which short laws over one binary and one unary operation imply which? | in progress, 712 laws up to size 3 |
+| [laws-without-small-models](problems/laws-without-small-models) | Nine of those laws have no model of size 2 or 3. Do they collapse every structure to one element? | 1 collapse shown (`z3-only`), 2 have a size 4 model, 6 open |
 
-Prior work is tracked in `docs/PRIOR_WORK.md`. We have not shown this family is unstudied.
-If you know of existing results, please open an issue with a reference.
+## Shared documents (`docs/`)
 
-## Method
+- `VERIFICATION_PROTOCOL.md`: the stages a claim must pass, and the status ladder.
+- `LEAN_CAVEATS.md`: documented cases where a Lean-accepted proof is not enough, each labeled by
+  how well we could confirm it.
+- `LESSONS.md`: mistakes and surprises, so they are not repeated.
+- `PRIOR_WORK.md`: related published work and what we did and did not find.
+- `LOG.md`: journal. `STEP_TEMPLATE.md`: format of the step records.
 
-1. `src/laws.py` enumerates every law up to a size limit (size = number of `*` and `f`
-   symbols in both sides), deduplicated up to variable renaming and side swap.
-2. `src/models.py` catalogues every structure of size 2 and 3 (size 3 up to relabeling) and
-   refutes implications by counterexample.
-3. `src/prove.py` tries to prove the remaining candidate implications with z3.
-   Proofs accumulate across runs because z3 outcomes are not stable.
-4. `src/findmodel.py` searches larger finite counterexamples, and independently re-checks
-   any model by direct evaluation.
-5. Next: independent prover, then Lean for anything we call a finding.
+## Adding a problem
 
-## Layout
-
-- `src/`      code
-- `data/`     generated law lists (large arrays and logs are git-ignored, regenerate)
-- `results/`  findings with certificates
-- `docs/`     `LOG.md` (journal), `LESSONS.md` (mistakes, do not repeat), `PRIOR_WORK.md` (sources)
+Create `problems/<short-name>/` with a `README.md` (question, status table, steps list, how to
+reproduce), a `steps/` folder with one record per step (`docs/STEP_TEMPLATE.md`), and its own
+code, data and results. Add it to the table above. Problem folders may depend on another
+problem's code, say so in the README.
 
 ## Reproduce
 
-Run from the project root (Windows paths shown, use `.venv/bin/python` elsewhere).
+Run from the repo root (Windows paths, use `.venv/bin/python` elsewhere):
 
 ```
 python -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
-.venv/Scripts/python.exe src/laws.py 3 data/laws_3.json            # 712 laws up to size 3
-.venv/Scripts/python.exe src/models.py data/laws_3.json data/o3    # small-model catalogue
-.venv/Scripts/python.exe src/prove.py collapse data/laws_3.json data/o3 5000
-.venv/Scripts/python.exe src/prove.py edges data/laws_3.json data/o3 1000
 ```
+
+then follow the "Reproduce" section of the problem's README.
+
+## Using this work
+
+If you know of existing results that cover any of this, please say so (an issue with a
+reference is ideal). We have not shown any of these families is unstudied.

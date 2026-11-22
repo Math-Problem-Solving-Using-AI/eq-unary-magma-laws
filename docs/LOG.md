@@ -26,6 +26,19 @@ Newest entries at the bottom.
   certificate types and status labels. Publishing to a remote is not done, user decides.
 - Edge prover run started on the remaining candidates (1s timeout per pair, 8 workers).
 
+### Rigor pass (same day, later)
+
+- Owner asked for: granular steps in the repo, no skipped unknowns, Lean caveats from real cases,
+  one folder and README per problem.
+- Read primary pages (via subagents) on Lean soundness, `native_decide`, misformalization, junk
+  values. Results in `LEAN_CAVEATS.md`, with several search-summary claims downgraded to UNCONFIRMED.
+- Added `VERIFICATION_PROTOCOL.md` and independent checks: law text round trip (712 ok), brute
+  force recount of laws (exact match up to size 4), plain-Python spot-check of the model
+  catalogue (0 disagreements).
+- Restructured into `problems/unary-magma-laws` and `problems/laws-without-small-models`.
+- First edge-prover run lost (results only saved at the end). Prover rewritten to save and resume.
+- Hand proof that `f(x)*(y*z) = y` collapses, checked step by step by z3 (`z3-only`).
+
 ## Next
 
 - Run `models.py` on size <= 3, record how many implications small models refute.
