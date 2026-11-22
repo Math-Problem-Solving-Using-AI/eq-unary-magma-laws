@@ -1,6 +1,6 @@
 # eq-unary-magma-laws
 
-> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open.
+> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open in the stored table; of these, 1,256 (laws without `f`) are settled by the Equational Theories Project data and 608 more by new 4-element certificates (steps 08 and 09). The 164,800 decided pairs among laws without `f` agree with the ETP (0 disagreements).
 
 ## Start here
 
@@ -23,6 +23,10 @@
   (z3 only), 5 and 6 open.
 - [results/witnesses_larger_models.json](results/witnesses_larger_models.json): counterexample structures
   (tables for `*` and `f`) with both laws as text.
+- [results/etp_crosscheck.json](results/etp_crosscheck.json): our law id to ETP equation number for the 408 laws
+  without `f`, and the ETP verdict for pairs open in our table. `query.py` prints it.
+- [results/witnesses_ffree_models.json](results/witnesses_ffree_models.json): 1,417 certificates for the rows of
+  `(x*y)*(y*x) = y` and `(x*y)*(y*z) = y` (not yet read by `query.py`).
 
 ## How to trust it
 
@@ -40,7 +44,9 @@
    summaries and other agents' reports are leads: read the primary page.
 3. A Lean-accepted proof is not sufficient: statement fidelity, junk values, `native_decide`,
    kernel bugs. See `docs/shared/LEAN_CAVEATS.md`.
-4. Do not claim novelty. No deep literature search has been done.
+4. Do not claim novelty. A literature check was done on 2026-11-22 (`docs/PRIOR_WORK.md`): nothing
+   found that covers this family, which is not proof that nothing exists. Parts are known: the laws
+   without `f` are ETP laws, and two of them are classical (central groupoids, Stein's third law).
 5. Autonomous sessions follow `LOOP.md` and keep `STATE.md` current.
 6. Do not publish, push or change license without the owner.
 

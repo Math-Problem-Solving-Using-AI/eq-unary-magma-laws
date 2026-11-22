@@ -13,7 +13,9 @@ satisfies B.
 
 Question: for all laws up to a size limit, decide every implication. This is the same kind of
 question the Equational Theories Project answered for one binary operation, applied to a family
-we have not found studied (see `docs/PRIOR_WORK.md`, and note that "not found" is not proof).
+we have not found studied (literature check of 2026-11-22 in `docs/PRIOR_WORK.md`: nothing found
+that tabulates laws with one binary and one unary operation; "not found" is not proof). The part
+without `f` is ordinary magma laws and is covered by the ETP (see the cross-check below).
 
 Size of a law = number of `*` and `f` symbols on both sides. Laws are counted up to renaming
 variables and swapping sides. Current scope: size 1 to 3 (712 laws, 506,944 ordered pairs including
