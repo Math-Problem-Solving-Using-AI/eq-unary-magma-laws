@@ -30,11 +30,12 @@ All 506,232 ordered pairs (A different from B) are accounted for, in exactly one
 
 | Group | Pairs | Status |
 |-------|-------|--------|
-| A does not imply B, refuted by a structure of size 2 or 3 | 335,177 | `model-verified (sampled)` |
+| A does not imply B, refuted by a structure of size 2 or 3 | 335,177 | `model-verified (sampled)`, full re-check in step 07 |
+| A does not imply B, refuted by a structure of size 4 or 5 | 708 | `model-verified`: certificates in `results/witnesses_larger_models.json`, re-checked by `src/verify_witnesses.py` |
 | A collapses every structure, so it implies B | 147,177 | `z3-only` |
 | A implies B, proved by z3 (with transitive closure) | 15,877 | `z3-only` |
 | A is one of the 9 open laws | 6,399 | open, see `../laws-without-small-models` |
-| unresolved | 1,602 | open, step 06 tries to settle them with larger structures |
+| unresolved (no structure up to size 5, no proof in 1 s) | 894 | open, from 71 source laws |
 
 ## Steps (granular record)
 
@@ -45,7 +46,8 @@ Read in order, `steps/`:
 3. `03-small-model-catalogue.md`
 4. `04-collapse-laws.md`
 5. `05-edge-proofs.md`
-6. `06-larger-counterexamples.md` (in progress)
+6. `06-larger-counterexamples.md`
+7. `07-full-recheck-of-small-refutations.md` (in progress)
 
 ## Layout
 
