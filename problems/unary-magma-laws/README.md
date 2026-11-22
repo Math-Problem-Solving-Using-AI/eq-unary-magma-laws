@@ -22,10 +22,19 @@ in `docs/VERIFICATION_PROTOCOL.md`. What we hold so far:
 | Item | Status |
 |------|--------|
 | 712 laws up to size 3 (8,805 up to size 4) enumerated | independently recounted by a different algorithm, exact match. Law texts round-trip to stored terms. |
-| 335,177 ordered pairs are NOT implications | each witnessed by a finite structure of size 2 or 3 in the catalogue. Spot-checked in plain Python (sample, not all). `model-verified (sampled)` |
-| 171,055 pairs not refuted by sizes 2 and 3 | open, need proof or larger counterexample |
 | 207 of the 216 laws with no model of size 2 or 3 force a one-element structure | `z3-only` |
 | 9 laws with no small model, collapse unproven | open, own problem: `../laws-without-small-models` |
+
+All 506,232 ordered pairs (A different from B) are accounted for, in exactly one row
+(details in `steps/05-edge-proofs.md`):
+
+| Group | Pairs | Status |
+|-------|-------|--------|
+| A does not imply B, refuted by a structure of size 2 or 3 | 335,177 | `model-verified (sampled)` |
+| A collapses every structure, so it implies B | 147,177 | `z3-only` |
+| A implies B, proved by z3 (with transitive closure) | 15,877 | `z3-only` |
+| A is one of the 9 open laws | 6,399 | open, see `../laws-without-small-models` |
+| unresolved | 1,602 | open, step 06 tries to settle them with larger structures |
 
 ## Steps (granular record)
 
@@ -36,6 +45,7 @@ Read in order, `steps/`:
 3. `03-small-model-catalogue.md`
 4. `04-collapse-laws.md`
 5. `05-edge-proofs.md`
+6. `06-larger-counterexamples.md` (in progress)
 
 ## Layout
 
