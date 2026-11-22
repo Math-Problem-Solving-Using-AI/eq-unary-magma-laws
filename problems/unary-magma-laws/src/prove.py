@@ -124,42 +124,56 @@ def main():
                 if c != 1:
                     print("  not proved collapse:", json.load(open(laws_file))[i]["text"], "code", c)
         else:
+            # Sources with NO small model are skipped here: their candidate list is every law
+            # (nothing refuted them), so grinding z3 on it is waste. They are handled in
+            # problems/laws-without-small-models (collapse laws imply everything).
             collapse = np.load(prefix + "_collapse.npy")
             cand = ~R
             np.fill_diagonal(cand, False)
+
+            def load(name, dtype=bool):
+                try:
+                    return np.load(f"{prefix}_{name}.npy")
+                except FileNotFoundError:
+                    return np.zeros((L, L), dtype=dtype) if dtype is bool else np.zeros(L, dtype=dtype)
+
+            # State is saved every few sources and on exit, and reloaded here, so a long run
+            # that is stopped loses almost nothing. Proofs accumulate, see collapse mode.
+            proven, z3sat = load("proven"), load("z3sat")
+            done_t = load("edges_done", np.int64)
             tasks = []
             for a in range(L):
-                if collapse[a]:
+                if collapse[a] or nmodels[a] == 0 or done_t[a] >= timeout:
                     continue
-                tg = [(b, laws[b]) for b in range(L) if cand[a, b]]
+                tg = [(b, laws[b]) for b in range(L) if cand[a, b] and not proven[a, b]]
                 if tg:
                     tasks.append((a, laws[a], tg, timeout))
             print("source laws:", len(tasks), "pairs:", sum(len(t[2]) for t in tasks), flush=True)
-            proven = np.zeros((L, L), dtype=bool)
-            z3sat = np.zeros((L, L), dtype=bool)
-            unknown = np.zeros((L, L), dtype=bool)
+
+            def save_state():
+                np.save(prefix + "_proven.npy", proven)
+                np.save(prefix + "_z3sat.npy", z3sat)
+                np.save(prefix + "_edges_done.npy", done_t)
+
             done = 0
-            for a, out in pool.imap_unordered(task_edges, tasks):
-                for b, c in out.items():
-                    if c == 1:
-                        proven[a, b] = True
-                    elif c == 2:
-                        z3sat[a, b] = True
-                    else:
-                        unknown[a, b] = True
-                done += 1
-                if done % 25 == 0:
-                    print(f"  {done}/{len(tasks)} sources, {time.time()-t0:.0f}s", flush=True)
-            for name, arr in (("proven", proven), ("z3sat", z3sat)):
-                try:  # accumulate across runs, see collapse mode
-                    arr |= np.load(f"{prefix}_{name}.npy")
-                except FileNotFoundError:
-                    pass
-            unknown = unknown & ~proven & ~z3sat
-            np.save(prefix + "_proven.npy", proven)
-            np.save(prefix + "_z3sat.npy", z3sat)
+            try:
+                for a, out in pool.imap_unordered(task_edges, tasks):
+                    for b, c in out.items():
+                        if c == 1:
+                            proven[a, b] = True
+                        elif c == 2:
+                            z3sat[a, b] = True
+                    done_t[a] = max(done_t[a], timeout)
+                    done += 1
+                    if done % 10 == 0:
+                        save_state()
+                        print(f"  {done}/{len(tasks)} sources, {time.time()-t0:.0f}s", flush=True)
+            finally:
+                save_state()
+            unknown = cand & ~proven & ~z3sat & ~R & (nmodels[:, None] > 0) & ~collapse[:, None]
             np.save(prefix + "_unknown.npy", unknown)
-            print("proved:", int(proven.sum()), "z3 sat:", int(z3sat.sum()), "unknown:", int(unknown.sum()))
+            print("proved:", int(proven.sum()), "z3 sat:", int(z3sat.sum()),
+                  "still unresolved (sources with a small model):", int(unknown.sum()))
     print(f"time {time.time()-t0:.1f}s")
 
 
