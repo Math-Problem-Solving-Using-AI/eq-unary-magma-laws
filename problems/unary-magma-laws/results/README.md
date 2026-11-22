@@ -20,7 +20,24 @@ Only the last one may be called a result. `known` means already in the literatur
 
 ## Files
 
-None yet. Generated data lives in `../data` (git-ignored except the law list). The models for the
-nine laws with no small model are in `../../laws-without-small-models/results`.
+- `status_matrix.npz`: the outcome for every ordered pair of the 712 laws (array `codes`, row =
+  law A, column = law B, index = law id minus 1 in `data/laws_3.json`). Codes:
 
-Planned: one file per certified claim group, each with its certificate and re-check command.
+  | Code | Meaning | Count | Label |
+  |------|---------|-------|-------|
+  | 0 | same law | 712 | - |
+  | 1 | NOT an implication, refuted by a structure with 2 or 3 elements (regenerable) | 335,177 | `model-verified` |
+  | 2 | NOT an implication, refuted by a certificate with 4 or 5 elements | 708 | `model-verified` |
+  | 3 | implication proved by z3, with transitive closure | 15,877 | `z3-only` |
+  | 4 | implication because A forces a one-element structure | 147,177 | `z3-only` |
+  | 5 | A is one of the 9 laws with no small model, collapse unproven | 6,399 | open |
+  | 6 | unresolved | 894 | open |
+
+  Codes 3 and 4 cannot be regenerated deterministically (z3 varies between runs), which is why the
+  table is stored. `src/check_status_matrix.py` checks codes 1 and 2 against what is regenerated.
+- `witnesses_larger_models.json`: the 708 certificates of code 2 (plus the 894 pairs where none was
+  found up to size 5). Re-check with `src/verify_witnesses.py`.
+- Look things up with `src/query.py`, for example
+  `python src/query.py "x*y = x" "x*(y*z) = x"`.
+
+Planned: derivations for codes 3 and 4 that an independent checker can verify.
