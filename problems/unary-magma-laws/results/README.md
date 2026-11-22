@@ -1,26 +1,26 @@
 # Results
 
-Nothing here counts as a finding until it carries a certificate anyone can re-check.
+Nothing here counts as a finding until it carries a certificate anyone can re-check, and has
+passed the stages in `docs/VERIFICATION_PROTOCOL.md`.
 
 ## Claim types and certificates
 
 | Claim | Certificate | How to re-check |
 |-------|-------------|-----------------|
-| Law A does NOT imply law B | A finite structure (tables for `*` and `f`) satisfying A and failing B | evaluate both laws on every assignment, `src/findmodel.py: check_model` (independent of z3) |
-| Law A implies law B | A proof | z3 `unsat` is a first filter only. Final status needs an independent prover or a Lean proof |
-| Law forces a one-element structure | A proof of `x = y` from the law | as above |
+| Law A does NOT imply law B | A finite structure (tables for `*` and `f`) satisfying A and failing B | evaluate both laws on every assignment, `src/findmodel.py: check_model` (independent of z3 and numpy) |
+| Law A implies law B | A derivation (chain of rewriting steps) | z3 `unsat` is a lead only. A stored derivation with an independent checker is planned |
+| Law forces a one-element structure | Same as implication, a derivation of `x = y` | as above |
 
-## Status labels (use exactly these)
+## Status labels (use exactly these, highest earned)
 
-- `z3-only`: z3 said unsat or sat, nothing else checked it.
-- `model-verified`: counterexample re-checked by plain evaluation. This is solid for non-implications.
-- `independent-prover`: second prover confirmed.
-- `lean-verified`: proof checked in Lean.
-- `known`: already in the literature (cite it). Do not present as new.
+`unverified` < `z3-only` < `model-verified` (non-implications only) < `independent-prover`
+< `lean-checked` < `lean-checked + fidelity-reviewed + literature-checked`
+
+Only the last one may be called a result. `known` means already in the literature: cite it.
 
 ## Files
 
-- `zero_model_laws.json`: laws with no model of size 2 or 3, with the models of size 4 to 6
-  we looked for. Status of each entry is in the file.
+None yet. Generated data lives in `../data` (git-ignored except the law list). The models for the
+nine laws with no small model are in `../../laws-without-small-models/results`.
 
-No `lean-verified` results yet.
+Planned: one file per certified claim group, each with its certificate and re-check command.
