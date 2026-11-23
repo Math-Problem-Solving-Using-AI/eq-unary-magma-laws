@@ -4,6 +4,56 @@
 > **LLMs and tools:** read [`llms.txt`](llms.txt). **Autonomous sessions:** [`LOOP.md`](LOOP.md) and [`STATE.md`](STATE.md). License: Apache-2.0.
 > **Look up any pair of laws:** `python src/query.py "x*y = x" "x*(y*z) = x"`
 
+## The answer in plain words
+
+1. **The question.** Take a set with two operations: `*`, which combines two elements into one, and `f`, which turns
+   one element into one element. Nothing else is assumed. Such a set is called a **structure**. A **law** is an
+   equation, such as `x*y = x`, that must hold for every choice of the letters. Law A **implies** law B when every
+   structure where A holds also has B holding. The question: for every ordered pair of different laws with at most 3
+   symbols `*` and `f` (712 laws, 712 x 711 = 506,232 pairs), does A imply B?
+
+2. **The answer.** Every one of the 506,232 pairs has an answer, and each answer has a machine check that the
+   independent checks below re-run:
+
+   | Answer | Pairs | How it was checked | Label |
+   |--------|------:|--------------------|-------|
+   | does not imply | 337,304 | a small table (2 to 6 elements) where A holds and B fails, re-checked by plain code that tries every choice of the letters | `model-verified` |
+   | does not imply | 3,662 | an infinite structure where A holds and B fails; plain code checks most of it, but parts rest on z3 or on Lean proofs of the outside Equational Theories Project that were read, not re-run | `z3-only` level |
+   | implies | 163,074 | the solver z3 found a proof (147,177 of them because A forces a one-element structure, where every law holds) | `z3-only` |
+   | implies | 2,192 | a stored chain of replacement steps from A to B, replayed by plain code | `z3-only` level at most |
+   | **total** | **506,232** | 340,966 "does not imply", 165,266 "implies" | |
+
+   Words used in the table: **z3** is a computer program (an SMT solver) that searches for proofs and
+   counterexamples. **`model-verified`** and **`z3-only`** are labels from `docs/shared/VERIFICATION_PROTOCOL.md`:
+   the first means an explicit counterexample checked by plain code; the second means we trust z3, or a check of
+   about the same strength, without an independent proof.
+
+3. **A small example.** A = `x*y = x`, B = `x*y = y`. Take the 2 elements {0, 1} with `x*y = x` for all x, y (and
+   `f` sending both to 0). A holds by definition. B fails: `0*1 = 0`, not 1. So A does not imply B. In the other
+   direction, A = `x*y = x` does imply B = `x*(y*z) = x`: put `y*z` in place of `y` in A.
+
+4. **What it does NOT mean.**
+   - Nothing here is checked in Lean (a proof assistant), and nothing has passed the full protocol of
+     `docs/shared/VERIFICATION_PROTOCOL.md`. `z3-only` is not "proved": it rests on z3 being right.
+   - The 3,662 infinite counterexamples say nothing about finite structures: for some of these pairs every finite
+     structure where A holds also has B holding.
+   - Only laws up to 3 symbols are covered. Larger laws are a new question.
+   - "We found no earlier table of these laws" (`docs/PRIOR_WORK.md`, 2026-11-22) is not "nobody did it".
+
+5. **How to re-check.** Run the independent checks listed under "Reproduce" (CI runs them on every push). The counts
+   above come from
+
+   ```
+   python src/tally_answers.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results
+   ```
+
+   which ends with `total: 506,232 ordered pairs of different laws (712 x 711 = 506,232)` and `tally: OK`. It checks
+   that every pair left open by the stored table gets an answer from a result file and that no two answers disagree;
+   the other checks re-check the answers themselves. `src/query.py` answers one pair, but it reads only the stored
+   table and steps 08 to 12: for the 5,874 pairs answered in steps 13 to 29 it still says "open" (sometimes with the
+   ETP's verdict). The answers are in the result files those steps name; changing the stored table's format is the
+   owner's decision (see `STATE.md`).
+
 ## The problem
 
 A structure has a set, one binary operation `*`, and one unary (single-input) operation `f`,
