@@ -256,6 +256,31 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   (metatheorem entries). Both fixed before any output was kept.
 - 20 pairs still open (4 with `f`, 16 without).
 
+### Loop run 14 (step 23)
+
+- Open pairs, piece 4d-3, split: the ETP 73 construction only. Read `ManuallyProved/Equation73.lean` in full. Its
+  models are the free group with `x*y = f(y x^-1) x`; a seed (finite partial f) passing 4 finite conditions extends
+  to a total f by the Lean theorem `exists_extension`.
+- New checker `src/check_greedy_eq73.py` with its own free group code: the 3 seeds pass the 4 conditions, the
+  target law (or r with B implies r, code 3) fails at x = 1 from seed values only, normal and mirrored; bounded run
+  of the extension rule, 20,000 steps per seed, conditions checked, laws 565 and 86 evaluated directly at 4,225 pairs
+  each, 0 failures. Selftest 13 of 13. Gate and CI.
+- 10 open pairs (from 565 and 86) "does not imply", step 17 level (`z3-only` at most): the general theorem is the
+  ETP's Lean proof, read and not re-run. 10 pairs still open (4 with `f`, 6 without).
+- Mistake: two first mutations of the selftest (`x4` replaced by `x5` in a seed; an added value whose `f(a) a^-1`
+  was new) were accepted, correctly: they did not make the certificate wrong. Replaced by mutations that break a
+  condition.
+- Mistake: a README patch script wrote with the Windows default encoding, failed on `⁻¹` and left README.md empty.
+  Restored from the last commit (which held only this run's committed version) and redone with UTF-8.
+
+### Decisions taken by the loop (run 14)
+
+- Label for the 10 pairs: the certificate's finite part is re-checked by plain code here, the general extension
+  theorem is the ETP's Lean proof (not re-run). Same treatment as step 17 (a re-checked certificate resting on a
+  theorem not machine-checked here): recorded at the `z3-only` level, never higher, and the pairs count as answered.
+  Re-running the ETP's Lean file would raise the label, so it goes to "Optional later". No published format change,
+  nothing published, no cost.
+
 ### Decisions taken by the loop (run 11)
 
 - Queue order: the 4 pairs of 277 and 408 resisted steps 18, 19 and 20 and need a new idea. The 17 pairs without
@@ -299,6 +324,13 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - z3 results depend on the process state, not only on the time limit: a proof found in a pool worker
   was not found again in a single process with the same limit, but was found at once in a fresh pool.
   When re-checking z3 claims, try more than one process layout before calling a proof unrepeatable.
+
+- A mutation test must make the claim false, not only change the input. Replacing one fresh generator in a seed by
+  another gives an equally valid certificate, and a checker that accepts it is right. Pick mutations that break a
+  stated condition, and look at each "ACCEPTED" before calling the checker weak.
+- On Windows, Python's `open()` defaults to the ANSI code page: a script that reads and rewrites a Markdown file with
+  `⁻¹` in it fails at write time and leaves the file empty. Always pass `encoding="utf-8"`, and keep the file's line
+  endings (`newline=`).
 
 - Count the cases an idea applies to before writing code for it. Queue item 0b had zero cases.
 - A search that returns nothing in seconds needs a positive control: point it at cases with known

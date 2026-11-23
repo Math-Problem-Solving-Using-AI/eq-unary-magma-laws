@@ -6,16 +6,17 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 20 open pairs still open after step 21 (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 10 open pairs still open after step 23 (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **Open pairs, piece 4d-3: certificates for the 3 base constructions** (step 22 found that all 16 Austin pairs
-   rest on them: ETP 73 with 3 seeds in `ManuallyProved/Equation73.lean`, 10 pairs; ETP 118 greedy in
-   `Generated/Greedy/Eq118.lean`, 4 pairs; the Asterix model of ETP 65 in `Asterix.lean`, 2 pairs; chains in
-   `results/austin_chains.json`). Start with ETP 73. See whether the starting finite piece of each construction plus
-   its extension rule can be checked by plain code (the ETP blueprint, chapter "Infinite magma constructions", and
-   the Lean files), and with what label. If only a Lean re-run of the ETP files would check them, write under Blocked what the owner must decide.
+1. **Open pairs, piece 4d-3, rest: the ETP 118 greedy construction, then the Asterix model** (step 23 did ETP 73:
+   10 pairs settled by its 3 seeds, `src/check_greedy_eq73.py`). Next: `Generated/Greedy/Eq118.lean` (base entries
+   `Equation118_not_implies_Equation222` and `_274`, 4 pairs: 143 -> 498, 143 -> 565 mirrored, 508 -> 86, 508 -> 153;
+   chains in `results/austin_chains.json`), read it in full and check its finite seed and failure the same way, with
+   a bounded test of its extension rule. Then the Asterix model of ETP 65 (`Asterix.lean`, 2 pairs: 598 -> 224 and
+   88 -> 579 mirrored, each with a 2-step derivation already replayed in step 22). If one of them can only be checked
+   by re-running Lean, write under Blocked what the owner must decide.
 2. **Open pairs, piece 4f: the 4 pairs of `(x*y)*f(x) = y` and its mirror** (sources 277, targets 574 and 632;
    408, targets 122 and 128). Step 20 found no counterexample by adding one extra law of size up to 4, and the
    ETP rules out `f` given by a short formula. Needs a new idea: an infinite model built over the free model of
@@ -48,6 +49,9 @@ that already have a machine check, or extend the question.
    reporting it. Same reason as item 4.
 6. **Derivations for the 546 "holds in T_A" verdicts** of the step 16 table control (implications obtained by
    rewriting): store them as chains of steps for a derivation checker. Raises labels of answered pairs.
+
+7. **Re-run the ETP's Lean file `ManuallyProved/Equation73.lean`** (theorem `exists_extension`), or re-prove the
+   extension theorem here, for the 10 pairs of step 23. It raises the label of answered pairs.
 
 ## Done
 
@@ -101,15 +105,20 @@ that already have a machine check, or extend the question.
   structures from 3 constructions (ETP 73: 10 pairs, ETP 118: 4, Asterix for ETP 65: 2), plus 7 implications of
   our table (code 3) and 2 short derivations replayed here (`results/austin_chains.json`,
   `src/trace_austin_pairs.py`, selftest 12 of 12). Nothing settled; 20 pairs still open.
+- 2026-11-23: step 23 (open pairs, piece 4d-3, split): the ETP construction for `x*(x*(y*x)) = y` (law 565). Its 3
+  finite seeds pass the conditions of the ETP's extension theorem and make the target laws fail, checked by plain
+  code with a bounded test of the extension rule (`results/greedy_eq73.json`, `src/check_greedy_eq73.py`, selftest
+  13 of 13, gate and CI). 10 pairs (from 565 and its mirror 86) "does not imply", step 17 level; the ETP's Lean
+  theorem is not re-run. 10 pairs still open (4 with `f`, 6 without).
 
 ## Last iteration
 
-2026-11-23, loop run 13, step 22: for each of the 16 open pairs where the ETP says "no" but only infinite examples show it, the run found which infinite example of the ETP it rests on; all 16 rest on just 3 such constructions, and every other link of the argument is already in this repository; nothing new is settled, 20 pairs remain open.
-Next: check whether those 3 infinite constructions (starting with the one for `x*(x*(y*x)) = y`, which covers 10 pairs) can be checked by this repository's own code, and with what label.
+2026-11-23, loop run 14, step 23: the ETP builds its infinite examples for `x*(x*(y*x)) = y` from 3 short starting lists and one extension rule; this repository's own code now checks the 3 lists, shows the target laws fail in every example built from them, and tests the rule for 20,000 steps, so 10 open pairs are answered "does not imply" (the general rule's proof is the ETP's Lean proof, not re-run here); 10 pairs remain open.
+Next: do the same for the ETP's second construction (for `x*((y*x)*x) = y`, 4 pairs), then the "Asterix" example (2 pairs).
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
   `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
-  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18 and the 5 pairs of steps 19 and 21 (still code 6).
+  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21 and the 10 pairs of step 23 (still code 6).
