@@ -1,0 +1,7616 @@
+{
+ "32,35": {
+  "A": "f(x)*y = x",
+  "B": "f(x*x) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,g0))",
+  "B_right": "g0"
+ },
+ "32,37": {
+  "A": "f(x)*y = x",
+  "B": "f(x*y) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,g1))",
+  "B_right": "g0"
+ },
+ "32,60": {
+  "A": "f(x)*y = x",
+  "B": "x*x = x*y",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "32,64": {
+  "A": "f(x)*y = x",
+  "B": "x*y = x*z",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "32,436": {
+  "A": "f(x)*y = x",
+  "B": "f(x*(x*x)) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "32,438": {
+  "A": "f(x)*y = x",
+  "B": "f(x*(x*y)) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g0,g1)))",
+  "B_right": "g0"
+ },
+ "32,441": {
+  "A": "f(x)*y = x",
+  "B": "f(x*(y*x)) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "32,444": {
+  "A": "f(x)*y = x",
+  "B": "f(x*(y*y)) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g1)))",
+  "B_right": "g0"
+ },
+ "32,448": {
+  "A": "f(x)*y = x",
+  "B": "f(x*(y*z)) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(g0,P(g1,g2)))",
+  "B_right": "g0"
+ },
+ "32,451": {
+  "A": "f(x)*y = x",
+  "B": "f(x*f(x)) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,F(g0)))",
+  "B_right": "g0"
+ },
+ "32,453": {
+  "A": "f(x)*y = x",
+  "B": "f(x*f(y)) = x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,F(g1)))",
+  "B_right": "g0"
+ },
+ "32,578": {
+  "A": "f(x)*y = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "32,579": {
+  "A": "f(x)*y = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "32,583": {
+  "A": "f(x)*y = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "32,584": {
+  "A": "f(x)*y = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "32,585": {
+  "A": "f(x)*y = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "32,640": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "32,641": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "32,642": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "32,650": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "32,651": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "32,652": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "32,665": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "32,666": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "32,667": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "32,668": {
+  "A": "f(x)*y = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "32,682": {
+  "A": "f(x)*y = x",
+  "B": "x*f(x) = x*x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "32,683": {
+  "A": "f(x)*y = x",
+  "B": "x*f(x) = x*y",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "32,692": {
+  "A": "f(x)*y = x",
+  "B": "x*f(y) = x*x",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "32,693": {
+  "A": "f(x)*y = x",
+  "B": "x*f(y) = x*y",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "32,694": {
+  "A": "f(x)*y = x",
+  "B": "x*f(y) = x*z",
+  "rule": "f(x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "35,416": {
+  "A": "f(x*x) = x",
+  "B": "f(x)*f(x) = x",
+  "rule": "f(x*x) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),F(g0))",
+  "B_right": "g0"
+ },
+ "37,30": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*x = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "g0"
+ },
+ "37,32": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*y = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "g0"
+ },
+ "37,60": {
+  "A": "f(x*y) = x",
+  "B": "x*x = x*y",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "37,64": {
+  "A": "f(x*y) = x",
+  "B": "x*y = x*z",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "37,401": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*(x*x) = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),P(g0,g0))",
+  "B_right": "g0"
+ },
+ "37,403": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*(x*y) = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g0,g1))",
+  "B_right": "g0"
+ },
+ "37,406": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*(y*x) = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g1,g0))",
+  "B_right": "g0"
+ },
+ "37,409": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*(y*y) = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g1,g1))",
+  "B_right": "g0"
+ },
+ "37,413": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*(y*z) = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),P(g1,g2))",
+  "B_right": "g0"
+ },
+ "37,416": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*f(x) = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),F(g0))",
+  "B_right": "g0"
+ },
+ "37,418": {
+  "A": "f(x*y) = x",
+  "B": "f(x)*f(y) = x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),F(g1))",
+  "B_right": "g0"
+ },
+ "37,578": {
+  "A": "f(x*y) = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "37,579": {
+  "A": "f(x*y) = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "37,583": {
+  "A": "f(x*y) = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "37,584": {
+  "A": "f(x*y) = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "37,585": {
+  "A": "f(x*y) = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "37,640": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "37,641": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "37,642": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "37,650": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "37,651": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "37,652": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "37,665": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "37,666": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "37,667": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "37,668": {
+  "A": "f(x*y) = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "37,682": {
+  "A": "f(x*y) = x",
+  "B": "x*f(x) = x*x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "37,683": {
+  "A": "f(x*y) = x",
+  "B": "x*f(x) = x*y",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "37,692": {
+  "A": "f(x*y) = x",
+  "B": "x*f(y) = x*x",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "37,693": {
+  "A": "f(x*y) = x",
+  "B": "x*f(y) = x*y",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "37,694": {
+  "A": "f(x*y) = x",
+  "B": "x*f(y) = x*z",
+  "rule": "f(x*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "38,55": {
+  "A": "f(x*y) = y",
+  "B": "x*f(x) = x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "g0"
+ },
+ "38,58": {
+  "A": "f(x*y) = y",
+  "B": "x*f(y) = y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "g1"
+ },
+ "38,61": {
+  "A": "f(x*y) = y",
+  "B": "x*x = y*x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "38,68": {
+  "A": "f(x*y) = y",
+  "B": "x*y = z*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "38,218": {
+  "A": "f(x*y) = y",
+  "B": "(x*x)*f(x) = x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),F(g0))",
+  "B_right": "g0"
+ },
+ "38,221": {
+  "A": "f(x*y) = y",
+  "B": "(x*x)*f(y) = y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),F(g1))",
+  "B_right": "g1"
+ },
+ "38,223": {
+  "A": "f(x*y) = y",
+  "B": "(x*x)*x = x*x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "38,225": {
+  "A": "f(x*y) = y",
+  "B": "(x*x)*x = y*x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "38,229": {
+  "A": "f(x*y) = y",
+  "B": "(x*x)*y = x*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "38,232": {
+  "A": "f(x*y) = y",
+  "B": "(x*x)*y = y*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "38,236": {
+  "A": "f(x*y) = y",
+  "B": "(x*x)*y = z*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "38,275": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*f(x) = x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),F(g0))",
+  "B_right": "g0"
+ },
+ "38,279": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*f(y) = y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),F(g1))",
+  "B_right": "g1"
+ },
+ "38,284": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*f(z) = z",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),F(g2))",
+  "B_right": "g2"
+ },
+ "38,285": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*x = x*x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "38,288": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*x = y*x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "38,292": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*x = z*x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "38,296": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*y = x*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "38,299": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*y = y*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "38,303": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*y = z*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "38,309": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*z = w*z",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "38,313": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*z = x*z",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "38,317": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*z = y*z",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "38,321": {
+  "A": "f(x*y) = y",
+  "B": "(x*y)*z = z*z",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "38,416": {
+  "A": "f(x*y) = y",
+  "B": "f(x)*f(x) = x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),F(g0))",
+  "B_right": "g0"
+ },
+ "38,419": {
+  "A": "f(x*y) = y",
+  "B": "f(x)*f(y) = y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),F(g1))",
+  "B_right": "g1"
+ },
+ "38,421": {
+  "A": "f(x*y) = y",
+  "B": "f(x)*x = x*x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "38,423": {
+  "A": "f(x*y) = y",
+  "B": "f(x)*x = y*x",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "38,427": {
+  "A": "f(x*y) = y",
+  "B": "f(x)*y = x*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "38,430": {
+  "A": "f(x*y) = y",
+  "B": "f(x)*y = y*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "38,434": {
+  "A": "f(x*y) = y",
+  "B": "f(x)*y = z*y",
+  "rule": "f(x*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "58,35": {
+  "A": "x*f(y) = y",
+  "B": "f(x*x) = x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,g0))",
+  "B_right": "g0"
+ },
+ "58,38": {
+  "A": "x*f(y) = y",
+  "B": "f(x*y) = y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,g1))",
+  "B_right": "g1"
+ },
+ "58,61": {
+  "A": "x*f(y) = y",
+  "B": "x*x = y*x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "58,68": {
+  "A": "x*f(y) = y",
+  "B": "x*y = z*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "58,223": {
+  "A": "x*f(y) = y",
+  "B": "(x*x)*x = x*x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "58,225": {
+  "A": "x*f(y) = y",
+  "B": "(x*x)*x = y*x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "58,229": {
+  "A": "x*f(y) = y",
+  "B": "(x*x)*y = x*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "58,232": {
+  "A": "x*f(y) = y",
+  "B": "(x*x)*y = y*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "58,236": {
+  "A": "x*f(y) = y",
+  "B": "(x*x)*y = z*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "58,285": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*x = x*x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "58,288": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*x = y*x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "58,292": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*x = z*x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "58,296": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*y = x*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "58,299": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*y = y*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "58,303": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*y = z*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "58,309": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*z = w*z",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "58,313": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*z = x*z",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "58,317": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*z = y*z",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "58,321": {
+  "A": "x*f(y) = y",
+  "B": "(x*y)*z = z*z",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "58,322": {
+  "A": "x*f(y) = y",
+  "B": "f((x*x)*x) = x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(P(g0,g0),g0))",
+  "B_right": "g0"
+ },
+ "58,325": {
+  "A": "x*f(y) = y",
+  "B": "f((x*x)*y) = y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g0),g1))",
+  "B_right": "g1"
+ },
+ "58,327": {
+  "A": "x*f(y) = y",
+  "B": "f((x*y)*x) = x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g0))",
+  "B_right": "g0"
+ },
+ "58,331": {
+  "A": "x*f(y) = y",
+  "B": "f((x*y)*y) = y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g1))",
+  "B_right": "g1"
+ },
+ "58,336": {
+  "A": "x*f(y) = y",
+  "B": "f((x*y)*z) = z",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(P(g0,g1),g2))",
+  "B_right": "g2"
+ },
+ "58,351": {
+  "A": "x*f(y) = y",
+  "B": "f(f(x)*x) = x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(F(g0),g0))",
+  "B_right": "g0"
+ },
+ "58,354": {
+  "A": "x*f(y) = y",
+  "B": "f(f(x)*y) = y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(F(g0),g1))",
+  "B_right": "g1"
+ },
+ "58,421": {
+  "A": "x*f(y) = y",
+  "B": "f(x)*x = x*x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "58,423": {
+  "A": "x*f(y) = y",
+  "B": "f(x)*x = y*x",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "58,427": {
+  "A": "x*f(y) = y",
+  "B": "f(x)*y = x*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "58,430": {
+  "A": "x*f(y) = y",
+  "B": "f(x)*y = y*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "58,434": {
+  "A": "x*f(y) = y",
+  "B": "f(x)*y = z*y",
+  "rule": "x*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "123,60": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*x = x*y",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "123,64": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*y = x*z",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "123,126": {
+  "A": "(f(x)*x)*y = x",
+  "B": "(f(x)*y)*x = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g1),g0)",
+  "B_right": "g0"
+ },
+ "123,129": {
+  "A": "(f(x)*x)*y = x",
+  "B": "(f(x)*y)*y = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g1),g1)",
+  "B_right": "g0"
+ },
+ "123,133": {
+  "A": "(f(x)*x)*y = x",
+  "B": "(f(x)*y)*z = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(F(g0),g1),g2)",
+  "B_right": "g0"
+ },
+ "123,322": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f((x*x)*x) = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(P(g0,g0),g0))",
+  "B_right": "g0"
+ },
+ "123,324": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f((x*x)*y) = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g0),g1))",
+  "B_right": "g0"
+ },
+ "123,327": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f((x*y)*x) = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g0))",
+  "B_right": "g0"
+ },
+ "123,330": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f((x*y)*y) = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g1))",
+  "B_right": "g0"
+ },
+ "123,334": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f((x*y)*z) = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(P(g0,g1),g2))",
+  "B_right": "g0"
+ },
+ "123,463": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f(x*x)*x = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(P(g0,g0)),g0)",
+  "B_right": "g0"
+ },
+ "123,465": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f(x*x)*y = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g0)),g1)",
+  "B_right": "g0"
+ },
+ "123,481": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f(x*y)*x = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g0)",
+  "B_right": "g0"
+ },
+ "123,484": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f(x*y)*y = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g1)",
+  "B_right": "g0"
+ },
+ "123,488": {
+  "A": "(f(x)*x)*y = x",
+  "B": "f(x*y)*z = x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(P(g0,g1)),g2)",
+  "B_right": "g0"
+ },
+ "123,578": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "123,579": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "123,583": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "123,584": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "123,585": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "123,640": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "123,641": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "123,642": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "123,650": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "123,651": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "123,652": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "123,665": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "123,666": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "123,667": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "123,668": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "123,682": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*f(x) = x*x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "123,683": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*f(x) = x*y",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "123,692": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*f(y) = x*x",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "123,693": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*f(y) = x*y",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "123,694": {
+  "A": "(f(x)*x)*y = x",
+  "B": "x*f(y) = x*z",
+  "rule": "(f(x)*x)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "127,401": {
+  "A": "(f(x)*y)*x = y",
+  "B": "f(x)*(x*x) = x",
+  "rule": "(f(x)*y)*x -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),P(g0,g0))",
+  "B_right": "g0"
+ },
+ "127,407": {
+  "A": "(f(x)*y)*x = y",
+  "B": "f(x)*(y*x) = y",
+  "rule": "(f(x)*y)*x -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g1,g0))",
+  "B_right": "g1"
+ },
+ "129,322": {
+  "A": "(f(x)*y)*y = x",
+  "B": "f((x*x)*x) = x",
+  "rule": "(f(x)*y)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(P(g0,g0),g0))",
+  "B_right": "g0"
+ },
+ "129,330": {
+  "A": "(f(x)*y)*y = x",
+  "B": "f((x*y)*y) = x",
+  "rule": "(f(x)*y)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g1))",
+  "B_right": "g0"
+ },
+ "129,463": {
+  "A": "(f(x)*y)*y = x",
+  "B": "f(x*x)*x = x",
+  "rule": "(f(x)*y)*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(P(g0,g0)),g0)",
+  "B_right": "g0"
+ },
+ "129,484": {
+  "A": "(f(x)*y)*y = x",
+  "B": "f(x*y)*y = x",
+  "rule": "(f(x)*y)*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g1)",
+  "B_right": "g0"
+ },
+ "133,60": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*x = x*y",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "133,64": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*y = x*z",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "133,322": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f((x*x)*x) = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(P(g0,g0),g0))",
+  "B_right": "g0"
+ },
+ "133,324": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f((x*x)*y) = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g0),g1))",
+  "B_right": "g0"
+ },
+ "133,327": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f((x*y)*x) = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g0))",
+  "B_right": "g0"
+ },
+ "133,330": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f((x*y)*y) = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g1))",
+  "B_right": "g0"
+ },
+ "133,334": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f((x*y)*z) = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(P(g0,g1),g2))",
+  "B_right": "g0"
+ },
+ "133,463": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f(x*x)*x = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(P(g0,g0)),g0)",
+  "B_right": "g0"
+ },
+ "133,465": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f(x*x)*y = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g0)),g1)",
+  "B_right": "g0"
+ },
+ "133,481": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f(x*y)*x = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g0)",
+  "B_right": "g0"
+ },
+ "133,484": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f(x*y)*y = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g1)",
+  "B_right": "g0"
+ },
+ "133,488": {
+  "A": "(f(x)*y)*z = x",
+  "B": "f(x*y)*z = x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(P(g0,g1)),g2)",
+  "B_right": "g0"
+ },
+ "133,578": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "133,579": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "133,583": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "133,584": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "133,585": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "133,640": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "133,641": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "133,642": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "133,650": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "133,651": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "133,652": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "133,665": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "133,666": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "133,667": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "133,668": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "133,682": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*f(x) = x*x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "133,683": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*f(x) = x*y",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "133,692": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*f(y) = x*x",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "133,693": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*f(y) = x*y",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "133,694": {
+  "A": "(f(x)*y)*z = x",
+  "B": "x*f(y) = x*z",
+  "rule": "(f(x)*y)*z -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "221,322": {
+  "A": "(x*x)*f(y) = y",
+  "B": "f((x*x)*x) = x",
+  "rule": "(x*x)*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(P(g0,g0),g0))",
+  "B_right": "g0"
+ },
+ "221,325": {
+  "A": "(x*x)*f(y) = y",
+  "B": "f((x*x)*y) = y",
+  "rule": "(x*x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g0),g1))",
+  "B_right": "g1"
+ },
+ "324,60": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*x = x*y",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "324,64": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*y = x*z",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "324,121": {
+  "A": "f((x*x)*y) = x",
+  "B": "(f(x)*x)*x = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(F(g0),g0),g0)",
+  "B_right": "g0"
+ },
+ "324,123": {
+  "A": "f((x*x)*y) = x",
+  "B": "(f(x)*x)*y = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g0),g1)",
+  "B_right": "g0"
+ },
+ "324,126": {
+  "A": "f((x*x)*y) = x",
+  "B": "(f(x)*y)*x = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g1),g0)",
+  "B_right": "g0"
+ },
+ "324,129": {
+  "A": "f((x*x)*y) = x",
+  "B": "(f(x)*y)*y = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g1),g1)",
+  "B_right": "g0"
+ },
+ "324,133": {
+  "A": "f((x*x)*y) = x",
+  "B": "(f(x)*y)*z = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(F(g0),g1),g2)",
+  "B_right": "g0"
+ },
+ "324,327": {
+  "A": "f((x*x)*y) = x",
+  "B": "f((x*y)*x) = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g0))",
+  "B_right": "g0"
+ },
+ "324,330": {
+  "A": "f((x*x)*y) = x",
+  "B": "f((x*y)*y) = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g1))",
+  "B_right": "g0"
+ },
+ "324,334": {
+  "A": "f((x*x)*y) = x",
+  "B": "f((x*y)*z) = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(P(g0,g1),g2))",
+  "B_right": "g0"
+ },
+ "324,463": {
+  "A": "f((x*x)*y) = x",
+  "B": "f(x*x)*x = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(P(g0,g0)),g0)",
+  "B_right": "g0"
+ },
+ "324,465": {
+  "A": "f((x*x)*y) = x",
+  "B": "f(x*x)*y = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g0)),g1)",
+  "B_right": "g0"
+ },
+ "324,481": {
+  "A": "f((x*x)*y) = x",
+  "B": "f(x*y)*x = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g0)",
+  "B_right": "g0"
+ },
+ "324,484": {
+  "A": "f((x*x)*y) = x",
+  "B": "f(x*y)*y = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g1)",
+  "B_right": "g0"
+ },
+ "324,488": {
+  "A": "f((x*x)*y) = x",
+  "B": "f(x*y)*z = x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(P(g0,g1)),g2)",
+  "B_right": "g0"
+ },
+ "324,578": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "324,579": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "324,583": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "324,584": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "324,585": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "324,640": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "324,641": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "324,642": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "324,650": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "324,651": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "324,652": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "324,665": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "324,666": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "324,667": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "324,668": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "324,682": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*f(x) = x*x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "324,683": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*f(x) = x*y",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "324,692": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*f(y) = x*x",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "324,693": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*f(y) = x*y",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "324,694": {
+  "A": "f((x*x)*y) = x",
+  "B": "x*f(y) = x*z",
+  "rule": "f((x*x)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "325,218": {
+  "A": "f((x*x)*y) = y",
+  "B": "(x*x)*f(x) = x",
+  "rule": "f((x*x)*y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),F(g0))",
+  "B_right": "g0"
+ },
+ "325,221": {
+  "A": "f((x*x)*y) = y",
+  "B": "(x*x)*f(y) = y",
+  "rule": "f((x*x)*y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),F(g1))",
+  "B_right": "g1"
+ },
+ "328,188": {
+  "A": "f((x*y)*x) = y",
+  "B": "(x*f(x))*x = x",
+  "rule": "f((x*y)*x) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,F(g0)),g0)",
+  "B_right": "g0"
+ },
+ "328,194": {
+  "A": "f((x*y)*x) = y",
+  "B": "(x*f(y))*x = y",
+  "rule": "f((x*y)*x) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,F(g1)),g0)",
+  "B_right": "g1"
+ },
+ "328,687": {
+  "A": "f((x*y)*x) = y",
+  "B": "x*f(x*x) = x",
+  "rule": "f((x*y)*x) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "328,703": {
+  "A": "f((x*y)*x) = y",
+  "B": "x*f(y*x) = y",
+  "rule": "f((x*y)*x) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g0)))",
+  "B_right": "g1"
+ },
+ "330,121": {
+  "A": "f((x*y)*y) = x",
+  "B": "(f(x)*x)*x = x",
+  "rule": "f((x*y)*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(F(g0),g0),g0)",
+  "B_right": "g0"
+ },
+ "330,129": {
+  "A": "f((x*y)*y) = x",
+  "B": "(f(x)*y)*y = x",
+  "rule": "f((x*y)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g1),g1)",
+  "B_right": "g0"
+ },
+ "330,463": {
+  "A": "f((x*y)*y) = x",
+  "B": "f(x*x)*x = x",
+  "rule": "f((x*y)*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(P(g0,g0)),g0)",
+  "B_right": "g0"
+ },
+ "330,484": {
+  "A": "f((x*y)*y) = x",
+  "B": "f(x*y)*y = x",
+  "rule": "f((x*y)*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g1)",
+  "B_right": "g0"
+ },
+ "331,55": {
+  "A": "f((x*y)*y) = y",
+  "B": "x*f(x) = x",
+  "rule": "f((x*y)*y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "g0"
+ },
+ "334,60": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*x = x*y",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "334,64": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*y = x*z",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "334,121": {
+  "A": "f((x*y)*z) = x",
+  "B": "(f(x)*x)*x = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(F(g0),g0),g0)",
+  "B_right": "g0"
+ },
+ "334,123": {
+  "A": "f((x*y)*z) = x",
+  "B": "(f(x)*x)*y = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g0),g1)",
+  "B_right": "g0"
+ },
+ "334,126": {
+  "A": "f((x*y)*z) = x",
+  "B": "(f(x)*y)*x = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g1),g0)",
+  "B_right": "g0"
+ },
+ "334,129": {
+  "A": "f((x*y)*z) = x",
+  "B": "(f(x)*y)*y = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(F(g0),g1),g1)",
+  "B_right": "g0"
+ },
+ "334,133": {
+  "A": "f((x*y)*z) = x",
+  "B": "(f(x)*y)*z = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(F(g0),g1),g2)",
+  "B_right": "g0"
+ },
+ "334,463": {
+  "A": "f((x*y)*z) = x",
+  "B": "f(x*x)*x = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(P(g0,g0)),g0)",
+  "B_right": "g0"
+ },
+ "334,465": {
+  "A": "f((x*y)*z) = x",
+  "B": "f(x*x)*y = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g0)),g1)",
+  "B_right": "g0"
+ },
+ "334,481": {
+  "A": "f((x*y)*z) = x",
+  "B": "f(x*y)*x = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g0)",
+  "B_right": "g0"
+ },
+ "334,484": {
+  "A": "f((x*y)*z) = x",
+  "B": "f(x*y)*y = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g1)",
+  "B_right": "g0"
+ },
+ "334,488": {
+  "A": "f((x*y)*z) = x",
+  "B": "f(x*y)*z = x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(P(g0,g1)),g2)",
+  "B_right": "g0"
+ },
+ "334,578": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "334,579": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "334,583": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "334,584": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "334,585": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "334,640": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "334,641": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "334,642": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "334,650": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "334,651": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "334,652": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "334,665": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "334,666": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "334,667": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "334,668": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "334,682": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*f(x) = x*x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "334,683": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*f(x) = x*y",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "334,692": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*f(y) = x*x",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "334,693": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*f(y) = x*y",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "334,694": {
+  "A": "f((x*y)*z) = x",
+  "B": "x*f(y) = x*z",
+  "rule": "f((x*y)*z) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "336,35": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x*x) = x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,g0))",
+  "B_right": "g0"
+ },
+ "336,38": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x*y) = y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,g1))",
+  "B_right": "g1"
+ },
+ "336,55": {
+  "A": "f((x*y)*z) = z",
+  "B": "x*f(x) = x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "g0"
+ },
+ "336,58": {
+  "A": "f((x*y)*z) = z",
+  "B": "x*f(y) = y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "g1"
+ },
+ "336,61": {
+  "A": "f((x*y)*z) = z",
+  "B": "x*x = y*x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "336,68": {
+  "A": "f((x*y)*z) = z",
+  "B": "x*y = z*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "336,218": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*x)*f(x) = x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),F(g0))",
+  "B_right": "g0"
+ },
+ "336,221": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*x)*f(y) = y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),F(g1))",
+  "B_right": "g1"
+ },
+ "336,223": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*x)*x = x*x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "336,225": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*x)*x = y*x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "336,229": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*x)*y = x*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "336,232": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*x)*y = y*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "336,236": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*x)*y = z*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "336,275": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*f(x) = x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),F(g0))",
+  "B_right": "g0"
+ },
+ "336,279": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*f(y) = y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),F(g1))",
+  "B_right": "g1"
+ },
+ "336,284": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*f(z) = z",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),F(g2))",
+  "B_right": "g2"
+ },
+ "336,285": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*x = x*x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "336,288": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*x = y*x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "336,292": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*x = z*x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "336,296": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*y = x*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "336,299": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*y = y*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "336,303": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*y = z*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "336,309": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*z = w*z",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "336,313": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*z = x*z",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "336,317": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*z = y*z",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "336,321": {
+  "A": "f((x*y)*z) = z",
+  "B": "(x*y)*z = z*z",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "336,351": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(f(x)*x) = x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(F(g0),g0))",
+  "B_right": "g0"
+ },
+ "336,354": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(f(x)*y) = y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(F(g0),g1))",
+  "B_right": "g1"
+ },
+ "336,416": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x)*f(x) = x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),F(g0))",
+  "B_right": "g0"
+ },
+ "336,419": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x)*f(y) = y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),F(g1))",
+  "B_right": "g1"
+ },
+ "336,421": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x)*x = x*x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "336,423": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x)*x = y*x",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "336,427": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x)*y = x*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "336,430": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x)*y = y*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "336,434": {
+  "A": "f((x*y)*z) = z",
+  "B": "f(x)*y = z*y",
+  "rule": "f((x*y)*z) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "348,60": {
+  "A": "f(f(x))*y = x",
+  "B": "x*x = x*y",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "348,64": {
+  "A": "f(f(x))*y = x",
+  "B": "x*y = x*z",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "348,351": {
+  "A": "f(f(x))*y = x",
+  "B": "f(f(x)*x) = x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(F(g0),g0))",
+  "B_right": "g0"
+ },
+ "348,353": {
+  "A": "f(f(x))*y = x",
+  "B": "f(f(x)*y) = x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(F(g0),g1))",
+  "B_right": "g0"
+ },
+ "348,356": {
+  "A": "f(f(x))*y = x",
+  "B": "f(f(x*x)) = x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "348,358": {
+  "A": "f(f(x))*y = x",
+  "B": "f(f(x*y)) = x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(F(P(g0,g1)))",
+  "B_right": "g0"
+ },
+ "348,578": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "348,579": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "348,583": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "348,584": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "348,585": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "348,640": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "348,641": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "348,642": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "348,650": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "348,651": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "348,652": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "348,665": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "348,666": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "348,667": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "348,668": {
+  "A": "f(f(x))*y = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "348,682": {
+  "A": "f(f(x))*y = x",
+  "B": "x*f(x) = x*x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "348,683": {
+  "A": "f(f(x))*y = x",
+  "B": "x*f(x) = x*y",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "348,692": {
+  "A": "f(f(x))*y = x",
+  "B": "x*f(y) = x*x",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "348,693": {
+  "A": "f(f(x))*y = x",
+  "B": "x*f(y) = x*y",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "348,694": {
+  "A": "f(f(x))*y = x",
+  "B": "x*f(y) = x*z",
+  "rule": "f(f(x))*y -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "358,60": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*x = x*y",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "358,64": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*y = x*z",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "358,346": {
+  "A": "f(f(x*y)) = x",
+  "B": "f(f(x))*x = x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(F(g0)),g0)",
+  "B_right": "g0"
+ },
+ "358,348": {
+  "A": "f(f(x*y)) = x",
+  "B": "f(f(x))*y = x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(F(g0)),g1)",
+  "B_right": "g0"
+ },
+ "358,351": {
+  "A": "f(f(x*y)) = x",
+  "B": "f(f(x)*x) = x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(F(g0),g0))",
+  "B_right": "g0"
+ },
+ "358,353": {
+  "A": "f(f(x*y)) = x",
+  "B": "f(f(x)*y) = x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(F(g0),g1))",
+  "B_right": "g0"
+ },
+ "358,578": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "358,579": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "358,583": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "358,584": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "358,585": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "358,640": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "358,641": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "358,642": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "358,650": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "358,651": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "358,652": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "358,665": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "358,666": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "358,667": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "358,668": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "358,682": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*f(x) = x*x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "358,683": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*f(x) = x*y",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "358,692": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*f(y) = x*x",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "358,693": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*f(y) = x*y",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "358,694": {
+  "A": "f(f(x*y)) = x",
+  "B": "x*f(y) = x*z",
+  "rule": "f(f(x*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "359,61": {
+  "A": "f(f(x*y)) = y",
+  "B": "x*x = y*x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "359,68": {
+  "A": "f(f(x*y)) = y",
+  "B": "x*y = z*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "359,223": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*x)*x = x*x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "359,225": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*x)*x = y*x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "359,229": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*x)*y = x*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "359,232": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*x)*y = y*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "359,236": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*x)*y = z*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "359,285": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*x = x*x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "359,288": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*x = y*x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "359,292": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*x = z*x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "359,296": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*y = x*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "359,299": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*y = y*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "359,303": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*y = z*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "359,309": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*z = w*z",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "359,313": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*z = x*z",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "359,317": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*z = y*z",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "359,321": {
+  "A": "f(f(x*y)) = y",
+  "B": "(x*y)*z = z*z",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "359,421": {
+  "A": "f(f(x*y)) = y",
+  "B": "f(x)*x = x*x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "359,423": {
+  "A": "f(f(x*y)) = y",
+  "B": "f(x)*x = y*x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "359,427": {
+  "A": "f(f(x*y)) = y",
+  "B": "f(x)*y = x*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "359,430": {
+  "A": "f(f(x*y)) = y",
+  "B": "f(x)*y = y*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "359,434": {
+  "A": "f(f(x*y)) = y",
+  "B": "f(x)*y = z*y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "359,451": {
+  "A": "f(f(x*y)) = y",
+  "B": "f(x*f(x)) = x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,F(g0)))",
+  "B_right": "g0"
+ },
+ "359,454": {
+  "A": "f(f(x*y)) = y",
+  "B": "f(x*f(y)) = y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,F(g1)))",
+  "B_right": "g1"
+ },
+ "359,677": {
+  "A": "f(f(x*y)) = y",
+  "B": "x*f(f(x)) = x",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(F(g0)))",
+  "B_right": "g0"
+ },
+ "359,680": {
+  "A": "f(f(x*y)) = y",
+  "B": "x*f(f(y)) = y",
+  "rule": "f(f(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(F(g1)))",
+  "B_right": "g1"
+ },
+ "409,436": {
+  "A": "f(x)*(y*y) = x",
+  "B": "f(x*(x*x)) = x",
+  "rule": "f(x)*(y*y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "409,444": {
+  "A": "f(x)*(y*y) = x",
+  "B": "f(x*(y*y)) = x",
+  "rule": "f(x)*(y*y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g1)))",
+  "B_right": "g0"
+ },
+ "416,35": {
+  "A": "f(x)*f(x) = x",
+  "B": "f(x*x) = x",
+  "rule": "f(x)*f(x) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,g0))",
+  "B_right": "g0"
+ },
+ "418,30": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x)*x = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "g0"
+ },
+ "418,32": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x)*y = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "g0"
+ },
+ "418,35": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*x) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,g0))",
+  "B_right": "g0"
+ },
+ "418,37": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*y) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,g1))",
+  "B_right": "g0"
+ },
+ "418,60": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*x = x*y",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "418,64": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*y = x*z",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "418,401": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x)*(x*x) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),P(g0,g0))",
+  "B_right": "g0"
+ },
+ "418,403": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x)*(x*y) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g0,g1))",
+  "B_right": "g0"
+ },
+ "418,406": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x)*(y*x) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g1,g0))",
+  "B_right": "g0"
+ },
+ "418,409": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x)*(y*y) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g1,g1))",
+  "B_right": "g0"
+ },
+ "418,413": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x)*(y*z) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),P(g1,g2))",
+  "B_right": "g0"
+ },
+ "418,436": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*(x*x)) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "418,438": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*(x*y)) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g0,g1)))",
+  "B_right": "g0"
+ },
+ "418,441": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*(y*x)) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "418,444": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*(y*y)) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g1)))",
+  "B_right": "g0"
+ },
+ "418,448": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*(y*z)) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(g0,P(g1,g2)))",
+  "B_right": "g0"
+ },
+ "418,451": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*f(x)) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,F(g0)))",
+  "B_right": "g0"
+ },
+ "418,453": {
+  "A": "f(x)*f(y) = x",
+  "B": "f(x*f(y)) = x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,F(g1)))",
+  "B_right": "g0"
+ },
+ "418,578": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "418,579": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "418,583": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "418,584": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "418,585": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "418,640": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "418,641": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "418,642": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "418,650": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "418,651": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "418,652": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "418,665": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "418,666": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "418,667": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "418,668": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "418,682": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*f(x) = x*x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "418,683": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*f(x) = x*y",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "418,692": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*f(y) = x*x",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "418,693": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*f(y) = x*y",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "418,694": {
+  "A": "f(x)*f(y) = x",
+  "B": "x*f(y) = x*z",
+  "rule": "f(x)*f(y) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "419,35": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(x*x) = x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,g0))",
+  "B_right": "g0"
+ },
+ "419,38": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(x*y) = y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,g1))",
+  "B_right": "g1"
+ },
+ "419,55": {
+  "A": "f(x)*f(y) = y",
+  "B": "x*f(x) = x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "g0"
+ },
+ "419,58": {
+  "A": "f(x)*f(y) = y",
+  "B": "x*f(y) = y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "g1"
+ },
+ "419,61": {
+  "A": "f(x)*f(y) = y",
+  "B": "x*x = y*x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "419,68": {
+  "A": "f(x)*f(y) = y",
+  "B": "x*y = z*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "419,218": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*x)*f(x) = x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),F(g0))",
+  "B_right": "g0"
+ },
+ "419,221": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*x)*f(y) = y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),F(g1))",
+  "B_right": "g1"
+ },
+ "419,223": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*x)*x = x*x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "419,225": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*x)*x = y*x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "419,229": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*x)*y = x*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "419,232": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*x)*y = y*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "419,236": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*x)*y = z*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "419,275": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*f(x) = x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),F(g0))",
+  "B_right": "g0"
+ },
+ "419,279": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*f(y) = y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),F(g1))",
+  "B_right": "g1"
+ },
+ "419,284": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*f(z) = z",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),F(g2))",
+  "B_right": "g2"
+ },
+ "419,285": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*x = x*x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "419,288": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*x = y*x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "419,292": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*x = z*x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "419,296": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*y = x*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "419,299": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*y = y*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "419,303": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*y = z*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "419,309": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*z = w*z",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "419,313": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*z = x*z",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "419,317": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*z = y*z",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "419,321": {
+  "A": "f(x)*f(y) = y",
+  "B": "(x*y)*z = z*z",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "419,322": {
+  "A": "f(x)*f(y) = y",
+  "B": "f((x*x)*x) = x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(P(g0,g0),g0))",
+  "B_right": "g0"
+ },
+ "419,325": {
+  "A": "f(x)*f(y) = y",
+  "B": "f((x*x)*y) = y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g0),g1))",
+  "B_right": "g1"
+ },
+ "419,327": {
+  "A": "f(x)*f(y) = y",
+  "B": "f((x*y)*x) = x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g0))",
+  "B_right": "g0"
+ },
+ "419,331": {
+  "A": "f(x)*f(y) = y",
+  "B": "f((x*y)*y) = y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(P(g0,g1),g1))",
+  "B_right": "g1"
+ },
+ "419,336": {
+  "A": "f(x)*f(y) = y",
+  "B": "f((x*y)*z) = z",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(P(g0,g1),g2))",
+  "B_right": "g2"
+ },
+ "419,351": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(f(x)*x) = x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(F(g0),g0))",
+  "B_right": "g0"
+ },
+ "419,354": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(f(x)*y) = y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(F(g0),g1))",
+  "B_right": "g1"
+ },
+ "419,421": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(x)*x = x*x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "419,423": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(x)*x = y*x",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "419,427": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(x)*y = x*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "419,430": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(x)*y = y*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "419,434": {
+  "A": "f(x)*f(y) = y",
+  "B": "f(x)*y = z*y",
+  "rule": "f(x)*f(y) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "438,30": {
+  "A": "f(x*(x*y)) = x",
+  "B": "f(x)*x = x",
+  "rule": "f(x*(x*y)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "g0"
+ },
+ "439,573": {
+  "A": "f(x*(x*y)) = y",
+  "B": "x*(x*f(x)) = x",
+  "rule": "f(x*(x*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,F(g0)))",
+  "B_right": "g0"
+ },
+ "439,576": {
+  "A": "f(x*(x*y)) = y",
+  "B": "x*(x*f(y)) = y",
+  "rule": "f(x*(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,F(g1)))",
+  "B_right": "g1"
+ },
+ "439,687": {
+  "A": "f(x*(x*y)) = y",
+  "B": "x*f(x*x) = x",
+  "rule": "f(x*(x*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "439,690": {
+  "A": "f(x*(x*y)) = y",
+  "B": "x*f(x*y) = y",
+  "rule": "f(x*(x*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "442,463": {
+  "A": "f(x*(y*x)) = y",
+  "B": "f(x*x)*x = x",
+  "rule": "f(x*(y*x)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(P(g0,g0)),g0)",
+  "B_right": "g0"
+ },
+ "442,482": {
+  "A": "f(x*(y*x)) = y",
+  "B": "f(x*y)*x = y",
+  "rule": "f(x*(y*x)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(P(g0,g1)),g0)",
+  "B_right": "g1"
+ },
+ "442,543": {
+  "A": "f(x*(y*x)) = y",
+  "B": "x*(f(x)*x) = x",
+  "rule": "f(x*(y*x)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(F(g0),g0))",
+  "B_right": "g0"
+ },
+ "442,549": {
+  "A": "f(x*(y*x)) = y",
+  "B": "x*(f(y)*x) = y",
+  "rule": "f(x*(y*x)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(F(g1),g0))",
+  "B_right": "g1"
+ },
+ "444,401": {
+  "A": "f(x*(y*y)) = x",
+  "B": "f(x)*(x*x) = x",
+  "rule": "f(x*(y*y)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),P(g0,g0))",
+  "B_right": "g0"
+ },
+ "444,409": {
+  "A": "f(x*(y*y)) = x",
+  "B": "f(x)*(y*y) = x",
+  "rule": "f(x*(y*y)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g1,g1))",
+  "B_right": "g0"
+ },
+ "445,61": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*x = y*x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "445,68": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*y = z*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "445,223": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*x)*x = x*x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "445,225": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*x)*x = y*x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "445,229": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*x)*y = x*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "445,232": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*x)*y = y*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "445,236": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*x)*y = z*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "445,285": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*x = x*x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "445,288": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*x = y*x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "445,292": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*x = z*x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "445,296": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*y = x*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "445,299": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*y = y*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "445,303": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*y = z*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "445,309": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*z = w*z",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "445,313": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*z = x*z",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "445,317": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*z = y*z",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "445,321": {
+  "A": "f(x*(y*y)) = y",
+  "B": "(x*y)*z = z*z",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "445,421": {
+  "A": "f(x*(y*y)) = y",
+  "B": "f(x)*x = x*x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "445,423": {
+  "A": "f(x*(y*y)) = y",
+  "B": "f(x)*x = y*x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "445,427": {
+  "A": "f(x*(y*y)) = y",
+  "B": "f(x)*y = x*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "445,430": {
+  "A": "f(x*(y*y)) = y",
+  "B": "f(x)*y = y*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "445,434": {
+  "A": "f(x*(y*y)) = y",
+  "B": "f(x)*y = z*y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "445,439": {
+  "A": "f(x*(y*y)) = y",
+  "B": "f(x*(x*y)) = y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "445,441": {
+  "A": "f(x*(y*y)) = y",
+  "B": "f(x*(y*x)) = x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "445,450": {
+  "A": "f(x*(y*y)) = y",
+  "B": "f(x*(y*z)) = z",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(g0,P(g1,g2)))",
+  "B_right": "g2"
+ },
+ "445,573": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*(x*f(x)) = x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,F(g0)))",
+  "B_right": "g0"
+ },
+ "445,576": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*(x*f(y)) = y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,F(g1)))",
+  "B_right": "g1"
+ },
+ "445,630": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*(y*f(x)) = x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,F(g0)))",
+  "B_right": "g0"
+ },
+ "445,634": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*(y*f(y)) = y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,F(g1)))",
+  "B_right": "g1"
+ },
+ "445,639": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*(y*f(z)) = z",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,F(g2)))",
+  "B_right": "g2"
+ },
+ "445,687": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*f(x*x) = x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "445,690": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*f(x*y) = y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "445,702": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*f(y*x) = x",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "445,706": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*f(y*y) = y",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g1)))",
+  "B_right": "g1"
+ },
+ "445,711": {
+  "A": "f(x*(y*y)) = y",
+  "B": "x*f(y*z) = z",
+  "rule": "f(x*(y*y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(P(g1,g2)))",
+  "B_right": "g2"
+ },
+ "448,30": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*x = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "g0"
+ },
+ "448,32": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*y = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "g0"
+ },
+ "448,35": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x*x) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,g0))",
+  "B_right": "g0"
+ },
+ "448,37": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x*y) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,g1))",
+  "B_right": "g0"
+ },
+ "448,60": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*x = x*y",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g0,g1)"
+ },
+ "448,64": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*y = x*z",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g0,g2)"
+ },
+ "448,401": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*(x*x) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),P(g0,g0))",
+  "B_right": "g0"
+ },
+ "448,403": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*(x*y) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g0,g1))",
+  "B_right": "g0"
+ },
+ "448,406": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*(y*x) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g1,g0))",
+  "B_right": "g0"
+ },
+ "448,409": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*(y*y) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),P(g1,g1))",
+  "B_right": "g0"
+ },
+ "448,413": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*(y*z) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),P(g1,g2))",
+  "B_right": "g0"
+ },
+ "448,416": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*f(x) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),F(g0))",
+  "B_right": "g0"
+ },
+ "448,418": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x)*f(y) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),F(g1))",
+  "B_right": "g0"
+ },
+ "448,451": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x*f(x)) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,F(g0)))",
+  "B_right": "g0"
+ },
+ "448,453": {
+  "A": "f(x*(y*z)) = x",
+  "B": "f(x*f(y)) = x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,F(g1)))",
+  "B_right": "g0"
+ },
+ "448,578": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(x*x) = x*x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "448,579": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(x*x) = x*y",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "448,583": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(x*y) = x*x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "448,584": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(x*y) = x*y",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "448,585": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(x*y) = x*z",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g0,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "448,640": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*x) = x*x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "448,641": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*x) = x*y",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "448,642": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*x) = x*z",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g0))",
+  "B_right": "P(g0,g2)"
+ },
+ "448,650": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*y) = x*x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "448,651": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*y) = x*y",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "448,652": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*y) = x*z",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "448,665": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*z) = x*w",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g3)"
+ },
+ "448,666": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*z) = x*x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g0)"
+ },
+ "448,667": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*z) = x*y",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g1)"
+ },
+ "448,668": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*(y*z) = x*z",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,g2))",
+  "B_right": "P(g0,g2)"
+ },
+ "448,682": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*f(x) = x*x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g0)"
+ },
+ "448,683": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*f(x) = x*y",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g0))",
+  "B_right": "P(g0,g1)"
+ },
+ "448,692": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*f(y) = x*x",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g0)"
+ },
+ "448,693": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*f(y) = x*y",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g1)"
+ },
+ "448,694": {
+  "A": "f(x*(y*z)) = x",
+  "B": "x*f(y) = x*z",
+  "rule": "f(x*(y*z)) -> x",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(g1))",
+  "B_right": "P(g0,g2)"
+ },
+ "450,61": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*x = y*x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "450,68": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*y = z*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "450,223": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*x)*x = x*x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "450,225": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*x)*x = y*x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "450,229": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*x)*y = x*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "450,232": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*x)*y = y*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "450,236": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*x)*y = z*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "450,285": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*x = x*x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "450,288": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*x = y*x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "450,292": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*x = z*x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "450,296": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*y = x*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "450,299": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*y = y*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "450,303": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*y = z*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "450,309": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*z = w*z",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "450,313": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*z = x*z",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "450,317": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*z = y*z",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "450,321": {
+  "A": "f(x*(y*z)) = z",
+  "B": "(x*y)*z = z*z",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "450,421": {
+  "A": "f(x*(y*z)) = z",
+  "B": "f(x)*x = x*x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "450,423": {
+  "A": "f(x*(y*z)) = z",
+  "B": "f(x)*x = y*x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "450,427": {
+  "A": "f(x*(y*z)) = z",
+  "B": "f(x)*y = x*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "450,430": {
+  "A": "f(x*(y*z)) = z",
+  "B": "f(x)*y = y*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "450,434": {
+  "A": "f(x*(y*z)) = z",
+  "B": "f(x)*y = z*y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "450,573": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*(x*f(x)) = x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,P(g0,F(g0)))",
+  "B_right": "g0"
+ },
+ "450,576": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*(x*f(y)) = y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,F(g1)))",
+  "B_right": "g1"
+ },
+ "450,630": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*(y*f(x)) = x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,F(g0)))",
+  "B_right": "g0"
+ },
+ "450,634": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*(y*f(y)) = y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,F(g1)))",
+  "B_right": "g1"
+ },
+ "450,639": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*(y*f(z)) = z",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,F(g2)))",
+  "B_right": "g2"
+ },
+ "450,687": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*f(x*x) = x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "450,690": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*f(x*y) = y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "450,702": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*f(y*x) = x",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "450,706": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*f(y*y) = y",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g1)))",
+  "B_right": "g1"
+ },
+ "450,711": {
+  "A": "f(x*(y*z)) = z",
+  "B": "x*f(y*z) = z",
+  "rule": "f(x*(y*z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(P(g1,g2)))",
+  "B_right": "g2"
+ },
+ "576,436": {
+  "A": "x*(x*f(y)) = y",
+  "B": "f(x*(x*x)) = x",
+  "rule": "x*(x*f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "576,439": {
+  "A": "x*(x*f(y)) = y",
+  "B": "f(x*(x*y)) = y",
+  "rule": "x*(x*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "576,687": {
+  "A": "x*(x*f(y)) = y",
+  "B": "x*f(x*x) = x",
+  "rule": "x*(x*f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "576,690": {
+  "A": "x*(x*f(y)) = y",
+  "B": "x*f(x*y) = y",
+  "rule": "x*(x*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "631,218": {
+  "A": "x*(y*f(x)) = y",
+  "B": "(x*x)*f(x) = x",
+  "rule": "x*(y*f(x)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),F(g0))",
+  "B_right": "g0"
+ },
+ "631,276": {
+  "A": "x*(y*f(x)) = y",
+  "B": "(x*y)*f(x) = y",
+  "rule": "x*(y*f(x)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),F(g0))",
+  "B_right": "g1"
+ },
+ "634,61": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*x = y*x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "634,68": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*y = z*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "634,223": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*x)*x = x*x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "634,225": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*x)*x = y*x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "634,229": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*x)*y = x*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "634,232": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*x)*y = y*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "634,236": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*x)*y = z*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "634,285": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*x = x*x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "634,288": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*x = y*x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "634,292": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*x = z*x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "634,296": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*y = x*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "634,299": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*y = y*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "634,303": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*y = z*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "634,309": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*z = w*z",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "634,313": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*z = x*z",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "634,317": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*z = y*z",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "634,321": {
+  "A": "x*(y*f(y)) = y",
+  "B": "(x*y)*z = z*z",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "634,421": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x)*x = x*x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "634,423": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x)*x = y*x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "634,427": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x)*y = x*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "634,430": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x)*y = y*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "634,434": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x)*y = z*y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "634,436": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x*(x*x)) = x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "634,439": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x*(x*y)) = y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "634,441": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x*(y*x)) = x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "634,445": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x*(y*y)) = y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g1)))",
+  "B_right": "g1"
+ },
+ "634,450": {
+  "A": "x*(y*f(y)) = y",
+  "B": "f(x*(y*z)) = z",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(g0,P(g1,g2)))",
+  "B_right": "g2"
+ },
+ "634,576": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*(x*f(y)) = y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g0,F(g1)))",
+  "B_right": "g1"
+ },
+ "634,630": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*(y*f(x)) = x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,P(g1,F(g0)))",
+  "B_right": "g0"
+ },
+ "634,639": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*(y*f(z)) = z",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,P(g1,F(g2)))",
+  "B_right": "g2"
+ },
+ "634,687": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*f(x*x) = x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "634,690": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*f(x*y) = y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "634,702": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*f(y*x) = x",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "634,706": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*f(y*y) = y",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g1)))",
+  "B_right": "g1"
+ },
+ "634,711": {
+  "A": "x*(y*f(y)) = y",
+  "B": "x*f(y*z) = z",
+  "rule": "x*(y*f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(P(g1,g2)))",
+  "B_right": "g2"
+ },
+ "639,61": {
+  "A": "x*(y*f(z)) = z",
+  "B": "x*x = y*x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "639,68": {
+  "A": "x*(y*f(z)) = z",
+  "B": "x*y = z*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "639,223": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*x)*x = x*x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "639,225": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*x)*x = y*x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "639,229": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*x)*y = x*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "639,232": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*x)*y = y*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "639,236": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*x)*y = z*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "639,285": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*x = x*x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "639,288": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*x = y*x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "639,292": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*x = z*x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "639,296": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*y = x*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "639,299": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*y = y*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "639,303": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*y = z*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "639,309": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*z = w*z",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "639,313": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*z = x*z",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "639,317": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*z = y*z",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "639,321": {
+  "A": "x*(y*f(z)) = z",
+  "B": "(x*y)*z = z*z",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "639,421": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x)*x = x*x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "639,423": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x)*x = y*x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "639,427": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x)*y = x*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "639,430": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x)*y = y*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "639,434": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x)*y = z*y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "639,436": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x*(x*x)) = x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "639,439": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x*(x*y)) = y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "639,441": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x*(y*x)) = x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "639,445": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x*(y*y)) = y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,P(g1,g1)))",
+  "B_right": "g1"
+ },
+ "639,450": {
+  "A": "x*(y*f(z)) = z",
+  "B": "f(x*(y*z)) = z",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "F(P(g0,P(g1,g2)))",
+  "B_right": "g2"
+ },
+ "639,687": {
+  "A": "x*(y*f(z)) = z",
+  "B": "x*f(x*x) = x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(g0,F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "639,690": {
+  "A": "x*(y*f(z)) = z",
+  "B": "x*f(x*y) = y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "639,702": {
+  "A": "x*(y*f(z)) = z",
+  "B": "x*f(y*x) = x",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g0)))",
+  "B_right": "g0"
+ },
+ "639,706": {
+  "A": "x*(y*f(z)) = z",
+  "B": "x*f(y*y) = y",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,F(P(g1,g1)))",
+  "B_right": "g1"
+ },
+ "639,711": {
+  "A": "x*(y*f(z)) = z",
+  "B": "x*f(y*z) = z",
+  "rule": "x*(y*f(z)) -> z",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,F(P(g1,g2)))",
+  "B_right": "g2"
+ },
+ "680,61": {
+  "A": "x*f(f(y)) = y",
+  "B": "x*x = y*x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(g0,g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "680,68": {
+  "A": "x*f(f(y)) = y",
+  "B": "x*y = z*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(g0,g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "680,223": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*x)*x = x*x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "680,225": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*x)*x = y*x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "680,229": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*x)*y = x*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "680,232": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*x)*y = y*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "680,236": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*x)*y = z*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "680,285": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*x = x*x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "680,288": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*x = y*x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "680,292": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*x = z*x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g0)",
+  "B_right": "P(g2,g0)"
+ },
+ "680,296": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*y = x*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "680,299": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*y = y*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "680,303": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*y = z*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "680,309": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*z = w*z",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2",
+   "w": "g3"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g3,g2)"
+ },
+ "680,313": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*z = x*z",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g0,g2)"
+ },
+ "680,317": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*z = y*z",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g1,g2)"
+ },
+ "680,321": {
+  "A": "x*f(f(y)) = y",
+  "B": "(x*y)*z = z*z",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(P(g0,g1),g2)",
+  "B_right": "P(g2,g2)"
+ },
+ "680,356": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(f(x*x)) = x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(F(P(g0,g0)))",
+  "B_right": "g0"
+ },
+ "680,359": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(f(x*y)) = y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(F(P(g0,g1)))",
+  "B_right": "g1"
+ },
+ "680,421": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(x)*x = x*x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g0,g0)"
+ },
+ "680,423": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(x)*x = y*x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g0)",
+  "B_right": "P(g1,g0)"
+ },
+ "680,427": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(x)*y = x*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g0,g1)"
+ },
+ "680,430": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(x)*y = y*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g1,g1)"
+ },
+ "680,434": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(x)*y = z*y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1",
+   "z": "g2"
+  },
+  "B_left": "P(F(g0),g1)",
+  "B_right": "P(g2,g1)"
+ },
+ "680,451": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(x*f(x)) = x",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0"
+  },
+  "B_left": "F(P(g0,F(g0)))",
+  "B_right": "g0"
+ },
+ "680,454": {
+  "A": "x*f(f(y)) = y",
+  "B": "f(x*f(y)) = y",
+  "rule": "x*f(f(y)) -> y",
+  "witness": {
+   "x": "g0",
+   "y": "g1"
+  },
+  "B_left": "F(P(g0,F(g1)))",
+  "B_right": "g1"
+ }
+}

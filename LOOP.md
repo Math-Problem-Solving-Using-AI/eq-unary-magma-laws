@@ -41,6 +41,8 @@ in `steps/`.
   - `python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json`
   - `python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json`
   - `python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json --selftest`
+  - `python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json`
+  - `python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json --selftest`
   A verifier you changed must still fail on corrupted input (mutation test).
 - **Status table.** After changing certificates or proofs run `src/export_status.py` and commit the
   new `results/status_matrix.npz`; its counts must match the README table.
