@@ -64,7 +64,8 @@ says code 5 for them.
 against the 35 open pairs without `f`. Result: 2 new certificates (both 6 elements, both pairs without
 `f`, both agreeing with the ETP), in `results/witnesses_etp_magmas.json`, re-checked by
 `src/verify_witnesses.py`. No pair that involves `f` was settled this way, which says nothing about
-whether those implications hold. `results/status_matrix.npz` still says code 6 for the 2 pairs.
+whether those implications hold. `src/query.py` prints these 2 certificates after re-checking them
+(step 12); `results/status_matrix.npz` still says code 6 for the 2 pairs.
 
 ## Steps (granular record)
 
@@ -81,6 +82,7 @@ Read in order, `steps/`:
 9. `09-ffree-models-with-f.md`
 10. `10-query-reads-step-09.md`
 11. `11-etp-magmas-with-f.md`
+12. `12-query-reads-step-11.md`
 
 ## Layout
 

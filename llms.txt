@@ -28,7 +28,7 @@
 - [results/witnesses_ffree_models.json](results/witnesses_ffree_models.json): 1,417 certificates for the rows of
   `(x*y)*(y*x) = y` and `(x*y)*(y*z) = y`. `query.py` reads them and re-checks each one before reporting it (step 10).
 - [results/witnesses_etp_magmas.json](results/witnesses_etp_magmas.json): 2 certificates for open (code 6) pairs,
-  built from ETP multiplication tables (step 11). `query.py` does not read them yet.
+  built from ETP multiplication tables (step 11). `query.py` reads them and re-checks each one before reporting it (step 12).
 
 ## How to trust it
 
