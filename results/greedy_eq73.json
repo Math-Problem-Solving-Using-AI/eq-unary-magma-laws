@@ -1,0 +1,29 @@
+{
+ "about": "Step 23. Finite seeds of the ETP's infinite models of ETP equation 73 (our law 565, x*(x*(y*x)) = y), and the 10 open pairs they settle. Checked by src/check_greedy_eq73.py. Words of the free group on generators 1, 2, 3, ... are lists of integers: k is generator x_k, -k its inverse, [] the identity; [3, 1] is x3*x1. A model is the free group with x*y = f(y * x^-1) * x, where f is any total function that extends a seed and satisfies f(f(f(a) * a^-1)) = a^-1 for every a (mirrored model: x*y = f(x * y^-1) * y). That such an f exists for every seed that passes the finite conditions is the ETP's Lean theorem Eq73.Greedy.exists_extension, which this repository does not re-run.",
+ "source": {
+  "repository": "https://github.com/teorth/equational_theories",
+  "commit": "dbc9a2bf0c939e7c646841e679f0f7fb6cfe4e15",
+  "commit_date": "2026-11-19",
+  "file": "equational_theories/ManuallyProved/Equation73.lean",
+  "lines": {"E0List": 39, "OK": 43, "exists_extension": 196, "f_base": 227, "op": 230, "eq73": 235, "not_99_4380": 270, "not_203": 297, "not_255": 314}
+ },
+ "operation": "x*y = f(y * x^-1) * x",
+ "seeds": {
+  "not_99_4380": [[[], [1]], [[1], [2]], [[2], []], [[-1], [3]], [[3, 1], [4]], [[4], [1]]],
+  "not_203": [[[], [1]], [[1], [2]], [[2], []], [[-2], [3]], [[3], [-2]]],
+  "not_255": [[[], [1]], [[1], [2]], [[2], []], [[-1], [3]], [[-1, -3], [4]]]
+ },
+ "E0": [[[], [1]], [[1], [2]], [[2], []]],
+ "pairs": [
+  {"pair": [565, 70], "seed": "not_255", "mirror": false, "r": 70, "x": []},
+  {"pair": [565, 137], "seed": "not_203", "mirror": false, "r": 137, "x": []},
+  {"pair": [565, 143], "seed": "not_203", "mirror": false, "r": 137, "x": []},
+  {"pair": [565, 492], "seed": "not_99_4380", "mirror": false, "r": 492, "x": []},
+  {"pair": [565, 498], "seed": "not_255", "mirror": false, "r": 70, "x": []},
+  {"pair": [86, 137], "seed": "not_99_4380", "mirror": true, "r": 137, "x": []},
+  {"pair": [86, 153], "seed": "not_255", "mirror": true, "r": 559, "x": []},
+  {"pair": [86, 492], "seed": "not_203", "mirror": true, "r": 492, "x": []},
+  {"pair": [86, 508], "seed": "not_203", "mirror": true, "r": 492, "x": []},
+  {"pair": [86, 559], "seed": "not_255", "mirror": true, "r": 559, "x": []}
+ ]
+}
