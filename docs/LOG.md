@@ -242,6 +242,20 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Mistake: the first outline had a wrong middle formula; the script stopped with "no step", as designed.
 - 20 pairs open (4 with `f`, 16 without).
 
+### Loop run 13 (step 22)
+
+- Open pairs, piece 4d-2: traced the 16 Austin pairs (`src/trace_austin_pairs.py`, `results/austin_chains.json`).
+- All 16 rest on 6 proven infinite "facts" entries of the ETP from 3 constructions: ETP 73 (`Eq73.not_99_4380`,
+  `not_203`, `not_255`, one construction with 3 seeds; 10 pairs, 5 through the mirror), ETP 118 greedy (2 entries,
+  4 pairs, 2 through the mirror), Asterix for ETP 65 (1 entry, 2 pairs, 1 through the mirror).
+- Links used: 7 code-3 implications of our table (`z3-only`) and 2 two-step derivations from B to a 4-product law
+  that the Asterix model fails (ETP 4065 from law 224, ETP 3253 from law 579), replayed by the script.
+- Mirrors recomputed from the law text agree with the ETP's `duals.json` for every chain.
+- Selftest 12 of 12 corruptions rejected. Not a gate and not in CI: it needs the ETP clone.
+- Mistakes: first run counted the 2 step 11 pairs (still code 6) as well; crash on ETP numbers above 4,694
+  (metatheorem entries). Both fixed before any output was kept.
+- 20 pairs still open (4 with `f`, 16 without).
+
 ### Decisions taken by the loop (run 11)
 
 - Queue order: the 4 pairs of 277 and 408 resisted steps 18, 19 and 20 and need a new idea. The 17 pairs without
