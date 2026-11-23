@@ -41,7 +41,7 @@ All 506,232 ordered pairs (A different from B) are accounted for, in exactly one
 | A does not imply B, refuted by a structure of size 4 or 5 | 708 | `model-verified`: certificates in `results/witnesses_larger_models.json`, re-checked by `src/verify_witnesses.py` |
 | A collapses every structure, so it implies B | 147,177 | `z3-only` |
 | A implies B, proved by z3 (with transitive closure) | 15,877 | `z3-only` |
-| A is one of the 9 open laws | 6,399 | open, see [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) |
+| A is one of the 9 open laws | 6,399 | open in the table; all 9 answered in [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models); the rows of 4 of them (2,844 pairs) also checked here (step 27, `z3-only`) |
 | unresolved (no structure up to size 5, no proof in 1 s) | 894 | open, from 71 source laws |
 
 **Cross-check with the Equational Theories Project (step 08).** Our 408 laws without `f` are ordinary
@@ -191,6 +191,19 @@ counter rule for every model of law 277. Label `z3-only` level, like steps 17 an
 with a machine check here.** The 6,399 pairs of the row "A is one of the 9 open laws" rest on the other repository
 (eq-laws-without-small-models); bringing its answers and checks here is the next queue item.
 
+**Rows of the four laws with only infinite models (step 27).** Four of the 9 laws with no small model,
+`(f(x)*y)*z = y` (law 135), `f((x*y)*z) = y` (law 336), `f(x*(y*z)) = y` (law 450) and `x*(y*f(z)) = y` (law 639),
+have the shape of step 16 ("a term = one of its letters", no overlap), so the infinite structure of formal terms
+built from the law decides their rows. Of their 2,844 pairs, **2,828 are "does not imply"** (certificates in
+`results/refutations_nine_laws.json`, checked by `src/check_term_rewriting.py`, `z3-only`) and **16 are "implies"**
+(each target is the law with letters made equal; one-step derivations in `results/derivations_nine_laws.json`,
+replayed by `src/check_derivations.py`, `z3-only` level at most). Mutation test `src/selftest_nine_laws.py`, gates and
+CI. Same verdicts as the sibling repository, which used different structures and code
+(`src/compare_nine_laws_sibling.py`, 0 differences). These say nothing about finite structures, where (by the
+sibling's hand argument) these laws have only one-element models. `results/status_matrix.npz` still says code 5.
+**Rows of the 9 laws still without a check here: 5 laws** (3 that collapse, 2,133 pairs; 2 with 4-element models,
+of whose 1,422 pairs 1,417 have certificates since step 09 and 5 rest on the ETP only).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -221,6 +234,7 @@ Read in order, `steps/`:
 24. `24-seeds-eq118.md`
 25. `25-asterix-eq65.md`
 26. `26-label-extension-law-277.md`
+27. `27-rows-of-four-infinite-laws.md`
 
 ## Layout
 
@@ -275,6 +289,9 @@ python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz resu
 python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json --selftest
 python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json
 python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json --selftest
+python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_nine_laws.json
+python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_nine_laws.json
+python src/selftest_nine_laws.py data/laws_3.json results/status_matrix.npz results/refutations_nine_laws.json results/derivations_nine_laws.json
 ```
 
 ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):

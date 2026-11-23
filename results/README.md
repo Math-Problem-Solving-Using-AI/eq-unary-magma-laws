@@ -127,6 +127,12 @@ Only the last one may be called a result. `known` means already in the literatur
   4 rewrite rules of its base, the counter rule and the values where the targets fail. Settles the last 4 pairs of the
   unresolved row (277 -> 632, 574 and 408 -> 128, 122), all "does not imply" (`steps/26-label-extension-law-277.md`,
   checked by `src/check_label_extension.py`, `z3-only` level). The 4 pairs are still code 6 in `status_matrix.npz`.
+- `refutations_nine_laws.json`: 2,828 certificates in the format of `refutations_term_rewriting.json` for the rows of
+  the four code 5 laws with an infinite term model (laws 135, 336, 450, 639), all "does not imply"
+  (`steps/27-rows-of-four-infinite-laws.md`, checked by `src/check_term_rewriting.py`, `z3-only`).
+- `derivations_nine_laws.json`: the other 16 pairs of those rows, all "implies", one replacement step each, in the
+  format of `derivations_open.json` (checked by `src/check_derivations.py`). These 2,844 pairs are still code 5 in
+  `status_matrix.npz`.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
