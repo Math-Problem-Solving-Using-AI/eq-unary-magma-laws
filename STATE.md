@@ -2,19 +2,16 @@
 
 push: ask   (commit locally only; the owner pushes. Change to `allowed` to let loop sessions push.)
 
-finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions then stop.)
+finished: yes (2026-11-23, loop run 23)   (`yes` when the finish line in `LOOP.md` holds; loop sessions then stop.)
 
 ## Focus
 
-Every case the README asks about has an answer with a machine check since step 29 (all of code 6 since step 26, all
-of code 5 since steps 27 to 29). Left for the finish line in `LOOP.md`: condition 3, plain words. Every step file now
-starts with "In plain words"; the README has no short plain-words answer yet.
+Finished (2026-11-23): every pair has an answer with a machine check (since step 29), and the README and every
+step file explain it in plain words (step 30). What is left is in "Optional later", for the owner.
 
 ## Queue (take the first item)
 
-1. **Plain-words answer in the README.** A short section near the top: the question, the answer for every kind of pair
-   (how many "implies", how many "does not imply", with which check and label), what it does not mean (`z3-only` is not
-   proved; nothing is Lean-checked), and how to re-check. Then check the finish line in `LOOP.md` again.
+Empty. The repository reached the finish line in `LOOP.md` on 2026-11-23.
 
 ## Optional later (loop sessions never take these; only the owner moves one to the queue)
 
@@ -141,11 +138,14 @@ that already have a machine check, or extend the question.
 - 2026-11-23: queue item "In plain words for steps 06 to 09": each file now starts with a numbered plain-words section,
   words defined, one small example re-checked by plain code and `src/query.py`, re-check commands with their expected
   output. Nothing else in those files changed; gates 35 of 35 (`docs/LOG.md`, run 22).
+- 2026-11-23: step 30 (queue item "plain-words answer in the README"): `src/tally_answers.py` counts every answer by kind
+  of check (gate and CI, mutation test 6 of 6): 165,266 "implies", 340,966 "does not imply", 506,232 in all, no pair
+  answered twice. The README now opens with the answer in plain words. Gates 37 of 37. Finish line reached.
 
 ## Last iteration
 
-2026-11-23, loop run 22: step files 06 to 09 (the 4- and 5-element tables, the full re-check of the small tables, the comparison with the outside Equational Theories Project, the 4-element tables reused with every choice of `f`) now open with an explanation in plain words and a small worked example, so every step file has one.
-Next: a short plain-words answer at the top of the README, then a check of whether the repository is finished.
+2026-11-23, loop run 23: the README now starts with the answer in plain words: of the 506,232 pairs of laws, 165,266 are "implies" and 340,966 are "does not imply", each with a computer check, and a new script recounts them.
+The repository is finished: every question has a checked answer explained in plain words; loop sessions stop, and the "Optional later" list is for the owner.
 
 ## Blocked
 
