@@ -1,0 +1,42 @@
+{
+ "pairs": [
+  {"pair": [86, 137], "A": "((x*y)*x)*x = y", "B": "(x*(x*x))*x = x", "etp": [274, 203], "chains": 1},
+  {"pair": [86, 153], "A": "((x*y)*x)*x = y", "B": "(x*(y*x))*x = y", "etp": [274, 222], "chains": 2},
+  {"pair": [86, 492], "A": "((x*y)*x)*x = y", "B": "x*((x*x)*x) = x", "etp": [274, 99], "chains": 1},
+  {"pair": [86, 508], "A": "((x*y)*x)*x = y", "B": "x*((y*x)*x) = y", "etp": [274, 118], "chains": 2},
+  {"pair": [86, 559], "A": "((x*y)*x)*x = y", "B": "x*(x*(x*x)) = x", "etp": [274, 47], "chains": 1},
+  {"pair": [88, 579], "A": "((x*y)*x)*y = x", "B": "x*(x*x) = x*x", "etp": [261, 307], "chains": 1},
+  {"pair": [143, 498], "A": "(x*(x*y))*x = y", "B": "x*((x*y)*x) = y", "etp": [229, 125], "chains": 1},
+  {"pair": [143, 565], "A": "(x*(x*y))*x = y", "B": "x*(x*(y*x)) = y", "etp": [229, 73], "chains": 1},
+  {"pair": [508, 86], "A": "x*((y*x)*x) = y", "B": "((x*y)*x)*x = y", "etp": [118, 274], "chains": 1},
+  {"pair": [508, 153], "A": "x*((y*x)*x) = y", "B": "(x*(y*x))*x = y", "etp": [118, 222], "chains": 1},
+  {"pair": [565, 70], "A": "x*(x*(y*x)) = y", "B": "((x*x)*x)*x = x", "etp": [73, 255], "chains": 1},
+  {"pair": [565, 137], "A": "x*(x*(y*x)) = y", "B": "(x*(x*x))*x = x", "etp": [73, 203], "chains": 1},
+  {"pair": [565, 143], "A": "x*(x*(y*x)) = y", "B": "(x*(x*y))*x = y", "etp": [73, 229], "chains": 2},
+  {"pair": [565, 492], "A": "x*(x*(y*x)) = y", "B": "x*((x*x)*x) = x", "etp": [73, 99], "chains": 1},
+  {"pair": [565, 498], "A": "x*(x*(y*x)) = y", "B": "x*((x*y)*x) = y", "etp": [73, 125], "chains": 2},
+  {"pair": [598, 224], "A": "x*(y*(x*y)) = y", "B": "(x*x)*x = x*x", "etp": [65, 359], "chains": 1}
+ ],
+ "chains": [
+  {"pair": [86, 137], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_99_4380", "base_line": 269, "base_satisfies": 73, "base_fails": 99, "mirror": true, "s_etp": 274, "r_etp": 203, "s_id": 86, "r_id": 137},
+  {"pair": [86, 153], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_255", "base_line": 313, "base_satisfies": 73, "base_fails": 255, "mirror": true, "s_etp": 274, "r_etp": 47, "s_id": 86, "r_id": 559},
+  {"pair": [86, 153], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_99_4380", "base_line": 269, "base_satisfies": 73, "base_fails": 99, "mirror": true, "s_etp": 274, "r_etp": 203, "s_id": 86, "r_id": 137},
+  {"pair": [86, 492], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_203", "base_line": 296, "base_satisfies": 73, "base_fails": 203, "mirror": true, "s_etp": 274, "r_etp": 99, "s_id": 86, "r_id": 492},
+  {"pair": [86, 508], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_203", "base_line": 296, "base_satisfies": 73, "base_fails": 203, "mirror": true, "s_etp": 274, "r_etp": 99, "s_id": 86, "r_id": 492},
+  {"pair": [86, 508], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_255", "base_line": 313, "base_satisfies": 73, "base_fails": 255, "mirror": true, "s_etp": 274, "r_etp": 47, "s_id": 86, "r_id": 559},
+  {"pair": [86, 559], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_255", "base_line": 313, "base_satisfies": 73, "base_fails": 255, "mirror": true, "s_etp": 274, "r_etp": 47, "s_id": 86, "r_id": 559},
+  {"pair": [88, 579], "base_file": "equational_theories/Asterix.lean", "base_name": "Asterix.Equation65_facts", "base_line": 531, "base_satisfies": 65, "base_fails": 4065, "mirror": true, "s_etp": 261, "r_etp": 3253, "s_id": 88, "r_id": null, "r_text": "x * x = x * (x * (x * x))", "B_implies_r": ["x*(x*(x*x))", "x*(x*x)", "x*x"]},
+  {"pair": [143, 498], "base_file": "equational_theories/Generated/Greedy/Eq118.lean", "base_name": "Equation118_not_implies_Equation222", "base_line": 2707, "base_satisfies": 118, "base_fails": 222, "mirror": true, "s_etp": 229, "r_etp": 125, "s_id": 143, "r_id": 498},
+  {"pair": [143, 565], "base_file": "equational_theories/Generated/Greedy/Eq118.lean", "base_name": "Equation118_not_implies_Equation274", "base_line": 2740, "base_satisfies": 118, "base_fails": 274, "mirror": true, "s_etp": 229, "r_etp": 73, "s_id": 143, "r_id": 565},
+  {"pair": [508, 86], "base_file": "equational_theories/Generated/Greedy/Eq118.lean", "base_name": "Equation118_not_implies_Equation274", "base_line": 2740, "base_satisfies": 118, "base_fails": 274, "mirror": false, "s_etp": 118, "r_etp": 274, "s_id": 508, "r_id": 86},
+  {"pair": [508, 153], "base_file": "equational_theories/Generated/Greedy/Eq118.lean", "base_name": "Equation118_not_implies_Equation222", "base_line": 2707, "base_satisfies": 118, "base_fails": 222, "mirror": false, "s_etp": 118, "r_etp": 222, "s_id": 508, "r_id": 153},
+  {"pair": [565, 70], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_255", "base_line": 313, "base_satisfies": 73, "base_fails": 255, "mirror": false, "s_etp": 73, "r_etp": 255, "s_id": 565, "r_id": 70},
+  {"pair": [565, 137], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_203", "base_line": 296, "base_satisfies": 73, "base_fails": 203, "mirror": false, "s_etp": 73, "r_etp": 203, "s_id": 565, "r_id": 137},
+  {"pair": [565, 143], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_203", "base_line": 296, "base_satisfies": 73, "base_fails": 203, "mirror": false, "s_etp": 73, "r_etp": 203, "s_id": 565, "r_id": 137},
+  {"pair": [565, 143], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_255", "base_line": 313, "base_satisfies": 73, "base_fails": 255, "mirror": false, "s_etp": 73, "r_etp": 255, "s_id": 565, "r_id": 70},
+  {"pair": [565, 492], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_99_4380", "base_line": 269, "base_satisfies": 73, "base_fails": 99, "mirror": false, "s_etp": 73, "r_etp": 99, "s_id": 565, "r_id": 492},
+  {"pair": [565, 498], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_255", "base_line": 313, "base_satisfies": 73, "base_fails": 255, "mirror": false, "s_etp": 73, "r_etp": 255, "s_id": 565, "r_id": 70},
+  {"pair": [565, 498], "base_file": "equational_theories/ManuallyProved/Equation73.lean", "base_name": "Eq73.not_99_4380", "base_line": 269, "base_satisfies": 73, "base_fails": 99, "mirror": false, "s_etp": 73, "r_etp": 99, "s_id": 565, "r_id": 492},
+  {"pair": [598, 224], "base_file": "equational_theories/Asterix.lean", "base_name": "Asterix.Equation65_facts", "base_line": 531, "base_satisfies": 65, "base_fails": 4065, "mirror": false, "s_etp": 65, "r_etp": 4065, "s_id": 598, "r_id": null, "r_text": "x * x = ((x * x) * x) * x", "B_implies_r": ["((x*x)*x)*x", "(x*x)*x", "x*x"]}
+ ]
+}
