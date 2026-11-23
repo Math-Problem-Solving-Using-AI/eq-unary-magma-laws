@@ -7,15 +7,14 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 ## Focus
 
 Every case the README asks about has an answer with a machine check since step 29 (all of code 6 since step 26, all
-of code 5 since steps 27 to 29). Left for the finish line in `LOOP.md`: condition 3, plain words. Steps 01 to 09 have
+of code 5 since steps 27 to 29). Left for the finish line in `LOOP.md`: condition 3, plain words. Steps 06 to 09 have
 no "In plain words" section, and the README has no short plain-words answer.
 
 ## Queue (take the first item)
 
-1. **"In plain words" for steps 01 to 05.** Add the section (numbered, as in the owner's rule and steps 10 to 29) right
-   under the header lines of each file, defining every technical word. Change nothing else in those files.
-2. **"In plain words" for steps 06 to 09.** Same.
-3. **Plain-words answer in the README.** A short section near the top: the question, the answer for every kind of pair
+1. **"In plain words" for steps 06 to 09.** Add the section (numbered, as in the owner's rule and steps 01 to 05 and 10
+   to 29) right under the header lines of each file, defining every technical word. Change nothing else in those files.
+2. **Plain-words answer in the README.** A short section near the top: the question, the answer for every kind of pair
    (how many "implies", how many "does not imply", with which check and label), what it does not mean (`z3-only` is not
    proved; nothing is Lean-checked), and how to re-check. Then check the finish line in `LOOP.md` again.
 
@@ -137,11 +136,15 @@ that already have a machine check, or extend the question.
   replayed by `src/check_derivations.py`; `src/selftest_ffree_laws.py`: coverage 1,417 + 5 = 1,422, control on the
   4-element tables, mutation test 10 of 10; gates and CI). Agrees with the ETP. Finish line checked: condition 3 (plain
   words in steps 01 to 09 and in the README) not met; three queue items added.
+- 2026-11-23: queue item "In plain words for steps 01 to 05": each of the five oldest step files now starts with a
+  numbered plain-words section, words defined, one small example checked by `src/query.py`, re-check commands with
+  their expected output. Nothing else in those files changed; gates 35 of 35. Re-running the step 04 z3 search from
+  scratch gave 203, 205, then 207 proofs, the same 207 laws as the table (`docs/LOG.md`, run 21).
 
 ## Last iteration
 
-2026-11-23, loop run 20, step 29: the last 5 pairs that only an outside project had answered turned out to be the law itself with some letters set equal, so each got a one-step proof replayed by this repository's checker; now every pair the README asks about has an answer with a machine check here.
-Next: the repository is not finished yet only because the oldest step files (01 to 09) lack a plain-words explanation; the next runs add those, then a plain-words answer in the README, then check the finish line again.
+2026-11-23, loop run 21: the first five step files (what the words mean, the list of 712 laws, the small tables, the laws that force a one-element set, the first solver proofs) now open with an explanation in plain words and a small worked example.
+Next: the same explanation for step files 06 to 09, then a short plain-words answer at the top of the README, then a check of whether the repository is finished.
 
 ## Blocked
 

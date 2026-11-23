@@ -360,6 +360,20 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   calling a pair open or "known elsewhere", run the cheap syntactic test "is B an instance of A (letters made equal)?".
 - Slip: Python `write_text` on Windows wrote LOOP.md, README.md and the CI file with CRLF; restored to LF before commit.
 
+### Loop run 21 (plain words for steps 01 to 05)
+
+- Queue item "In plain words for steps 01 to 05": each file got the section right under its header lines, with the
+  words it uses defined and one small example checked by `src/query.py` (`x*y = x` against `x*y = y*x`; `f(x) = y`
+  collapsing; `x*y = x` implying `(x*y)*z = x`, and the 2-element table refuting the reverse). Nothing else in those
+  files changed. Gates 35 of 35.
+- To give step 04 an honest expected output, `python src/prove.py collapse data/laws_3.json data/o3 5000` was re-run
+  from an empty `data/o3_collapse.npy` (git-ignored): 203, then 205, then 207 proofs over three runs (a fourth run at
+  60 s stayed at 207); the 207 laws are exactly the rows coded 4 in `results/status_matrix.npz`. One more instance of
+  z3 varying between runs; accumulating proofs is what makes the count repeatable.
+- Observation, not changed: the header of `steps/05-edge-proofs.md` still says "IN PROGRESS, nothing recorded yet",
+  written before attempt 2 finished. The item said to change nothing but the new section, so the plain-words section
+  says the header is out of date instead.
+
 ### Decisions taken by the loop (run 19)
 
 - The item said to write the sibling's collapse derivations in our format. The sibling's proofs use rules our checker
