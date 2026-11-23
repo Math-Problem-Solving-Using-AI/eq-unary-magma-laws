@@ -36,6 +36,7 @@ in `steps/`.
   - `python src/verify_small_refutations.py data/laws_3.json data/o3`
   - `python src/verify_witnesses.py results/witnesses_larger_models.json`
   - `python src/verify_witnesses.py results/witnesses_ffree_models.json`
+  - `python src/verify_witnesses.py results/witnesses_etp_magmas.json`
   - `python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz`
   - `python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json`
   A verifier you changed must still fail on corrupted input (mutation test).
