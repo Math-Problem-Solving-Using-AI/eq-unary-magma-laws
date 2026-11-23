@@ -46,6 +46,8 @@
   stored chain of replacement steps from A (step 19, checked by `src/check_derivations.py`). 21 pairs are still
   open (17 without `f` have an ETP answer). Step 21 added 1 more pair without `f` (law 153 implies law 508); 20 pairs
   are still open (16 without `f`, all ETP "Austin pairs": true in every finite structure, refuted only by infinite ones).
+- [results/austin_chains.json](results/austin_chains.json): for each of the 16 Austin pairs, the base ETP infinite
+  structure it rests on (3 constructions in all) and the links already in this repository (step 22). No new answers.
 - [results/extra_laws_277.json](results/extra_laws_277.json): search for a counterexample to the 4 open pairs with
   `f` by completing `(x*y)*f(x) = y` with one extra law of size 1 to 4 (step 20). None found; 21 pairs still open.
 

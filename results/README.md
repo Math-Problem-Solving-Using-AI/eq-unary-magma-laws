@@ -97,6 +97,13 @@ Only the last one may be called a result. `known` means already in the literatur
   `x*(y*f(x)) = y`, `x*(x*f(x)) = x` tested when a run completes. `laws`: for each E (key = its id in the list of
   `src/laws.py 4`, whose first 712 laws are `data/laws_3.json`) the outcome per symbol order: a stop reason, or
   `[order, [verdicts], rules]`. 274 complete, all `holds`; no certificates, nothing settled.
+- `austin_chains.json`: for each of the 16 open pairs without `f` that the ETP calls Austin pairs (only infinite
+  counterexamples), how its ETP answer is built (`steps/22-trace-austin-pairs.md`, produced by
+  `src/trace_austin_pairs.py` from a local ETP clone). `pairs`: 16 rows; `chains`: 20 chains, each a base ETP
+  structure (Lean file, theorem name, line; satisfies law `base_satisfies`, fails law `base_fails`, ETP numbers),
+  a `mirror` flag, the laws s and r after mirroring (ETP numbers and our ids), and the link "B implies r": our table
+  when `r_id` is set, else a derivation `B_implies_r` (list of terms, each one step of B from the last). No
+  certificates; nothing settled; the 16 pairs are still code 6.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 

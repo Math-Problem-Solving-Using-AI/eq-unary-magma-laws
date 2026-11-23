@@ -139,6 +139,13 @@ every finite model of A, so any counterexample is infinite; the ETP builds them 
 in Lean). This repository has no check of its own for those 16 yet. `results/status_matrix.npz` still says code 6.
 **Still open after step 21: 20 pairs** (4 with `f`; 16 without `f`, which have an ETP answer).
 
+**Where the 16 ETP answers come from (step 22).** Each of the 16 "does not imply" answers rests on one infinite
+structure that the ETP proves in Lean, read as stored or in the mirror, plus implications that are already in this
+repository (7 from the table, code 3, `z3-only`; 2 short derivations replayed by plain code). Only **3 ETP
+constructions** carry all 16: the one for `x*(x*(y*x)) = y` (10 pairs), the one for `x*((y*x)*x) = y` (4 pairs)
+and the "Asterix" model for `x*(y*(x*y)) = y` (2 pairs). The chains are in `results/austin_chains.json`
+(`src/trace_austin_pairs.py`, needs a local copy of the ETP). **Nothing new is settled; still 20 open pairs.**
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -164,6 +171,7 @@ Read in order, `steps/`:
 19. `19-derivations-aimed-at-target.md`
 20. `20-counterexample-search-law-277.md`
 21. `21-pairs-without-f-left.md`
+22. `22-trace-austin-pairs.md`
 
 ## Layout
 
