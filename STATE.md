@@ -6,15 +6,19 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Every pair of the unresolved row (code 6) has an answer with a machine check since step 26. Left for the finish line in `LOOP.md`: the 6,399 pairs of the 9 laws with no small model (code 5), answered in the sibling repository eq-laws-without-small-models but not yet checked here.
+Every pair of the unresolved row (code 6) has an answer with a machine check since step 26. Left for the finish line in `LOOP.md`: the rows of 5 of the 9 laws with no small model (code 5), answered in the sibling repository eq-laws-without-small-models but not yet checked here (the rows of the other 4 got a check in step 27).
 
 ## Queue (take the first item)
 
-1. **The nine laws with no small model are settled** (2026-11-23, see
-   https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
-   4-element models, 4 have infinite term models (`z3-only`). Update codes 5 from its results and
-   re-export the table; its 2,828 certificates in `results/refutations_term_models.json` decide the rows
-   of the four (707 targets each fail; the other 4 per law are instances of the law).
+1. **Rows of the 3 collapse laws** (laws 110 `((x*y)*z)*x = w`, 284 `(x*y)*f(z) = y`, 415 `f(x)*(y*z) = y`; 2,133
+   pairs, code 5). The sibling eq-laws-without-small-models stores collapse derivations in
+   `results/collapse_xy_fz.json` and `results/collapse_fx_yz.json`; law 110 collapses in one step (`w` on one side
+   only). Write them in the format of `results/derivations_nine_laws.json` (a fact `x = y`, then each target in one
+   step) and replay them with `src/check_derivations.py`, table unchanged.
+2. **Rows of the 2 laws with 4-element models** (laws 250 `(x*y)*(y*x) = y`, 257 `(x*y)*(y*z) = y`; 1,422 pairs,
+   code 5). 1,417 have certificates checked here since step 09; the other 5 are implications resting on the ETP only.
+   Give those 5 a check here (stored derivation replayed by `src/check_derivations.py`, or z3, labelled honestly).
+   Then check the finish line in `LOOP.md`.
 
 ## Optional later (loop sessions never take these; only the owner moves one to the queue)
 
@@ -120,14 +124,20 @@ that already have a machine check, or extend the question.
   (`results/label_extension_277.json`, `src/check_label_extension.py`, selftest 18 of 18, gate and CI). 0 pairs of
   the unresolved row (code 6) still open. Queue item "piece 5" (z3 gave up at size 6 or 7) removed: no pairs left.
 
+- 2026-11-23: step 27 (queue item "the nine laws", first piece, split): the rows of the four code 5 laws with an
+  infinite term model (laws 135, 336, 450, 639): the step 16 structure gives 2,828 "does not imply" (`z3-only`,
+  `results/refutations_nine_laws.json`) and 16 "implies" (one-step derivations, `results/derivations_nine_laws.json`),
+  checked by the step 16 and 19 checkers (now accepting codes 5 and 6), mutation test 7 of 7
+  (`src/selftest_nine_laws.py`), gates and CI. Same verdicts as the sibling, 0 differences. Table unchanged.
+
 ## Last iteration
 
-2026-11-23, loop run 17, step 26: the last 4 open pairs, from `(x*y)*f(x) = y` and its mirror, are answered "does not imply" by an infinite example whose elements carry a hidden counter that goes up by 1 in ordinary products and down by 1 when multiplying by a value of `f`, so the source law always undoes it and the target law does not; plain code and z3 check it (label `z3-only` level, not Lean), and every pair of the "unresolved" row now has a checked answer.
-Next: the rows of the 9 laws with no small model (6,399 pairs) are answered in the sibling repository but not yet checked here; the next run brings those answers in with a check, without changing the stored table.
+2026-11-23, loop run 18, step 27: four of the nine laws with no small example have an infinite example built from formal expressions; with it, 2,828 of their 2,844 pairs are "does not imply" and the other 16 are "implies" by a one-step replacement, all checked by this repository's own code (label `z3-only`, not Lean), and they agree with the sibling repository.
+Next: the rows of the three laws that force a single element (2,133 pairs) get the sibling's step-by-step collapse proofs replayed here; after that, the two laws with 4-element tables.
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
   `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
-  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21, the 10 pairs of step 23, the 4 pairs of step 24, the 2 pairs of step 25 and the 4 pairs of step 26 (still code 6).
+  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21, the 10 pairs of step 23, the 4 pairs of step 24, the 2 pairs of step 25 and the 4 pairs of step 26 (still code 6), and the 2,844 pairs of step 27 (still code 5).

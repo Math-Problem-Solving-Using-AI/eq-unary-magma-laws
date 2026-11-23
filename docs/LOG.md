@@ -323,6 +323,30 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   in the foreground. Rule kept: give every computation `timeout 600000`.
 - Queue item "pairs where z3 gave up at size 6 or 7" has no pairs left (the 4 pairs of 4f are answered); removed.
 
+### Loop run 18 (step 27)
+
+- Queue item "the nine laws with no small model", first piece. Four of the nine (135, 336, 450, 639) are "term =
+  letter" with no overlap, exactly the case of step 16, which had only been run on code 6 pairs. New search
+  `src/refute_nine_laws.py` runs it on their code 5 rows: 2,828 refuted, 16 equal in T_A, the equal ones stored as
+  one-step derivations. Checked by the step 16 and step 19 checkers, whose "pair is open" test now accepts codes 5
+  and 6. Mutation tests: step 16 selftest 8 of 8 on the new file, new `src/selftest_nine_laws.py` 7 of 7.
+- Same split as the sibling's `results/refutations_term_models.json` (different structures, different code), 0
+  differences (`src/compare_nine_laws_sibling.py`, tested on 2 corrupted copies of the sibling file).
+- Mistake: the first mutation for the widened code check used a source whose fact 0 was not A; the checker rejected
+  the source first and never reached the code check, and my filter on the message showed "ACCEPTED". Rewritten to
+  claim the pair (A, A). Rule kept: a mutation must reach the check it targets; read why it is rejected.
+- Not finished: the rows of laws 110, 284, 415 (collapse) and 250, 257 (4-element models; 5 implications rest on the
+  ETP only) have no check here yet. Item split; the two pieces are back at the top of the queue.
+
+### Decisions taken by the loop (run 18)
+
+- The queue item said "update codes 5 from its results and re-export the table". That changes the published table
+  (new meaning for codes or new codes), which the owner decides (Blocked). The loop took the option that changes no
+  published format: certificates and derivations in two new result files with their own checks, table unchanged.
+  Nothing published, no cost.
+- The two checkers of steps 16 and 19 were widened (codes 5 and 6 instead of 6) rather than copied, so the same
+  code checks both files; their selftests still pass on their old files.
+
 ### Decisions taken by the loop (run 17)
 
 - Label for the 4 pairs: `z3-only` level, as for steps 17 and 23 to 25 (infinite structure, rules and lemma checked
