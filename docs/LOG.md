@@ -227,6 +227,21 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   model of 277 and 632 (4 rules) has such an `f`.
 - Mistake caught on paper: one argument used one-to-one-ness of `z -> z*c` on F for a value outside F; dropped.
 
+### Loop run 12 (step 21)
+
+- Open pairs, piece 4d (17 pairs without `f`, sources 86, 88, 143, 153, 508, 565, 598). Split: this run did the
+  first piece.
+- Completion with 20 and 45 symbols per formula, 80 rules: all 7 sources keep growing (dead end, scratch only).
+- ETP (local clone, read only): the 1 "implies" (153 to 508 = ETP 222 to 118) has a 3-step Vampire proof; it is
+  now a 4-step derivation in `results/derivations_open.json`, replayed by `src/check_derivations.py`. The 16
+  "does not imply" are all in the ETP's `data/Austin_implications.txt` (finite models always satisfy B); the ETP's
+  base refutations are greedy infinite constructions (`Generated/Greedy/Eq118.lean`, `ManuallyProved/Equation73.lean`,
+  `Asterix.lean`), the rest follow by chaining.
+- Bug fixed in `src/derive_open.py` (`one_step` crashed when the target position ran through a letter); the 4 step 19
+  derivations are unchanged.
+- Mistake: the first outline had a wrong middle formula; the script stopped with "no step", as designed.
+- 20 pairs open (4 with `f`, 16 without).
+
 ### Decisions taken by the loop (run 11)
 
 - Queue order: the 4 pairs of 277 and 408 resisted steps 18, 19 and 20 and need a new idea. The 17 pairs without

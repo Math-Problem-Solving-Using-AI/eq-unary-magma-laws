@@ -6,22 +6,28 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 21 open pairs still open after steps 19 and 20 (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 20 open pairs still open after step 21 (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **Open pairs, piece 4d: the 17 pairs without `f` left** (step 17; the ETP says 16 "does not imply", 1
-   "implies", but this repository has no certificate it re-checks). Retry completion with higher limits for
-   their 7 source laws, or read how the ETP settles them and build a certificate our checkers can re-check.
-2. **Open pairs, piece 4f: the 4 pairs of `(x*y)*f(x) = y` and its mirror** (sources 277, targets 574 and 632;
+1. **Open pairs, piece 4d-2: trace the 16 Austin pairs without `f`** (step 21). For each pair, find the base ETP
+   refutation it rests on (ETP 118 against 222 or 274, ETP 73 against 99, 203 or 255, the Asterix model of ETP 65)
+   and the implications that carry it over, and check this repository has those implications (codes 3 or 4, or a
+   derivation). Plain code over `data/full_entries.json` and `data/Austin_implications.txt` of the local ETP clone
+   and our table. Record the chains; no new certificates yet.
+2. **Open pairs, piece 4d-3: certificates for the 3 base greedy constructions** (after 4d-2). See whether the
+   starting finite piece of each ETP construction plus its extension rule can be checked by plain code (the
+   ETP blueprint, chapter "Infinite magma constructions", and the Lean files named in step 21), and with what
+   label. If only a Lean re-run of the ETP files would check them, write under Blocked what the owner must decide.
+3. **Open pairs, piece 4f: the 4 pairs of `(x*y)*f(x) = y` and its mirror** (sources 277, targets 574 and 632;
    408, targets 122 and 128). Step 20 found no counterexample by adding one extra law of size up to 4, and the
    ETP rules out `f` given by a short formula. Needs a new idea: an infinite model built over the free model of
    277 and 632 (hand notes in `steps/20-counterexample-search-law-277.md`: the values of `f` must form a model of
    both laws on which `f` is one-to-one and not onto), or a longer derivation of 632.
-3. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4f and 4d do not settle (all 4
-   pairs of piece 4f had `unknown` at sizes 6 and 7 in step 15): retry those sizes with a longer limit, or size 8 (check time per
+4. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4f and 4d do not settle (all 4
+   pairs of piece 4f had `unknown` at sizes 6 and 7 in step 15; not the 16 Austin pairs of 4d, which have no finite counterexample): retry those sizes with a longer limit, or size 8 (check time per
    pair first).
-4. **The nine laws with no small model are settled** (2026-11-23, see
+5. **The nine laws with no small model are settled** (2026-11-23, see
    https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
    4-element models, 4 have infinite term models (`z3-only`). Update codes 5 from its results and
    re-export the table; its 2,828 certificates in `results/refutations_term_models.json` decide the rows
@@ -89,14 +95,20 @@ that already have a machine check, or extend the question.
   short formulas (all implications true), z3 with hints `unknown`. Hand notes on what a counterexample needs.
   Queue reordered (`docs/LOG.md`, decisions run 11). 21 pairs still open.
 
+- 2026-11-23: step 21 (open pairs, piece 4d, split): the 17 pairs without `f`. Completion with larger limits
+  still grows. The one "implies" (law 153 `(x*(y*x))*x = y` to law 508 `x*((y*x)*x) = y`) now has a derivation
+  from the ETP's Vampire proof, replayed by `src/check_derivations.py` (`results/derivations_open.json`). The 16
+  "does not imply" are ETP Austin pairs (only infinite counterexamples, greedy constructions); no own check yet.
+  20 pairs still open (4 with `f`, 16 without).
+
 ## Last iteration
 
-2026-11-23, loop run 11, step 20: the loop looked for an infinite counterexample to the 4 open pairs of `(x*y)*f(x) = y` and its mirror (adding one extra law, 8,804 tries; replacing `f` by short formulas; z3 with hints) and found none, so those 4 pairs stay open and 21 pairs remain.
-Next: the 17 open pairs without `f` now come first, because the ETP has answers for them; the next run reads how the ETP settled them and tries to build certificates this repository can re-check.
+2026-11-23, loop run 12, step 21: of the 17 open pairs without `f`, one ("does `(x*(y*x))*x = y` force `x*((y*x)*x) = y`?") is now answered "yes" with a short chain of steps that the repository's own code replays; the other 16 are "no" according to the ETP, but only infinite examples show it, so they stay open here and 20 pairs remain.
+Next: trace, for each of those 16 pairs, which basic infinite example of the ETP it rests on and which known implications carry it over, before trying to check those examples with the repository's own code.
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
   `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
-  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18 and the 4 pairs of step 19 (still code 6).
+  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18 and the 5 pairs of steps 19 and 21 (still code 6).
