@@ -10,6 +10,7 @@ passed the stages in `docs/shared/VERIFICATION_PROTOCOL.md`.
 | Law A does NOT imply law B | A finite structure (tables for `*` and `f`) satisfying A and failing B | evaluate both laws on every assignment, `src/findmodel.py: check_model` (independent of z3 and numpy) |
 | Law A implies law B | A derivation (chain of rewriting steps) | z3 `unsat` is a lead only. A stored derivation with an independent checker is planned |
 | Law A does NOT imply law B, by an infinite structure | The structure T_A of formal terms built from A read as a rewrite rule, the witness, and B's two values there | `src/check_term_rewriting.py`: z3 checks A on all terms (`z3-only`), plain code recomputes B's values |
+| Law A does NOT imply B, or A implies B, by a completed rewrite system | The rule set R (each rule with a derivation from A), and B's normal forms at distinct generators: different means B fails in the structure of normal forms, equal means B is derived | `src/check_completion.py`: replays the derivations, checks KBO and all critical pairs in plain code (relies on the critical pair lemma and Newman's lemma) |
 | Law forces a one-element structure | Same as implication, a derivation of `x = y` | as above |
 
 ## Status labels (use exactly these, highest earned)
@@ -68,6 +69,14 @@ Only the last one may be called a result. `known` means already in the literatur
   `"a,b": {A, B, rule, witness, B_left, B_right}`: B's letters sent to generators `g0, g1, ...`, and B's two
   sides computed in T_A (`F` stands for `f`, `P` for `*`), which differ. Label `z3-only`. Check with
   `src/check_term_rewriting.py` (`--selftest` for the mutation test). Still code 6 in `status_matrix.npz`;
+  `src/query.py` does not read this file.
+- `completions_open.json`: 133 of the 190 open pairs left after step 16, decided by Knuth-Bendix completion of
+  the overlapping source rules (`steps/17-completion-overlapping-rules.md`, produced by `src/complete_open.py`).
+  `sources`: for each of the 7 completed source laws, every derived equation with its derivation (a chain of
+  replacement steps starting from A) and the final rule set; `pairs`: `"a,b": {A, B, verdict, B_left, B_right}`,
+  132 `fails` (not implied) and 1 `holds` (implied). Terms are written `m(s,t)` for `s*t`, `f(t)`, `v0, v1, ...`.
+  Label: `z3-only` level at most (no z3 used; plain-code check that relies on two textbook theorems). Check with
+  `src/check_completion.py` (`--selftest` for the mutation test). Still code 6 in `status_matrix.npz`;
   `src/query.py` does not read this file.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.

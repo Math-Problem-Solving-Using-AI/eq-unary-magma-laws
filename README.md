@@ -97,6 +97,16 @@ say nothing about finite structures. `results/status_matrix.npz` still says code
 after step 16: 190 pairs** (172 with `f`, no answer; 18 without `f`, which have an ETP answer), all from
 source laws whose rule overlaps itself.
 
+**Repairing the overlaps (step 17).** For each of those 26 source laws, the overlaps were turned into new
+rules (Knuth-Bendix completion), each stored with a derivation from A. For 7 of them this ends with a rule
+set where every overlap gives the same result, and the structure of simplified terms satisfies A. It settles
+**133 of the 190 open pairs: 132 "does not imply", 1 "implies"** (`(x*(y*y))*y = x` implies
+`(x*y)*(y*y) = x`, which the ETP also says). Certificates in `results/completions_open.json`, re-checked in
+full by plain code (`src/check_completion.py`), which relies on two textbook theorems of rewriting; label at
+the `z3-only` level, no higher (no z3 is used). `results/status_matrix.npz` still says code 6 for them.
+**Still open after step 17: 57 pairs** (40 with `f`, no answer; 17 without `f`, which have an ETP answer),
+from 19 source laws whose completion stopped.
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -117,6 +127,7 @@ Read in order, `steps/`:
 14. `14-z3-30s-open-pairs.md`
 15. `15-search-size-6-7-open-pairs.md`
 16. `16-infinite-term-structures.md`
+17. `17-completion-overlapping-rules.md`
 
 ## Layout
 
@@ -157,6 +168,8 @@ python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/
 python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json --selftest
 python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json
 python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json --selftest
+python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json
+python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json --selftest
 ```
 
 ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):
