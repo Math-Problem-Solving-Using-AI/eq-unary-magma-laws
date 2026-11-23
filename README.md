@@ -146,6 +146,16 @@ constructions** carry all 16: the one for `x*(x*(y*x)) = y` (10 pairs), the one 
 and the "Asterix" model for `x*(y*(x*y)) = y` (2 pairs). The chains are in `results/austin_chains.json`
 (`src/trace_austin_pairs.py`, needs a local copy of the ETP). **Nothing new is settled; still 20 open pairs.**
 
+**The construction for `x*(x*(y*x)) = y`, checked here (step 23).** The ETP builds its infinite models of this law
+on the free group (words in x1, x2, ... where `x x⁻¹` cancels), with `x*y = f(y x⁻¹) x`, starting from one of 3
+short lists of values of `f` ("seeds") and extending them by a fixed rule. `src/check_greedy_eq73.py` checks with
+its own code that each seed meets the 4 conditions the ETP's extension theorem needs, that the target law (or a law
+the target implies, code 3 in our table) fails using seed values only, and runs the extension rule for 20,000 steps
+per seed with law 565 evaluated directly (0 failures). **10 open pairs, all from law 565 or its mirror law 86: "does
+not imply"** (`results/greedy_eq73.json`, gate and CI). Same label as step 17: the ETP's general extension theorem
+is a Lean proof that was read, not re-run here. `results/status_matrix.npz` still says code 6 for them. **Still
+open after step 23: 10 pairs** (4 with `f`; 6 without `f`, which rest on the ETP 118 and Asterix constructions).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -172,6 +182,7 @@ Read in order, `steps/`:
 20. `20-counterexample-search-law-277.md`
 21. `21-pairs-without-f-left.md`
 22. `22-trace-austin-pairs.md`
+23. `23-seeds-eq73.md`
 
 ## Layout
 

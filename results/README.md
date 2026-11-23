@@ -104,6 +104,13 @@ Only the last one may be called a result. `known` means already in the literatur
   a `mirror` flag, the laws s and r after mirroring (ETP numbers and our ids), and the link "B implies r": our table
   when `r_id` is set, else a derivation `B_implies_r` (list of terms, each one step of B from the last). No
   certificates; nothing settled; the 16 pairs are still code 6.
+- `greedy_eq73.json`: the 3 finite seeds of the ETP's infinite models of `x*(x*(y*x)) = y` (law 565) and the 10
+  open pairs they settle, all "does not imply" (`steps/23-seeds-eq73.md`, checked by `src/check_greedy_eq73.py`).
+  Words of the free group are lists of integers (k is generator x_k, -k its inverse, [] the identity). `source`:
+  ETP commit, Lean file and line numbers; `seeds`: name to list of [argument, value]; `pairs`: our pair, seed,
+  `mirror` (true: operation `f(x y^-1) y` instead of `f(y x^-1) x`), law `r` that fails at `x`, and the table link
+  B implies r (B = r or code 3). Label: same as `completions_open.json`; the ETP's extension theorem is not re-run.
+  The 10 pairs are still code 6 in `status_matrix.npz`.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
