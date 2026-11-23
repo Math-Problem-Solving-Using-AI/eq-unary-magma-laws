@@ -288,6 +288,28 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   misread rule holds on both seeds). All mutations now run the full check, which rejects it.
 - Found: the derived triples of kind sP6 never occur in the bounded test, in any order tried. Recorded as not tested.
 
+### Loop run 16 (step 25)
+
+- Open pairs, piece 4d-3, last: the ETP's Asterix model of ETP 65 (`equational_theories/Asterix.lean`, read in full).
+  A partial solution there is a set E1 of defined products and a subset E0 of closed pairs, with 6 conditions; one
+  seed (`initial`, 18 products, 6 closed pairs).
+- New checker `src/check_asterix_eq65.py`: the seed meets the 6 conditions (copied verbatim; `--etp` compares the
+  conditions, the ETP 65 text and the seed with the Lean file: identical); law B fails at x = 0 from seed products
+  only, normal and mirrored; bounded run of the Lean extension step (`add_e0`: 20,000 in `closureSeq` order, 5,000
+  random, then on demand; 49,426 single steps, 8 of the "bad" kind), conditions and seed products checked, laws 598
+  and 88 evaluated at 1,600 pairs each, 0 failures. Selftest 16 of 16. Gate and CI.
+- 2 open pairs (598 -> 224, 88 -> 579) "does not imply", same label as steps 23 and 24. All 16 ETP Austin pairs
+  now have a check here. 4 pairs still open, all with `f`.
+- Mistake: the first run took 66 s (fresh number searched from 0 each step); fixed by keeping the smallest unused
+  number, same output in 1 s.
+- Mistake: the first selftest's "seed product removed" took out `0*3 = 4`, which the certificate does not need; it was
+  accepted, correctly. Replaced by removing products the certificate needs.
+
+### Decisions taken by the loop (run 16)
+
+- Label for the 2 pairs: same reasoning as run 14 (finite part re-checked here, the extension theorem is the ETP's
+  Lean proof, not re-run). No published format change, nothing published, no cost.
+
 ### Decisions taken by the loop (run 15)
 
 - Queue item "piece 4d-3, rest" had two constructions; the loop did the ETP 118 one and put the Asterix model back

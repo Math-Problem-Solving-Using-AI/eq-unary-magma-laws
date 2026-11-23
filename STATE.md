@@ -6,26 +6,19 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 6 open pairs still open after step 24 (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 4 open pairs still open after step 25 (all with `f`) (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **Open pairs, piece 4d-3, last: the Asterix model of ETP 65** (steps 23 and 24 did the ETP 73 and ETP 118
-   greedy constructions, 14 pairs). `equational_theories/Asterix.lean` (547 lines, base entry
-   `Asterix.Equation65_facts`, line 531), 2 pairs: 598 -> 224 and 88 -> 579 mirrored, each through a law r with a
-   2-step derivation B implies r already replayed in step 22 (`results/austin_chains.json`). Read it in full, see
-   whether its model and the failure of r can be checked by plain code (with a bounded test of any infinite part),
-   the same way as steps 23 and 24. If it can only be checked by re-running Lean, write under Blocked what the owner
-   must decide.
-2. **Open pairs, piece 4f: the 4 pairs of `(x*y)*f(x) = y` and its mirror** (sources 277, targets 574 and 632;
+1. **Open pairs, piece 4f: the 4 pairs of `(x*y)*f(x) = y` and its mirror** (sources 277, targets 574 and 632;
    408, targets 122 and 128). Step 20 found no counterexample by adding one extra law of size up to 4, and the
    ETP rules out `f` given by a short formula. Needs a new idea: an infinite model built over the free model of
    277 and 632 (hand notes in `steps/20-counterexample-search-law-277.md`: the values of `f` must form a model of
    both laws on which `f` is one-to-one and not onto), or a longer derivation of 632.
-3. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4f and 4d do not settle (all 4
+2. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4f and 4d do not settle (all 4
    pairs of piece 4f had `unknown` at sizes 6 and 7 in step 15; not the 16 Austin pairs of 4d, which have no finite counterexample): retry those sizes with a longer limit, or size 8 (check time per
    pair first).
-4. **The nine laws with no small model are settled** (2026-11-23, see
+3. **The nine laws with no small model are settled** (2026-11-23, see
    https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
    4-element models, 4 have infinite term models (`z3-only`). Update codes 5 from its results and
    re-export the table; its 2,828 certificates in `results/refutations_term_models.json` decide the rows
@@ -56,6 +49,8 @@ that already have a machine check, or extend the question.
    helper theorems), or re-prove the extension step here, for the 4 pairs of step 24; and find out whether the
    derived triples of kind sP6 can occur at all (never seen in the bounded test). It raises the label of answered
    pairs.
+9. **Re-run the ETP's Lean file `Asterix.lean`** (`move_rev_good`, `move_rev_bad`, `closure_prop`), or re-prove its
+   extension step here, for the 2 pairs of step 25. It raises the label of answered pairs.
 
 ## Done
 
@@ -120,15 +115,21 @@ that already have a machine check, or extend the question.
   and law 508 (`results/greedy_eq118.json`, `src/check_greedy_eq118.py`, selftest 14 of 14, gate and CI). 4 pairs
   (from 508 and its mirror 143) "does not imply", same label as step 23; the Lean construction is not re-run. The
   Asterix model went back to the queue as its own item. 6 pairs still open (4 with `f`, 2 without).
+- 2026-11-23: step 25 (open pairs, piece 4d-3, last): the ETP's Asterix model of `x*(y*(x*y)) = y` (law 598). Its seed
+  (18 products, 6 closed pairs) meets the 6 conditions of the Lean file (conditions, law text and seed compared with
+  it), the target laws fail at x = 0 using seed products only, and a bounded run of the Lean extension step (about
+  49,000 steps) keeps the conditions and law 598 (`results/asterix_eq65.json`, `src/check_asterix_eq65.py`, selftest
+  16 of 16, gate and CI). 2 pairs (598 -> 224 and its mirror 88 -> 579) "does not imply", same label as step 23; the
+  Lean construction is not re-run. All 16 Austin pairs now have a check here. 4 pairs still open, all with `f`.
 
 ## Last iteration
 
-2026-11-23, loop run 15, step 24: the ETP builds its infinite examples for `x*((y*x)*x) = y` by starting from a tiny table of products and adding one product at a time with a brand-new number; this repository's own code now checks the 2 starting tables, shows the target laws fail in every example built from them, and tests the adding rule for about 26,000 steps, so 4 more open pairs are answered "does not imply" (the general rule's proof is the ETP's Lean proof, not re-run here); 6 pairs remain open.
-Next: try the same for the last ETP construction, the "Asterix" example (2 pairs without `f`); the 4 pairs with `f` still need a new idea.
+2026-11-23, loop run 16, step 25: the ETP's last infinite example ("Asterix", for `x*(y*(x*y)) = y`) starts from a small table of 18 products and adds one product at a time with a brand-new number; this repository's own code now checks the starting table, shows the 2 target laws fail in every example built from it, and tests the adding rule for about 49,000 steps, so 2 more open pairs are answered "does not imply" (the general rule's proof is the ETP's Lean proof, not re-run here); 4 pairs remain open, all of them with `f`.
+Next: the 4 open pairs of `(x*y)*f(x) = y` and its mirror, which have no answer here and are outside the ETP's data (it has no `f`), and need a new idea (an infinite example or a longer proof).
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
   `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
-  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21, the 10 pairs of step 23 and the 4 pairs of step 24 (still code 6).
+  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21, the 10 pairs of step 23, the 4 pairs of step 24 and the 2 pairs of step 25 (still code 6).
