@@ -88,6 +88,8 @@
 
    Expected: `pairs in file: 892, proved by z3: 13, settled in addition by the closure: 5`, the 18
    pairs listed (15 with `ETP: implies`, 3 with `ETP: no data (has f)`), then `ALL PASS`.
+   (Since step 14 the file also holds the 30-second answers, so the expected numbers are those in
+   `steps/14-z3-30s-open-pairs.md`: 16 proofs, 4 by closure, 20 pairs.)
    Add `--selftest` for the mutation test (expected: 5 lines `rejected`, then `selftest: ALL PASS`),
    or `--rerun` to ask z3 again (its answers may differ from run to run).
 

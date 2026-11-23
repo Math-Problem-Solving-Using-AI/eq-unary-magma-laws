@@ -1,6 +1,6 @@
 # eq-unary-magma-laws
 
-> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open in the stored table; of these, 1,256 (laws without `f`) are settled by the Equational Theories Project data and 608 more by new 4-element certificates (steps 08 and 09); 2 open pairs without `f` also have 6-element certificates built from ETP tables (step 11); 18 open pairs are implications by z3 with 10 s per pair plus chaining (step 13, `z3-only`). The 164,800 decided pairs among laws without `f` agree with the ETP (0 disagreements).
+> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open in the stored table; of these, 1,256 (laws without `f`) are settled by the Equational Theories Project data and 608 more by new 4-element certificates (steps 08 and 09); 2 open pairs without `f` also have 6-element certificates built from ETP tables (step 11); 20 open pairs are implications by z3 with 10 s and then 30 s per pair plus chaining (steps 13 and 14, `z3-only`). The 164,800 decided pairs among laws without `f` agree with the ETP (0 disagreements).
 
 ## Start here
 
@@ -29,8 +29,8 @@
   `(x*y)*(y*x) = y` and `(x*y)*(y*z) = y`. `query.py` reads them and re-checks each one before reporting it (step 10).
 - [results/witnesses_etp_magmas.json](results/witnesses_etp_magmas.json): 2 certificates for open (code 6) pairs,
   built from ETP multiplication tables (step 11). `query.py` reads them and re-checks each one before reporting it (step 12).
-- [results/z3_open_retry.json](results/z3_open_retry.json): z3 with 10 s on the 892 open pairs, 13 proofs (`z3-only`),
-  18 pairs with chaining (step 13). Checked against the table and the ETP by `src/check_z3_retry.py`; `query.py` does not read it.
+- [results/z3_open_retry.json](results/z3_open_retry.json): z3 with 10 s, then 30 s, on the 892 open pairs, 16 proofs
+  (`z3-only`), 20 pairs with chaining (steps 13 and 14). Checked against the table and the ETP by `src/check_z3_retry.py`; `query.py` does not read it.
 
 ## How to trust it
 

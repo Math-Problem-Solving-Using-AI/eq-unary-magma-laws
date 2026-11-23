@@ -50,9 +50,10 @@ Only the last one may be called a result. `known` means already in the literatur
   (`steps/11-etp-magmas-with-f.md`, produced by `src/refute_from_etp_magmas.py`). Re-check with
   `src/verify_witnesses.py results/witnesses_etp_magmas.json`. `src/query.py` reads this file for code-6
   pairs and re-checks the entry before reporting it (`steps/12-query-reads-step-11.md`).
-- `z3_open_retry.json`: z3's answer, with 10 seconds per pair, for each of the 892 open (code 6) pairs
-  without a certificate (`steps/13-z3-retry-open-pairs.md`, produced by `src/retry_open_z3.py`). 13 are
-  `unsat` (`proved_ms`), label `z3-only`; with the closure they settle 18 pairs, still code 6 in
+- `z3_open_retry.json`: z3's answers, with 10 seconds per pair and then 30 seconds for those still
+  `unknown`, for each of the 892 open (code 6) pairs without a certificate (`steps/13-z3-retry-open-pairs.md`,
+  `steps/14-z3-30s-open-pairs.md`, produced by `src/retry_open_z3.py`). 16 are `unsat` (`proved_ms`, the
+  limit that gave the proof), label `z3-only`; with the closure they settle 20 pairs, still code 6 in
   `status_matrix.npz`. Check with `src/check_z3_retry.py` (consistency with the table and the ETP, not a
   proof check). `src/query.py` does not read this file.
 - Look things up with `src/query.py`, for example

@@ -72,8 +72,12 @@ certificate, with 10 seconds each instead of 1. It proved 13 of them, and chaini
 proofs settles 5 more: 18 open pairs are now "implies", label `z3-only`. The 15 of them without `f` agree
 with the ETP; 3 of the 13 direct proofs were not repeated when z3 was asked again. The answers are in
 `results/z3_open_retry.json`, checked against the table and the ETP by `src/check_z3_retry.py`.
-`results/status_matrix.npz` still says code 6 for them. **Still open after step 13: 874 pairs** (20 without
-`f`, which have an ETP answer; 854 with `f`, with no answer).
+`results/status_matrix.npz` still says code 6 for them.
+
+**z3 with 30 seconds per pair (step 14).** The 879 pairs z3 could not decide in 10 seconds got 30 seconds
+each. 3 more proofs, all for laws without `f` (the ETP agrees), 0 counterexamples. With chaining, 20 open
+pairs are now "implies", label `z3-only` (same file and checker). **Still open after step 14: 872 pairs**
+(18 without `f`, which have an ETP answer; 854 with `f`, with no answer).
 
 ## Steps (granular record)
 
@@ -92,6 +96,7 @@ Read in order, `steps/`:
 11. `11-etp-magmas-with-f.md`
 12. `12-query-reads-step-11.md`
 13. `13-z3-retry-open-pairs.md`
+14. `14-z3-30s-open-pairs.md`
 
 ## Layout
 
