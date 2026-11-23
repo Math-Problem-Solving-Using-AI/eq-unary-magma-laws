@@ -321,6 +321,67 @@
      ]
     }
    ]
+  },
+  "152": {
+   "A": "(x*(y*x))*x = y",
+   "facts": [
+    {
+     "left": "m(m(v0,m(v1,v0)),v0)",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(v0,m(v1,v0))",
+     "right": "m(m(v0,v1),v0)",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "m(v0,m(v1,v0))"
+       }
+      },
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [
+        0,
+        1
+       ],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v0,m(m(v1,v0),v0))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "m(v1,v0)"
+       }
+      },
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    }
+   ]
   }
  },
  "pairs": {
@@ -347,6 +408,12 @@
    "B": "(x*f(x))*x = x",
    "verdict": "holds",
    "fact": 5
+  },
+  "152,507": {
+   "A": "(x*(y*x))*x = y",
+   "B": "x*((y*x)*x) = y",
+   "verdict": "holds",
+   "fact": 2
   }
  }
 }
