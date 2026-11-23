@@ -213,6 +213,27 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   `f` not onto in Q; z3 found no such Q with 2 to 5 elements (for 277 and 483). Item split: the 4 pairs of 277
   and 408 are the new first queue item.
 
+### Loop run 11 (step 20)
+
+- Open pairs, piece 4f (277 `(x*y)*f(x) = y` to 632 and 574; mirror 408 to 128 and 122). No answer.
+- Tried: z3 with three derived facts as hints, 120 s: `unknown`. Completion of 277 alone at 30 rules, size 16:
+  grows; the rules treat `x*(y*f(x))` like `y` everywhere but never reduce it to `y`. New `src/scan_extra_laws.py`:
+  277 plus one extra law E of size 1 to 4 (8,804 laws), completed with step 18's code and limits: 274 complete,
+  law 632 holds in all of them (`results/extra_laws_277.json`). Positive control: a step 17 "fails" pair is
+  reported "fails". ETP (local clone, outcome file 2024-11-10): `f(x)` replaced by `x`, `x*x`, `x*(x*x)`,
+  `(x*x)*x` gives magma implications the ETP lists as true.
+- Hand notes (leads): in a counterexample, the set F of values of `f` is a model of 277 and 632, `f` is
+  one-to-one on F and not onto F (endless chain F, f(F), ...), and values with equal `f` lie outside F. The free
+  model of 277 and 632 (4 rules) has such an `f`.
+- Mistake caught on paper: one argument used one-to-one-ness of `z -> z*c` on F for a value outside F; dropped.
+
+### Decisions taken by the loop (run 11)
+
+- Queue order: the 4 pairs of 277 and 408 resisted steps 18, 19 and 20 and need a new idea. The 17 pairs without
+  `f` (next item) have ETP answers that may be reachable by reading the ETP's proofs and counterexamples. The loop
+  put the 17 pairs first and the 4 pairs second, so the next run starts on work with a known way in. No published
+  format changes, nothing published, no cost.
+
 ### Decisions taken by the loop (run 8)
 
 - The status ladder has no rung for a rewrite-system certificate re-checked by plain code (no z3 involved, but
@@ -221,6 +242,10 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   published format and stays on the safe side of the labels. Whether to add a rung is for the owner and the hub.
 
 ### Lessons for the hub
+
+- Before building an infinite counterexample by hand, add one extra law and complete: if the pair fails in the
+  completed system, that system is a counterexample with a certificate. It is cheap (8,804 extra laws in about 25
+  minutes here). It found nothing for law 277, but it rules out the easy constructions quickly.
 
 - When completion keeps growing, aim at the target before raising limits: here a 5-step proof existed for 4
   pairs whose completion did not finish at 60 rules. Writing the hand proof as a list of terms and letting a

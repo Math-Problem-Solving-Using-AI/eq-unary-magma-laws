@@ -6,19 +6,18 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 21 open pairs left after step 19 (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 21 open pairs still open after steps 19 and 20 (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **Open pairs, piece 4f: the 4 pairs of `(x*y)*f(x) = y` and its mirror** (step 19 settled 483 and 704).
-   Sources 277 `(x*y)*f(x) = y` (targets 574, 632) and 408 `f(x)*(y*x) = y` (targets 122, 128; mirror of
-   277). Hand notes in `steps/19-derivations-aimed-at-target.md`: a counterexample must be infinite, with `f`
-   neither one-to-one nor onto. Try: an infinite model Q of 277 whose `f` misses a value, then the "layered"
-   construction of step 19 (copies stacked over the values outside `f(Q)`), checked by plain code; or a longer
-   derivation stored for `src/check_derivations.py`.
-2. **Open pairs, piece 4d: the 17 pairs without `f` left** (step 17; the ETP says 16 "does not imply", 1
+1. **Open pairs, piece 4d: the 17 pairs without `f` left** (step 17; the ETP says 16 "does not imply", 1
    "implies", but this repository has no certificate it re-checks). Retry completion with higher limits for
    their 7 source laws, or read how the ETP settles them and build a certificate our checkers can re-check.
+2. **Open pairs, piece 4f: the 4 pairs of `(x*y)*f(x) = y` and its mirror** (sources 277, targets 574 and 632;
+   408, targets 122 and 128). Step 20 found no counterexample by adding one extra law of size up to 4, and the
+   ETP rules out `f` given by a short formula. Needs a new idea: an infinite model built over the free model of
+   277 and 632 (hand notes in `steps/20-counterexample-search-law-277.md`: the values of `f` must form a model of
+   both laws on which `f` is one-to-one and not onto), or a longer derivation of 632.
 3. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4f and 4d do not settle (all 4
    pairs of piece 4f had `unknown` at sizes 6 and 7 in step 15): retry those sizes with a longer limit, or size 8 (check time per
    pair first).
@@ -84,11 +83,16 @@ that already have a machine check, or extend the question.
   `f(x*y)*x = y` implies laws 550 and 544, its mirror 704 implies 195 and 189: 4 pairs, each a stored chain
   replayed by plain code (`results/derivations_open.json`, new checker `src/check_derivations.py`, mutation
   test 14 of 14, gate and CI; `z3-only` level at most, no z3 used). 21 pairs still open (4 with `f`, 17 without).
+- 2026-11-23: step 20 (open pairs, piece 4f, first attempt): no counterexample for `(x*y)*f(x) = y` to
+  `x*(y*f(x)) = y`: one extra law of size 1 to 4 (8,804 completions, 274 complete, the target holds in all;
+  `src/scan_extra_laws.py`, `results/extra_laws_277.json`, positive control passed), ETP with `f` replaced by
+  short formulas (all implications true), z3 with hints `unknown`. Hand notes on what a counterexample needs.
+  Queue reordered (`docs/LOG.md`, decisions run 11). 21 pairs still open.
 
 ## Last iteration
 
-2026-11-23, loop run 10, step 19: instead of building a full rule set, the loop aimed straight at the target and found short proofs that the law `f(x*y)*x = y` and its mirror force their two open targets; 4 more pairs are "implies", each by a chain of replacement steps that separate plain code replays.
-Next: 21 pairs remain (4 with `f`, all from `(x*y)*f(x) = y` and its mirror, 17 without `f`); the next run looks for an infinite counterexample or a longer proof for those 4 (queue item 1).
+2026-11-23, loop run 11, step 20: the loop looked for an infinite counterexample to the 4 open pairs of `(x*y)*f(x) = y` and its mirror (adding one extra law, 8,804 tries; replacing `f` by short formulas; z3 with hints) and found none, so those 4 pairs stay open and 21 pairs remain.
+Next: the 17 open pairs without `f` now come first, because the ETP has answers for them; the next run reads how the ETP settled them and tries to build certificates this repository can re-check.
 
 ## Blocked
 
