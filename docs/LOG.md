@@ -88,6 +88,10 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   regenerate `results/status_matrix.npz`. The loop took the first: it changes no published format,
   publishes nothing and costs nothing. A new code in the stored table stays an owner decision
   (`STATE.md`, Blocked). Step 10.
+- Queue item 0b (ETP magmas plus a chosen `f`, for open pairs whose source has no `f`) turned out to
+  apply to no open pair: all 35 such pairs have targets without `f` too. The loop widened it to every open
+  pair (ETP tables of size 4 and 5, every `f`) and to every ETP table for the 35 `f`-free pairs. This
+  changes no format, publishes nothing and costs seconds. Step 11.
 
 ### Loop run 1 (step 10)
 
@@ -96,3 +100,18 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Dead end avoided: the mutation "replace `f` by the identity" does not have to break a witness
   (1,397 of 1,417 stay valid). Confirmed with a second evaluator instead of counting it as a failure.
   Rule: a mutation test needs changes that are sure to break the claim, or a second evaluator.
+
+### Loop run 2 (step 11)
+
+- ETP tables of size 4 and 5 with every `f` (769,287 structures) settle none of the 894 open pairs.
+  Every ETP table with `f` the identity gives 6-element certificates for 2 of the 35 open `f`-free pairs
+  (both ETP non-implications). Positive control: the same search on the code-5 rows reproduces the
+  1,417 certificates of step 09 exactly.
+- Bug caught: a helper "does this law mention `f`?" walked the stored pair (left, right) as if it were
+  one term and skipped the left side. It crashed on the first law with `f` only on the left.
+
+### Lessons for the hub
+
+- Count the cases an idea applies to before writing code for it. Queue item 0b had zero cases.
+- A search that returns nothing in seconds needs a positive control: point it at cases with known
+  answers and check it finds them, before reporting "nothing found".

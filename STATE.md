@@ -10,10 +10,12 @@ Settle the 894 open pairs (the finish line in `LOOP.md`: every pair answered wit
 
 ## Queue (take the first item)
 
-0b. **ETP models for pairs that involve `f`.** For a code-6 pair A => B where A has no `f`, an ETP
-   counterexample magma for A plus a chosen `f` may refute B. Same trick as step 09, with the ETP's
-   finite magmas (`data/smallest_magma_examples.txt` in the ETP repository).
-1. **894 open pairs (code 6 in `results/status_matrix.npz`), 71 source laws.** Retry z3 with longer
+0c. **`query.py` reads `results/witnesses_etp_magmas.json`** (same pattern as step 10): for a code-6
+   pair with a step 11 certificate, re-check it and print "NOT an implication, model-verified".
+   2 pairs today. Changes no published format.
+1. **894 open pairs (code 6 in `results/status_matrix.npz`), 71 source laws; 2 of them now have
+   step 11 certificates, and 33 more (no `f`) are `known (ETP)` only.** ETP tables of size 4 and 5 with
+   every `f` gave nothing for pairs with `f` (step 11); size 6 and up with a non-trivial `f` was not tried. Retry z3 with longer
    timeouts (10 s, 30 s, accumulate proofs, save state), search structures of size 6 and 7
    (`src/resolve_open.py` with larger MAXN), then analyze by hand the most frequent sources:
    `f(x)*f(y) = x` and `f(x)*f(y) = y` (38 open targets each). Every counterexample goes through
@@ -44,12 +46,15 @@ that already have a machine check, or extend the question.
   certificates for the two `f`-free laws with 4-element models), literature check (`docs/PRIOR_WORK.md`).
 - 2026-11-23: step 10 (queue item 0, option "teach `query.py`"): `query.py` reports the 1,417 step 09
   certificates after re-checking them. Stored table unchanged; new table codes left to the owner (Blocked).
+- 2026-11-23: step 11 (queue item 0b): ETP multiplication tables with every choice of `f`. The item as
+  written applied to no open pair; widened at no cost. 2 open `f`-free pairs got 6-element certificates
+  (`results/witnesses_etp_magmas.json`); nothing for pairs with `f`.
 
 ## Last iteration
 
-2026-11-23, loop run 1, step 10: the lookup tool now answers "does not imply" for the 1,417 pairs
-settled in step 09, after re-checking each answer; nothing new was proved.
-Next: queue item 0b, use the ETP's finite examples plus a chosen `f` to settle more open pairs.
+2026-11-23, loop run 2, step 11: we tried the small example tables published by the Equational Theories
+Project, with every possible choice of `f`, against the 894 open pairs; 2 pairs got a checked counterexample, the rest stay open.
+Next: queue item 0c, make the lookup tool report those 2 answers; then queue item 1 (longer proof attempts, bigger searches).
 
 ## Blocked
 
