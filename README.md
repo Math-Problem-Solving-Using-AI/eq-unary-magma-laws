@@ -303,6 +303,8 @@ python src/check_derivations.py data/laws_3.json results/status_matrix.npz resul
 python src/selftest_nine_laws.py data/laws_3.json results/status_matrix.npz results/refutations_nine_laws.json results/derivations_nine_laws.json
 python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_collapse_laws.json
 python src/selftest_collapse_laws.py data/laws_3.json results/status_matrix.npz results/derivations_collapse_laws.json
+python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_ffree_laws.json
+python src/selftest_ffree_laws.py data/laws_3.json results/status_matrix.npz results/witnesses_ffree_models.json results/derivations_ffree_laws.json
 ```
 
 ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):

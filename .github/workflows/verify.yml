@@ -47,6 +47,8 @@ jobs:
       - run: python src/selftest_nine_laws.py data/laws_3.json results/status_matrix.npz results/refutations_nine_laws.json results/derivations_nine_laws.json
       - run: python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_collapse_laws.json
       - run: python src/selftest_collapse_laws.py data/laws_3.json results/status_matrix.npz results/derivations_collapse_laws.json
+      - run: python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_ffree_laws.json
+      - run: python src/selftest_ffree_laws.py data/laws_3.json results/status_matrix.npz results/witnesses_ffree_models.json results/derivations_ffree_laws.json
       - run: python src/query.py "x*y = x" "x*(y*z) = x"
       - run: python src/query.py "(x*y)*(y*x) = y" "f(x) = x" --witness
       - run: python src/query.py "(x*(x*y))*y = x" "x*(y*y) = x*y" --witness
