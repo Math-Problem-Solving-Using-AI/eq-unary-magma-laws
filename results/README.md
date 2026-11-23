@@ -9,6 +9,7 @@ passed the stages in `docs/shared/VERIFICATION_PROTOCOL.md`.
 |-------|-------------|-----------------|
 | Law A does NOT imply law B | A finite structure (tables for `*` and `f`) satisfying A and failing B | evaluate both laws on every assignment, `src/findmodel.py: check_model` (independent of z3 and numpy) |
 | Law A implies law B | A derivation (chain of rewriting steps) | z3 `unsat` is a lead only. A stored derivation with an independent checker is planned |
+| Law A does NOT imply law B, by an infinite structure | The structure T_A of formal terms built from A read as a rewrite rule, the witness, and B's two values there | `src/check_term_rewriting.py`: z3 checks A on all terms (`z3-only`), plain code recomputes B's values |
 | Law forces a one-element structure | Same as implication, a derivation of `x = y` | as above |
 
 ## Status labels (use exactly these, highest earned)
@@ -61,6 +62,13 @@ Only the last one may be called a result. `known` means already in the literatur
   Same format as `witnesses_larger_models.json`; no table was found, so every entry has `size` null and
   only z3's answer per size in `tried` (`unsat` there is `z3-only`, `unknown` means nothing).
   `src/verify_witnesses.py` reads it (0 certificates).
+- `refutations_term_rewriting.json`: 682 non-implications among the 872 open pairs left after step 15, each
+  by an infinite structure T_A built from the source law read as a rewrite rule without overlap
+  (`steps/16-infinite-term-structures.md`, produced by `src/refute_by_rewriting.py`). Format
+  `"a,b": {A, B, rule, witness, B_left, B_right}`: B's letters sent to generators `g0, g1, ...`, and B's two
+  sides computed in T_A (`F` stands for `f`, `P` for `*`), which differ. Label `z3-only`. Check with
+  `src/check_term_rewriting.py` (`--selftest` for the mutation test). Still code 6 in `status_matrix.npz`;
+  `src/query.py` does not read this file.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 

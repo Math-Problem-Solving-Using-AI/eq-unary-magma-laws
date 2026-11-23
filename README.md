@@ -86,6 +86,17 @@ infinite. For laws such as `f(x)*y = x`, which make `f` one-to-one, a hand argum
 machine) suggests every finite table satisfies the targets, so only infinite structures can refute them.
 The search outcome is in `results/witnesses_open_6_7.json` (no certificates).
 
+**Infinite structures built from the law itself (step 16).** Each open source law has the form "a term =
+one of its letters", for example `f(x)*y = x`. Read as a rule "replace the pattern by the letter", it
+defines an infinite structure whose elements are formal terms. When the rule cannot overlap with itself,
+that structure satisfies the law, and computing the target law in it decides the pair. Result: **682 of the
+872 open pairs are "does not imply"**, each with a certificate in `results/refutations_term_rewriting.json`,
+checked by `src/check_term_rewriting.py`. Label `z3-only`: that the structure satisfies the source law is
+checked by z3 on all elements (plus a hand argument); that the target fails is checked by plain code. These
+say nothing about finite structures. `results/status_matrix.npz` still says code 6 for them. **Still open
+after step 16: 190 pairs** (172 with `f`, no answer; 18 without `f`, which have an ETP answer), all from
+source laws whose rule overlaps itself.
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -105,6 +116,7 @@ Read in order, `steps/`:
 13. `13-z3-retry-open-pairs.md`
 14. `14-z3-30s-open-pairs.md`
 15. `15-search-size-6-7-open-pairs.md`
+16. `16-infinite-term-structures.md`
 
 ## Layout
 
@@ -143,6 +155,8 @@ python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_lar
 python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
 python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json
 python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json --selftest
+python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json
+python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json --selftest
 ```
 
 ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):
