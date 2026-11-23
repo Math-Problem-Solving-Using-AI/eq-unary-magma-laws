@@ -6,16 +6,11 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Every pair of the unresolved row (code 6) has an answer with a machine check since step 26. Left for the finish line in `LOOP.md`: the rows of 5 of the 9 laws with no small model (code 5), answered in the sibling repository eq-laws-without-small-models but not yet checked here (the rows of the other 4 got a check in step 27).
+Every pair of the unresolved row (code 6) has an answer with a machine check since step 26. The rows of 7 of the 9 laws with no small model (code 5) got a check here in steps 27 and 28. Left for the finish line in `LOOP.md`: 5 implications in the rows of laws 250 and 257 that rest on the ETP only.
 
 ## Queue (take the first item)
 
-1. **Rows of the 3 collapse laws** (laws 110 `((x*y)*z)*x = w`, 284 `(x*y)*f(z) = y`, 415 `f(x)*(y*z) = y`; 2,133
-   pairs, code 5). The sibling eq-laws-without-small-models stores collapse derivations in
-   `results/collapse_xy_fz.json` and `results/collapse_fx_yz.json`; law 110 collapses in one step (`w` on one side
-   only). Write them in the format of `results/derivations_nine_laws.json` (a fact `x = y`, then each target in one
-   step) and replay them with `src/check_derivations.py`, table unchanged.
-2. **Rows of the 2 laws with 4-element models** (laws 250 `(x*y)*(y*x) = y`, 257 `(x*y)*(y*z) = y`; 1,422 pairs,
+1. **Rows of the 2 laws with 4-element models** (laws 250 `(x*y)*(y*x) = y`, 257 `(x*y)*(y*z) = y`; 1,422 pairs,
    code 5). 1,417 have certificates checked here since step 09; the other 5 are implications resting on the ETP only.
    Give those 5 a check here (stored derivation replayed by `src/check_derivations.py`, or z3, labelled honestly).
    Then check the finish line in `LOOP.md`.
@@ -129,15 +124,19 @@ that already have a machine check, or extend the question.
   `results/refutations_nine_laws.json`) and 16 "implies" (one-step derivations, `results/derivations_nine_laws.json`),
   checked by the step 16 and 19 checkers (now accepting codes 5 and 6), mutation test 7 of 7
   (`src/selftest_nine_laws.py`), gates and CI. Same verdicts as the sibling, 0 differences. Table unchanged.
+- 2026-11-23: step 28 (queue item 1): the rows of the three collapse laws (110, 284, 415): `x = y` derived from each by a
+  stored chain (2 or 6 steps), every other law in one more step; 2,133 pairs "implies"
+  (`results/derivations_collapse_laws.json`, replayed by `src/check_derivations.py`, mutation test
+  `src/selftest_collapse_laws.py` 14 of 14, gates and CI; `z3-only` level at most, no z3 used). Table unchanged.
 
 ## Last iteration
 
-2026-11-23, loop run 18, step 27: four of the nine laws with no small example have an infinite example built from formal expressions; with it, 2,828 of their 2,844 pairs are "does not imply" and the other 16 are "implies" by a one-step replacement, all checked by this repository's own code (label `z3-only`, not Lean), and they agree with the sibling repository.
-Next: the rows of the three laws that force a single element (2,133 pairs) get the sibling's step-by-step collapse proofs replayed here; after that, the two laws with 4-element tables.
+2026-11-23, loop run 19, step 28: three of the nine laws with no small example force every structure to have one element; for each, a step-by-step proof of "any two elements are equal" was stored and replayed by this repository's own checker, so all 2,133 of their pairs are "implies" (replayed proofs, not Lean).
+Next: the last 5 pairs (laws 250 and 257, which have 4-element examples) whose "implies" answers rest only on the outside project's data get a check here; then the loop checks whether the repository is finished.
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
   `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
-  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21, the 10 pairs of step 23, the 4 pairs of step 24, the 2 pairs of step 25 and the 4 pairs of step 26 (still code 6), and the 2,844 pairs of step 27 (still code 5).
+  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21, the 10 pairs of step 23, the 4 pairs of step 24, the 2 pairs of step 25 and the 4 pairs of step 26 (still code 6), the 2,844 pairs of step 27 and the 2,133 pairs of step 28 (still code 5).

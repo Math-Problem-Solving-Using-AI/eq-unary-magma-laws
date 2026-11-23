@@ -338,6 +338,22 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Not finished: the rows of laws 110, 284, 415 (collapse) and 250, 257 (4-element models; 5 implications rest on the
   ETP only) have no check here yet. Item split; the two pieces are back at the top of the queue.
 
+### Loop run 19 (step 28)
+
+- Queue item "rows of the 3 collapse laws". `src/collapse_derivations.py` writes, for laws 110, 284 and 415, a chain
+  deriving `x = y` (2 steps for 110; helper equation plus 4 steps for 284 and 415) and then each of the 711 targets in
+  one step from `x = y`: 2,133 pairs, all "implies" (`results/derivations_collapse_laws.json`). Replayed by the
+  unchanged `src/check_derivations.py` (2,147 steps). New mutation test `src/selftest_collapse_laws.py`, 14 of 14.
+  The sibling's checker also passes on its own two collapse proofs (run with `python -B`, sibling left clean).
+- Rows of 7 of the 9 code 5 laws now have a check here. Left: the 5 ETP-only implications of laws 250 and 257.
+
+### Decisions taken by the loop (run 19)
+
+- The item said to write the sibling's collapse derivations in our format. The sibling's proofs use rules our checker
+  does not have (symmetry, transitivity, instantiation of a derived equation). Rather than widen the checker, the
+  same argument was rewritten as plain replacement chains (a helper equation, then `x = y`), which the unchanged
+  checker replays. Nothing published, no cost, no format change.
+
 ### Decisions taken by the loop (run 18)
 
 - The queue item said "update codes 5 from its results and re-export the table". That changes the published table
