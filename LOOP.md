@@ -65,6 +65,8 @@ in `steps/`.
   - `python src/selftest_collapse_laws.py data/laws_3.json results/status_matrix.npz results/derivations_collapse_laws.json`
   - `python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_ffree_laws.json`
   - `python src/selftest_ffree_laws.py data/laws_3.json results/status_matrix.npz results/witnesses_ffree_models.json results/derivations_ffree_laws.json`
+  - `python src/tally_answers.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results`
+  - `python src/tally_answers.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results --selftest`
   A verifier you changed must still fail on corrupted input (mutation test).
 - **Status table.** After changing certificates or proofs run `src/export_status.py` and commit the
   new `results/status_matrix.npz`; its counts must match the README table.
