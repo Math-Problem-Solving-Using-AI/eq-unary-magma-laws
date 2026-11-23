@@ -175,7 +175,7 @@ and runs the extension step about 49,000 times with laws 598 and 88 evaluated di
 598 -> 224 and its mirror 88 -> 579: "does not imply"** (`results/asterix_eq65.json`, gate and CI). Same label as
 step 23: the ETP's construction is a Lean proof that was read, not re-run here. `results/status_matrix.npz` still says
 code 6 for them. **Still open after step 25: 4 pairs, all with `f`** (`(x*y)*f(x) = y` and its mirror; no answer
-anywhere yet). All 16 ETP Austin pairs now have a check here.
+here, and the ETP has no laws with `f`). All 16 ETP Austin pairs now have a check here.
 
 ## Steps (granular record)
 
