@@ -23,3 +23,4 @@ jobs:
       - run: python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
       - run: python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
       - run: python src/query.py "x*y = x" "x*(y*z) = x"
+      - run: python src/query.py "(x*y)*(y*x) = y" "f(x) = x" --witness

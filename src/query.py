@@ -95,6 +95,31 @@ def etp_note(a, b, c):
     return head + "Our answer agrees with the ETP data (steps/08-etp-crosscheck.md)."
 
 
+def ffree_certificates():
+    """Certificates of step 09 (results/witnesses_ffree_models.json), keyed by "a,b" (law index)."""
+    path = ROOT / "results" / "witnesses_ffree_models.json"
+    return json.load(open(path, encoding="utf-8")) if path.exists() else {}
+
+
+def ffree_note(a, b, entries, certs):
+    """For a pair still code 5 in the table: a 4-element certificate from step 09, re-checked now."""
+    from verify_witnesses import check_entry
+
+    e = certs.get(f"{a},{b}")
+    if e is None:
+        return None, None
+    if e["A"] != entries[a]["text"] or e["B"] != entries[b]["text"]:
+        return ("WARNING: results/witnesses_ffree_models.json has an entry for this pair whose law texts "
+                "do not match the table. Not used.", None)
+    if not check_entry(e):
+        return ("WARNING: the certificate in results/witnesses_ffree_models.json for this pair FAILED "
+                "the re-check. Not used.", None)
+    return ("Step 09: NOT an implication. A structure with 4 elements satisfies A and fails B "
+            "(results/witnesses_ffree_models.json, re-checked just now by src/verify_witnesses.py code). "
+            "Label: model-verified. The table above still says code 5 because the stored matrix "
+            "predates step 09 (steps/09-ffree-models-with-f.md).", e["model"])
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     flags = {a for a in sys.argv[1:] if a.startswith("--")}
@@ -109,6 +134,11 @@ def main():
                 print(f"   B = #{entries[b]['id']}: {entries[b]['text']}")
             if len(ids) > 10:
                 print(f"   ... {len(ids) - 10} more")
+        certs = ffree_certificates()
+        n = sum(f"{a},{b}" in certs for b in np.where(codes[a] == 5)[0])
+        if n:
+            print(f"\nStep 09: {n} of the open (code 5) targets above have a 4-element certificate in "
+                  "results/witnesses_ffree_models.json (model-verified). Ask about one pair to see it.")
         return
     if len(args) != 2:
         raise SystemExit(__doc__)
@@ -121,6 +151,11 @@ def main():
     etp = etp_note(a, b, c)
     if etp:
         print(etp)
+    note, model = ffree_note(a, b, entries, ffree_certificates()) if c == 5 else (None, None)
+    if note:
+        print(note)
+    if "--witness" in flags and model:
+        print("structure satisfying A and failing B:", json.dumps(model))
     if "--witness" in flags and c in (1, 2):
         if c == 1:
             w = witness(a, b, entries)
