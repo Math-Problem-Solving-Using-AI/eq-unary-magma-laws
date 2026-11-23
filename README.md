@@ -56,7 +56,8 @@ unchanged, and the ETP information is in `results/etp_crosscheck.json`.
 trying all 256 choices of `f` on the known 4-element table refutes 1,417 of their 1,422 open
 targets (608 of them contain `f`; certificates in `results/witnesses_ffree_models.json`, re-checked
 by `src/verify_witnesses.py`). The 5 left are exactly the implications the ETP proves, so both rows
-are fully decided.
+are fully decided. `src/query.py` prints these certificates (step 10); `results/status_matrix.npz` still
+says code 5 for them.
 
 ## Steps (granular record)
 
@@ -71,6 +72,7 @@ Read in order, `steps/`:
 7. `07-full-recheck-of-small-refutations.md`
 8. `08-etp-crosscheck.md`
 9. `09-ffree-models-with-f.md`
+10. `10-query-reads-step-09.md`
 
 ## Layout
 

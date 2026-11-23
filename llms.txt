@@ -26,7 +26,7 @@
 - [results/etp_crosscheck.json](results/etp_crosscheck.json): our law id to ETP equation number for the 408 laws
   without `f`, and the ETP verdict for pairs open in our table. `query.py` prints it.
 - [results/witnesses_ffree_models.json](results/witnesses_ffree_models.json): 1,417 certificates for the rows of
-  `(x*y)*(y*x) = y` and `(x*y)*(y*z) = y` (not yet read by `query.py`).
+  `(x*y)*(y*x) = y` and `(x*y)*(y*z) = y`. `query.py` reads them and re-checks each one before reporting it (step 10).
 
 ## How to trust it
 

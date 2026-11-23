@@ -43,7 +43,8 @@ Only the last one may be called a result. `known` means already in the literatur
   together with the ETP's answer (label `known (ETP)`). Produced by `src/etp_crosscheck.py`.
 - `witnesses_ffree_models.json`: 1,417 certificates (4 elements) for the rows of `(x*y)*(y*x) = y` and
   `(x*y)*(y*z) = y`, which are still code 5 in `status_matrix.npz` (`steps/09-ffree-models-with-f.md`).
-  Re-check with `src/verify_witnesses.py results/witnesses_ffree_models.json`.
+  Re-check with `src/verify_witnesses.py results/witnesses_ffree_models.json`. `src/query.py` reads this
+  file for code-5 pairs and re-checks the entry before reporting it (`steps/10-query-reads-step-09.md`).
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
