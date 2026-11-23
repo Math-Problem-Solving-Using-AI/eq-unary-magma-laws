@@ -1,0 +1,20 @@
+{
+ "about": "Step 24. Finite seeds of the ETP's infinite models of ETP equation 118 (our law 508, x*((y*x)*x) = y), and the 4 open pairs they settle. Checked by src/check_greedy_eq118.py. A seed is a finite partial operation on the natural numbers, given as triples [x, y, z] meaning x*y = z. A model is the natural numbers with a total operation that contains the seed and satisfies law 508 (mirrored model: x*y is read as y*x, which satisfies law 143). That such an operation exists for every seed that passes the 11 rules of PartialSolution is the ETP's Lean construction (PartialSolution.adjoin, complSeq, toMagma_equation118), which this repository does not re-run.",
+ "source": {
+  "repository": "https://github.com/teorth/equational_theories",
+  "commit": "dbc9a2bf0c939e7c646841e679f0f7fb6cfe4e15",
+  "commit_date": "2026-11-19",
+  "file": "equational_theories/Generated/Greedy/Eq118.lean",
+  "lines": {"PartialSolution": 2441, "adjoin": 2462, "addArbitrary": 2570, "complSeq": 2598, "of_R": 2671, "toMagma": 2676, "toMagma_equation118": 2679, "counter222": 2689, "Equation118_not_implies_Equation222": 2708, "counter274": 2722, "Equation118_not_implies_Equation274": 2741}
+ },
+ "seeds": {
+  "counter222": {"triples": [[1, 2, 3], [2, 3, 1]], "finsupp": [1, 2, 3]},
+  "counter274": {"triples": [[1, 1, 1], [1, 2, 3], [1, 3, 3], [3, 1, 3]], "finsupp": [1, 2, 3]}
+ },
+ "pairs": [
+  {"pair": [508, 86], "seed": "counter274", "mirror": false, "env": {"x": 1, "y": 2}},
+  {"pair": [508, 153], "seed": "counter222", "mirror": false, "env": {"x": 2, "y": 1}},
+  {"pair": [143, 498], "seed": "counter222", "mirror": true, "env": {"x": 2, "y": 1}},
+  {"pair": [143, 565], "seed": "counter274", "mirror": true, "env": {"x": 1, "y": 2}}
+ ]
+}
