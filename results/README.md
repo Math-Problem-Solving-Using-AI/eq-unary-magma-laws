@@ -91,6 +91,11 @@ Only the last one may be called a result. `known` means already in the literatur
   Terms as in `completions_open.json`. Label: `z3-only` level at most (no z3 used; nothing but replacing equals
   by equals). Check with `src/check_derivations.py` (`--selftest` for the mutation test). Still code 6 in
   `status_matrix.npz`; `src/query.py` does not read this file.
+- `extra_laws_277.json`: the search of step 20 (`steps/20-counterexample-search-law-277.md`, produced by
+  `src/scan_extra_laws.py`): `(x*y)*f(x) = y` completed together with each law E of size 1 to 4, and the targets
+  `x*(y*f(x)) = y`, `x*(x*f(x)) = x` tested when a run completes. `laws`: for each E (key = its id in the list of
+  `src/laws.py 4`, whose first 712 laws are `data/laws_3.json`) the outcome per symbol order: a stop reason, or
+  `[order, [verdicts], rules]`. 274 complete, all `holds`; no certificates, nothing settled.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 

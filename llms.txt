@@ -45,6 +45,8 @@
 - [results/derivations_open.json](results/derivations_open.json): 4 of those 25 pairs, all "implies", each by a
   stored chain of replacement steps from A (step 19, checked by `src/check_derivations.py`). 21 pairs are still
   open (17 without `f` have an ETP answer).
+- [results/extra_laws_277.json](results/extra_laws_277.json): search for a counterexample to the 4 open pairs with
+  `f` by completing `(x*y)*f(x) = y` with one extra law of size 1 to 4 (step 20). None found; 21 pairs still open.
 
 ## How to trust it
 

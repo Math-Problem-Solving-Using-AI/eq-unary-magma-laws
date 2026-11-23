@@ -124,6 +124,13 @@ Derivations in `results/derivations_open.json`, checked by `src/check_derivation
 `results/status_matrix.npz` still says code 6 for them. **Still open after step 19: 21 pairs** (4 with `f`, from
 `(x*y)*f(x) = y` and its mirror `f(x)*(y*x) = y`; 17 without `f`, which have an ETP answer).
 
+**Looking for a counterexample to `(x*y)*f(x) = y` (step 20).** Any counterexample must be infinite. Adding one
+extra law of size 1 to 4 to `(x*y)*f(x) = y` and completing (8,804 tries) never gave a model where
+`x*(y*f(x)) = y` fails: 274 runs completed and in all of them it holds. Replacing `f(x)` by `x`, `x*x`,
+`x*(x*x)` or `(x*x)*x` gives laws without `f` for which the ETP says the implication holds. z3 with hints said
+`unknown` after 120 s. **Nothing was settled; still 21 open pairs.** The search outcome is in
+`results/extra_laws_277.json` (no certificates).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -147,6 +154,7 @@ Read in order, `steps/`:
 17. `17-completion-overlapping-rules.md`
 18. `18-completion-new-symbols.md`
 19. `19-derivations-aimed-at-target.md`
+20. `20-counterexample-search-law-277.md`
 
 ## Layout
 
