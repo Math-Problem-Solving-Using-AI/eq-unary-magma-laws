@@ -170,6 +170,8 @@ python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz re
 python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json --selftest
 python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json
 python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json --selftest
+python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_new_symbols.json
+python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_new_symbols.json --selftest
 ```
 
 ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):

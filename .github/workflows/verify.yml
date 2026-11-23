@@ -29,6 +29,8 @@ jobs:
       - run: python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json --selftest
       - run: python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json
       - run: python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json --selftest
+      - run: python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_new_symbols.json
+      - run: python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_new_symbols.json --selftest
       - run: python src/query.py "x*y = x" "x*(y*z) = x"
       - run: python src/query.py "(x*y)*(y*x) = y" "f(x) = x" --witness
       - run: python src/query.py "(x*(x*y))*y = x" "x*(y*y) = x*y" --witness

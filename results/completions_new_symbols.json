@@ -1,0 +1,3176 @@
+{
+ "sources": {
+  "353": {
+   "A": "f(f(x)*y) = x",
+   "precedence": "f > * > h0",
+   "facts": [
+    {
+     "left": "f(m(f(v0),v1))",
+     "right": "v0",
+     "chain": null
+    },
+    {
+     "left": "f(m(f(v0),v1))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v2,v5))",
+     "right": "m(f(v2),v3)",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0,
+        0
+       ],
+       "subst": {
+        "v0": "v2",
+        "v1": "v3"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "m(f(v2),v3)",
+        "v1": "v5"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v2)",
+     "right": "f(m(v2,v2))",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "f(m(v2,v5))",
+     "right": "h0(v2)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v3": "v3",
+        "v5": "v5"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v3": "v3",
+        "v5": "v2"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(f(v2),v3)",
+     "right": "h0(v2)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v3": "v3",
+        "v5": "v2"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(f(v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "f(v0)",
+        "v5": "v1"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(h0(v14))",
+     "right": "v14",
+     "chain": [
+      {
+       "fact": 5,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v14",
+        "v3": "v17"
+       }
+      },
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v2": "f(v14)",
+        "v5": "v17"
+       }
+      },
+      {
+       "fact": 6,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v14"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h0(v22))",
+     "right": "m(v22,v23)",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v22",
+        "v5": "v23"
+       }
+      },
+      {
+       "fact": 6,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "m(v22,v23)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 6,
+     "dir": 1,
+     "rule": "h0(f(v0)) -> v0"
+    },
+    {
+     "fact": 7,
+     "dir": 1,
+     "rule": "f(h0(v14)) -> v14"
+    },
+    {
+     "fact": 8,
+     "dir": -1,
+     "rule": "m(v22,v23) -> h0(h0(v22))"
+    }
+   ]
+  },
+  "454": {
+   "A": "f(x*f(y)) = y",
+   "precedence": "f > * > h0",
+   "facts": [
+    {
+     "left": "f(m(v0,f(v1)))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "f(m(v0,f(v1)))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v4,v3))",
+     "right": "m(v2,f(v3))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0,
+        1
+       ],
+       "subst": {
+        "v0": "v2",
+        "v1": "v3"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v4",
+        "v1": "m(v2,f(v3))"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v3)",
+     "right": "f(m(v3,v3))",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "f(m(v4,v3))",
+     "right": "h0(v3)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v3": "v3",
+        "v4": "v4"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v3": "v3",
+        "v4": "v3"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v2,f(v3))",
+     "right": "h0(v3)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v3": "v3",
+        "v4": "v3"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(f(v1))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "f(v1)",
+        "v4": "v0"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(h0(v15))",
+     "right": "v15",
+     "chain": [
+      {
+       "fact": 5,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v17",
+        "v3": "v15"
+       }
+      },
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "f(v15)",
+        "v4": "v17"
+       }
+      },
+      {
+       "fact": 6,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v1": "v15"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h0(v22))",
+     "right": "m(v23,v22)",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v3": "v22",
+        "v4": "v23"
+       }
+      },
+      {
+       "fact": 6,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v1": "m(v23,v22)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 6,
+     "dir": 1,
+     "rule": "h0(f(v1)) -> v1"
+    },
+    {
+     "fact": 7,
+     "dir": 1,
+     "rule": "f(h0(v15)) -> v15"
+    },
+    {
+     "fact": 8,
+     "dir": -1,
+     "rule": "m(v23,v22) -> h0(h0(v22))"
+    }
+   ]
+  },
+  "465": {
+   "A": "f(x*x)*y = x",
+   "precedence": "f > * > h0 > h1",
+   "facts": [
+    {
+     "left": "m(f(m(v0,v0)),v1)",
+     "right": "v0",
+     "chain": null
+    },
+    {
+     "left": "m(f(m(v0,v0)),v1)",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(f(v2),v5)",
+     "right": "f(m(v2,v2))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0,
+        0
+       ],
+       "subst": {
+        "v0": "v2",
+        "v1": "f(m(v2,v2))"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(m(v2,v2))",
+        "v1": "v5"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v2)",
+     "right": "m(f(v2),v2)",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(f(v2),v5)",
+     "right": "h0(v2)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v5": "v5"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v5": "v2"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v2,v2))",
+     "right": "h0(v2)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2",
+        "v5": "v2"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(h0(v10))",
+     "right": "h0(f(v10))",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v10",
+        "v5": "f(v10)"
+       }
+      },
+      {
+       "fact": 5,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v2": "f(v10)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(m(v0,v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "m(v0,v0)",
+        "v5": "v1"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h0(v30))",
+     "right": "f(v30)",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v30",
+        "v5": "f(v30)"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(v30)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(h0(v13),v15)",
+     "right": "v13",
+     "chain": [
+      {
+       "fact": 5,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v13"
+       }
+      },
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v2": "m(v13,v13)",
+        "v5": "v15"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v13"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v86,v88)",
+     "right": "m(v86,v86)",
+     "chain": [
+      {
+       "fact": 7,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "v86"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v13": "m(v86,v86)",
+        "v15": "v88"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(v86)",
+     "right": "m(v86,v86)",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(v86,v88)",
+     "right": "h1(v86)",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v86": "v86",
+        "v88": "v88"
+       }
+      },
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "v86",
+        "v88": "v86"
+       }
+      },
+      {
+       "fact": 11,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "v86"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v86,v86)",
+     "right": "h1(v86)",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "v86",
+        "v88": "v86"
+       }
+      },
+      {
+       "fact": 11,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "v86"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h1(v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 12,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v86": "v0",
+        "v88": "v0"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(h0(v13))",
+     "right": "v13",
+     "chain": [
+      {
+       "fact": 12,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "h0(v13)",
+        "v88": "v15"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v13": "v13",
+        "v15": "v15"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v140)",
+     "right": "f(h1(v140))",
+     "chain": [
+      {
+       "fact": 14,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "v140"
+       }
+      },
+      {
+       "fact": 8,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v30": "h1(v140)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(f(v158))",
+     "right": "h0(v158)",
+     "chain": [
+      {
+       "fact": 8,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v30": "v158"
+       }
+      },
+      {
+       "fact": 15,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v13": "h0(v158)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 6,
+     "dir": 1,
+     "rule": "f(h0(v10)) -> h0(f(v10))"
+    },
+    {
+     "fact": 8,
+     "dir": 1,
+     "rule": "h0(h0(v30)) -> f(v30)"
+    },
+    {
+     "fact": 12,
+     "dir": 1,
+     "rule": "m(v86,v88) -> h1(v86)"
+    },
+    {
+     "fact": 13,
+     "dir": 1,
+     "rule": "m(v86,v86) -> h1(v86)"
+    },
+    {
+     "fact": 14,
+     "dir": 1,
+     "rule": "h0(h1(v0)) -> v0"
+    },
+    {
+     "fact": 15,
+     "dir": 1,
+     "rule": "h1(h0(v13)) -> v13"
+    },
+    {
+     "fact": 16,
+     "dir": -1,
+     "rule": "f(h1(v140)) -> h0(v140)"
+    },
+    {
+     "fact": 17,
+     "dir": 1,
+     "rule": "h1(f(v158)) -> h0(v158)"
+    }
+   ]
+  },
+  "484": {
+   "A": "f(x*y)*y = x",
+   "precedence": "* > f > h0",
+   "facts": [
+    {
+     "left": "m(f(m(v0,v1)),v1)",
+     "right": "v0",
+     "chain": null
+    },
+    {
+     "left": "m(f(m(v0,v1)),v1)",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(f(v2),v5)",
+     "right": "f(m(v2,v5))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0,
+        0
+       ],
+       "subst": {
+        "v0": "v2",
+        "v1": "v5"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(m(v2,v5))",
+        "v1": "v5"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(m(v0,v1),v1))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "m(v0,v1)",
+        "v5": "v1"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v14,v17)",
+     "right": "f(m(m(m(v14,v15),v15),v17))",
+     "chain": [
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "v14",
+        "v1": "v15"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v2": "m(m(v14,v15),v15)",
+        "v5": "v17"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v27,v29),v31)",
+     "right": "f(m(m(m(m(v27,v28),v28),v29),v31))",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v14": "v27",
+        "v15": "v28",
+        "v17": "v29"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v2": "m(m(m(v27,v28),v28),v29)",
+        "v5": "v31"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v62,v63),v63)",
+     "right": "m(m(v62,v65),v65)",
+     "chain": [
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "m(m(v62,v63),v63)",
+        "v1": "v65"
+       }
+      },
+      {
+       "fact": 5,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v27": "v62",
+        "v28": "v63",
+        "v29": "v65",
+        "v31": "v65"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v62)",
+     "right": "m(m(v62,v62),v62)",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(m(v62,v63),v63)",
+     "right": "h0(v62)",
+     "chain": [
+      {
+       "fact": 6,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v62": "v62",
+        "v63": "v63",
+        "v65": "v65"
+       }
+      },
+      {
+       "fact": 6,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v62": "v62",
+        "v63": "v62",
+        "v65": "v65"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v62": "v62"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v62,v65),v65)",
+     "right": "h0(v62)",
+     "chain": [
+      {
+       "fact": 6,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v62": "v62",
+        "v63": "v62",
+        "v65": "v65"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v62": "v62"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(h0(v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 9,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v62": "v0",
+        "v65": "v1"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(h0(v102),v105)",
+     "right": "h0(m(v102,v105))",
+     "chain": [
+      {
+       "fact": 8,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v62": "v102",
+        "v63": "v105"
+       }
+      },
+      {
+       "fact": 8,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v62": "m(v102,v105)",
+        "v63": "v105"
+       }
+      }
+     ]
+    },
+    {
+     "left": "v94",
+     "right": "h0(f(v94))",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "v94"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v62": "v94",
+        "v65": "v97"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v2": "m(v94,v97)",
+        "v5": "v97"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v94",
+        "v5": "v97"
+       }
+      },
+      {
+       "fact": 8,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v62": "f(v94)",
+        "v63": "v97"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 2,
+     "dir": 1,
+     "rule": "m(f(v2),v5) -> f(m(v2,v5))"
+    },
+    {
+     "fact": 9,
+     "dir": 1,
+     "rule": "m(m(v62,v65),v65) -> h0(v62)"
+    },
+    {
+     "fact": 10,
+     "dir": 1,
+     "rule": "f(h0(v0)) -> v0"
+    },
+    {
+     "fact": 11,
+     "dir": 1,
+     "rule": "m(h0(v102),v105) -> h0(m(v102,v105))"
+    },
+    {
+     "fact": 12,
+     "dir": -1,
+     "rule": "h0(f(v94)) -> v94"
+    }
+   ]
+  },
+  "488": {
+   "A": "f(x*y)*z = x",
+   "precedence": "f > * > h0 > h1",
+   "facts": [
+    {
+     "left": "m(f(m(v0,v1)),v2)",
+     "right": "v0",
+     "chain": null
+    },
+    {
+     "left": "m(f(m(v0,v1)),v2)",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(f(v3),v8)",
+     "right": "f(m(v3,v4))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0,
+        0
+       ],
+       "subst": {
+        "v0": "v3",
+        "v1": "v4",
+        "v2": "v7"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(m(v3,v4))",
+        "v1": "v7",
+        "v2": "v8"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v3)",
+     "right": "m(f(v3),v3)",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(f(v3),v8)",
+     "right": "h0(v3)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "v3",
+        "v4": "v4",
+        "v8": "v8"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3",
+        "v4": "v4",
+        "v8": "v3"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v3,v4))",
+     "right": "h0(v3)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3",
+        "v4": "v4",
+        "v8": "v3"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(h0(v13))",
+     "right": "h0(f(v13))",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v3": "v13",
+        "v8": "v16"
+       }
+      },
+      {
+       "fact": 5,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "f(v13)",
+        "v4": "v16"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(m(v0,v1))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "m(v0,v1)",
+        "v8": "v2"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h0(v39))",
+     "right": "f(v39)",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v3": "v39",
+        "v8": "v42"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(v39)",
+        "v1": "v42"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(h0(v17),v20)",
+     "right": "v17",
+     "chain": [
+      {
+       "fact": 5,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v3": "v17",
+        "v4": "v18"
+       }
+      },
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "m(v17,v18)",
+        "v8": "v20"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v17",
+        "v1": "v18"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v111,v114)",
+     "right": "m(v111,v112)",
+     "chain": [
+      {
+       "fact": 7,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "v111",
+        "v1": "v112"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v17": "m(v111,v112)",
+        "v20": "v114"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(v111)",
+     "right": "m(v111,v111)",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(v111,v114)",
+     "right": "h1(v111)",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v111": "v111",
+        "v112": "v112",
+        "v114": "v114"
+       }
+      },
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v111": "v111",
+        "v112": "v112",
+        "v114": "v111"
+       }
+      },
+      {
+       "fact": 11,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v111": "v111"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v111,v112)",
+     "right": "h1(v111)",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v111": "v111",
+        "v112": "v112",
+        "v114": "v111"
+       }
+      },
+      {
+       "fact": 11,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v111": "v111"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h1(v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 13,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v111": "v0",
+        "v112": "v1"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(h0(v17))",
+     "right": "v17",
+     "chain": [
+      {
+       "fact": 13,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v111": "h0(v17)",
+        "v112": "v20"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v17": "v17",
+        "v20": "v20"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v167)",
+     "right": "f(h1(v167))",
+     "chain": [
+      {
+       "fact": 14,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "v167"
+       }
+      },
+      {
+       "fact": 8,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v39": "h1(v167)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(f(v181))",
+     "right": "h0(v181)",
+     "chain": [
+      {
+       "fact": 8,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v39": "v181"
+       }
+      },
+      {
+       "fact": 15,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v17": "h0(v181)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 6,
+     "dir": 1,
+     "rule": "f(h0(v13)) -> h0(f(v13))"
+    },
+    {
+     "fact": 8,
+     "dir": 1,
+     "rule": "h0(h0(v39)) -> f(v39)"
+    },
+    {
+     "fact": 13,
+     "dir": 1,
+     "rule": "m(v111,v112) -> h1(v111)"
+    },
+    {
+     "fact": 14,
+     "dir": 1,
+     "rule": "h0(h1(v0)) -> v0"
+    },
+    {
+     "fact": 15,
+     "dir": 1,
+     "rule": "h1(h0(v17)) -> v17"
+    },
+    {
+     "fact": 16,
+     "dir": -1,
+     "rule": "f(h1(v167)) -> h0(v167)"
+    },
+    {
+     "fact": 17,
+     "dir": 1,
+     "rule": "h1(f(v181)) -> h0(v181)"
+    }
+   ]
+  },
+  "690": {
+   "A": "x*f(x*y) = y",
+   "precedence": "* > f > h0",
+   "facts": [
+    {
+     "left": "m(v0,f(m(v0,v1)))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(v0,f(m(v0,v1)))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v4,f(v3))",
+     "right": "f(m(v4,v3))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        1,
+        0
+       ],
+       "subst": {
+        "v0": "v4",
+        "v1": "v3"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v4",
+        "v1": "f(m(v4,v3))"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v0,m(v0,v1)))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "m(v0,v1)",
+        "v4": "v0"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v17,v15)",
+     "right": "f(m(v17,m(v14,m(v14,v15))))",
+     "chain": [
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v0": "v14",
+        "v1": "v15"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "m(v14,m(v14,v15))",
+        "v4": "v17"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v31,m(v29,v28))",
+     "right": "f(m(v31,m(v29,m(v27,m(v27,v28)))))",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v14": "v27",
+        "v15": "v28",
+        "v17": "v29"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "m(v29,m(v27,m(v27,v28)))",
+        "v4": "v31"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v62,m(v62,v63))",
+     "right": "m(v64,m(v64,v63))",
+     "chain": [
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "v64",
+        "v1": "m(v62,m(v62,v63))"
+       }
+      },
+      {
+       "fact": 5,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v27": "v62",
+        "v28": "v63",
+        "v29": "v64",
+        "v31": "v64"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v63)",
+     "right": "m(v63,m(v63,v63))",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(v62,m(v62,v63))",
+     "right": "h0(v63)",
+     "chain": [
+      {
+       "fact": 6,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v62": "v62",
+        "v63": "v63",
+        "v64": "v64"
+       }
+      },
+      {
+       "fact": 6,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v62": "v63",
+        "v63": "v63",
+        "v64": "v64"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v63": "v63"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v64,m(v64,v63))",
+     "right": "h0(v63)",
+     "chain": [
+      {
+       "fact": 6,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v62": "v63",
+        "v63": "v63",
+        "v64": "v64"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v63": "v63"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(h0(v1))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 9,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v63": "v1",
+        "v64": "v0"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v104,h0(v103))",
+     "right": "h0(m(v104,v103))",
+     "chain": [
+      {
+       "fact": 8,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v62": "v104",
+        "v63": "v103"
+       }
+      },
+      {
+       "fact": 8,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v62": "v104",
+        "v63": "m(v104,v103)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "v94",
+     "right": "h0(f(v94))",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v1": "v94"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v63": "v94",
+        "v64": "v96"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "m(v96,v94)",
+        "v4": "v96"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v3": "v94",
+        "v4": "v96"
+       }
+      },
+      {
+       "fact": 8,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v62": "v96",
+        "v63": "f(v94)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 2,
+     "dir": 1,
+     "rule": "m(v4,f(v3)) -> f(m(v4,v3))"
+    },
+    {
+     "fact": 9,
+     "dir": 1,
+     "rule": "m(v64,m(v64,v63)) -> h0(v63)"
+    },
+    {
+     "fact": 10,
+     "dir": 1,
+     "rule": "f(h0(v1)) -> v1"
+    },
+    {
+     "fact": 11,
+     "dir": 1,
+     "rule": "m(v104,h0(v103)) -> h0(m(v104,v103))"
+    },
+    {
+     "fact": 12,
+     "dir": -1,
+     "rule": "h0(f(v94)) -> v94"
+    }
+   ]
+  },
+  "706": {
+   "A": "x*f(y*y) = y",
+   "precedence": "f > * > h0 > h1",
+   "facts": [
+    {
+     "left": "m(v0,f(m(v1,v1)))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(v0,f(m(v1,v1)))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v4,f(v3))",
+     "right": "f(m(v3,v3))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        1,
+        0
+       ],
+       "subst": {
+        "v0": "f(m(v3,v3))",
+        "v1": "v3"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v4",
+        "v1": "f(m(v3,v3))"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v3)",
+     "right": "m(v3,f(v3))",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(v4,f(v3))",
+     "right": "h0(v3)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "v3",
+        "v4": "v4"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3",
+        "v4": "v3"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v3,v3))",
+     "right": "h0(v3)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3",
+        "v4": "v3"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "v3"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(h0(v10))",
+     "right": "h0(f(v10))",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v3": "v10",
+        "v4": "f(v10)"
+       }
+      },
+      {
+       "fact": 5,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "f(v10)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(m(v1,v1))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v3": "m(v1,v1)",
+        "v4": "v0"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h0(v30))",
+     "right": "f(v30)",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v3": "v30",
+        "v4": "f(v30)"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v1": "f(v30)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v15,h0(v13))",
+     "right": "v13",
+     "chain": [
+      {
+       "fact": 5,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v3": "v13"
+       }
+      },
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v3": "m(v13,v13)",
+        "v4": "v15"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v1": "v13"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v88,v86)",
+     "right": "m(v86,v86)",
+     "chain": [
+      {
+       "fact": 7,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v1": "v86"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v13": "m(v86,v86)",
+        "v15": "v88"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(v86)",
+     "right": "m(v86,v86)",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(v88,v86)",
+     "right": "h1(v86)",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v86": "v86",
+        "v88": "v88"
+       }
+      },
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "v86",
+        "v88": "v86"
+       }
+      },
+      {
+       "fact": 11,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "v86"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v86,v86)",
+     "right": "h1(v86)",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "v86",
+        "v88": "v86"
+       }
+      },
+      {
+       "fact": 11,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "v86"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h1(v1))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 12,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v86": "v1",
+        "v88": "v1"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(h0(v13))",
+     "right": "v13",
+     "chain": [
+      {
+       "fact": 12,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v86": "h0(v13)",
+        "v88": "v15"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v13": "v13",
+        "v15": "v15"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v140)",
+     "right": "f(h1(v140))",
+     "chain": [
+      {
+       "fact": 14,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v1": "v140"
+       }
+      },
+      {
+       "fact": 8,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v30": "h1(v140)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(f(v158))",
+     "right": "h0(v158)",
+     "chain": [
+      {
+       "fact": 8,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v30": "v158"
+       }
+      },
+      {
+       "fact": 15,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v13": "h0(v158)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 6,
+     "dir": 1,
+     "rule": "f(h0(v10)) -> h0(f(v10))"
+    },
+    {
+     "fact": 8,
+     "dir": 1,
+     "rule": "h0(h0(v30)) -> f(v30)"
+    },
+    {
+     "fact": 12,
+     "dir": 1,
+     "rule": "m(v88,v86) -> h1(v86)"
+    },
+    {
+     "fact": 13,
+     "dir": 1,
+     "rule": "m(v86,v86) -> h1(v86)"
+    },
+    {
+     "fact": 14,
+     "dir": 1,
+     "rule": "h0(h1(v1)) -> v1"
+    },
+    {
+     "fact": 15,
+     "dir": 1,
+     "rule": "h1(h0(v13)) -> v13"
+    },
+    {
+     "fact": 16,
+     "dir": -1,
+     "rule": "f(h1(v140)) -> h0(v140)"
+    },
+    {
+     "fact": 17,
+     "dir": 1,
+     "rule": "h1(f(v158)) -> h0(v158)"
+    }
+   ]
+  },
+  "711": {
+   "A": "x*f(y*z) = z",
+   "precedence": "f > * > h0 > h1",
+   "facts": [
+    {
+     "left": "m(v0,f(m(v1,v2)))",
+     "right": "v2",
+     "chain": null
+    },
+    {
+     "left": "m(v0,f(m(v1,v2)))",
+     "right": "v2",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v6,f(v5))",
+     "right": "f(m(v4,v5))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        1,
+        0
+       ],
+       "subst": {
+        "v0": "v7",
+        "v1": "v4",
+        "v2": "v5"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v6",
+        "v1": "v7",
+        "v2": "f(m(v4,v5))"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v5)",
+     "right": "m(v5,f(v5))",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(v6,f(v5))",
+     "right": "h0(v5)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v4": "v4",
+        "v5": "v5",
+        "v6": "v6"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v4": "v4",
+        "v5": "v5",
+        "v6": "v5"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v5": "v5"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v4,v5))",
+     "right": "h0(v5)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v4": "v4",
+        "v5": "v5",
+        "v6": "v5"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v5": "v5"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(h0(v13))",
+     "right": "h0(f(v13))",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v5": "v13",
+        "v6": "v15"
+       }
+      },
+      {
+       "fact": 5,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v4": "v15",
+        "v5": "f(v13)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(m(v1,v2))",
+     "right": "v2",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v5": "m(v1,v2)",
+        "v6": "v0"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h0(v39))",
+     "right": "f(v39)",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v5": "v39",
+        "v6": "v41"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v1": "v41",
+        "v2": "f(v39)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v20,h0(v18))",
+     "right": "v18",
+     "chain": [
+      {
+       "fact": 5,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v4": "v17",
+        "v5": "v18"
+       }
+      },
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v5": "m(v17,v18)",
+        "v6": "v20"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v1": "v17",
+        "v2": "v18"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v114,v112)",
+     "right": "m(v111,v112)",
+     "chain": [
+      {
+       "fact": 7,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v1": "v111",
+        "v2": "v112"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v18": "m(v111,v112)",
+        "v20": "v114"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(v112)",
+     "right": "m(v112,v112)",
+     "chain": null,
+     "definition": true
+    },
+    {
+     "left": "m(v114,v112)",
+     "right": "h1(v112)",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v111": "v111",
+        "v112": "v112",
+        "v114": "v114"
+       }
+      },
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v111": "v111",
+        "v112": "v112",
+        "v114": "v112"
+       }
+      },
+      {
+       "fact": 11,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v112": "v112"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v111,v112)",
+     "right": "h1(v112)",
+     "chain": [
+      {
+       "fact": 10,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v111": "v111",
+        "v112": "v112",
+        "v114": "v112"
+       }
+      },
+      {
+       "fact": 11,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v112": "v112"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(h1(v2))",
+     "right": "v2",
+     "chain": [
+      {
+       "fact": 13,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v111": "v1",
+        "v112": "v2"
+       }
+      },
+      {
+       "fact": 7,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v1": "v1",
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(h0(v18))",
+     "right": "v18",
+     "chain": [
+      {
+       "fact": 13,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v111": "v20",
+        "v112": "h0(v18)"
+       }
+      },
+      {
+       "fact": 9,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v18": "v18",
+        "v20": "v20"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h0(v167)",
+     "right": "f(h1(v167))",
+     "chain": [
+      {
+       "fact": 14,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v167"
+       }
+      },
+      {
+       "fact": 8,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v39": "h1(v167)"
+       }
+      }
+     ]
+    },
+    {
+     "left": "h1(f(v181))",
+     "right": "h0(v181)",
+     "chain": [
+      {
+       "fact": 8,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v39": "v181"
+       }
+      },
+      {
+       "fact": 15,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v18": "h0(v181)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 6,
+     "dir": 1,
+     "rule": "f(h0(v13)) -> h0(f(v13))"
+    },
+    {
+     "fact": 8,
+     "dir": 1,
+     "rule": "h0(h0(v39)) -> f(v39)"
+    },
+    {
+     "fact": 13,
+     "dir": 1,
+     "rule": "m(v111,v112) -> h1(v112)"
+    },
+    {
+     "fact": 14,
+     "dir": 1,
+     "rule": "h0(h1(v2)) -> v2"
+    },
+    {
+     "fact": 15,
+     "dir": 1,
+     "rule": "h1(h0(v18)) -> v18"
+    },
+    {
+     "fact": 16,
+     "dir": -1,
+     "rule": "f(h1(v167)) -> h0(v167)"
+    },
+    {
+     "fact": 17,
+     "dir": 1,
+     "rule": "h1(f(v181)) -> h0(v181)"
+    }
+   ]
+  }
+ },
+ "pairs": {
+  "353,356": {
+   "A": "f(f(x)*y) = x",
+   "B": "f(f(x*x)) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "353,358": {
+   "A": "f(f(x)*y) = x",
+   "B": "f(f(x*y)) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "454,356": {
+   "A": "f(x*f(y)) = y",
+   "B": "f(f(x*x)) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "454,359": {
+   "A": "f(x*f(y)) = y",
+   "B": "f(f(x*y)) = y",
+   "verdict": "holds",
+   "B_left": "v1",
+   "B_right": "v1"
+  },
+  "465,129": {
+   "A": "f(x*x)*y = x",
+   "B": "(f(x)*y)*y = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,133": {
+   "A": "f(x*x)*y = x",
+   "B": "(f(x)*y)*z = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,322": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*x)*x) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,324": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*x)*y) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,327": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*y)*x) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,330": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*y)*y) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,334": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*y)*z) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,481": {
+   "A": "f(x*x)*y = x",
+   "B": "f(x*y)*x = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,484": {
+   "A": "f(x*x)*y = x",
+   "B": "f(x*y)*y = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "465,488": {
+   "A": "f(x*x)*y = x",
+   "B": "f(x*y)*z = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "484,121": {
+   "A": "f(x*y)*y = x",
+   "B": "(f(x)*x)*x = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "484,129": {
+   "A": "f(x*y)*y = x",
+   "B": "(f(x)*y)*y = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "488,129": {
+   "A": "f(x*y)*z = x",
+   "B": "(f(x)*y)*y = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "488,133": {
+   "A": "f(x*y)*z = x",
+   "B": "(f(x)*y)*z = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "690,573": {
+   "A": "x*f(x*y) = y",
+   "B": "x*(x*f(x)) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "690,576": {
+   "A": "x*f(x*y) = y",
+   "B": "x*(x*f(y)) = y",
+   "verdict": "holds",
+   "B_left": "v1",
+   "B_right": "v1"
+  },
+  "706,436": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(x*x)) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "706,439": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(x*y)) = y",
+   "verdict": "holds",
+   "B_left": "v1",
+   "B_right": "v1"
+  },
+  "706,441": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(y*x)) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "706,445": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(y*y)) = y",
+   "verdict": "holds",
+   "B_left": "v1",
+   "B_right": "v1"
+  },
+  "706,450": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(y*z)) = z",
+   "verdict": "holds",
+   "B_left": "v2",
+   "B_right": "v2"
+  },
+  "706,576": {
+   "A": "x*f(y*y) = y",
+   "B": "x*(x*f(y)) = y",
+   "verdict": "holds",
+   "B_left": "v1",
+   "B_right": "v1"
+  },
+  "706,639": {
+   "A": "x*f(y*y) = y",
+   "B": "x*(y*f(z)) = z",
+   "verdict": "holds",
+   "B_left": "v2",
+   "B_right": "v2"
+  },
+  "706,690": {
+   "A": "x*f(y*y) = y",
+   "B": "x*f(x*y) = y",
+   "verdict": "holds",
+   "B_left": "v1",
+   "B_right": "v1"
+  },
+  "706,702": {
+   "A": "x*f(y*y) = y",
+   "B": "x*f(y*x) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "706,711": {
+   "A": "x*f(y*y) = y",
+   "B": "x*f(y*z) = z",
+   "verdict": "holds",
+   "B_left": "v2",
+   "B_right": "v2"
+  },
+  "711,576": {
+   "A": "x*f(y*z) = z",
+   "B": "x*(x*f(y)) = y",
+   "verdict": "holds",
+   "B_left": "v1",
+   "B_right": "v1"
+  },
+  "711,639": {
+   "A": "x*f(y*z) = z",
+   "B": "x*(y*f(z)) = z",
+   "verdict": "holds",
+   "B_left": "v2",
+   "B_right": "v2"
+  }
+ }
+}

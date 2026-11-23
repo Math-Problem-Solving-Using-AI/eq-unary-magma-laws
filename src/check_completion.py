@@ -19,6 +19,11 @@ not imply B; equal means B follows from A (each rule is a fact). Stored values a
 Controls: for each source, the verdicts on all 712 targets must not contradict the table (codes 1, 2
 counterexamples; codes 0, 3, 4 implications) nor the ETP verdicts for open pairs without f.
 
+Step 18 (results/completions_new_symbols.json) adds new symbols h0, h1, ...: a fact may be a definition
+h(x, y, ...) = term (no chain), checked by definition_problem; every symbol a fact uses must be f, * or
+defined by an earlier fact, and the precedence ("f > * > h0 > ...") must list exactly those symbols. A
+definition is conservative, so a target without new symbols that is derived still follows from A alone.
+
 Usage: python src/check_completion.py laws_json status_npz etp_json completions_json [--selftest]
 """
 import copy
@@ -42,9 +47,14 @@ def parse(s):
                 j += 1
             assert j > i + 1, f"bad term {s!r}"
             return ("v", int(s[i + 1:j])), j
-        head = s[i]
-        assert head in "fm" and s[i + 1] == "(", f"bad term {s!r}"
-        args, i = [], i + 2
+        j = i + 1
+        if s[i] == "h":  # a new symbol of step 18: h0, h1, ...
+            while j < len(s) and s[j].isdigit():
+                j += 1
+            assert j > i + 1, f"bad term {s!r}"
+        head = s[i:j]
+        assert head[0] in "fmh" and s[j] == "(", f"bad term {s!r}"
+        args, i = [], j + 1
         while True:
             a, i = go(i)
             args.append(a)
@@ -52,7 +62,7 @@ def parse(s):
                 break
             assert s[i] == ",", f"bad term {s!r}"
             i += 1
-        assert len(args) == (1 if head == "f" else 2), f"bad arity in {s!r}"
+        assert len(args) == {"f": 1, "m": 2}.get(head, len(args)), f"bad arity in {s!r}"
         return (head, *args), i + 1
     t, i = go(0)
     assert i == len(s), f"trailing text in {s!r}"
@@ -167,7 +177,31 @@ def normal_form(t, rules):
     return t
 
 
+def symbols(t):
+    """Set of (symbol, number of arguments) in t."""
+    return set() if t[0] == "v" else {(t[0], len(t) - 1)}.union(*(symbols(c) for c in t[1:]))
+
+
 # ---- the checks
+
+def definition_problem(fact, stored, arity, k):
+    """A definition h(x, y, ...) = term must name a new symbol h0, h1, ... applied to distinct letters, with
+    no chain, and a right side in symbols defined before it, using only letters of the left side. Such a
+    definition is conservative, so it adds no equation between terms without new symbols."""
+    left, right = fact
+    if k == 0 or stored["chain"] is not None:
+        return "a definition must not be fact 0 and must have no chain"
+    if not (left[0][0] == "h" and left[0] not in arity and len(left) > 1):
+        return "a definition must name a new symbol h0, h1, ... with at least one argument"
+    args = left[1:]
+    if any(x[0] != "v" for x in args) or len(set(args)) != len(args):
+        return "the arguments of a defined symbol must be distinct letters"
+    if not variables(right) <= variables(left):
+        return "the right side of a definition uses a letter not on its left side"
+    if any(arity.get(g) != n for g, n in symbols(right)):
+        return "the right side of a definition uses a symbol not defined before it"
+    return None
+
 
 def check_source(a, src, texts):
     """Returns (problems, rules) for one source law."""
@@ -181,7 +215,18 @@ def check_source(a, src, texts):
             return [f"source {a}: fact {k} does not parse ({e})"], None
     if not facts or facts[0] != parse_law(src["A"]) or src["facts"][0]["chain"] is not None:
         return [f"source {a}: fact 0 is not A"], None
+    arity = {"f": 1, "m": 2}  # grows with each definition of a new symbol (step 18)
+    for k in range(len(facts)):
+        if src["facts"][k].get("definition"):
+            p = definition_problem(facts[k], src["facts"][k], arity, k)
+            if p:
+                return [f"source {a}: fact {k}: {p}"], None
+            arity[facts[k][0][0]] = len(facts[k][0]) - 1
+        if any(arity.get(g) != n for g, n in symbols(facts[k][0]) | symbols(facts[k][1])):
+            return [f"source {a}: fact {k} uses a symbol that is not defined before it, or a wrong arity"], None
     for k in range(1, len(facts)):
+        if src["facts"][k].get("definition"):
+            continue
         chain = src["facts"][k]["chain"]
         if not chain:
             return [f"source {a}: fact {k} has no derivation"], None
@@ -201,9 +246,9 @@ def check_source(a, src, texts):
             return [f"source {a}: derivation of fact {k} fails ({e})"], None
         if t != facts[k][1]:
             return [f"source {a}: derivation of fact {k} ends at {text(t)}, not at its right side"], None
-    prec = {"f > *": "fm", "* > f": "mf"}.get(src["precedence"])
-    if prec is None:
-        return [f"source {a}: unknown precedence"], None
+    prec = ["m" if g == "*" else g for g in src["precedence"].split(" > ")]
+    if sorted(prec) != sorted(arity):
+        return [f"source {a}: precedence {src['precedence']} does not list exactly the symbols used"], None
     rules = []
     for ru in src["rules"]:
         j, d = ru["fact"], ru["dir"]
@@ -289,14 +334,19 @@ def selftest(texts, codes, etp, data):
         print(f"mutation {name}: {'rejected' if probs else 'ACCEPTED'}" + (f" ({probs[0]})" if probs else ""))
 
     pairs = sorted(data["pairs"], key=lambda k: tuple(map(int, k.split(","))))
-    k0 = next(k for k in pairs if data["pairs"][k]["verdict"] == "fails")
+    k0 = next((k for k in pairs if data["pairs"][k]["verdict"] == "fails"), pairs[0])  # step 18: all hold
     a0 = k0.split(",")[0]
     two = next(a for a, s in data["sources"].items() if len(s["rules"]) >= 2)
     deep = next(a for a, s in data["sources"].items()
                 if any(f["chain"] and len(f["chain"]) >= 2 for f in s["facts"]))
-    d = copy.deepcopy(data); d["pairs"][k0]["B_left"] = d["pairs"][k0]["B_right"]
-    run("value of B's left side replaced by the right one", d)
-    d = copy.deepcopy(data); d["pairs"][k0]["verdict"] = "holds"
+    d = copy.deepcopy(data); e = d["pairs"][k0]
+    if e["verdict"] == "fails":
+        e["B_left"] = e["B_right"]
+        run("value of B's left side replaced by the right one", d)
+    else:
+        e["B_left"] = f"f({e['B_left']})"
+        run("value of B's left side changed", d)
+    d = copy.deepcopy(data); e = d["pairs"][k0]; e["verdict"] = {"fails": "holds", "holds": "fails"}[e["verdict"]]
     run("verdict flipped", d)
     d = copy.deepcopy(data); e = d["pairs"][k0]; e["A"], e["B"] = e["B"], e["A"]
     run("A and B swapped", d)
@@ -320,11 +370,33 @@ def selftest(texts, codes, etp, data):
                                       "chain": [{"fact": 0, "dir": 1, "pos": [], "subst": ident}]})
     d["sources"][a0]["rules"].append({"fact": len(d["sources"][a0]["facts"]) - 1, "dir": 1, "rule": "m(v0,v1) -> v0"})
     run("an underived rule x*y -> x added", d)
+    defined = next((a for a, s in data["sources"].items() if any(f.get("definition") for f in s["facts"])), None)
+    if defined is not None:  # files with new symbols (step 18)
+        facts = data["sources"][defined]["facts"]
+        kd = next(k for k, f in enumerate(facts) if f.get("definition"))
+        sym = facts[kd]["left"].split("(")[0]
+        d = copy.deepcopy(data)
+        d["sources"][defined]["facts"].append({"left": "h99(v0)", "right": "v1", "chain": None, "definition": True})
+        run(f"a definition h99(x) = y added (letter not on its left side, source {defined})", d)
+        d = copy.deepcopy(data)
+        d["sources"][defined]["facts"].append({"left": f"{sym}(v0)", "right": "v0", "chain": None, "definition": True})
+        run(f"a second definition of {sym} added", d)
+        d = copy.deepcopy(data)
+        f = d["sources"][defined]["facts"][kd]; f["left"] = "h98(" + f["left"].split("(", 1)[1]
+        run(f"{sym} renamed in its definition (later facts use an undefined symbol)", d)
+        d = copy.deepcopy(data)
+        src = d["sources"][defined]; src["precedence"] = " > ".join(
+            g for g in src["precedence"].split(" > ") if g in ("f", "*"))
+        run("precedence without the new symbols", d)
+        d = copy.deepcopy(data)
+        f = d["sources"][defined]["facts"][-1]; f["chain"], f["definition"] = None, True
+        run("a derived fact marked as a definition", d)
     # an overlapping source with only its own rule: the critical pair check must see the failure
     d = {"sources": {}, "pairs": {}}
     for a, s in data["sources"].items():
         f0 = s["facts"][0]
-        d["sources"][a] = {"A": s["A"], "precedence": s["precedence"],
+        prec = " > ".join(g for g in s["precedence"].split(" > ") if g in ("f", "*"))  # no new symbols here
+        d["sources"][a] = {"A": s["A"], "precedence": prec,
                            "facts": [f0, {"left": f0["left"], "right": f0["right"], "chain": [
                                {"fact": 0, "dir": 1, "pos": [], "subst": {f"v{x}": f"v{x}" for x in
                                    variables(parse(f0["left"])) | variables(parse(f0["right"]))}}]}],

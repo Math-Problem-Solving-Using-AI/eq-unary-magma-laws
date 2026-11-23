@@ -45,6 +45,8 @@ in `steps/`.
   - `python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json --selftest`
   - `python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json`
   - `python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json --selftest`
+  - `python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_new_symbols.json`
+  - `python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_new_symbols.json --selftest`
   A verifier you changed must still fail on corrupted input (mutation test).
 - **Status table.** After changing certificates or proofs run `src/export_status.py` and commit the
   new `results/status_matrix.npz`; its counts must match the README table.
