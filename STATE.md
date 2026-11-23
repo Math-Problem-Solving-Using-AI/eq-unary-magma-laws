@@ -6,14 +6,18 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Every pair of the unresolved row (code 6) has an answer with a machine check since step 26. The rows of 7 of the 9 laws with no small model (code 5) got a check here in steps 27 and 28. Left for the finish line in `LOOP.md`: 5 implications in the rows of laws 250 and 257 that rest on the ETP only.
+Every case the README asks about has an answer with a machine check since step 29 (all of code 6 since step 26, all
+of code 5 since steps 27 to 29). Left for the finish line in `LOOP.md`: condition 3, plain words. Steps 01 to 09 have
+no "In plain words" section, and the README has no short plain-words answer.
 
 ## Queue (take the first item)
 
-1. **Rows of the 2 laws with 4-element models** (laws 250 `(x*y)*(y*x) = y`, 257 `(x*y)*(y*z) = y`; 1,422 pairs,
-   code 5). 1,417 have certificates checked here since step 09; the other 5 are implications resting on the ETP only.
-   Give those 5 a check here (stored derivation replayed by `src/check_derivations.py`, or z3, labelled honestly).
-   Then check the finish line in `LOOP.md`.
+1. **"In plain words" for steps 01 to 05.** Add the section (numbered, as in the owner's rule and steps 10 to 29) right
+   under the header lines of each file, defining every technical word. Change nothing else in those files.
+2. **"In plain words" for steps 06 to 09.** Same.
+3. **Plain-words answer in the README.** A short section near the top: the question, the answer for every kind of pair
+   (how many "implies", how many "does not imply", with which check and label), what it does not mean (`z3-only` is not
+   proved; nothing is Lean-checked), and how to re-check. Then check the finish line in `LOOP.md` again.
 
 ## Optional later (loop sessions never take these; only the owner moves one to the queue)
 
@@ -128,15 +132,20 @@ that already have a machine check, or extend the question.
   stored chain (2 or 6 steps), every other law in one more step; 2,133 pairs "implies"
   (`results/derivations_collapse_laws.json`, replayed by `src/check_derivations.py`, mutation test
   `src/selftest_collapse_laws.py` 14 of 14, gates and CI; `z3-only` level at most, no z3 used). Table unchanged.
+- 2026-11-23: step 29 (queue item 1): the 5 pairs of laws 250 and 257 without a 4-element certificate are each the
+  source law with letters made equal; 5 "implies" by one-step derivations (`results/derivations_ffree_laws.json`,
+  replayed by `src/check_derivations.py`; `src/selftest_ffree_laws.py`: coverage 1,417 + 5 = 1,422, control on the
+  4-element tables, mutation test 10 of 10; gates and CI). Agrees with the ETP. Finish line checked: condition 3 (plain
+  words in steps 01 to 09 and in the README) not met; three queue items added.
 
 ## Last iteration
 
-2026-11-23, loop run 19, step 28: three of the nine laws with no small example force every structure to have one element; for each, a step-by-step proof of "any two elements are equal" was stored and replayed by this repository's own checker, so all 2,133 of their pairs are "implies" (replayed proofs, not Lean).
-Next: the last 5 pairs (laws 250 and 257, which have 4-element examples) whose "implies" answers rest only on the outside project's data get a check here; then the loop checks whether the repository is finished.
+2026-11-23, loop run 20, step 29: the last 5 pairs that only an outside project had answered turned out to be the law itself with some letters set equal, so each got a one-step proof replayed by this repository's checker; now every pair the README asks about has an answer with a machine check here.
+Next: the repository is not finished yet only because the oldest step files (01 to 09) lack a plain-words explanation; the next runs add those, then a plain-words answer in the README, then check the finish line again.
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
   `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
-  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21, the 10 pairs of step 23, the 4 pairs of step 24, the 2 pairs of step 25 and the 4 pairs of step 26 (still code 6), the 2,844 pairs of step 27 and the 2,133 pairs of step 28 (still code 5).
+  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18, the 5 pairs of steps 19 and 21, the 10 pairs of step 23, the 4 pairs of step 24, the 2 pairs of step 25 and the 4 pairs of step 26 (still code 6), the 2,844 pairs of step 27, the 2,133 pairs of step 28 and the 5 pairs of step 29 (still code 5).
