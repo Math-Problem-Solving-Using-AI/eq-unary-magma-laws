@@ -10,9 +10,6 @@ Settle the 894 open pairs (the finish line in `LOOP.md`: every pair answered wit
 
 ## Queue (take the first item)
 
-0c. **`query.py` reads `results/witnesses_etp_magmas.json`** (same pattern as step 10): for a code-6
-   pair with a step 11 certificate, re-check it and print "NOT an implication, model-verified".
-   2 pairs today. Changes no published format.
 1. **894 open pairs (code 6 in `results/status_matrix.npz`), 71 source laws; 2 of them now have
    step 11 certificates, and 33 more (no `f`) are `known (ETP)` only.** ETP tables of size 4 and 5 with
    every `f` gave nothing for pairs with `f` (step 11); size 6 and up with a non-trivial `f` was not tried. Retry z3 with longer
@@ -49,12 +46,14 @@ that already have a machine check, or extend the question.
 - 2026-11-23: step 11 (queue item 0b): ETP multiplication tables with every choice of `f`. The item as
   written applied to no open pair; widened at no cost. 2 open `f`-free pairs got 6-element certificates
   (`results/witnesses_etp_magmas.json`); nothing for pairs with `f`.
+- 2026-11-23: step 12 (queue item 0c): `query.py` reports the 2 step 11 certificates after re-checking
+  them. Stored table unchanged; other answers of the tool unchanged.
 
 ## Last iteration
 
-2026-11-23, loop run 2, step 11: we tried the small example tables published by the Equational Theories
-Project, with every possible choice of `f`, against the 894 open pairs; 2 pairs got a checked counterexample, the rest stay open.
-Next: queue item 0c, make the lookup tool report those 2 answers; then queue item 1 (longer proof attempts, bigger searches).
+2026-11-23, loop run 3, step 12: the lookup tool now tells a reader that the 2 pairs settled in step 11 are
+"does not imply", after checking the example table again each time; nothing new was settled.
+Next: queue item 1, the 894 pairs that are still open (longer proof attempts, bigger searches, in resumable chunks).
 
 ## Blocked
 

@@ -92,6 +92,8 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   apply to no open pair: all 35 such pairs have targets without `f` too. The loop widened it to every open
   pair (ETP tables of size 4 and 5, every `f`) and to every ETP table for the 35 `f`-free pairs. This
   changes no format, publishes nothing and costs seconds. Step 11.
+- Queue item 0c (`query.py` reads the step 11 certificates) had one way to do it and it changes no
+  format, publishes nothing and costs nothing, so the loop did it without an owner decision. Step 12.
 
 ### Loop run 1 (step 10)
 
@@ -109,6 +111,14 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   1,417 certificates of step 09 exactly.
 - Bug caught: a helper "does this law mention `f`?" walked the stored pair (left, right) as if it were
   one term and skipped the left side. It crashed on the first law with `f` only on the left.
+
+### Loop run 3 (step 12)
+
+- `query.py` now reports the 2 step 11 certificates for code-6 pairs, after re-checking each entry. The
+  step 09 reader became one table (`CERTIFICATE_FILES`, code to file); 6 of 9 saved outputs are
+  byte-identical, the other 3 only gained lines. Mutation test: 0 broken entries accepted in either file.
+- Slip caught: a scripted text replacement silently did nothing (escaped newline in the search text).
+  Found by searching for the old function name afterwards.
 
 ### Lessons for the hub
 
