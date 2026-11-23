@@ -305,6 +305,31 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Mistake: the first selftest's "seed product removed" took out `0*3 = 4`, which the certificate does not need; it was
   accepted, correctly. Replaced by removing products the certificate needs.
 
+### Loop run 17 (step 26)
+
+- Open pairs, piece 4f: `(x*y)*f(x) = y` (277) and its mirror (408). Read the rules of completion of law 277 alone
+  (40 rules): `x*(y*f(x))` behaves like `y` in all of them, never equal. Idea: pairs (m, k) over the free model M of
+  laws 277 and 632 (the 4 rules of step 20), with a counter k (k = 0 on values of `f`): multiplying by a non-value
+  of `f` adds 1, by a value of `f` takes 1 away (not below 0), product inside F gives 0. Law 277 holds (label lemma,
+  uses only law 277 in M and "m*n in F implies n in F", which is rules 1 and 4); law 632 and 574 fail at (g, 0).
+- New checker `src/check_label_extension.py`: rules shrink, 13 critical pairs join, rule 1 = law 277, rule 4
+  present, no rule starts with `f`; lemma over 210 cases; law 277 directly on 175 elements (30,625 pairs, 0
+  failures); 4 failures computed. Selftest 18 of 18 (each reason read). Optional `--z3`: z3 proves
+  `f(x)*f(y) = f(x*y)` from 277 and then the lemma for every model of 277 (both `unsat`). Gate and CI.
+- 4 pairs (277 -> 632, 574; 408 -> 128, 122) "does not imply", `z3-only` level. All 894 code-6 pairs now have an
+  answer with a check. Not finished: the 6,399 code-5 pairs (rows of the 9 laws) still rest on the sibling repository.
+- Dead end: z3 on the lemma without the fact `f(x)*f(y) = f(x*y)`: `unknown` after 60 s, with two encodings of "in F".
+- Mistake: one z3 command ran without the 10-minute foreground limit, went to the background and was stopped; rerun
+  in the foreground. Rule kept: give every computation `timeout 600000`.
+- Queue item "pairs where z3 gave up at size 6 or 7" has no pairs left (the 4 pairs of 4f are answered); removed.
+
+### Decisions taken by the loop (run 17)
+
+- Label for the 4 pairs: `z3-only` level, as for steps 17 and 23 to 25 (infinite structure, rules and lemma checked
+  by plain code, lemma also by z3, Newman's lemma not re-proved). No published format change, nothing published, no
+  cost. The stored table keeps code 6 for them (Blocked item unchanged).
+- Finish line not declared: `README.md` still lists the 6,399 pairs of the 9 laws as open here.
+
 ### Decisions taken by the loop (run 16)
 
 - Label for the 2 pairs: same reasoning as run 14 (finite part re-checked here, the extension theorem is the ETP's
@@ -339,6 +364,13 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   published format and stays on the safe side of the labels. Whether to add a rung is for the owner and the hub.
 
 ### Lessons for the hub
+
+- When completion of a law grows without end and some value `u` behaves like `v` in every rule found but is never
+  made equal to it, try a structure whose elements carry an extra counter that tells `u` from `v` (here: pairs over
+  the free model of the law plus the target, with a counter that products add to and values of `f` take from). It
+  settled 4 pairs that finite searches, extra laws and z3 had not.
+- When z3 cannot prove a lemma about all models of a law, give it a short consequence of the law that it proves
+  separately in its own call (here `f(x)*f(y) = f(x*y)`): `unknown` after 60 s became `unsat` in 0.3 s.
 
 - Before building an infinite counterexample by hand, add one extra law and complete: if the pair fails in the
   completed system, that system is a counterexample with a certificate. It is cheap (8,804 extra laws in about 25
