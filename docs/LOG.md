@@ -173,7 +173,34 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   nothing (accepted). Now picks a certificate with two letters.
 - Split recorded: piece 4 continues as piece 4b (overlapping rules, completion), queue item 1.
 
+### Loop run 8 (step 17)
+
+- Open pairs, piece 4b: Knuth-Bendix completion (KBO, weight 1, both precedences, limits 40 rules, 14 symbols,
+  4,000 equations) of the 26 overlapping source rules. 7 complete in under a second; 133 of 190 open pairs
+  decided (132 not implied, 1 implied: `(x*(y*y))*y = x` => `(x*y)*(y*y) = x`, ETP agrees). Every derived
+  equation is stored with a replayable derivation from A. New search `src/complete_open.py`, new checker
+  `src/check_completion.py` (own KBO, unification and innermost simplifier; mutation test 10 of 10), gate and CI.
+- Control: 4,984 verdicts of the 7 rule sets against the table and the ETP, 0 contradictions.
+- Dead end recorded: 10 sources stop at `cannot orient` (equations with a letter on one side only, like
+  `f(x)*z = f(x*x)`, or `x*(y*x) = z*(y*z)`), 9 at the term size limit (7 of them without `f`). 57 pairs left,
+  split into queue items 4c (40 with `f`) and 4d (17 without `f`).
+- Decision taken by the loop: label of the step 17 answers (see "Decisions taken by the loop" below).
+
+### Decisions taken by the loop (run 8)
+
+- The status ladder has no rung for a rewrite-system certificate re-checked by plain code (no z3 involved, but
+  resting on the critical pair lemma and Newman's lemma, which are not machine-checked). The loop recorded these
+  answers at the `z3-only` level, never higher, and wrote "no z3 used" next to the label everywhere. It changes no
+  published format and stays on the safe side of the labels. Whether to add a rung is for the owner and the hub.
+
 ### Lessons for the hub
+
+- When a law "term = letter" overlaps itself, run Knuth-Bendix completion before anything heavier: here 4 laws with
+  31 open targets each completed to one rule in one round (the overlap shows one letter does not matter, e.g.
+  `(x*y)*f(z) = z` gives `x*f(y) = y`), and 133 pairs were settled in under a second.
+- The verification ladder has no rung for an infinite structure whose certificate (rule set, derivations, critical
+  pairs) is re-checked by plain code. This repository records such answers at the `z3-only` level; the hub may want
+  a rung for it.
 
 - Before searching for an infinite counterexample, look at the source law as a rewrite rule. A law
   "term = letter" whose term cannot overlap itself has an infinite model of formal terms that decides every
