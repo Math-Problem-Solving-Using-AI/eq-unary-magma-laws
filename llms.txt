@@ -1,6 +1,6 @@
 # eq-unary-magma-laws
 
-> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open in the stored table; of these, 1,256 (laws without `f`) are settled by the Equational Theories Project data and 608 more by new 4-element certificates (steps 08 and 09); 2 open pairs without `f` also have 6-element certificates built from ETP tables (step 11); 20 open pairs are implications by z3 with 10 s and then 30 s per pair plus chaining (steps 13 and 14, `z3-only`); 682 open pairs are non-implications by infinite term structures (step 16, `z3-only`); 133 more are decided by completed rewrite systems (step 17: 132 not implied, 1 implied, plain-code certificates, `z3-only` level at most); 32 more (all with `f`) are implied by completion with new symbols (step 18, same label); 25 remain open. The 164,800 decided pairs among laws without `f` agree with the ETP (0 disagreements).
+> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open in the stored table; of these, 1,256 (laws without `f`) are settled by the Equational Theories Project data and 608 more by new 4-element certificates (steps 08 and 09); 2 open pairs without `f` also have 6-element certificates built from ETP tables (step 11); 20 open pairs are implications by z3 with 10 s and then 30 s per pair plus chaining (steps 13 and 14, `z3-only`); 682 open pairs are non-implications by infinite term structures (step 16, `z3-only`); 133 more are decided by completed rewrite systems (step 17: 132 not implied, 1 implied, plain-code certificates, `z3-only` level at most); 32 more (all with `f`) are implied by completion with new symbols (step 18, same label); 4 more (all with `f`) are implied by stored derivations (step 19, same label); 21 remain open. The 164,800 decided pairs among laws without `f` agree with the ETP (0 disagreements).
 
 ## Start here
 
@@ -41,7 +41,10 @@
   code by `src/check_completion.py`). 57 pairs were still open after it.
 - [results/completions_new_symbols.json](results/completions_new_symbols.json): 32 of those 57 pairs, all
   "implies", by completion with new symbols for values that ignore a letter (step 18, same checker). 25 pairs
-  are still open (17 without `f` have an ETP answer).
+  were still open after it.
+- [results/derivations_open.json](results/derivations_open.json): 4 of those 25 pairs, all "implies", each by a
+  stored chain of replacement steps from A (step 19, checked by `src/check_derivations.py`). 21 pairs are still
+  open (17 without `f` have an ETP answer).
 
 ## How to trust it
 

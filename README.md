@@ -116,6 +116,14 @@ replacement steps from A that plain code replays (`results/completions_new_symbo
 **Still open after step 18: 25 pairs** (8 with `f`, from `(x*y)*f(x) = y`, `f(x)*(y*x) = y`, `f(x*y)*x = y` and
 `x*f(y*x) = y`, whose completion keeps growing; 17 without `f`, which have an ETP answer).
 
+**Derivations aimed at the target (step 19).** For `f(x*y)*x = y` and its mirror `x*f(y*x) = y`, a short proof
+found by hand (`f` turns products into products, and every value is fixed by its `f`) was turned into chains of
+replacement steps that plain code replays. It settles **4 of the 8 open pairs with `f`: all 4 "implies"**
+(`f(x*y)*x = y` implies `x*(f(y)*x) = y` and `x*(f(x)*x) = x`; the mirror implies the mirrored targets).
+Derivations in `results/derivations_open.json`, checked by `src/check_derivations.py`; same label as step 17.
+`results/status_matrix.npz` still says code 6 for them. **Still open after step 19: 21 pairs** (4 with `f`, from
+`(x*y)*f(x) = y` and its mirror `f(x)*(y*x) = y`; 17 without `f`, which have an ETP answer).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -138,6 +146,7 @@ Read in order, `steps/`:
 16. `16-infinite-term-structures.md`
 17. `17-completion-overlapping-rules.md`
 18. `18-completion-new-symbols.md`
+19. `19-derivations-aimed-at-target.md`
 
 ## Layout
 

@@ -84,6 +84,13 @@ Only the last one may be called a result. `known` means already in the literatur
   `completions_open.json`; the precedence lists every symbol (`f > * > h0 > h1`) and a definition is a fact
   `{"left": "h0(v2)", "right": "f(m(v2,v2))", "chain": null, "definition": true}`. Same label and checker
   (`src/check_completion.py`, `--selftest`). Still code 6 in `status_matrix.npz`; `src/query.py` does not read it.
+- `derivations_open.json`: 4 of the 25 open pairs left after step 18, all "implies", each by a stored
+  derivation (`steps/19-derivations-aimed-at-target.md`, produced by `src/derive_open.py` from a hand outline).
+  `sources`: for laws 483 and 704 (keys `"482"`, `"703"`), the facts with their chains of replacement steps,
+  fact 0 being A; `pairs`: `"a,b": {A, B, verdict, fact}`, where `fact` is the index of the fact that is B.
+  Terms as in `completions_open.json`. Label: `z3-only` level at most (no z3 used; nothing but replacing equals
+  by equals). Check with `src/check_derivations.py` (`--selftest` for the mutation test). Still code 6 in
+  `status_matrix.npz`; `src/query.py` does not read this file.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
