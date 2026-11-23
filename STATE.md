@@ -6,22 +6,21 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 57 open pairs left after step 17 (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 25 open pairs left after step 18 (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **Open pairs, piece 4c: the 40 pairs with `f` whose completion stopped** (step 17). 36 pairs from 10 source
-   laws stop at `cannot orient`: an equation with a letter on one side only, such as `f(x)*z = f(x*x)` (from
-   `f(x*x)*y = x` and `x*f(y*y) = y`, 10 pairs each), or `x*(y*x) = z*(y*z)`. Try completion with a new
-   one-input symbol for the value that does not depend on that letter (for example `h(x)` with
-   `f(x)*z -> h(x)` and `f(x*x) -> h(x)`; the checker must then check that every rule with `h` is sound for the
-   structure, or that `h` is defined from A), or ordered completion. 4 pairs (277 `(x*y)*f(x) = y`, 408
-   `f(x)*(y*x) = y`) stop at the term size limit: retry with higher limits.
+1. **Open pairs, piece 4e: the 8 pairs with `f` whose completion keeps growing** (step 18). Sources 277
+   `(x*y)*f(x) = y` (targets 574, 632), 408 `f(x)*(y*x) = y` (122, 128), 483 `f(x*y)*x = y` (544, 550), 704
+   `x*f(y*x) = y` (189, 195). Completion, with or without new symbols, does not finish at 24 symbols and 60
+   rules. Try: a derivation search aimed at the target (rewrite B's sides with A's consequences, store the
+   chain for `src/check_completion.py`), or an infinite model guessed from the pattern of the growing rule set
+   and checked by plain code.
 2. **Open pairs, piece 4d: the 17 pairs without `f` left** (step 17; the ETP says 16 "does not imply", 1
    "implies", but this repository has no certificate it re-checks). Retry completion with higher limits for
    their 7 source laws, or read how the ETP settles them and build a certificate our checkers can re-check.
-3. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4c and 4d do not settle (of the 57
-   left, 26 had `unknown` at size 7 in step 15): retry those sizes with a longer limit, or size 8 (check time per
+3. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4e and 4d do not settle (all 8
+   pairs of piece 4e had `unknown` at size 7 in step 15): retry those sizes with a longer limit, or size 8 (check time per
    pair first).
 4. **The nine laws with no small model are settled** (2026-11-23, see
    https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
@@ -77,15 +76,19 @@ that already have a machine check, or extend the question.
   complete. 133 of the 190 open pairs decided: 132 "does not imply", 1 "implies" (agrees with the ETP)
   (`results/completions_open.json`, checker `src/check_completion.py`, mutation test 10 of 10, gate and CI;
   `z3-only` level at most, no z3 used). 57 pairs still open (40 with `f`).
+- 2026-11-23: step 18 (open pairs, piece 4c, split): completion with new symbols for values that ignore a
+  letter; 8 of the 19 stopped sources complete; 32 of the 40 open pairs with `f` are "implies", each with a
+  replayed derivation (`results/completions_new_symbols.json`, checker `src/check_completion.py` extended,
+  mutation test 15 of 15, gate and CI). 25 pairs still open (8 with `f`, 17 without).
 
 ## Last iteration
 
-2026-11-23, loop run 8, step 17: for 7 of the 26 laws whose pattern overlapped itself, adding the equations that the overlaps force gave a clean set of rules; with it, 132 more pairs are "does not imply" and 1 is "implies", all re-checked by separate plain code.
-Next: 57 pairs remain (40 with `f`); the next run tries to handle equations where one side has a letter the other lacks, such as `f(x)*z = f(x*x)` (queue item 1).
+2026-11-23, loop run 9, step 18: where a law forced a value to ignore one of its letters, the loop gave that value its own name and finished the rule-building; this showed that 32 more pairs with `f` are "implies", each by a step-by-step chain that separate plain code replays.
+Next: 25 pairs remain (8 with `f`, 17 without); the next run tries the 8 pairs with `f` whose rule-building keeps growing (queue item 1).
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
   `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
-  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16 and the 133 pairs of step 17 (still code 6).
+  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17 and the 32 pairs of step 18 (still code 6).

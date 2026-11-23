@@ -186,6 +186,19 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   split into queue items 4c (40 with `f`) and 4d (17 without `f`).
 - Decision taken by the loop: label of the step 17 answers (see "Decisions taken by the loop" below).
 
+### Loop run 9 (step 18)
+
+- Open pairs, piece 4c (40 pairs with `f` whose completion stopped). An equation with a letter on one side only,
+  `s = t`, gets a new symbol `h(V)` (V the shared letters) with the conservative definition `h(V) = s[other
+  letters := first letter of V]` and the rules `s -> h(V)`, `t -> h(V)`, both derived. New search
+  `src/complete_new_symbols.py`; `src/check_completion.py` extended (definitions, general precedence, 5 new
+  mutations, 15 of 15; step 17 file still 10 of 10). 8 of 19 sources complete; 32 open pairs, all "implies".
+  Control: 5,696 verdicts of the 8 rule sets against the table, 0 contradictions.
+- Dead end recorded: 277, 408, 483, 704 (8 pairs) do not complete at 24 symbols and 60 rules either (scratch run,
+  about 4 minutes). Item split: these 8 pairs are the new first queue item.
+- Mutation slip caught: "each source with only its own rule" was rejected on the new file for the wrong reason
+  (precedence listed unused symbols); fixed so the critical pair check is what rejects it.
+
 ### Decisions taken by the loop (run 8)
 
 - The status ladder has no rung for a rewrite-system certificate re-checked by plain code (no z3 involved, but
@@ -194,6 +207,11 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   published format and stays on the safe side of the labels. Whether to add a rung is for the owner and the hub.
 
 ### Lessons for the hub
+
+- When completion stops at an equation with a letter on one side only (`f(x)*z = f(x*x)`), name the value that
+  ignores that letter with a new defined symbol and continue. Here it turned 8 stuck completions into
+  convergent systems and 32 open implications, which z3 with 30 s per pair had not proved, into short
+  replayable derivations.
 
 - When a law "term = letter" overlaps itself, run Knuth-Bendix completion before anything heavier: here 4 laws with
   31 open targets each completed to one rule in one round (the overlap shows one letter does not matter, e.g.
