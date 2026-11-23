@@ -78,3 +78,21 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Literature check (`PRIOR_WORK.md`): no table of type (2,1) laws found. The two `f`-free laws are
   known (Stein's third law / centrist groupoids, OEIS A128934; central groupoids, Evans and Knuth).
   The finite-versus-general leads are "candidate Austin laws".
+
+## 2026-11-23
+
+### Decisions taken by the loop
+
+- Queue item 0 (make the table and `query.py` reflect steps 08 and 09) offered two options: teach
+  `query.py` to read `results/witnesses_ffree_models.json`, or add new codes to `export_status.py` and
+  regenerate `results/status_matrix.npz`. The loop took the first: it changes no published format,
+  publishes nothing and costs nothing. A new code in the stored table stays an owner decision
+  (`STATE.md`, Blocked). Step 10.
+
+### Loop run 1 (step 10)
+
+- `query.py` now reports the 1,417 step 09 certificates for code-5 pairs, after re-checking each entry
+  with the independent verifier's code. Stored table unchanged.
+- Dead end avoided: the mutation "replace `f` by the identity" does not have to break a witness
+  (1,397 of 1,417 stay valid). Confirmed with a second evaluator instead of counting it as a failure.
+  Rule: a mutation test needs changes that are sure to break the claim, or a second evaluator.

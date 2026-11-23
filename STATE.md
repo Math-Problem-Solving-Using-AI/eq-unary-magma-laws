@@ -10,12 +10,6 @@ Settle the 894 open pairs (the finish line in `LOOP.md`: every pair answered wit
 
 ## Queue (take the first item)
 
-0. **Make `query.py` and the status table use steps 08 and 09.** `results/status_matrix.npz` still says
-   "open" for the 1,256 pairs the ETP settles and for the 1,417 pairs certified in step 09.
-   `query.py` already reads `results/etp_crosscheck.json`, but not `results/witnesses_ffree_models.json`.
-   Options: teach `query.py` to read that file, or add codes to `export_status.py` (for example 7 =
-   `known (ETP)`, and code 2 extended to the new certificates), regenerate, keep the old matrix for
-   comparison, and update the README counts. Owner's choice: a new code changes the published format.
 0b. **ETP models for pairs that involve `f`.** For a code-6 pair A => B where A has no `f`, an ETP
    counterexample magma for A plus a chosen `f` may refute B. Same trick as step 09, with the ETP's
    finite magmas (`data/smallest_magma_examples.txt` in the ETP repository).
@@ -48,12 +42,17 @@ that already have a machine check, or extend the question.
 - 2026-11-22: steps 01 to 07, see `steps/`. All 506,232 pairs accounted for.
 - 2026-11-22: step 08 (ETP cross-check: 0 disagreements, 1,256 open pairs settled), step 09 (1,417
   certificates for the two `f`-free laws with 4-element models), literature check (`docs/PRIOR_WORK.md`).
+- 2026-11-23: step 10 (queue item 0, option "teach `query.py`"): `query.py` reports the 1,417 step 09
+  certificates after re-checking them. Stored table unchanged; new table codes left to the owner (Blocked).
 
 ## Last iteration
 
-2026-11-22, research session: steps 08 and 09,
-literature check. Next: queue item 0 (make the table and `query.py` reflect steps 08 and 09).
+2026-11-23, loop run 1, step 10: the lookup tool now answers "does not imply" for the 1,417 pairs
+settled in step 09, after re-checking each answer; nothing new was proved.
+Next: queue item 0b, use the ETP's finite examples plus a chosen `f` to settle more open pairs.
 
 ## Blocked
 
-(nothing)
+- Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
+  step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
+  `query.py` reports those answers and the table still says "open" for them.
