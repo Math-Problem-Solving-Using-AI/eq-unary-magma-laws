@@ -386,6 +386,16 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   stopped on its own assertion before touching 08. Kept each file's own line endings.
 - Every step file now starts with "In plain words". Left for the finish line: the plain-words answer in the README.
 
+### Loop run 23 (step 30, plain-words answer in the README; finish line reached)
+
+- New `src/tally_answers.py` (gate and CI, mutation test 6 of 6): reads the stored table and the 15 result files of
+  steps 09 to 29, checks that every code 5 or 6 pair has an answer and that no two answers disagree, and prints the
+  counts by kind of check. 165,266 "implies", 340,966 "does not imply", total 506,232; matched the hand sum of the step
+  records on the first run; no pair is answered by two files.
+- README: new section "The answer in plain words" near the top. It also warns that `src/query.py` still says "open"
+  for the 5,874 pairs answered in steps 13 to 29 (Optional later items 4 and 5, and Blocked).
+- Gates 37 of 37. Finish line of `LOOP.md` holds: `finished: yes` in `STATE.md`, queue empty.
+
 ### Decisions taken by the loop (run 19)
 
 - The item said to write the sibling's collapse derivations in our format. The sibling's proofs use rules our checker

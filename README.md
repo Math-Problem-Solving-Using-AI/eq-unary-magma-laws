@@ -302,6 +302,7 @@ Read in order, `steps/`:
 27. `27-rows-of-four-infinite-laws.md`
 28. `28-rows-of-three-collapse-laws.md`
 29. `29-last-five-pairs-laws-250-257.md`
+30. `30-plain-words-answer.md`
 
 ## Layout
 

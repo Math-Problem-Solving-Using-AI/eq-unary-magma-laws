@@ -66,6 +66,10 @@
 - [results/derivations_ffree_laws.json](results/derivations_ffree_laws.json): the last 5 pairs of the rows of laws 250 and 257
   (the ones without a 4-element certificate of step 09): each target is the source law with letters made equal; 5 "implies" (step 29,
   checked by `src/check_derivations.py` and `src/selftest_ffree_laws.py`). Every pair of code 5 and code 6 now has a check here.
+- [README.md, "The answer in plain words"](README.md): the final counts, from `src/tally_answers.py` (step 30): 165,266
+  "implies" (163,074 `z3-only`, 2,192 replayed derivations, `z3-only` level at most) and 340,966 "does not imply" (337,304
+  `model-verified`, 3,662 infinite structures, `z3-only` level); total 506,232. `src/query.py` still says "open" for the 5,874
+  pairs answered in steps 13 to 29.
 - [results/extra_laws_277.json](results/extra_laws_277.json): search for a counterexample to the 4 open pairs with
   `f` by completing `(x*y)*f(x) = y` with one extra law of size 1 to 4 (step 20). None found; 21 pairs still open.
 
