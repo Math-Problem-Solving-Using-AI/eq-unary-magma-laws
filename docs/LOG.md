@@ -136,6 +136,16 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Not done: `status_matrix.npz` keeps code 6 for the 18 (the z3 proof arrays `export_status.py` needs are
   git-ignored and not present); `query.py` does not read the new file (Optional later).
 
+### Loop run 5 (step 14)
+
+- Open pairs, piece 2: z3 with 30 s per pair on the 879 pairs that were `unknown` at 10 s. Seven resumable
+  runs of about 500 s each. 3 `unsat` (239,209 497,564 567,603, all `f`-free, all ETP "implies"),
+  876 `unknown`, 0 `sat`. With chaining, 20 pairs `z3-only` (239,209 was already settled by chaining).
+  872 pairs still open: 18 `f`-free (ETP answer), 854 with `f` (no answer).
+- `--rerun` repeated 8 of the 16 proofs; 202,485 and 709,57, repeated in step 13, were not repeated now.
+- Dead end recorded: more z3 time did nothing for the pairs with `f` (3 proofs at 10 s in step 13, none
+  added at 30 s). Next pieces: structure search of size 6 and 7, then infinite counterexamples.
+
 ### Lessons for the hub
 
 - z3 results depend on the process state, not only on the time limit: a proof found in a pool worker

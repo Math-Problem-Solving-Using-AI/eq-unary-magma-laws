@@ -6,23 +6,21 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 874 open pairs (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 872 open pairs (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **874 open pairs left (code 6, 64 source laws), piece 2: z3 at 30 s.** Step 13 asked z3 with 10 s
-   about the 892 open pairs without a certificate: 13 proofs, 18 pairs with chaining (`z3-only`), 879
-   `unknown`. Run `src/retry_open_z3.py` with `30000` on the pairs still `unknown` (it skips proved ones;
-   about an hour on 8 cores, in runs of under ten minutes, it resumes), then `src/check_z3_retry.py`.
-2. **Open pairs, piece 3: structure search of size 6 and 7** (`src/resolve_open.py` with larger MAXN,
-   or a resumable variant; check time per pair first). Every counterexample goes through
-   `src/verify_witnesses.py`.
-3. **Open pairs, piece 4: "finite yes, infinite no" analysis** of the most frequent sources
+1. **872 open pairs left (code 6, 62 source laws; 854 with `f`), piece 3: structure search of size 6
+   and 7** (`src/resolve_open.py` with larger MAXN, or a resumable variant; check time per pair first).
+   Skip the 20 pairs settled in `results/z3_open_retry.json`. Every counterexample goes through
+   `src/verify_witnesses.py`. Steps 03 and 06 searched sizes up to 5, so any finite counterexample has at
+   least 6 elements; z3 at 10 s and 30 s (steps 13, 14) found none.
+2. **Open pairs, piece 4: "finite yes, infinite no" analysis** of the most frequent sources
    (`f(x)*f(y) = x`, `f(x)*f(y) = y`, `f(x*y) = x`, `x*f(y) = y` ...): in a finite structure these force
    `f` to be one-to-one or onto, which an infinite structure need not be. Look for infinite
    counterexamples with a certificate format that plain code can check, as in the sibling repository
    eq-laws-without-small-models (step 11 there).
-4. **The nine laws with no small model are settled** (2026-11-23, see
+3. **The nine laws with no small model are settled** (2026-11-23, see
    https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
    4-element models, 4 have infinite term models (`z3-only`). Update codes 5 from its results and
    re-export the table; its 2,828 certificates in `results/refutations_term_models.json` decide the rows
@@ -58,12 +56,15 @@ that already have a machine check, or extend the question.
 - 2026-11-23: step 13 (queue item 1, first piece): z3 with 10 s on the 892 open pairs without a
   certificate: 13 proofs, 18 pairs with chaining, label `z3-only`, consistent with the table and the ETP
   (`src/check_z3_retry.py`, mutation-tested, now a gate). 874 pairs still open.
+- 2026-11-23: step 14 (open pairs, piece 2): z3 with 30 s on the 879 pairs still `unknown`: 3 proofs, all
+  without `f` and agreeing with the ETP; 20 pairs `z3-only` with chaining, 0 counterexamples. 872 pairs
+  still open (854 with `f`).
 
 ## Last iteration
 
-2026-11-23, loop run 4, step 13: the solver z3 got 10 seconds per open pair instead of 1 and showed that 18 of
-them are "implies" (z3's word only, not a checked proof); 874 pairs are still open.
-Next: give z3 30 seconds on the pairs it could not decide (queue item 1, in pieces of under ten minutes).
+2026-11-23, loop run 5, step 14: the solver z3 got 30 seconds on each of the 879 open pairs it could not decide in 10;
+it settled 2 more pairs as "implies" (z3's word only, all without `f`), so 872 pairs are still open, 854 of them with `f`.
+Next: search for counterexample tables with 6 and 7 elements on the open pairs (queue item 1), timing one pair first.
 
 ## Blocked
 
