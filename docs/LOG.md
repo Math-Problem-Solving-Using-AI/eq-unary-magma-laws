@@ -374,6 +374,18 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   written before attempt 2 finished. The item said to change nothing but the new section, so the plain-words section
   says the header is out of date instead.
 
+### Loop run 22 (plain words for steps 06 to 09)
+
+- Queue item "In plain words for steps 06 to 09": each file got the section right under its header lines, words
+  defined, one small example re-checked by plain code and `src/query.py`: the 4-element table separating
+  `(x*y)*x = y` from `(x*y)*y = x` (step 06); the 2-element left-projection table (step 07); the hand proof that
+  `((x*y)*z)*x = w` collapses (step 08); the 4-element central groupoid table read as pairs of bits, with `f` constant
+  0, refuting `f(x) = x` (step 09). Nothing else in those files changed. Gates 35 of 35; the step 09 mutation test
+  (`selftest_verifiers.py` on `witnesses_ffree_models.json`) ALL PASS.
+- Slip: steps 08 and 09 are stored with CRLF line endings, 06 and 07 with LF; the first insert script assumed LF and
+  stopped on its own assertion before touching 08. Kept each file's own line endings.
+- Every step file now starts with "In plain words". Left for the finish line: the plain-words answer in the README.
+
 ### Decisions taken by the loop (run 19)
 
 - The item said to write the sibling's collapse derivations in our format. The sibling's proofs use rules our checker
