@@ -120,7 +120,27 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Slip caught: a scripted text replacement silently did nothing (escaped newline in the search text).
   Found by searching for the old function name afterwards.
 
+### Loop run 4 (step 13)
+
+- Queue item 1 (894 open pairs) is too big for one run; split into four pieces (z3 at 10 s, z3 at 30 s,
+  structure search of size 6 and 7, "finite yes, infinite no" analysis). This run did the first.
+- z3 with 10 s per pair on the 892 open pairs without a certificate: 13 `unsat`, 879 `unknown`, 0 `sat`.
+  Chaining with codes 3 and 4 settles 5 more: 18 pairs `z3-only`. All 15 `f`-free ones are "implies" in
+  the ETP; the closure contradicts no refutation. New checker `src/check_z3_retry.py` (mutation test
+  5 of 5) is a gate and runs in CI.
+- Surprise: asked again in one process, z3 repeated only 6 of the 13 proofs; a fresh pool repeated 4 more
+  within a second each. z3's success depends on the process's history. 3 proofs (75,209 77,94 142,491,
+  all `f`-free and ETP "implies") were not repeated.
+- Dead end recorded: a mutation "open pair whose closure contradicts a refutation" cannot exist (a
+  structure refuting A => C, with B => C, also refutes A => B).
+- Not done: `status_matrix.npz` keeps code 6 for the 18 (the z3 proof arrays `export_status.py` needs are
+  git-ignored and not present); `query.py` does not read the new file (Optional later).
+
 ### Lessons for the hub
+
+- z3 results depend on the process state, not only on the time limit: a proof found in a pool worker
+  was not found again in a single process with the same limit, but was found at once in a fresh pool.
+  When re-checking z3 claims, try more than one process layout before calling a proof unrepeatable.
 
 - Count the cases an idea applies to before writing code for it. Queue item 0b had zero cases.
 - A search that returns nothing in seconds needs a positive control: point it at cases with known

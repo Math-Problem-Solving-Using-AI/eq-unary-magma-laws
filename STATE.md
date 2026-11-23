@@ -6,18 +6,23 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 894 open pairs (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 874 open pairs (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **894 open pairs (code 6 in `results/status_matrix.npz`), 71 source laws; 2 of them now have
-   step 11 certificates, and 33 more (no `f`) are `known (ETP)` only.** ETP tables of size 4 and 5 with
-   every `f` gave nothing for pairs with `f` (step 11); size 6 and up with a non-trivial `f` was not tried. Retry z3 with longer
-   timeouts (10 s, 30 s, accumulate proofs, save state), search structures of size 6 and 7
-   (`src/resolve_open.py` with larger MAXN), then analyze by hand the most frequent sources:
-   `f(x)*f(y) = x` and `f(x)*f(y) = y` (38 open targets each). Every counterexample goes through
+1. **874 open pairs left (code 6, 64 source laws), piece 2: z3 at 30 s.** Step 13 asked z3 with 10 s
+   about the 892 open pairs without a certificate: 13 proofs, 18 pairs with chaining (`z3-only`), 879
+   `unknown`. Run `src/retry_open_z3.py` with `30000` on the pairs still `unknown` (it skips proved ones;
+   about an hour on 8 cores, in runs of under ten minutes, it resumes), then `src/check_z3_retry.py`.
+2. **Open pairs, piece 3: structure search of size 6 and 7** (`src/resolve_open.py` with larger MAXN,
+   or a resumable variant; check time per pair first). Every counterexample goes through
    `src/verify_witnesses.py`.
-2. **The nine laws with no small model are settled** (2026-11-23, see
+3. **Open pairs, piece 4: "finite yes, infinite no" analysis** of the most frequent sources
+   (`f(x)*f(y) = x`, `f(x)*f(y) = y`, `f(x*y) = x`, `x*f(y) = y` ...): in a finite structure these force
+   `f` to be one-to-one or onto, which an infinite structure need not be. Look for infinite
+   counterexamples with a certificate format that plain code can check, as in the sibling repository
+   eq-laws-without-small-models (step 11 there).
+4. **The nine laws with no small model are settled** (2026-11-23, see
    https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
    4-element models, 4 have infinite term models (`z3-only`). Update codes 5 from its results and
    re-export the table; its 2,828 certificates in `results/refutations_term_models.json` decide the rows
@@ -35,6 +40,8 @@ that already have a machine check, or extend the question.
    resuming everywhere (see lessons). Check memory and time first.
 3. **Lean** for anything that survives, following `docs/shared/LEAN_CAVEATS.md`. Lean 4.36.0 (elan, no Mathlib) is installed on the
    owner's machine since 2026-11-23.
+4. **`query.py` reads `results/z3_open_retry.json`** (step 13), so the tool reports the 18 `z3-only`
+   implications. It reports an answer that already has a machine check, so it is not loop work.
 
 ## Done
 
@@ -48,12 +55,15 @@ that already have a machine check, or extend the question.
   (`results/witnesses_etp_magmas.json`); nothing for pairs with `f`.
 - 2026-11-23: step 12 (queue item 0c): `query.py` reports the 2 step 11 certificates after re-checking
   them. Stored table unchanged; other answers of the tool unchanged.
+- 2026-11-23: step 13 (queue item 1, first piece): z3 with 10 s on the 892 open pairs without a
+  certificate: 13 proofs, 18 pairs with chaining, label `z3-only`, consistent with the table and the ETP
+  (`src/check_z3_retry.py`, mutation-tested, now a gate). 874 pairs still open.
 
 ## Last iteration
 
-2026-11-23, loop run 3, step 12: the lookup tool now tells a reader that the 2 pairs settled in step 11 are
-"does not imply", after checking the example table again each time; nothing new was settled.
-Next: queue item 1, the 894 pairs that are still open (longer proof attempts, bigger searches, in resumable chunks).
+2026-11-23, loop run 4, step 13: the solver z3 got 10 seconds per open pair instead of 1 and showed that 18 of
+them are "implies" (z3's word only, not a checked proof); 874 pairs are still open.
+Next: give z3 30 seconds on the pairs it could not decide (queue item 1, in pieces of under ten minutes).
 
 ## Blocked
 
