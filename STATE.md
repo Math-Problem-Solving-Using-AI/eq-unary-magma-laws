@@ -6,21 +6,21 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 25 open pairs left after step 18 (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 21 open pairs left after step 19 (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **Open pairs, piece 4e: the 8 pairs with `f` whose completion keeps growing** (step 18). Sources 277
-   `(x*y)*f(x) = y` (targets 574, 632), 408 `f(x)*(y*x) = y` (122, 128), 483 `f(x*y)*x = y` (544, 550), 704
-   `x*f(y*x) = y` (189, 195). Completion, with or without new symbols, does not finish at 24 symbols and 60
-   rules. Try: a derivation search aimed at the target (rewrite B's sides with A's consequences, store the
-   chain for `src/check_completion.py`), or an infinite model guessed from the pattern of the growing rule set
-   and checked by plain code.
+1. **Open pairs, piece 4f: the 4 pairs of `(x*y)*f(x) = y` and its mirror** (step 19 settled 483 and 704).
+   Sources 277 `(x*y)*f(x) = y` (targets 574, 632) and 408 `f(x)*(y*x) = y` (targets 122, 128; mirror of
+   277). Hand notes in `steps/19-derivations-aimed-at-target.md`: a counterexample must be infinite, with `f`
+   neither one-to-one nor onto. Try: an infinite model Q of 277 whose `f` misses a value, then the "layered"
+   construction of step 19 (copies stacked over the values outside `f(Q)`), checked by plain code; or a longer
+   derivation stored for `src/check_derivations.py`.
 2. **Open pairs, piece 4d: the 17 pairs without `f` left** (step 17; the ETP says 16 "does not imply", 1
    "implies", but this repository has no certificate it re-checks). Retry completion with higher limits for
    their 7 source laws, or read how the ETP settles them and build a certificate our checkers can re-check.
-3. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4e and 4d do not settle (all 8
-   pairs of piece 4e had `unknown` at size 7 in step 15): retry those sizes with a longer limit, or size 8 (check time per
+3. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that pieces 4f and 4d do not settle (all 4
+   pairs of piece 4f had `unknown` at sizes 6 and 7 in step 15): retry those sizes with a longer limit, or size 8 (check time per
    pair first).
 4. **The nine laws with no small model are settled** (2026-11-23, see
    https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
@@ -80,15 +80,19 @@ that already have a machine check, or extend the question.
   letter; 8 of the 19 stopped sources complete; 32 of the 40 open pairs with `f` are "implies", each with a
   replayed derivation (`results/completions_new_symbols.json`, checker `src/check_completion.py` extended,
   mutation test 15 of 15, gate and CI). 25 pairs still open (8 with `f`, 17 without).
+- 2026-11-23: step 19 (open pairs, piece 4e, split): derivations aimed at the target. Law 483
+  `f(x*y)*x = y` implies laws 550 and 544, its mirror 704 implies 195 and 189: 4 pairs, each a stored chain
+  replayed by plain code (`results/derivations_open.json`, new checker `src/check_derivations.py`, mutation
+  test 14 of 14, gate and CI; `z3-only` level at most, no z3 used). 21 pairs still open (4 with `f`, 17 without).
 
 ## Last iteration
 
-2026-11-23, loop run 9, step 18: where a law forced a value to ignore one of its letters, the loop gave that value its own name and finished the rule-building; this showed that 32 more pairs with `f` are "implies", each by a step-by-step chain that separate plain code replays.
-Next: 25 pairs remain (8 with `f`, 17 without); the next run tries the 8 pairs with `f` whose rule-building keeps growing (queue item 1).
+2026-11-23, loop run 10, step 19: instead of building a full rule set, the loop aimed straight at the target and found short proofs that the law `f(x*y)*x = y` and its mirror force their two open targets; 4 more pairs are "implies", each by a chain of replacement steps that separate plain code replays.
+Next: 21 pairs remain (4 with `f`, all from `(x*y)*f(x) = y` and its mirror, 17 without `f`); the next run looks for an infinite counterexample or a longer proof for those 4 (queue item 1).
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
   `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
-  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17 and the 32 pairs of step 18 (still code 6).
+  `z3-only` implications of steps 13 and 14, the 682 non-implications of step 16, the 133 pairs of step 17, the 32 pairs of step 18 and the 4 pairs of step 19 (still code 6).

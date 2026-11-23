@@ -199,6 +199,20 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Mutation slip caught: "each source with only its own rule" was rejected on the new file for the wrong reason
   (precedence listed unused symbols); fixed so the critical pair check is what rejects it.
 
+### Loop run 10 (step 19)
+
+- Open pairs, piece 4e (8 pairs with `f` whose completion keeps growing). Law 483 `f(x*y)*x = y`: by hand,
+  E1 `f(y)*f(x*y) = x`, E2 `f(x)*f(y) = f(x*y)`, E3 `f(x*(f(y)*x)) = f(y)`, and then the target
+  `x*(f(y)*x) = y` in 5 steps (every value z equals `f(w)*(f(z)*f(w))`). `src/derive_open.py` turns the outline
+  into stored steps (it stops when two neighbouring terms are not one step apart), mirrored for law 704. New
+  checker `src/check_derivations.py` (replay, pair checks, control on the 16 models with 2 or 3 elements,
+  mutation test 14 of 14), gate and CI. 4 pairs "implies"; 21 left (4 with `f`, from 277 and 408).
+- Slip caught by the step finder: an outline term `f(f(y))` should have been `f(y)`.
+- Dead ends (paper, not kept): for 277 `(x*y)*f(x) = y`, affine models on groups and translation-invariant
+  models force `f` one-to-one, and then the target holds. A layered construction over a model Q of 277 needs
+  `f` not onto in Q; z3 found no such Q with 2 to 5 elements (for 277 and 483). Item split: the 4 pairs of 277
+  and 408 are the new first queue item.
+
 ### Decisions taken by the loop (run 8)
 
 - The status ladder has no rung for a rewrite-system certificate re-checked by plain code (no z3 involved, but
@@ -207,6 +221,10 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   published format and stays on the safe side of the labels. Whether to add a rung is for the owner and the hub.
 
 ### Lessons for the hub
+
+- When completion keeps growing, aim at the target before raising limits: here a 5-step proof existed for 4
+  pairs whose completion did not finish at 60 rules. Writing the hand proof as a list of terms and letting a
+  script find each single step makes slips visible at once and gives a chain any replay checker can verify.
 
 - When completion stops at an equation with a letter on one side only (`f(x)*z = f(x*x)`), name the value that
   ignores that letter with a new defined symbol and continue. Here it turned 8 stuck completions into
