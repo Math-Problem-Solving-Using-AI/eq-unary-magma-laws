@@ -107,6 +107,15 @@ the `z3-only` level, no higher (no z3 is used). `results/status_matrix.npz` stil
 **Still open after step 17: 57 pairs** (40 with `f`, no answer; 17 without `f`, which have an ETP answer),
 from 19 source laws whose completion stopped.
 
+**New names for values that ignore a letter (step 18).** Most of those 19 completions stopped at an equation
+with a letter on one side only, such as `f(x)*z = f(x*x)`: it says `f(x)*z` does not depend on `z`. Giving
+that value a new name (a symbol `h0(x)` defined as `f(x*x)`) and completing again finishes for 8 source laws,
+all with `f`. It settles **32 of the 40 open pairs with `f`: all 32 "implies"**, each with a chain of
+replacement steps from A that plain code replays (`results/completions_new_symbols.json`, checked by
+`src/check_completion.py`; same label as step 17). `results/status_matrix.npz` still says code 6 for them.
+**Still open after step 18: 25 pairs** (8 with `f`, from `(x*y)*f(x) = y`, `f(x)*(y*x) = y`, `f(x*y)*x = y` and
+`x*f(y*x) = y`, whose completion keeps growing; 17 without `f`, which have an ETP answer).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -128,6 +137,7 @@ Read in order, `steps/`:
 15. `15-search-size-6-7-open-pairs.md`
 16. `16-infinite-term-structures.md`
 17. `17-completion-overlapping-rules.md`
+18. `18-completion-new-symbols.md`
 
 ## Layout
 

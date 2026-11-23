@@ -78,6 +78,12 @@ Only the last one may be called a result. `known` means already in the literatur
   Label: `z3-only` level at most (no z3 used; plain-code check that relies on two textbook theorems). Check with
   `src/check_completion.py` (`--selftest` for the mutation test). Still code 6 in `status_matrix.npz`;
   `src/query.py` does not read this file.
+- `completions_new_symbols.json`: 32 of the 57 open pairs left after step 17, all "implies", decided by
+  completion with new symbols `h0, h1, ...` for values that do not depend on some letter
+  (`steps/18-completion-new-symbols.md`, produced by `src/complete_new_symbols.py`). Same format as
+  `completions_open.json`; the precedence lists every symbol (`f > * > h0 > h1`) and a definition is a fact
+  `{"left": "h0(v2)", "right": "f(m(v2,v2))", "chain": null, "definition": true}`. Same label and checker
+  (`src/check_completion.py`, `--selftest`). Still code 6 in `status_matrix.npz`; `src/query.py` does not read it.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
