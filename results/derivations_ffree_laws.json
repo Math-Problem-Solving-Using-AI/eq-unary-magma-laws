@@ -1,0 +1,135 @@
+{
+ "sources": {
+  "249": {
+   "A": "(x*y)*(y*x) = y",
+   "facts": [
+    {
+     "left": "m(m(v0,v1),m(v1,v0))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(m(v0,v0),m(v0,v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "256": {
+   "A": "(x*y)*(y*z) = y",
+   "facts": [
+    {
+     "left": "m(m(v0,v1),m(v1,v2))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(m(v0,v0),m(v0,v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v0,v0),m(v0,v1))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v0,v1),m(v1,v0))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v0,v1),m(v1,v1))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v1"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "pairs": {
+  "249,203": {
+   "A": "(x*y)*(y*x) = y",
+   "B": "(x*x)*(x*x) = x",
+   "verdict": "holds",
+   "fact": 1
+  },
+  "256,203": {
+   "A": "(x*y)*(y*z) = y",
+   "B": "(x*x)*(x*x) = x",
+   "verdict": "holds",
+   "fact": 1
+  },
+  "256,205": {
+   "A": "(x*y)*(y*z) = y",
+   "B": "(x*x)*(x*y) = x",
+   "verdict": "holds",
+   "fact": 2
+  },
+  "256,249": {
+   "A": "(x*y)*(y*z) = y",
+   "B": "(x*y)*(y*x) = y",
+   "verdict": "holds",
+   "fact": 3
+  },
+  "256,252": {
+   "A": "(x*y)*(y*z) = y",
+   "B": "(x*y)*(y*y) = y",
+   "verdict": "holds",
+   "fact": 4
+  }
+ }
+}

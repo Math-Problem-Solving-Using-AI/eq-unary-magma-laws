@@ -6,6 +6,63 @@
   were re-checked by us.
 - Commit(s): see `git log -- steps/08-etp-crosscheck.md src/etp_crosscheck.py results/etp_crosscheck.json`
 
+## In plain words
+
+1. **The question.** 408 of our 712 laws do not use `f` at all. For those, an outside project has already decided
+   every pair. Does our table agree with it, and can it answer the pairs that were still open for us?
+
+   Words used here:
+   - A **structure** is a set of elements with a two-input operation `*` and a one-input operation `f`. A **magma** is
+     the same thing without `f`: a set with only `*`.
+   - A **law** is an equation such as `x*y = x` that must hold for every choice of the letters. Law A **implies** law B
+     if every structure where A holds also has B holding.
+   - The **ETP** (Equational Theories Project) is a public online project that decided, for 4,694 magma laws with at
+     most 4 uses of `*`, which ones imply which. Its proofs are checked in **Lean**, a program that checks
+     mathematical proofs step by step. Its answers are published as one large file.
+   - **Code** numbers are the answers stored in `results/status_matrix.npz` (for example 1 and 2 = "does not imply",
+     shown by a table; 3 and 4 = "implies", by z3; 5 and 6 = open). **z3** is an automatic solver.
+   - A law **collapses** if it forces every structure where it holds to have only one element; such a law implies
+     every other law.
+   - The label **`known (ETP)`** means: the answer comes from the ETP file and was not re-checked by us.
+
+2. **What was done, in order.**
+   1. Argued that the two settings ask the same question for laws without `f`: drop `f` from one of our structures
+      and you get a magma; add `f(x) = x` to a magma and you get one of our structures. Neither step changes whether
+      A or B holds.
+   2. Downloaded two ETP files (the law list and the answer file) and recorded their versions and fingerprints
+      (sha256), so the comparison can be repeated with the same data.
+   3. Matched our 408 laws to ETP laws with a new reader written for this step, after renaming letters in a fixed way.
+      All 408 matched, one to one.
+   4. Checked which way the ETP file is read (row implies column, or the reverse) with three cases whose answer is
+      known in advance, so a flipped reading would be caught.
+   5. Compared all 166,056 ordered pairs of distinct laws without `f`. Result: 0 disagreements.
+   6. Showed the comparison can fail: four deliberate damages (two of our codes changed, the matching shifted by one,
+      the file read the wrong way round) were all detected.
+   7. Took the ETP's answers for the 1,256 pairs that were open for us (412 + 17 "implies", 809 + 18 "does not
+      imply") and stored them in `results/etp_crosscheck.json`, without changing our own table.
+
+3. **A small example.** Law A = `((x*y)*z)*x = w` was "open" in our table: in step 04, z3 did not prove within 5 seconds
+   that it collapses. The ETP says it collapses. A two-line check by hand: pick any two elements a and b, and put
+   x = y = z = a. The law says `((a*a)*a)*a = w` for every w. With w = a and then w = b, the same left side equals both
+   a and b, so a = b. Every two elements are equal: the set has one element. (Step 28 later stored this argument as a
+   chain of steps that a program replays.)
+
+4. **What it means and what it does NOT mean.**
+   - It means: our 164,800 decided pairs without `f` agree with the ETP, which makes a bug in that part of our table
+     unlikely. The 1,256 open pairs without `f` got an answer, labelled `known (ETP)`.
+   - It does NOT mean that we checked the ETP's Lean proofs or rebuilt its answer file: we used the published file
+     as it is. It says nothing about the 340,176 pairs where a law uses `f`: the ETP has no laws with `f`.
+   - The 63,337 "implies" answers without `f` still rest on z3 here (`z3-only`); the ETP agreeing is extra support, not
+     a proof checked by us.
+
+5. **How to re-check.** From the repository root:
+   - `python src/query.py "x*y = x" "x*y = y"`; expected, among other lines,
+     `ETP: A is Equation4, B is Equation5 ... Our answer agrees with the ETP data`.
+   - `python src/query.py "((x*y)*z)*x = w" "x*y = y"`; expected `code 5: OPEN` (the stored table was not changed)
+     and then `the ETP data says A implies B (implicit_proof_true). Label: known (ETP; ...)`.
+   - The full comparison needs the two ETP files from the internet: the commands under "Command(s)" below. The
+     expected result is `"disagreements": []` in `results/etp_crosscheck.json` and the counts in the "Output" table.
+
 ## Goal
 
 Find bugs in our table by comparing it with an independent, much more thoroughly checked source.

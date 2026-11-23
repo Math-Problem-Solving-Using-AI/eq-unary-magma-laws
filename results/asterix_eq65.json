@@ -1,0 +1,19 @@
+{
+ "about": "Step 25. The finite seed of the ETP's infinite 'Asterix' model of ETP equation 65 (our law 598, x*(y*(x*y)) = y), and the 2 open pairs it settles. Checked by src/check_asterix_eq65.py. The seed is a finite partial solution on the natural numbers: E1 lists the defined products as [a, b, value] meaning a*b = value, E0 lists the pairs (a, b) where the law is already closed, a*(b*(a*b)) = b. A model is the natural numbers with a total operation that keeps every product of E1 and satisfies law 598 (mirrored model: x*y is read as y*x, which satisfies law 88). That such an operation exists for every seed that passes the 6 conditions of PartialSolution is the ETP's Lean construction (move_rev_good, move_rev_bad, act, add_e0, closureSeq, closure_prop), which this repository does not re-run.",
+ "source": {
+  "repository": "https://github.com/teorth/equational_theories",
+  "commit": "dbc9a2bf0c939e7c646841e679f0f7fb6cfe4e15",
+  "commit_date": "2026-11-19",
+  "file": "equational_theories/Asterix.lean",
+  "lines": {"Equation65": 8, "PartialSolution": 16, "move_rev_good": 44, "move_rev_bad": 181, "notMemFinset": 338, "move_rev_good'": 352, "move_rev_bad'": 376, "act": 400, "add_e1": 427, "add_e0": 454, "closureSeq": 469, "closure": 493, "closure_prop": 503, "initial": 513, "Equation65_facts": 532}
+ },
+ "seed": {
+  "E0": [[0, 0], [1, 0], [0, 1], [0, 8], [8, 8], [8, 0]],
+  "E1": [[0, 0, 1], [1, 0, 2], [0, 2, 3], [1, 3, 0], [0, 3, 4], [1, 1, 5], [0, 5, 6], [1, 6, 7], [0, 1, 8],
+         [0, 8, 0], [8, 8, 0], [1, 8, 9], [0, 9, 1], [8, 0, 10], [0, 10, 8], [8, 10, 8], [10, 10, 8], [2, 0, 11]]
+ },
+ "pairs": [
+  {"pair": [598, 224], "mirror": false, "env": {"x": 0}},
+  {"pair": [88, 579], "mirror": true, "env": {"x": 0}}
+ ]
+}

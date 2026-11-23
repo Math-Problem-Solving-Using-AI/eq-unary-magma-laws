@@ -1,0 +1,419 @@
+{
+ "sources": {
+  "482": {
+   "A": "f(x*y)*x = y",
+   "facts": [
+    {
+     "left": "m(f(m(v0,v1)),v0)",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(f(v1),f(m(v0,v1)))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": -1,
+       "pos": [
+        0,
+        0
+       ],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      },
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(m(v0,v1))",
+        "v1": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(f(v0),f(v1))",
+     "right": "f(m(v0,v1))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0,
+        0
+       ],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      },
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(v1)",
+        "v1": "f(m(v0,v1))"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v0,m(f(v1),v0)))",
+     "right": "f(v1)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "m(f(v1),v0)"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(v1)",
+        "v1": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v0,m(f(v1),v0))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "m(v0,m(f(v1),v0))",
+        "v1": "v0"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v0": "m(v0,m(f(v1),v0))",
+        "v1": "v0"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": 1,
+       "pos": [
+        1,
+        0
+       ],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v0": "v1",
+        "v1": "v0"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v1",
+        "v1": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v0,m(f(v0),v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "703": {
+   "A": "x*f(y*x) = y",
+   "facts": [
+    {
+     "left": "m(v0,f(m(v1,v0)))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(f(m(v1,v0)),f(v1))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": -1,
+       "pos": [
+        1,
+        0
+       ],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      },
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(m(v1,v0))",
+        "v1": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(f(v1),f(v0))",
+     "right": "f(m(v1,v0))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        1,
+        0
+       ],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      },
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(v1)",
+        "v1": "f(m(v1,v0))"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(m(v0,f(v1)),v0))",
+     "right": "f(v1)",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "m(v0,f(v1))"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "f(v1)",
+        "v1": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v0,f(v1)),v0)",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "m(m(v0,f(v1)),v0)",
+        "v1": "v0"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "m(m(v0,f(v1)),v0)",
+        "v1": "v0"
+       }
+      },
+      {
+       "fact": 3,
+       "dir": 1,
+       "pos": [
+        0,
+        1
+       ],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      },
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "v1",
+        "v1": "v0"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v1",
+        "v1": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v0,f(v0)),v0)",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 4,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "152": {
+   "A": "(x*(y*x))*x = y",
+   "facts": [
+    {
+     "left": "m(m(v0,m(v1,v0)),v0)",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(v0,m(v1,v0))",
+     "right": "m(m(v0,v1),v0)",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": -1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "m(v0,m(v1,v0))"
+       }
+      },
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [
+        0,
+        1
+       ],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v0,m(m(v1,v0),v0))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "m(v1,v0)"
+       }
+      },
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "pairs": {
+  "482,549": {
+   "A": "f(x*y)*x = y",
+   "B": "x*(f(y)*x) = y",
+   "verdict": "holds",
+   "fact": 4
+  },
+  "482,543": {
+   "A": "f(x*y)*x = y",
+   "B": "x*(f(x)*x) = x",
+   "verdict": "holds",
+   "fact": 5
+  },
+  "703,194": {
+   "A": "x*f(y*x) = y",
+   "B": "(x*f(y))*x = y",
+   "verdict": "holds",
+   "fact": 4
+  },
+  "703,188": {
+   "A": "x*f(y*x) = y",
+   "B": "(x*f(x))*x = x",
+   "verdict": "holds",
+   "fact": 5
+  },
+  "152,507": {
+   "A": "(x*(y*x))*x = y",
+   "B": "x*((y*x)*x) = y",
+   "verdict": "holds",
+   "fact": 2
+  }
+ }
+}

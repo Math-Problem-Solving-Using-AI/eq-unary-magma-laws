@@ -4,6 +4,59 @@
 - Status label: IN PROGRESS, nothing recorded yet
 - Commit(s): ebdb14f (first version), fix in a later commit
 
+## In plain words
+
+1. **The question.** After steps 03 and 04, 17,479 pairs (A, B) were not refuted by a small table, and A is not one
+   of the 216 laws without a small model. For those pairs: can z3 prove that A implies B?
+
+   Words used here:
+   - A **law** is an equation such as `x*y = x` that must hold for every choice of the letters. A **implies** B if
+     every structure (a set with a two-input operation `*` and a one-input operation `f`) where A holds also has B
+     holding (step 01).
+   - **z3** is an automatic solver. Asked "is there a structure where A holds and B fails?", it answers `unsat` (no,
+     so A implies B), `sat` (yes) or `unknown` / time-out.
+   - The label **`z3-only`** means the answer rests on z3 alone, with no stored proof checked by other code.
+   - **Transitive closure**: if A implies B and B implies C, then A implies C, with no new z3 call.
+   - **Open** or **unresolved** means no answer yet.
+   - The status line above says "IN PROGRESS": that line was written before attempt 2 and not updated afterwards.
+     Attempt 2 finished; its numbers are below.
+
+2. **What was done, in order.**
+   1. **Attempt 1** ran z3 for about 40 minutes and kept results only in memory. It was stopped by hand and everything
+      was lost. Lesson: save results every few tasks and be able to resume.
+   2. **Attempt 2** (with saving) skipped the 9 laws with no small model and no collapse proof (each would have about
+      700 pairs that nothing refutes) and gave z3 1 second per pair: 15,731 pairs proved, 15,877 after transitive
+      closure, 28 answered `sat` (z3 says a counterexample exists but did not return it, so there was nothing to check
+      yet; step 06 looked for them).
+   3. Cross-checked: none of the proved pairs is refuted by a small table. A wrong z3 proof would likely have shown up
+      here.
+   4. Counted every one of the 506,232 ordered pairs into exactly one group: 335,177 refuted by a small table,
+      147,177 with a collapsing law as A, 15,877 proved by z3, 6,399 with one of the 9 unresolved laws as A, and
+      1,602 unresolved. These groups are the codes stored in `results/status_matrix.npz`.
+
+3. **A small example.** A = `x*y = x`, B = `(x*y)*z = x`. z3 proved that A implies B. By hand: A with x := x*y and
+   y := z gives `(x*y)*z = x*y`, and A again gives `x*y = x`, so `(x*y)*z = x`. The reverse does not hold: on {0, 1}
+   take `0*y = 1` and `1*y = 0` for every y. Then `(x*y)*z = x` holds (x is switched twice), but `0*0 = 1`, so
+   `x*y = x` fails.
+
+4. **What it means and what it does NOT mean.**
+   - It means: 15,877 pairs are marked "implies" (code 3, `z3-only`) and 1,602 were left for a search with larger
+     tables (step 06).
+   - It does NOT mean: proved. No proof is stored for these pairs and no other program checked them. z3 also varies
+     between runs, so a pair it timed out on this time may be proved next time. "Unresolved" means z3 gave up, not that
+     the pair is false.
+
+5. **How to re-check.** From the repository root, after `python src/models.py data/laws_3.json data/o3`:
+   - `python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz`;
+     expected `counts: {0: 712, 1: 335177, 2: 708, 3: 15877, 4: 147177, 5: 6399, 6: 894}` and
+     `status table consistent` (code 2 and the smaller unresolved count 894 come from step 06). It checks the table
+     against the small tables of step 03, not the z3 proofs.
+   - `python src/query.py "x*y = x" "(x*y)*z = x"`; expected `code 3: implication, proved by z3 (with transitive
+     closure)` and `label: z3-only`. `python src/query.py "(x*y)*z = x" "x*y = x" --witness` shows the 2-element table
+     above (`"mul": [[1, 1], [0, 0]]`).
+   - Re-running z3 itself: `python src/prove.py edges data/laws_3.json data/o3 1000` (about 4 to 5 minutes with 8
+     workers; it needs `data/o3_collapse.npy` from step 04). Its counts can differ a little from run to run.
+
 ## Goal
 For the pairs (A, B) that no small structure refutes, try to prove A implies B with z3.
 Pairs z3 cannot prove go to a larger-counterexample search.

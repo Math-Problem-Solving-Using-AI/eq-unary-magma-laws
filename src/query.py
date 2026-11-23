@@ -95,6 +95,42 @@ def etp_note(a, b, c):
     return head + "Our answer agrees with the ETP data (steps/08-etp-crosscheck.md)."
 
 
+# Certificates found after the stored table was made, by the table code of the pairs they settle:
+# (file in results/, step that found them, step file).
+CERTIFICATE_FILES = {
+    5: ("witnesses_ffree_models.json", "Step 09", "steps/09-ffree-models-with-f.md"),
+    6: ("witnesses_etp_magmas.json", "Step 11", "steps/11-etp-magmas-with-f.md"),
+}
+
+
+def later_certificates(c):
+    """Certificates for pairs still code c in the table, keyed by "a,b" (law index)."""
+    if c not in CERTIFICATE_FILES:
+        return {}
+    path = ROOT / "results" / CERTIFICATE_FILES[c][0]
+    return json.load(open(path, encoding="utf-8")) if path.exists() else {}
+
+
+def certificate_note(a, b, c, entries, certs):
+    """For a pair still code 5 or 6 in the table: a certificate from a later step, re-checked now."""
+    from verify_witnesses import check_entry
+
+    e = certs.get(f"{a},{b}")
+    if e is None:
+        return None, None
+    name, step, record = CERTIFICATE_FILES[c]
+    if e["A"] != entries[a]["text"] or e["B"] != entries[b]["text"]:
+        return (f"WARNING: results/{name} has an entry for this pair whose law texts "
+                "do not match the table. Not used.", None)
+    if not check_entry(e):
+        return (f"WARNING: the certificate in results/{name} for this pair FAILED "
+                "the re-check. Not used.", None)
+    return (f"{step}: NOT an implication. A structure with {e['size']} elements satisfies A and fails B "
+            f"(results/{name}, re-checked just now by src/verify_witnesses.py code). "
+            f"Label: model-verified. The table above still says code {c} because the stored matrix "
+            f"predates {step.lower()} ({record}).", e["model"])
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
     flags = {a for a in sys.argv[1:] if a.startswith("--")}
@@ -109,6 +145,13 @@ def main():
                 print(f"   B = #{entries[b]['id']}: {entries[b]['text']}")
             if len(ids) > 10:
                 print(f"   ... {len(ids) - 10} more")
+        for c, (name, step, _) in CERTIFICATE_FILES.items():
+            certs = later_certificates(c)
+            hits = [certs[f"{a},{b}"] for b in np.where(codes[a] == c)[0] if f"{a},{b}" in certs]
+            if hits:
+                sizes = "/".join(str(n) for n in sorted({e["size"] for e in hits}))
+                print(f"\n{step}: {len(hits)} of the open (code {c}) targets above have a {sizes}-element "
+                      f"certificate in results/{name} (model-verified). Ask about one pair to see it.")
         return
     if len(args) != 2:
         raise SystemExit(__doc__)
@@ -121,6 +164,11 @@ def main():
     etp = etp_note(a, b, c)
     if etp:
         print(etp)
+    note, model = certificate_note(a, b, c, entries, later_certificates(c))
+    if note:
+        print(note)
+    if "--witness" in flags and model:
+        print("structure satisfying A and failing B:", json.dumps(model))
     if "--witness" in flags and c in (1, 2):
         if c == 1:
             w = witness(a, b, entries)

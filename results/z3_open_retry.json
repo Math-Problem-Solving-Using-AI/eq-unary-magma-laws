@@ -1,0 +1,7145 @@
+{
+ "about": "Ask z3 again, with a longer time limit, about the pairs that are still open (code 6).",
+ "z3_version": "5.4.1",
+ "pairs": {
+  "32,37": {
+   "A": "f(x)*y = x",
+   "B": "f(x*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,35": {
+   "A": "f(x)*y = x",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,64": {
+   "A": "f(x)*y = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,60": {
+   "A": "f(x)*y = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,436": {
+   "A": "f(x)*y = x",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,444": {
+   "A": "f(x)*y = x",
+   "B": "f(x*(y*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,438": {
+   "A": "f(x)*y = x",
+   "B": "f(x*(x*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,441": {
+   "A": "f(x)*y = x",
+   "B": "f(x*(y*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,448": {
+   "A": "f(x)*y = x",
+   "B": "f(x*(y*z)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,578": {
+   "A": "f(x)*y = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,451": {
+   "A": "f(x)*y = x",
+   "B": "f(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,453": {
+   "A": "f(x)*y = x",
+   "B": "f(x*f(y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,579": {
+   "A": "f(x)*y = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,584": {
+   "A": "f(x)*y = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,583": {
+   "A": "f(x)*y = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,585": {
+   "A": "f(x)*y = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,642": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,650": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,651": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,640": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,641": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,652": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,666": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,665": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,692": {
+   "A": "f(x)*y = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,668": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,683": {
+   "A": "f(x)*y = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,682": {
+   "A": "f(x)*y = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,667": {
+   "A": "f(x)*y = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,693": {
+   "A": "f(x)*y = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "32,694": {
+   "A": "f(x)*y = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "35,416": {
+   "A": "f(x*x) = x",
+   "B": "f(x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,32": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,60": {
+   "A": "f(x*y) = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,401": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,30": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,64": {
+   "A": "f(x*y) = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,403": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*(x*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,409": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*(y*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,406": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,413": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*(y*z) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,418": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*f(y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,579": {
+   "A": "f(x*y) = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,578": {
+   "A": "f(x*y) = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,416": {
+   "A": "f(x*y) = x",
+   "B": "f(x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,585": {
+   "A": "f(x*y) = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,583": {
+   "A": "f(x*y) = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,584": {
+   "A": "f(x*y) = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,640": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,650": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,651": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,642": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,641": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,666": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,665": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,652": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,667": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,682": {
+   "A": "f(x*y) = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,683": {
+   "A": "f(x*y) = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,668": {
+   "A": "f(x*y) = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,692": {
+   "A": "f(x*y) = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,693": {
+   "A": "f(x*y) = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "37,694": {
+   "A": "f(x*y) = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,55": {
+   "A": "f(x*y) = y",
+   "B": "x*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,58": {
+   "A": "f(x*y) = y",
+   "B": "x*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,61": {
+   "A": "f(x*y) = y",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,68": {
+   "A": "f(x*y) = y",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,218": {
+   "A": "f(x*y) = y",
+   "B": "(x*x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,221": {
+   "A": "f(x*y) = y",
+   "B": "(x*x)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,223": {
+   "A": "f(x*y) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,229": {
+   "A": "f(x*y) = y",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,225": {
+   "A": "f(x*y) = y",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,232": {
+   "A": "f(x*y) = y",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,279": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,275": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,236": {
+   "A": "f(x*y) = y",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,284": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*f(z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,292": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,288": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,285": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,303": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,296": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,309": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,299": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,313": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,321": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,416": {
+   "A": "f(x*y) = y",
+   "B": "f(x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,317": {
+   "A": "f(x*y) = y",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,419": {
+   "A": "f(x*y) = y",
+   "B": "f(x)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,421": {
+   "A": "f(x*y) = y",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,427": {
+   "A": "f(x*y) = y",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,423": {
+   "A": "f(x*y) = y",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,430": {
+   "A": "f(x*y) = y",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "38,434": {
+   "A": "f(x*y) = y",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,35": {
+   "A": "x*f(y) = y",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,38": {
+   "A": "x*f(y) = y",
+   "B": "f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,68": {
+   "A": "x*f(y) = y",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,61": {
+   "A": "x*f(y) = y",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,223": {
+   "A": "x*f(y) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,225": {
+   "A": "x*f(y) = y",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,229": {
+   "A": "x*f(y) = y",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,232": {
+   "A": "x*f(y) = y",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,236": {
+   "A": "x*f(y) = y",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,285": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,288": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,292": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,296": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,299": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,303": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,309": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,313": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,317": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,321": {
+   "A": "x*f(y) = y",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,322": {
+   "A": "x*f(y) = y",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,325": {
+   "A": "x*f(y) = y",
+   "B": "f((x*x)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,327": {
+   "A": "x*f(y) = y",
+   "B": "f((x*y)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,331": {
+   "A": "x*f(y) = y",
+   "B": "f((x*y)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,351": {
+   "A": "x*f(y) = y",
+   "B": "f(f(x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,336": {
+   "A": "x*f(y) = y",
+   "B": "f((x*y)*z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "75,209": {
+   "A": "((x*x)*y)*x = y",
+   "B": "(x*x)*(y*x) = y",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "58,354": {
+   "A": "x*f(y) = y",
+   "B": "f(f(x)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "77,94": {
+   "A": "((x*x)*y)*y = x",
+   "B": "((x*y)*y)*x = x",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "58,421": {
+   "A": "x*f(y) = y",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,427": {
+   "A": "x*f(y) = y",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,423": {
+   "A": "x*f(y) = y",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,430": {
+   "A": "x*f(y) = y",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "58,434": {
+   "A": "x*f(y) = y",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "75,594": {
+   "A": "((x*x)*y)*x = y",
+   "B": "x*(y*(x*x)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "85,152": {
+   "A": "((x*y)*x)*x = y",
+   "B": "(x*(y*x))*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "85,136": {
+   "A": "((x*y)*x)*x = y",
+   "B": "(x*(x*x))*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "85,491": {
+   "A": "((x*y)*x)*x = y",
+   "B": "x*((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "85,558": {
+   "A": "((x*y)*x)*x = y",
+   "B": "x*(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "85,507": {
+   "A": "((x*y)*x)*x = y",
+   "B": "x*((y*x)*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "87,578": {
+   "A": "((x*y)*x)*y = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,60": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,64": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,126": {
+   "A": "(f(x)*x)*y = x",
+   "B": "(f(x)*y)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,129": {
+   "A": "(f(x)*x)*y = x",
+   "B": "(f(x)*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,322": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,324": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f((x*x)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,133": {
+   "A": "(f(x)*x)*y = x",
+   "B": "(f(x)*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,327": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f((x*y)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,330": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f((x*y)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,334": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f((x*y)*z) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,463": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f(x*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,465": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f(x*x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,481": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f(x*y)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,484": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f(x*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,488": {
+   "A": "(f(x)*x)*y = x",
+   "B": "f(x*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,579": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,578": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,583": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,585": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,584": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,640": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,641": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,642": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,651": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,650": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,652": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,666": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,665": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,667": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,668": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,682": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,692": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,683": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,693": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "123,694": {
+   "A": "(f(x)*x)*y = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "127,401": {
+   "A": "(f(x)*y)*x = y",
+   "B": "f(x)*(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "127,407": {
+   "A": "(f(x)*y)*x = y",
+   "B": "f(x)*(y*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "129,330": {
+   "A": "(f(x)*y)*y = x",
+   "B": "f((x*y)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "129,463": {
+   "A": "(f(x)*y)*y = x",
+   "B": "f(x*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "129,322": {
+   "A": "(f(x)*y)*y = x",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "129,484": {
+   "A": "(f(x)*y)*y = x",
+   "B": "f(x*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,60": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,64": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,322": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,327": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f((x*y)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,324": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f((x*x)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,330": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f((x*y)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,334": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f((x*y)*z) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,463": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f(x*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,465": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f(x*x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,484": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f(x*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,481": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f(x*y)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,578": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,488": {
+   "A": "(f(x)*y)*z = x",
+   "B": "f(x*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,583": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,579": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,584": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,585": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,640": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,641": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,642": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,650": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,652": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,651": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,665": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,666": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "142,491": {
+   "A": "(x*(x*y))*x = y",
+   "B": "x*((x*x)*x) = x",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "133,667": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,668": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "152,69": {
+   "A": "(x*(y*x))*x = y",
+   "B": "((x*x)*x)*x = x",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "152,85": {
+   "A": "(x*(y*x))*x = y",
+   "B": "((x*y)*x)*x = y",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "152,491": {
+   "A": "(x*(y*x))*x = y",
+   "B": "x*((x*x)*x) = x",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "133,683": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,682": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "164,203": {
+   "A": "(x*(y*y))*y = x",
+   "B": "(x*x)*(x*x) = x",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "133,693": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,692": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "133,694": {
+   "A": "(f(x)*y)*z = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "142,497": {
+   "A": "(x*(x*y))*x = y",
+   "B": "x*((x*y)*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "142,564": {
+   "A": "(x*(x*y))*x = y",
+   "B": "x*(x*(y*x)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "152,507": {
+   "A": "(x*(y*x))*x = y",
+   "B": "x*((y*x)*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "202,485": {
+   "A": "(x*f(y))*z = z",
+   "B": "f(x*y)*y = y",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "202,490": {
+   "A": "(x*f(y))*z = z",
+   "B": "f(x*y)*z = z",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "202,33": {
+   "A": "(x*f(y))*z = z",
+   "B": "f(x)*y = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "202,466": {
+   "A": "(x*f(y))*z = z",
+   "B": "f(x*x)*y = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "164,251": {
+   "A": "(x*(y*y))*y = x",
+   "B": "(x*y)*(y*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "194,328": {
+   "A": "(x*f(y))*x = y",
+   "B": "f((x*y)*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "194,322": {
+   "A": "(x*f(y))*x = y",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "194,687": {
+   "A": "(x*f(y))*x = y",
+   "B": "x*f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "194,703": {
+   "A": "(x*f(y))*x = y",
+   "B": "x*f(y*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "239,594": {
+   "A": "(x*y)*(x*x) = y",
+   "B": "x*(y*(x*x)) = y",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "221,322": {
+   "A": "(x*x)*f(y) = y",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "221,325": {
+   "A": "(x*x)*f(y) = y",
+   "B": "f((x*x)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "239,209": {
+   "A": "(x*y)*(x*x) = y",
+   "B": "(x*x)*(y*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unsat"
+   },
+   "proved_ms": 30000
+  },
+  "276,573": {
+   "A": "(x*y)*f(x) = y",
+   "B": "x*(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "276,631": {
+   "A": "(x*y)*f(x) = y",
+   "B": "x*(y*f(x)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,35": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,38": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,61": {
+   "A": "(x*y)*f(z) = z",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,68": {
+   "A": "(x*y)*f(z) = z",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,223": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,225": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,229": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,232": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,236": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,285": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,288": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,292": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,296": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,299": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,303": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,309": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,313": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,317": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,321": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,322": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,325": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*x)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,327": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*y)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,331": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*y)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,354": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(f(x)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,336": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*y)*z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,351": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(f(x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,421": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,423": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,427": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,430": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "284,434": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,60": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,64": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,121": {
+   "A": "f((x*x)*y) = x",
+   "B": "(f(x)*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,123": {
+   "A": "f((x*x)*y) = x",
+   "B": "(f(x)*x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,126": {
+   "A": "f((x*x)*y) = x",
+   "B": "(f(x)*y)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,129": {
+   "A": "f((x*x)*y) = x",
+   "B": "(f(x)*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,133": {
+   "A": "f((x*x)*y) = x",
+   "B": "(f(x)*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,327": {
+   "A": "f((x*x)*y) = x",
+   "B": "f((x*y)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,330": {
+   "A": "f((x*x)*y) = x",
+   "B": "f((x*y)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,463": {
+   "A": "f((x*x)*y) = x",
+   "B": "f(x*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,334": {
+   "A": "f((x*x)*y) = x",
+   "B": "f((x*y)*z) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,465": {
+   "A": "f((x*x)*y) = x",
+   "B": "f(x*x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,481": {
+   "A": "f((x*x)*y) = x",
+   "B": "f(x*y)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,484": {
+   "A": "f((x*x)*y) = x",
+   "B": "f(x*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,488": {
+   "A": "f((x*x)*y) = x",
+   "B": "f(x*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,578": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,579": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,583": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,584": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,585": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,640": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,641": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,642": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,650": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,651": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,652": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,665": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,666": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,667": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,668": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,682": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,683": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,692": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,694": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "324,693": {
+   "A": "f((x*x)*y) = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "325,218": {
+   "A": "f((x*x)*y) = y",
+   "B": "(x*x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "325,221": {
+   "A": "f((x*x)*y) = y",
+   "B": "(x*x)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "328,188": {
+   "A": "f((x*y)*x) = y",
+   "B": "(x*f(x))*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "328,194": {
+   "A": "f((x*y)*x) = y",
+   "B": "(x*f(y))*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "328,687": {
+   "A": "f((x*y)*x) = y",
+   "B": "x*f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "328,703": {
+   "A": "f((x*y)*x) = y",
+   "B": "x*f(y*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "330,121": {
+   "A": "f((x*y)*y) = x",
+   "B": "(f(x)*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "330,129": {
+   "A": "f((x*y)*y) = x",
+   "B": "(f(x)*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "330,463": {
+   "A": "f((x*y)*y) = x",
+   "B": "f(x*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "330,484": {
+   "A": "f((x*y)*y) = x",
+   "B": "f(x*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "331,55": {
+   "A": "f((x*y)*y) = y",
+   "B": "x*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,60": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,64": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,121": {
+   "A": "f((x*y)*z) = x",
+   "B": "(f(x)*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,123": {
+   "A": "f((x*y)*z) = x",
+   "B": "(f(x)*x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,126": {
+   "A": "f((x*y)*z) = x",
+   "B": "(f(x)*y)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,129": {
+   "A": "f((x*y)*z) = x",
+   "B": "(f(x)*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,133": {
+   "A": "f((x*y)*z) = x",
+   "B": "(f(x)*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,463": {
+   "A": "f((x*y)*z) = x",
+   "B": "f(x*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,465": {
+   "A": "f((x*y)*z) = x",
+   "B": "f(x*x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,481": {
+   "A": "f((x*y)*z) = x",
+   "B": "f(x*y)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,484": {
+   "A": "f((x*y)*z) = x",
+   "B": "f(x*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,488": {
+   "A": "f((x*y)*z) = x",
+   "B": "f(x*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,578": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,579": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,583": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,584": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,585": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,640": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,641": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,642": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,650": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,651": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,652": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,665": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,666": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,667": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,668": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,682": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,683": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,692": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,693": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "334,694": {
+   "A": "f((x*y)*z) = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,35": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,38": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,55": {
+   "A": "f((x*y)*z) = z",
+   "B": "x*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,58": {
+   "A": "f((x*y)*z) = z",
+   "B": "x*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,61": {
+   "A": "f((x*y)*z) = z",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,68": {
+   "A": "f((x*y)*z) = z",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,218": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,221": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*x)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,223": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,225": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,236": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,229": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,232": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,275": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,279": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,284": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*f(z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,285": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,288": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,296": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,292": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,299": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,303": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,309": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,313": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,317": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,321": {
+   "A": "f((x*y)*z) = z",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,351": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(f(x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,354": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(f(x)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,416": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,419": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,421": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,423": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,427": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,430": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "336,434": {
+   "A": "f((x*y)*z) = z",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,60": {
+   "A": "f(f(x))*y = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,64": {
+   "A": "f(f(x))*y = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,351": {
+   "A": "f(f(x))*y = x",
+   "B": "f(f(x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,353": {
+   "A": "f(f(x))*y = x",
+   "B": "f(f(x)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,356": {
+   "A": "f(f(x))*y = x",
+   "B": "f(f(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,358": {
+   "A": "f(f(x))*y = x",
+   "B": "f(f(x*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,578": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,579": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,583": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,584": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,585": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,640": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,641": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,642": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,650": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,652": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,665": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,651": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,666": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,667": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,682": {
+   "A": "f(f(x))*y = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,668": {
+   "A": "f(f(x))*y = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,683": {
+   "A": "f(f(x))*y = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,693": {
+   "A": "f(f(x))*y = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,692": {
+   "A": "f(f(x))*y = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "348,694": {
+   "A": "f(f(x))*y = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,58": {
+   "A": "f(f(x)*y) = y",
+   "B": "x*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "353,356": {
+   "A": "f(f(x)*y) = x",
+   "B": "f(f(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "353,358": {
+   "A": "f(f(x)*y) = x",
+   "B": "f(f(x*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,55": {
+   "A": "f(f(x)*y) = y",
+   "B": "x*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,61": {
+   "A": "f(f(x)*y) = y",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,68": {
+   "A": "f(f(x)*y) = y",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,218": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,221": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,229": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,223": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,225": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,232": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,236": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,275": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,279": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,284": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*f(z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,285": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,288": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,292": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,296": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,299": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,303": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,309": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,313": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,419": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,317": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,416": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,321": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,421": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,427": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,423": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,430": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,60": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,346": {
+   "A": "f(f(x*y)) = x",
+   "B": "f(f(x))*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,64": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "354,434": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,348": {
+   "A": "f(f(x*y)) = x",
+   "B": "f(f(x))*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,351": {
+   "A": "f(f(x*y)) = x",
+   "B": "f(f(x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,353": {
+   "A": "f(f(x*y)) = x",
+   "B": "f(f(x)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,578": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,579": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,583": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,640": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,584": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,585": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,641": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,642": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,652": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,651": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,650": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,665": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,667": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,666": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,668": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,682": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,693": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,683": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,692": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "358,694": {
+   "A": "f(f(x*y)) = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,68": {
+   "A": "f(f(x*y)) = y",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,61": {
+   "A": "f(f(x*y)) = y",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,223": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,225": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,229": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,232": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,236": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,285": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,288": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,292": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,296": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,299": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,303": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,309": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,317": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,421": {
+   "A": "f(f(x*y)) = y",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,321": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,313": {
+   "A": "f(f(x*y)) = y",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,427": {
+   "A": "f(f(x*y)) = y",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,423": {
+   "A": "f(f(x*y)) = y",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,430": {
+   "A": "f(f(x*y)) = y",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,451": {
+   "A": "f(f(x*y)) = y",
+   "B": "f(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,434": {
+   "A": "f(f(x*y)) = y",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,677": {
+   "A": "f(f(x*y)) = y",
+   "B": "x*f(f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,680": {
+   "A": "f(f(x*y)) = y",
+   "B": "x*f(f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "359,454": {
+   "A": "f(f(x*y)) = y",
+   "B": "f(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "407,121": {
+   "A": "f(x)*(y*x) = y",
+   "B": "(f(x)*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "409,436": {
+   "A": "f(x)*(y*y) = x",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "407,127": {
+   "A": "f(x)*(y*x) = y",
+   "B": "(f(x)*y)*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "409,444": {
+   "A": "f(x)*(y*y) = x",
+   "B": "f(x*(y*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,35": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,37": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,64": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,60": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,436": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,438": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(x*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,441": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(y*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,444": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(y*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,448": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(y*z)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,451": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,578": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,453": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*f(y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,579": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,583": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,584": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,585": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,640": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,641": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,642": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,650": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,651": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,652": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,665": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,666": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,667": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,668": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,682": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,683": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,692": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,693": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "413,694": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "416,35": {
+   "A": "f(x)*f(x) = x",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,30": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,32": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,35": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,37": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,60": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,64": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,401": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x)*(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,403": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x)*(x*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,406": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x)*(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,409": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x)*(y*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,413": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x)*(y*z) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,436": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,438": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*(x*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,441": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*(y*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,444": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*(y*y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,448": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*(y*z)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,451": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,578": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,453": {
+   "A": "f(x)*f(y) = x",
+   "B": "f(x*f(y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,579": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,583": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,584": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,640": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,585": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,641": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,650": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,651": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,642": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,652": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,665": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,667": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,668": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,682": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,666": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,683": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,692": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,693": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,35": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "418,694": {
+   "A": "f(x)*f(y) = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,38": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,58": {
+   "A": "f(x)*f(y) = y",
+   "B": "x*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,55": {
+   "A": "f(x)*f(y) = y",
+   "B": "x*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,61": {
+   "A": "f(x)*f(y) = y",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,68": {
+   "A": "f(x)*f(y) = y",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,218": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,221": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*x)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,223": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,229": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,225": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,232": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,236": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,275": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,279": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*f(y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,284": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*f(z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,285": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,288": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,292": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,296": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,299": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,303": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,309": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,313": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,317": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,321": {
+   "A": "f(x)*f(y) = y",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,322": {
+   "A": "f(x)*f(y) = y",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,325": {
+   "A": "f(x)*f(y) = y",
+   "B": "f((x*x)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,331": {
+   "A": "f(x)*f(y) = y",
+   "B": "f((x*y)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,327": {
+   "A": "f(x)*f(y) = y",
+   "B": "f((x*y)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,336": {
+   "A": "f(x)*f(y) = y",
+   "B": "f((x*y)*z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,351": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(f(x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,354": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(f(x)*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,421": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,423": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,427": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,430": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "419,434": {
+   "A": "f(x)*f(y) = y",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "438,30": {
+   "A": "f(x*(x*y)) = x",
+   "B": "f(x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "439,576": {
+   "A": "f(x*(x*y)) = y",
+   "B": "x*(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "439,573": {
+   "A": "f(x*(x*y)) = y",
+   "B": "x*(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "439,687": {
+   "A": "f(x*(x*y)) = y",
+   "B": "x*f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "439,690": {
+   "A": "f(x*(x*y)) = y",
+   "B": "x*f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "442,463": {
+   "A": "f(x*(y*x)) = y",
+   "B": "f(x*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "442,543": {
+   "A": "f(x*(y*x)) = y",
+   "B": "x*(f(x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "442,482": {
+   "A": "f(x*(y*x)) = y",
+   "B": "f(x*y)*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "442,549": {
+   "A": "f(x*(y*x)) = y",
+   "B": "x*(f(y)*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "444,401": {
+   "A": "f(x*(y*y)) = x",
+   "B": "f(x)*(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "444,409": {
+   "A": "f(x*(y*y)) = x",
+   "B": "f(x)*(y*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,61": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,223": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,68": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,225": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,229": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,236": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,232": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,285": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,288": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,292": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,296": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,299": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,303": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,309": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,313": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,317": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,321": {
+   "A": "f(x*(y*y)) = y",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,423": {
+   "A": "f(x*(y*y)) = y",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,421": {
+   "A": "f(x*(y*y)) = y",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,430": {
+   "A": "f(x*(y*y)) = y",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,427": {
+   "A": "f(x*(y*y)) = y",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,434": {
+   "A": "f(x*(y*y)) = y",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,439": {
+   "A": "f(x*(y*y)) = y",
+   "B": "f(x*(x*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,441": {
+   "A": "f(x*(y*y)) = y",
+   "B": "f(x*(y*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,450": {
+   "A": "f(x*(y*y)) = y",
+   "B": "f(x*(y*z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,576": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,573": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,634": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*(y*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,630": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*(y*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,639": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*(y*f(z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,687": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,690": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,702": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*f(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,706": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*f(y*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "445,711": {
+   "A": "f(x*(y*y)) = y",
+   "B": "x*f(y*z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,30": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,32": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,35": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,37": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,60": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,64": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,401": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,403": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*(x*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,406": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,409": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*(y*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,413": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*(y*z) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,418": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*f(y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,416": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,451": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,453": {
+   "A": "f(x*(y*z)) = x",
+   "B": "f(x*f(y)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,578": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,579": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,583": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,584": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,585": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,640": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,641": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,642": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,650": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,651": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,652": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,665": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,666": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,667": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,668": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,682": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,683": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,692": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,693": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "448,694": {
+   "A": "f(x*(y*z)) = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,61": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,68": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,223": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,225": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,229": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,236": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,232": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,285": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,288": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,292": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,296": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,299": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,303": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,309": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,313": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,317": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,321": {
+   "A": "f(x*(y*z)) = z",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,421": {
+   "A": "f(x*(y*z)) = z",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,423": {
+   "A": "f(x*(y*z)) = z",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,427": {
+   "A": "f(x*(y*z)) = z",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,430": {
+   "A": "f(x*(y*z)) = z",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,434": {
+   "A": "f(x*(y*z)) = z",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,573": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,576": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,630": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*(y*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,634": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*(y*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,639": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*(y*f(z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,687": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,690": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,702": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*f(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,706": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*f(y*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "450,711": {
+   "A": "f(x*(y*z)) = z",
+   "B": "x*f(y*z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,30": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,32": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,60": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*x = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,64": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*y = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,401": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,403": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(x*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,406": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,409": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(y*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,413": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(y*z) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,416": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,418": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*f(y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,578": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,579": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,583": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,584": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,585": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,640": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,641": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,642": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*x) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,650": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,651": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,652": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,665": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*z) = x*w",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,666": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*z) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,667": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*z) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,668": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*z) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,682": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(x) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,683": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(x) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,692": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(y) = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,693": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(y) = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "453,694": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(y) = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "454,356": {
+   "A": "f(x*f(y)) = y",
+   "B": "f(f(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,129": {
+   "A": "f(x*x)*y = x",
+   "B": "(f(x)*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "454,359": {
+   "A": "f(x*f(y)) = y",
+   "B": "f(f(x*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,133": {
+   "A": "f(x*x)*y = x",
+   "B": "(f(x)*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,322": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,324": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*x)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,327": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*y)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,330": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*y)*y) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,481": {
+   "A": "f(x*x)*y = x",
+   "B": "f(x*y)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,334": {
+   "A": "f(x*x)*y = x",
+   "B": "f((x*y)*z) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,484": {
+   "A": "f(x*x)*y = x",
+   "B": "f(x*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "465,488": {
+   "A": "f(x*x)*y = x",
+   "B": "f(x*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "497,142": {
+   "A": "x*((x*y)*x) = y",
+   "B": "(x*(x*y))*x = y",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "482,543": {
+   "A": "f(x*y)*x = y",
+   "B": "x*(f(x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "482,549": {
+   "A": "f(x*y)*x = y",
+   "B": "x*(f(y)*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "507,136": {
+   "A": "x*((y*x)*x) = y",
+   "B": "(x*(x*x))*x = x",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "484,121": {
+   "A": "f(x*y)*y = x",
+   "B": "(f(x)*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "484,129": {
+   "A": "f(x*y)*y = x",
+   "B": "(f(x)*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "488,133": {
+   "A": "f(x*y)*z = x",
+   "B": "(f(x)*y)*z = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "488,129": {
+   "A": "f(x*y)*z = x",
+   "B": "(f(x)*y)*y = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "497,136": {
+   "A": "x*((x*y)*x) = y",
+   "B": "(x*(x*x))*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "497,564": {
+   "A": "x*((x*y)*x) = y",
+   "B": "x*(x*(y*x)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unsat"
+   },
+   "proved_ms": 30000
+  },
+  "507,85": {
+   "A": "x*((y*x)*x) = y",
+   "B": "((x*y)*x)*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "507,152": {
+   "A": "x*((y*x)*x) = y",
+   "B": "(x*(y*x))*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "549,436": {
+   "A": "x*(f(y)*x) = y",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "549,442": {
+   "A": "x*(f(y)*x) = y",
+   "B": "f(x*(y*x)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "549,482": {
+   "A": "x*(f(y)*x) = y",
+   "B": "f(x*y)*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "549,463": {
+   "A": "x*(f(y)*x) = y",
+   "B": "f(x*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "564,69": {
+   "A": "x*(x*(y*x)) = y",
+   "B": "((x*x)*x)*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "564,136": {
+   "A": "x*(x*(y*x)) = y",
+   "B": "(x*(x*x))*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "564,142": {
+   "A": "x*(x*(y*x)) = y",
+   "B": "(x*(x*y))*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "564,497": {
+   "A": "x*(x*(y*x)) = y",
+   "B": "x*((x*y)*x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "564,491": {
+   "A": "x*(x*(y*x)) = y",
+   "B": "x*((x*x)*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "567,603": {
+   "A": "x*(x*(y*y)) = y",
+   "B": "x*(y*(y*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unsat"
+   },
+   "proved_ms": 30000
+  },
+  "576,439": {
+   "A": "x*(x*f(y)) = y",
+   "B": "f(x*(x*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "576,436": {
+   "A": "x*(x*f(y)) = y",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "576,687": {
+   "A": "x*(x*f(y)) = y",
+   "B": "x*f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "576,690": {
+   "A": "x*(x*f(y)) = y",
+   "B": "x*f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "597,223": {
+   "A": "x*(y*(x*y)) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "631,218": {
+   "A": "x*(y*f(x)) = y",
+   "B": "(x*x)*f(x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "631,276": {
+   "A": "x*(y*f(x)) = y",
+   "B": "(x*y)*f(x) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,61": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,68": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,223": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,229": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,225": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,232": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,236": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,285": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,288": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,292": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,296": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,299": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,303": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,313": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,309": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,317": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,421": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,321": {
+   "A": "x*(y*f(y)) = y",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,423": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,427": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,434": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,430": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,436": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,439": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x*(x*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,441": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x*(y*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,445": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x*(y*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,450": {
+   "A": "x*(y*f(y)) = y",
+   "B": "f(x*(y*z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,576": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,639": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*(y*f(z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,630": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*(y*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,690": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,687": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,702": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*f(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,706": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*f(y*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,61": {
+   "A": "x*(y*f(z)) = z",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "634,711": {
+   "A": "x*(y*f(y)) = y",
+   "B": "x*f(y*z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,68": {
+   "A": "x*(y*f(z)) = z",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,223": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,225": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,229": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,236": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,232": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,285": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,288": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,292": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,296": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,303": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,313": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,309": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,299": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,317": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,321": {
+   "A": "x*(y*f(z)) = z",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,423": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,421": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,436": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,430": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,434": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,427": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,439": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x*(x*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,441": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x*(y*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,450": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x*(y*z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,445": {
+   "A": "x*(y*f(z)) = z",
+   "B": "f(x*(y*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,690": {
+   "A": "x*(y*f(z)) = z",
+   "B": "x*f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,702": {
+   "A": "x*(y*f(z)) = z",
+   "B": "x*f(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,687": {
+   "A": "x*(y*f(z)) = z",
+   "B": "x*f(x*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,706": {
+   "A": "x*(y*f(z)) = z",
+   "B": "x*f(y*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "639,711": {
+   "A": "x*(y*f(z)) = z",
+   "B": "x*f(y*z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,61": {
+   "A": "x*f(f(y)) = y",
+   "B": "x*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,223": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,68": {
+   "A": "x*f(f(y)) = y",
+   "B": "x*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,236": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,225": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,232": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,229": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,288": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,285": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,292": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*x = z*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,296": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,303": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,299": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,309": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*z = w*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,313": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*z = x*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,321": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*z = z*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,317": {
+   "A": "x*f(f(y)) = y",
+   "B": "(x*y)*z = y*z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,359": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(f(x*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,356": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(f(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,427": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(x)*y = x*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,423": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(x)*x = y*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,421": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(x)*x = x*x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,430": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(x)*y = y*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,434": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(x)*y = z*y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,451": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,436": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(x*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "680,454": {
+   "A": "x*f(f(y)) = y",
+   "B": "f(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "703,188": {
+   "A": "x*f(y*x) = y",
+   "B": "(x*f(x))*x = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "703,194": {
+   "A": "x*f(y*x) = y",
+   "B": "(x*f(y))*x = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "690,573": {
+   "A": "x*f(x*y) = y",
+   "B": "x*(x*f(x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "690,576": {
+   "A": "x*f(x*y) = y",
+   "B": "x*(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,441": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(y*x)) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,439": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(x*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "709,57": {
+   "A": "x*f(y*z) = x",
+   "B": "x*f(y) = x",
+   "tries": {
+    "10000": "unsat"
+   },
+   "proved_ms": 10000
+  },
+  "706,445": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(y*y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,450": {
+   "A": "x*f(y*y) = y",
+   "B": "f(x*(y*z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,639": {
+   "A": "x*f(y*y) = y",
+   "B": "x*(y*f(z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,576": {
+   "A": "x*f(y*y) = y",
+   "B": "x*(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,702": {
+   "A": "x*f(y*y) = y",
+   "B": "x*f(y*x) = x",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,690": {
+   "A": "x*f(y*y) = y",
+   "B": "x*f(x*y) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "706,711": {
+   "A": "x*f(y*y) = y",
+   "B": "x*f(y*z) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "711,576": {
+   "A": "x*f(y*z) = z",
+   "B": "x*(x*f(y)) = y",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  },
+  "711,639": {
+   "A": "x*f(y*z) = z",
+   "B": "x*(y*f(z)) = z",
+   "tries": {
+    "10000": "unknown",
+    "30000": "unknown"
+   }
+  }
+ }
+}

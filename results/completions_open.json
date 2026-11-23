@@ -1,0 +1,1399 @@
+{
+ "sources": {
+  "164": {
+   "A": "(x*(y*y))*y = x",
+   "precedence": "f > *",
+   "facts": [
+    {
+     "left": "m(m(v0,m(v1,v1)),v1)",
+     "right": "v0",
+     "chain": null
+    },
+    {
+     "left": "m(m(v0,m(v1,v1)),v1)",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v2,v5)",
+     "right": "m(v2,m(m(v5,v5),m(v5,v5)))",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "v2",
+        "v1": "m(v5,v5)"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "m(v2,m(m(v5,v5),m(v5,v5)))",
+        "v1": "v5"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(v12,v11),m(v11,v11))",
+     "right": "v12",
+     "chain": [
+      {
+       "fact": 2,
+       "dir": 1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v2": "v12",
+        "v5": "v11"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v12",
+        "v1": "m(v11,v11)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 1,
+     "dir": 1,
+     "rule": "m(m(v0,m(v1,v1)),v1) -> v0"
+    },
+    {
+     "fact": 3,
+     "dir": 1,
+     "rule": "m(m(v12,v11),m(v11,v11)) -> v12"
+    }
+   ]
+  },
+  "194": {
+   "A": "(x*f(y))*x = y",
+   "precedence": "f > *",
+   "facts": [
+    {
+     "left": "m(m(v0,f(v1)),v0)",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(m(v0,f(v1)),v0)",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v3,m(f(v5),f(v3)))",
+     "right": "v5",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "f(v5)",
+        "v1": "v3"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "m(f(v5),f(v3))",
+        "v1": "v5"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 1,
+     "dir": 1,
+     "rule": "m(m(v0,f(v1)),v0) -> v1"
+    },
+    {
+     "fact": 2,
+     "dir": 1,
+     "rule": "m(v3,m(f(v5),f(v3))) -> v5"
+    }
+   ]
+  },
+  "284": {
+   "A": "(x*y)*f(z) = z",
+   "precedence": "f > *",
+   "facts": [
+    {
+     "left": "m(m(v0,v1),f(v2))",
+     "right": "v2",
+     "chain": null
+    },
+    {
+     "left": "m(m(v0,v1),f(v2))",
+     "right": "v2",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v5,f(v8))",
+     "right": "v8",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0
+       ],
+       "subst": {
+        "v0": "v3",
+        "v1": "v4",
+        "v2": "v5"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "m(v3,v4)",
+        "v1": "f(v5)",
+        "v2": "v8"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 2,
+     "dir": 1,
+     "rule": "m(v5,f(v8)) -> v8"
+    }
+   ]
+  },
+  "354": {
+   "A": "f(f(x)*y) = y",
+   "precedence": "f > *",
+   "facts": [
+    {
+     "left": "f(m(f(v0),v1))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "f(m(f(v0),v1))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v3,v5))",
+     "right": "v5",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0,
+        0
+       ],
+       "subst": {
+        "v0": "v2",
+        "v1": "v3"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "m(f(v2),v3)",
+        "v1": "v5"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 2,
+     "dir": 1,
+     "rule": "f(m(v3,v5)) -> v5"
+    }
+   ]
+  },
+  "413": {
+   "A": "f(x)*(y*z) = x",
+   "precedence": "f > *",
+   "facts": [
+    {
+     "left": "m(f(v0),m(v1,v2))",
+     "right": "v0",
+     "chain": null
+    },
+    {
+     "left": "m(f(v0),m(v1,v2))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v2"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(f(v6),v3)",
+     "right": "v6",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v0": "v3",
+        "v1": "v4",
+        "v2": "v5"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v6",
+        "v1": "f(v3)",
+        "v2": "m(v4,v5)"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 2,
+     "dir": 1,
+     "rule": "m(f(v6),v3) -> v6"
+    }
+   ]
+  },
+  "453": {
+   "A": "f(x*f(y)) = x",
+   "precedence": "f > *",
+   "facts": [
+    {
+     "left": "f(m(v0,f(v1)))",
+     "right": "v0",
+     "chain": null
+    },
+    {
+     "left": "f(m(v0,f(v1)))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v4,v2))",
+     "right": "v4",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        0,
+        1
+       ],
+       "subst": {
+        "v0": "v2",
+        "v1": "v3"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v4",
+        "v1": "m(v2,f(v3))"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 2,
+     "dir": 1,
+     "rule": "f(m(v4,v2)) -> v4"
+    }
+   ]
+  },
+  "549": {
+   "A": "x*(f(y)*x) = y",
+   "precedence": "f > *",
+   "facts": [
+    {
+     "left": "m(v0,m(f(v1),v0))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(v0,m(f(v1),v0))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(f(v3),f(v5)),v3)",
+     "right": "v5",
+     "chain": [
+      {
+       "fact": 1,
+       "dir": -1,
+       "pos": [
+        1
+       ],
+       "subst": {
+        "v0": "f(v5)",
+        "v1": "v3"
+       }
+      },
+      {
+       "fact": 1,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "m(f(v3),f(v5))",
+        "v1": "v5"
+       }
+      }
+     ]
+    }
+   ],
+   "rules": [
+    {
+     "fact": 1,
+     "dir": 1,
+     "rule": "m(v0,m(f(v1),v0)) -> v1"
+    },
+    {
+     "fact": 2,
+     "dir": 1,
+     "rule": "m(m(f(v3),f(v5)),v3) -> v5"
+    }
+   ]
+  }
+ },
+ "pairs": {
+  "164,251": {
+   "A": "(x*(y*y))*y = x",
+   "B": "(x*y)*(y*y) = x",
+   "verdict": "holds",
+   "B_left": "v0",
+   "B_right": "v0"
+  },
+  "194,322": {
+   "A": "(x*f(y))*x = y",
+   "B": "f((x*x)*x) = x",
+   "verdict": "fails",
+   "B_left": "f(m(m(v0,v0),v0))",
+   "B_right": "v0"
+  },
+  "194,328": {
+   "A": "(x*f(y))*x = y",
+   "B": "f((x*y)*x) = y",
+   "verdict": "fails",
+   "B_left": "f(m(m(v0,v1),v0))",
+   "B_right": "v1"
+  },
+  "194,687": {
+   "A": "(x*f(y))*x = y",
+   "B": "x*f(x*x) = x",
+   "verdict": "fails",
+   "B_left": "m(v0,f(m(v0,v0)))",
+   "B_right": "v0"
+  },
+  "194,703": {
+   "A": "(x*f(y))*x = y",
+   "B": "x*f(y*x) = y",
+   "verdict": "fails",
+   "B_left": "m(v0,f(m(v1,v0)))",
+   "B_right": "v1"
+  },
+  "284,35": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x*x) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,v0))",
+   "B_right": "v0"
+  },
+  "284,38": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x*y) = y",
+   "verdict": "fails",
+   "B_left": "f(m(v0,v1))",
+   "B_right": "v1"
+  },
+  "284,61": {
+   "A": "(x*y)*f(z) = z",
+   "B": "x*x = y*x",
+   "verdict": "fails",
+   "B_left": "m(v0,v0)",
+   "B_right": "m(v1,v0)"
+  },
+  "284,68": {
+   "A": "(x*y)*f(z) = z",
+   "B": "x*y = z*y",
+   "verdict": "fails",
+   "B_left": "m(v0,v1)",
+   "B_right": "m(v2,v1)"
+  },
+  "284,223": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*x = x*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v0)",
+   "B_right": "m(v0,v0)"
+  },
+  "284,225": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*x = y*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v0)",
+   "B_right": "m(v1,v0)"
+  },
+  "284,229": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*y = x*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v1)",
+   "B_right": "m(v0,v1)"
+  },
+  "284,232": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*y = y*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v1)",
+   "B_right": "m(v1,v1)"
+  },
+  "284,236": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*x)*y = z*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v1)",
+   "B_right": "m(v2,v1)"
+  },
+  "284,285": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*x = x*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v0)",
+   "B_right": "m(v0,v0)"
+  },
+  "284,288": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*x = y*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v0)",
+   "B_right": "m(v1,v0)"
+  },
+  "284,292": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*x = z*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v0)",
+   "B_right": "m(v2,v0)"
+  },
+  "284,296": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*y = x*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v1)",
+   "B_right": "m(v0,v1)"
+  },
+  "284,299": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*y = y*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v1)",
+   "B_right": "m(v1,v1)"
+  },
+  "284,303": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*y = z*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v1)",
+   "B_right": "m(v2,v1)"
+  },
+  "284,309": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*z = w*z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v2)",
+   "B_right": "m(v3,v2)"
+  },
+  "284,313": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*z = x*z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v2)",
+   "B_right": "m(v0,v2)"
+  },
+  "284,317": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*z = y*z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v2)",
+   "B_right": "m(v1,v2)"
+  },
+  "284,321": {
+   "A": "(x*y)*f(z) = z",
+   "B": "(x*y)*z = z*z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v2)",
+   "B_right": "m(v2,v2)"
+  },
+  "284,322": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*x)*x) = x",
+   "verdict": "fails",
+   "B_left": "f(m(m(v0,v0),v0))",
+   "B_right": "v0"
+  },
+  "284,325": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*x)*y) = y",
+   "verdict": "fails",
+   "B_left": "f(m(m(v0,v0),v1))",
+   "B_right": "v1"
+  },
+  "284,327": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*y)*x) = x",
+   "verdict": "fails",
+   "B_left": "f(m(m(v0,v1),v0))",
+   "B_right": "v0"
+  },
+  "284,331": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*y)*y) = y",
+   "verdict": "fails",
+   "B_left": "f(m(m(v0,v1),v1))",
+   "B_right": "v1"
+  },
+  "284,336": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f((x*y)*z) = z",
+   "verdict": "fails",
+   "B_left": "f(m(m(v0,v1),v2))",
+   "B_right": "v2"
+  },
+  "284,351": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(f(x)*x) = x",
+   "verdict": "fails",
+   "B_left": "f(m(f(v0),v0))",
+   "B_right": "v0"
+  },
+  "284,354": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(f(x)*y) = y",
+   "verdict": "fails",
+   "B_left": "f(m(f(v0),v1))",
+   "B_right": "v1"
+  },
+  "284,421": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*x = x*x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v0)",
+   "B_right": "m(v0,v0)"
+  },
+  "284,423": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*x = y*x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v0)",
+   "B_right": "m(v1,v0)"
+  },
+  "284,427": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*y = x*y",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v1)",
+   "B_right": "m(v0,v1)"
+  },
+  "284,430": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*y = y*y",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v1)",
+   "B_right": "m(v1,v1)"
+  },
+  "284,434": {
+   "A": "(x*y)*f(z) = z",
+   "B": "f(x)*y = z*y",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v1)",
+   "B_right": "m(v2,v1)"
+  },
+  "354,55": {
+   "A": "f(f(x)*y) = y",
+   "B": "x*f(x) = x",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v0))",
+   "B_right": "v0"
+  },
+  "354,58": {
+   "A": "f(f(x)*y) = y",
+   "B": "x*f(y) = y",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v1))",
+   "B_right": "v1"
+  },
+  "354,61": {
+   "A": "f(f(x)*y) = y",
+   "B": "x*x = y*x",
+   "verdict": "fails",
+   "B_left": "m(v0,v0)",
+   "B_right": "m(v1,v0)"
+  },
+  "354,68": {
+   "A": "f(f(x)*y) = y",
+   "B": "x*y = z*y",
+   "verdict": "fails",
+   "B_left": "m(v0,v1)",
+   "B_right": "m(v2,v1)"
+  },
+  "354,218": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*f(x) = x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),f(v0))",
+   "B_right": "v0"
+  },
+  "354,221": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*f(y) = y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),f(v1))",
+   "B_right": "v1"
+  },
+  "354,223": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*x = x*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v0)",
+   "B_right": "m(v0,v0)"
+  },
+  "354,225": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*x = y*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v0)",
+   "B_right": "m(v1,v0)"
+  },
+  "354,229": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*y = x*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v1)",
+   "B_right": "m(v0,v1)"
+  },
+  "354,232": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*y = y*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v1)",
+   "B_right": "m(v1,v1)"
+  },
+  "354,236": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*x)*y = z*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v0),v1)",
+   "B_right": "m(v2,v1)"
+  },
+  "354,275": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*f(x) = x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),f(v0))",
+   "B_right": "v0"
+  },
+  "354,279": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*f(y) = y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),f(v1))",
+   "B_right": "v1"
+  },
+  "354,284": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*f(z) = z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),f(v2))",
+   "B_right": "v2"
+  },
+  "354,285": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*x = x*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v0)",
+   "B_right": "m(v0,v0)"
+  },
+  "354,288": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*x = y*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v0)",
+   "B_right": "m(v1,v0)"
+  },
+  "354,292": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*x = z*x",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v0)",
+   "B_right": "m(v2,v0)"
+  },
+  "354,296": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*y = x*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v1)",
+   "B_right": "m(v0,v1)"
+  },
+  "354,299": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*y = y*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v1)",
+   "B_right": "m(v1,v1)"
+  },
+  "354,303": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*y = z*y",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v1)",
+   "B_right": "m(v2,v1)"
+  },
+  "354,309": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*z = w*z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v2)",
+   "B_right": "m(v3,v2)"
+  },
+  "354,313": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*z = x*z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v2)",
+   "B_right": "m(v0,v2)"
+  },
+  "354,317": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*z = y*z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v2)",
+   "B_right": "m(v1,v2)"
+  },
+  "354,321": {
+   "A": "f(f(x)*y) = y",
+   "B": "(x*y)*z = z*z",
+   "verdict": "fails",
+   "B_left": "m(m(v0,v1),v2)",
+   "B_right": "m(v2,v2)"
+  },
+  "354,416": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*f(x) = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),f(v0))",
+   "B_right": "v0"
+  },
+  "354,419": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*f(y) = y",
+   "verdict": "fails",
+   "B_left": "m(f(v0),f(v1))",
+   "B_right": "v1"
+  },
+  "354,421": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*x = x*x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v0)",
+   "B_right": "m(v0,v0)"
+  },
+  "354,423": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*x = y*x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v0)",
+   "B_right": "m(v1,v0)"
+  },
+  "354,427": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*y = x*y",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v1)",
+   "B_right": "m(v0,v1)"
+  },
+  "354,430": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*y = y*y",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v1)",
+   "B_right": "m(v1,v1)"
+  },
+  "354,434": {
+   "A": "f(f(x)*y) = y",
+   "B": "f(x)*y = z*y",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v1)",
+   "B_right": "m(v2,v1)"
+  },
+  "413,35": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*x) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,v0))",
+   "B_right": "v0"
+  },
+  "413,37": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*y) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,v1))",
+   "B_right": "v0"
+  },
+  "413,60": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*x = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,v0)",
+   "B_right": "m(v0,v1)"
+  },
+  "413,64": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*y = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,v1)",
+   "B_right": "m(v0,v2)"
+  },
+  "413,436": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(x*x)) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,m(v0,v0)))",
+   "B_right": "v0"
+  },
+  "413,438": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(x*y)) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,m(v0,v1)))",
+   "B_right": "v0"
+  },
+  "413,441": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(y*x)) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,m(v1,v0)))",
+   "B_right": "v0"
+  },
+  "413,444": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(y*y)) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,m(v1,v1)))",
+   "B_right": "v0"
+  },
+  "413,448": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*(y*z)) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,m(v1,v2)))",
+   "B_right": "v0"
+  },
+  "413,451": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*f(x)) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,f(v0)))",
+   "B_right": "v0"
+  },
+  "413,453": {
+   "A": "f(x)*(y*z) = x",
+   "B": "f(x*f(y)) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,f(v1)))",
+   "B_right": "v0"
+  },
+  "413,578": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*x) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v0))",
+   "B_right": "m(v0,v0)"
+  },
+  "413,579": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*x) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v0))",
+   "B_right": "m(v0,v1)"
+  },
+  "413,583": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*y) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v1))",
+   "B_right": "m(v0,v0)"
+  },
+  "413,584": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*y) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v1))",
+   "B_right": "m(v0,v1)"
+  },
+  "413,585": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(x*y) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v1))",
+   "B_right": "m(v0,v2)"
+  },
+  "413,640": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*x) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v0))",
+   "B_right": "m(v0,v0)"
+  },
+  "413,641": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*x) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v0))",
+   "B_right": "m(v0,v1)"
+  },
+  "413,642": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*x) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v0))",
+   "B_right": "m(v0,v2)"
+  },
+  "413,650": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*y) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v1))",
+   "B_right": "m(v0,v0)"
+  },
+  "413,651": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*y) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v1))",
+   "B_right": "m(v0,v1)"
+  },
+  "413,652": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*y) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v1))",
+   "B_right": "m(v0,v2)"
+  },
+  "413,665": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*z) = x*w",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v2))",
+   "B_right": "m(v0,v3)"
+  },
+  "413,666": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*z) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v2))",
+   "B_right": "m(v0,v0)"
+  },
+  "413,667": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*z) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v2))",
+   "B_right": "m(v0,v1)"
+  },
+  "413,668": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*(y*z) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v2))",
+   "B_right": "m(v0,v2)"
+  },
+  "413,682": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(x) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v0))",
+   "B_right": "m(v0,v0)"
+  },
+  "413,683": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(x) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v0))",
+   "B_right": "m(v0,v1)"
+  },
+  "413,692": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(y) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v1))",
+   "B_right": "m(v0,v0)"
+  },
+  "413,693": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(y) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v1))",
+   "B_right": "m(v0,v1)"
+  },
+  "413,694": {
+   "A": "f(x)*(y*z) = x",
+   "B": "x*f(y) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v1))",
+   "B_right": "m(v0,v2)"
+  },
+  "453,30": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*x = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v0)",
+   "B_right": "v0"
+  },
+  "453,32": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*y = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),v1)",
+   "B_right": "v0"
+  },
+  "453,60": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*x = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,v0)",
+   "B_right": "m(v0,v1)"
+  },
+  "453,64": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*y = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,v1)",
+   "B_right": "m(v0,v2)"
+  },
+  "453,401": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(x*x) = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),m(v0,v0))",
+   "B_right": "v0"
+  },
+  "453,403": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(x*y) = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),m(v0,v1))",
+   "B_right": "v0"
+  },
+  "453,406": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(y*x) = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),m(v1,v0))",
+   "B_right": "v0"
+  },
+  "453,409": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(y*y) = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),m(v1,v1))",
+   "B_right": "v0"
+  },
+  "453,413": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*(y*z) = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),m(v1,v2))",
+   "B_right": "v0"
+  },
+  "453,416": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*f(x) = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),f(v0))",
+   "B_right": "v0"
+  },
+  "453,418": {
+   "A": "f(x*f(y)) = x",
+   "B": "f(x)*f(y) = x",
+   "verdict": "fails",
+   "B_left": "m(f(v0),f(v1))",
+   "B_right": "v0"
+  },
+  "453,578": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*x) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v0))",
+   "B_right": "m(v0,v0)"
+  },
+  "453,579": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*x) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v0))",
+   "B_right": "m(v0,v1)"
+  },
+  "453,583": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*y) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v1))",
+   "B_right": "m(v0,v0)"
+  },
+  "453,584": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*y) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v1))",
+   "B_right": "m(v0,v1)"
+  },
+  "453,585": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(x*y) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v0,v1))",
+   "B_right": "m(v0,v2)"
+  },
+  "453,640": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*x) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v0))",
+   "B_right": "m(v0,v0)"
+  },
+  "453,641": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*x) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v0))",
+   "B_right": "m(v0,v1)"
+  },
+  "453,642": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*x) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v0))",
+   "B_right": "m(v0,v2)"
+  },
+  "453,650": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*y) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v1))",
+   "B_right": "m(v0,v0)"
+  },
+  "453,651": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*y) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v1))",
+   "B_right": "m(v0,v1)"
+  },
+  "453,652": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*y) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v1))",
+   "B_right": "m(v0,v2)"
+  },
+  "453,665": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*z) = x*w",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v2))",
+   "B_right": "m(v0,v3)"
+  },
+  "453,666": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*z) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v2))",
+   "B_right": "m(v0,v0)"
+  },
+  "453,667": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*z) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v2))",
+   "B_right": "m(v0,v1)"
+  },
+  "453,668": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*(y*z) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,m(v1,v2))",
+   "B_right": "m(v0,v2)"
+  },
+  "453,682": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(x) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v0))",
+   "B_right": "m(v0,v0)"
+  },
+  "453,683": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(x) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v0))",
+   "B_right": "m(v0,v1)"
+  },
+  "453,692": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(y) = x*x",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v1))",
+   "B_right": "m(v0,v0)"
+  },
+  "453,693": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(y) = x*y",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v1))",
+   "B_right": "m(v0,v1)"
+  },
+  "453,694": {
+   "A": "f(x*f(y)) = x",
+   "B": "x*f(y) = x*z",
+   "verdict": "fails",
+   "B_left": "m(v0,f(v1))",
+   "B_right": "m(v0,v2)"
+  },
+  "549,436": {
+   "A": "x*(f(y)*x) = y",
+   "B": "f(x*(x*x)) = x",
+   "verdict": "fails",
+   "B_left": "f(m(v0,m(v0,v0)))",
+   "B_right": "v0"
+  },
+  "549,442": {
+   "A": "x*(f(y)*x) = y",
+   "B": "f(x*(y*x)) = y",
+   "verdict": "fails",
+   "B_left": "f(m(v0,m(v1,v0)))",
+   "B_right": "v1"
+  },
+  "549,463": {
+   "A": "x*(f(y)*x) = y",
+   "B": "f(x*x)*x = x",
+   "verdict": "fails",
+   "B_left": "m(f(m(v0,v0)),v0)",
+   "B_right": "v0"
+  },
+  "549,482": {
+   "A": "x*(f(y)*x) = y",
+   "B": "f(x*y)*x = y",
+   "verdict": "fails",
+   "B_left": "m(f(m(v0,v1)),v0)",
+   "B_right": "v1"
+  }
+ }
+}

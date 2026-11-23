@@ -20,6 +20,37 @@ jobs:
       - run: python src/verify_small_refutations.py data/laws_3.json data/o3
       - run: python src/verify_witnesses.py results/witnesses_larger_models.json
       - run: python src/verify_witnesses.py results/witnesses_ffree_models.json
+      - run: python src/verify_witnesses.py results/witnesses_etp_magmas.json
       - run: python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
       - run: python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
+      - run: python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json
+      - run: python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json --selftest
+      - run: python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json
+      - run: python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_term_rewriting.json --selftest
+      - run: python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json
+      - run: python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_open.json --selftest
+      - run: python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_new_symbols.json
+      - run: python src/check_completion.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/completions_new_symbols.json --selftest
+      - run: python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_open.json
+      - run: python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_open.json --selftest
+      - run: python src/check_greedy_eq73.py data/laws_3.json results/status_matrix.npz results/greedy_eq73.json
+      - run: python src/check_greedy_eq73.py data/laws_3.json results/status_matrix.npz results/greedy_eq73.json --selftest
+      - run: python src/check_greedy_eq118.py data/laws_3.json results/status_matrix.npz results/greedy_eq118.json
+      - run: python src/check_greedy_eq118.py data/laws_3.json results/status_matrix.npz results/greedy_eq118.json --selftest
+      - run: python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json
+      - run: python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json --selftest
+      - run: python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json
+      - run: python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json --selftest
+      - run: python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_nine_laws.json
+      - run: python src/check_term_rewriting.py data/laws_3.json results/status_matrix.npz results/refutations_nine_laws.json --selftest
+      - run: python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_nine_laws.json
+      - run: python src/selftest_nine_laws.py data/laws_3.json results/status_matrix.npz results/refutations_nine_laws.json results/derivations_nine_laws.json
+      - run: python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_collapse_laws.json
+      - run: python src/selftest_collapse_laws.py data/laws_3.json results/status_matrix.npz results/derivations_collapse_laws.json
+      - run: python src/check_derivations.py data/laws_3.json results/status_matrix.npz results/derivations_ffree_laws.json
+      - run: python src/selftest_ffree_laws.py data/laws_3.json results/status_matrix.npz results/witnesses_ffree_models.json results/derivations_ffree_laws.json
+      - run: python src/tally_answers.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results
+      - run: python src/tally_answers.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results --selftest
       - run: python src/query.py "x*y = x" "x*(y*z) = x"
+      - run: python src/query.py "(x*y)*(y*x) = y" "f(x) = x" --witness
+      - run: python src/query.py "(x*(x*y))*y = x" "x*(y*y) = x*y" --witness
