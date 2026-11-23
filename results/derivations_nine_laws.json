@@ -1,0 +1,398 @@
+{
+ "sources": {
+  "134": {
+   "A": "(f(x)*y)*z = y",
+   "facts": [
+    {
+     "left": "m(m(f(v0),v1),v2)",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(m(f(v0),v0),v0)",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(f(v0),v0),v1)",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(f(v0),v1),v0)",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(m(f(v0),v1),v1)",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v1"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "335": {
+   "A": "f((x*y)*z) = y",
+   "facts": [
+    {
+     "left": "f(m(m(v0,v1),v2))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "f(m(m(v0,v0),v0))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(m(v0,v0),v1))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(m(v0,v1),v0))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(m(v0,v1),v1))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v1"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "449": {
+   "A": "f(x*(y*z)) = y",
+   "facts": [
+    {
+     "left": "f(m(v0,m(v1,v2)))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "f(m(v0,m(v0,v0)))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v0,m(v0,v1)))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v0,m(v1,v0)))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "f(m(v0,m(v1,v1)))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v1"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "638": {
+   "A": "x*(y*f(z)) = y",
+   "facts": [
+    {
+     "left": "m(v0,m(v1,f(v2)))",
+     "right": "v1",
+     "chain": null
+    },
+    {
+     "left": "m(v0,m(v0,f(v0)))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v0,m(v0,f(v1)))",
+     "right": "v0",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v0",
+        "v2": "v1"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v0,m(v1,f(v0)))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v0"
+       }
+      }
+     ]
+    },
+    {
+     "left": "m(v0,m(v1,f(v1)))",
+     "right": "v1",
+     "chain": [
+      {
+       "fact": 0,
+       "dir": 1,
+       "pos": [],
+       "subst": {
+        "v0": "v0",
+        "v1": "v1",
+        "v2": "v1"
+       }
+      }
+     ]
+    }
+   ]
+  }
+ },
+ "pairs": {
+  "134,121": {
+   "A": "(f(x)*y)*z = y",
+   "B": "(f(x)*x)*x = x",
+   "verdict": "holds",
+   "fact": 1
+  },
+  "134,123": {
+   "A": "(f(x)*y)*z = y",
+   "B": "(f(x)*x)*y = x",
+   "verdict": "holds",
+   "fact": 2
+  },
+  "134,127": {
+   "A": "(f(x)*y)*z = y",
+   "B": "(f(x)*y)*x = y",
+   "verdict": "holds",
+   "fact": 3
+  },
+  "134,130": {
+   "A": "(f(x)*y)*z = y",
+   "B": "(f(x)*y)*y = y",
+   "verdict": "holds",
+   "fact": 4
+  },
+  "335,322": {
+   "A": "f((x*y)*z) = y",
+   "B": "f((x*x)*x) = x",
+   "verdict": "holds",
+   "fact": 1
+  },
+  "335,324": {
+   "A": "f((x*y)*z) = y",
+   "B": "f((x*x)*y) = x",
+   "verdict": "holds",
+   "fact": 2
+  },
+  "335,328": {
+   "A": "f((x*y)*z) = y",
+   "B": "f((x*y)*x) = y",
+   "verdict": "holds",
+   "fact": 3
+  },
+  "335,331": {
+   "A": "f((x*y)*z) = y",
+   "B": "f((x*y)*y) = y",
+   "verdict": "holds",
+   "fact": 4
+  },
+  "449,436": {
+   "A": "f(x*(y*z)) = y",
+   "B": "f(x*(x*x)) = x",
+   "verdict": "holds",
+   "fact": 1
+  },
+  "449,438": {
+   "A": "f(x*(y*z)) = y",
+   "B": "f(x*(x*y)) = x",
+   "verdict": "holds",
+   "fact": 2
+  },
+  "449,442": {
+   "A": "f(x*(y*z)) = y",
+   "B": "f(x*(y*x)) = y",
+   "verdict": "holds",
+   "fact": 3
+  },
+  "449,445": {
+   "A": "f(x*(y*z)) = y",
+   "B": "f(x*(y*y)) = y",
+   "verdict": "holds",
+   "fact": 4
+  },
+  "638,573": {
+   "A": "x*(y*f(z)) = y",
+   "B": "x*(x*f(x)) = x",
+   "verdict": "holds",
+   "fact": 1
+  },
+  "638,575": {
+   "A": "x*(y*f(z)) = y",
+   "B": "x*(x*f(y)) = x",
+   "verdict": "holds",
+   "fact": 2
+  },
+  "638,631": {
+   "A": "x*(y*f(z)) = y",
+   "B": "x*(y*f(x)) = y",
+   "verdict": "holds",
+   "fact": 3
+  },
+  "638,634": {
+   "A": "x*(y*f(z)) = y",
+   "B": "x*(y*f(y)) = y",
+   "verdict": "holds",
+   "fact": 4
+  }
+ }
+}

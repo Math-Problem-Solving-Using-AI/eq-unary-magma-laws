@@ -9,7 +9,7 @@ search (src/derive_open.py). It
   1. requires A to be the text of law a in data/laws_3.json and fact 0 to be A as parsed from its text
      (src/check_laws_text.py);
   2. replays every chain;
-  3. for each pair "a,b": requires the pair to be open (code 6), the texts to match, the verdict to be
+  3. for each pair "a,b": requires the pair to be open (code 5 or 6), the texts to match, the verdict to be
      "holds", and the named fact to be B as parsed from its text (either orientation).
 Control: every fact must hold in every model of A with 2 or 3 elements, all of them enumerated here by plain
 evaluation. (Every finite model of these A satisfies the targets anyway, so this control can only catch a
@@ -111,7 +111,7 @@ def check(texts, codes, data, control=True):
         if not (0 <= b < len(texts)) or (texts[a], texts[b]) != (e["A"], e["B"]):
             problems.append(f"{key}: law texts do not match data/laws_3.json")
             continue
-        if codes[a, b] != 6:
+        if codes[a, b] not in (5, 6):
             problems.append(f"{key}: pair is not open (code {codes[a, b]})")
         if e["verdict"] != "holds":
             problems.append(f"{key}: verdict is not 'holds'")

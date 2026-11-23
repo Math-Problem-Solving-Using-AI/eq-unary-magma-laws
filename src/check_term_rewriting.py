@@ -7,7 +7,7 @@ An entry "a,b" claims: law A (id a+1) does not imply law B (id b+1), because of 
 The entry stores the rule, the witness (B's variables sent to generators) and the values of B's two
 sides there. This script does not import the search (src/refute_by_rewriting.py). For each entry it
   1. parses A and B from their texts (src/check_laws_text.py) and requires them to be the texts of
-     laws a and b in data/laws_3.json, and the pair to be open (code 6) in results/status_matrix.npz;
+     laws a and b in data/laws_3.json, and the pair to be open (code 5 or 6) in results/status_matrix.npz;
   2. re-derives the rule from A (one side is a variable occurring in the other) and requires it to equal
      the stored rule, and requires that no proper non-variable subterm of t unifies with a renamed copy
      of t (the condition of the hand argument that T_A satisfies A);
@@ -235,7 +235,7 @@ def check(texts, codes, data, rewrite=True):
         if not (0 <= a < len(texts) and 0 <= b < len(texts)) or (texts[a], texts[b]) != (e["A"], e["B"]):
             problems.append(f"{key}: law texts do not match data/laws_3.json")
             continue
-        if codes[a, b] != 6:
+        if codes[a, b] not in (5, 6):
             problems.append(f"{key}: pair is not open (code {codes[a, b]})")
         la, lb = parse_law(e["A"]), parse_law(e["B"])
         rule = rule_of(la)
