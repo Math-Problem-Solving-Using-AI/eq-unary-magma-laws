@@ -1,0 +1,43 @@
+{
+ "about": "Step 26. An infinite structure that satisfies law 277, (x*y)*f(x) = y, and fails laws 632, x*(y*f(x)) = y, and 574, x*(x*f(x)) = x; read with the product reversed (x*y taken as y*x) it satisfies the mirror law 408, f(x)*(y*x) = y, and fails 128 and 122. Checked by src/check_label_extension.py. Base M: the terms over one letter g that the 4 rules below cannot rewrite (normal forms); x*y and f(x) in M are the normal forms of the formal product and of f applied. The rules shrink every term (so rewriting stops) and every overlap of two rules rewrites to one result (so the normal form does not depend on the order), hence M is a structure, and law 277 holds in M because it is rule 1. F is the set of normal forms that start with f (the values of f in M). The structure S: its elements are pairs (m, k) with m in M and k a whole number 0, 1, 2, ... (the label), where k must be 0 when m is in F. f(m, k) = (f(m), 0). (m, k)*(n, l) = (m*n, label) where label = l + push if n is not in F; label = 0 if m*n is in F; label = max(k - pop, 0) otherwise. Law 277 holds in S for every M that satisfies law 277 (the label lemma: it uses only (m*n)*f(m) = n and 'm*n in F implies n in F' in M, the second from rules 1 and 4). The checker re-checks the rules, the lemma over all cases with labels up to a bound, law 277 in S directly on all elements with small terms and labels, and that the target law fails at the stored values.",
+ "base": {
+  "generator": "g",
+  "rules": [
+   "(x*y)*f(x) = y",
+   "x*(y*f(x)) = y",
+   "y*f(x*y) = f(x)",
+   "f(x)*f(y) = f(x*y)"
+  ],
+  "origin": "Knuth-Bendix completion of law 277 together with law 632 (step 20, results/extra_laws_277.json, key \"632\"): 4 rules. Rule 1 is law 277 itself; rule 4 is the fact f(x)*f(y) = f(x*y), which follows from law 277 (step 20)."
+ },
+ "labels": {
+  "push": 1,
+  "pop": 1
+ },
+ "bounded": {
+  "max_size": 7,
+  "max_label": 3
+ },
+ "pairs": [
+  {
+   "pair": [277, 632],
+   "mirror": false,
+   "env": {"x": ["g", 0], "y": ["g", 0]}
+  },
+  {
+   "pair": [277, 574],
+   "mirror": false,
+   "env": {"x": ["g", 0]}
+  },
+  {
+   "pair": [408, 128],
+   "mirror": true,
+   "env": {"x": ["g", 0], "y": ["g", 0]}
+  },
+  {
+   "pair": [408, 122],
+   "mirror": true,
+   "env": {"x": ["g", 0]}
+  }
+ ]
+}

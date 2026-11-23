@@ -55,6 +55,8 @@ in `steps/`.
   - `python src/check_greedy_eq118.py data/laws_3.json results/status_matrix.npz results/greedy_eq118.json --selftest`
   - `python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json`
   - `python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json --selftest`
+  - `python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json`
+  - `python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json --selftest`
   A verifier you changed must still fail on corrupted input (mutation test).
 - **Status table.** After changing certificates or proofs run `src/export_status.py` and commit the
   new `results/status_matrix.npz`; its counts must match the README table.

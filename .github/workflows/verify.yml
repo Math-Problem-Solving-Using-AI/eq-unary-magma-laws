@@ -39,6 +39,8 @@ jobs:
       - run: python src/check_greedy_eq118.py data/laws_3.json results/status_matrix.npz results/greedy_eq118.json --selftest
       - run: python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json
       - run: python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json --selftest
+      - run: python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json
+      - run: python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json --selftest
       - run: python src/query.py "x*y = x" "x*(y*z) = x"
       - run: python src/query.py "(x*y)*(y*x) = y" "f(x) = x" --witness
       - run: python src/query.py "(x*(x*y))*y = x" "x*(y*y) = x*y" --witness
