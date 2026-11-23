@@ -273,6 +273,27 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Mistake: a README patch script wrote with the Windows default encoding, failed on `⁻¹` and left README.md empty.
   Restored from the last commit (which held only this run's committed version) and redone with UTF-8.
 
+### Loop run 15 (step 24)
+
+- Open pairs, piece 4d-3, rest, split: the ETP 118 greedy construction only; the Asterix model goes back to the top
+  of the queue as its own item. Read `Generated/Greedy/Eq118.lean` lines 2441 to 2791 (partial solutions as triples
+  x*y = z with 11 rules, the extension step `adjoin`, the greedy chain, the seeds `counter222` and `counter274`).
+- New checker `src/check_greedy_eq118.py`: the 2 seeds meet the 11 rules (copied verbatim, `--etp` compares them with
+  the Lean file: identical); law B fails from seed products only, normal and mirrored; bounded run of the extension
+  step (20,000 steps in the Lean chain order, 5,000 random, then on demand), rules checked, laws 508 and 143
+  evaluated at 1,600 pairs each, 0 failures. Selftest 14 of 14. Gate and CI.
+- 4 open pairs (508 -> 86, 508 -> 153, 143 -> 498, 143 -> 565) "does not imply", same label as step 23. 6 pairs
+  still open (4 with `f`, 2 without).
+- Mistake: the first selftest ran its mutations without the bounded test and accepted "rule 1 misread" (the
+  misread rule holds on both seeds). All mutations now run the full check, which rejects it.
+- Found: the derived triples of kind sP6 never occur in the bounded test, in any order tried. Recorded as not tested.
+
+### Decisions taken by the loop (run 15)
+
+- Queue item "piece 4d-3, rest" had two constructions; the loop did the ETP 118 one and put the Asterix model back
+  at the top of the queue as a separate item (LOOP.md: split an item too big for one session). Label for the 4
+  pairs: same reasoning as run 14. No published format change, nothing published, no cost.
+
 ### Decisions taken by the loop (run 14)
 
 - Label for the 10 pairs: the certificate's finite part is re-checked by plain code here, the general extension
@@ -325,6 +346,8 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   was not found again in a single process with the same limit, but was found at once in a fresh pool.
   When re-checking z3 claims, try more than one process layout before calling a proof unrepeatable.
 
+- A selftest must run the same checks as a normal run. Skipping the slow part (here a bounded run of an extension
+  rule) to save time let a misread rule through, because the seeds alone happened to satisfy it.
 - A mutation test must make the claim false, not only change the input. Replacing one fresh generator in a seed by
   another gives an equally valid certificate, and a checker that accepts it is right. Pick mutations that break a
   stated condition, and look at each "ACCEPTED" before calling the checker weak.
