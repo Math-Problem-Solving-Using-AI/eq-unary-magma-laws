@@ -123,6 +123,10 @@ Only the last one may be called a result. `known` means already in the literatur
   a*b = v), and `E0`, the pairs (a, b) where a*(b*(a*b)) = b already holds; `pairs`: our pair, `mirror` (true: x*y
   is read as the seed's y*x, a model of law 88) and `env`, the value of x where law B fails. Label: same as
   `greedy_eq73.json`; the ETP's construction is not re-run. The 2 pairs are still code 6 in `status_matrix.npz`.
+- `label_extension_277.json`: an infinite counterexample for `(x*y)*f(x) = y` (law 277) and its mirror (law 408): the
+  4 rewrite rules of its base, the counter rule and the values where the targets fail. Settles the last 4 pairs of the
+  unresolved row (277 -> 632, 574 and 408 -> 128, 122), all "does not imply" (`steps/26-label-extension-law-277.md`,
+  checked by `src/check_label_extension.py`, `z3-only` level). The 4 pairs are still code 6 in `status_matrix.npz`.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 

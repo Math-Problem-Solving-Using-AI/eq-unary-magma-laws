@@ -177,6 +177,20 @@ step 23: the ETP's construction is a Lean proof that was read, not re-run here. 
 code 6 for them. **Still open after step 25: 4 pairs, all with `f`** (`(x*y)*f(x) = y` and its mirror; no answer
 here, and the ETP has no laws with `f`). All 16 ETP Austin pairs now have a check here.
 
+**The last 4 pairs of the unresolved row (step 26).** `(x*y)*f(x) = y` (law 277) does **not** imply
+`x*(y*f(x)) = y` (law 632) or `x*(x*f(x)) = x` (law 574), and its mirror `f(x)*(y*x) = y` (law 408) does not imply
+the mirrors, laws 128 and 122. The counterexample is infinite. Its elements are pairs (m, k): m is a formula over one
+letter `g` that 4 rewrite rules cannot shorten (the free model of laws 277 and 632), and k is a counter. Multiplying
+by an ordinary element adds 1 to the counter, multiplying by a value of `f` takes 1 away. Law 277 always ends with
+"times `f(x)`", which undoes the 1 just added, so it holds; law 632 does not, so at x = y = (g, 0) it gives (g, 1)
+instead of (g, 0). `src/check_label_extension.py` checks the rules (all shrink formulas, all 13 critical pairs join),
+the counter rule over all cases, law 277 directly on 175 small elements (30,625 pairs, 0 failures) and the 4
+failures (`results/label_extension_277.json`, gate and CI, selftest 18 of 18). With `--z3`, z3 also proves the
+counter rule for every model of law 277. Label `z3-only` level, like steps 17 and 23 to 25; not Lean.
+`results/status_matrix.npz` still says code 6 for them. **All 894 pairs of the "unresolved" row now have an answer
+with a machine check here.** The 6,399 pairs of the row "A is one of the 9 open laws" rest on the other repository
+(eq-laws-without-small-models); bringing its answers and checks here is the next queue item.
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -206,6 +220,7 @@ Read in order, `steps/`:
 23. `23-seeds-eq73.md`
 24. `24-seeds-eq118.md`
 25. `25-asterix-eq65.md`
+26. `26-label-extension-law-277.md`
 
 ## Layout
 
@@ -258,6 +273,8 @@ python src/check_greedy_eq118.py data/laws_3.json results/status_matrix.npz resu
 python src/check_greedy_eq118.py data/laws_3.json results/status_matrix.npz results/greedy_eq118.json --selftest
 python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json
 python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json --selftest
+python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json
+python src/check_label_extension.py data/laws_3.json results/status_matrix.npz results/label_extension_277.json --selftest
 ```
 
 ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):
