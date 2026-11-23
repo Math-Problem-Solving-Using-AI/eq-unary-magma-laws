@@ -31,6 +31,8 @@
   built from ETP multiplication tables (step 11). `query.py` reads them and re-checks each one before reporting it (step 12).
 - [results/z3_open_retry.json](results/z3_open_retry.json): z3 with 10 s, then 30 s, on the 892 open pairs, 16 proofs
   (`z3-only`), 20 pairs with chaining (steps 13 and 14). Checked against the table and the ETP by `src/check_z3_retry.py`; `query.py` does not read it.
+- [results/witnesses_open_6_7.json](results/witnesses_open_6_7.json): search for counterexample tables of size 6 and 7 on the
+  872 open pairs left (step 15). None found; z3's per-size answers only. 872 pairs are still open.
 
 ## How to trust it
 

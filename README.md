@@ -79,6 +79,13 @@ each. 3 more proofs, all for laws without `f` (the ETP agrees), 0 counterexample
 pairs are now "implies", label `z3-only` (same file and checker). **Still open after step 14: 872 pairs**
 (18 without `f`, which have an ETP answer; 854 with `f`, with no answer).
 
+**Tables of size 6 and 7 (step 15).** z3 looked for a counterexample table of 6, then 7 elements for each
+of the 872 open pairs (10 seconds per size). It found none. For 395 pairs it says no table of either size
+exists (`z3-only`); for the other 477 it gave up. This settles nothing: a counterexample may be larger or
+infinite. For laws such as `f(x)*y = x`, which make `f` one-to-one, a hand argument (not checked by
+machine) suggests every finite table satisfies the targets, so only infinite structures can refute them.
+The search outcome is in `results/witnesses_open_6_7.json` (no certificates).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -97,6 +104,7 @@ Read in order, `steps/`:
 12. `12-query-reads-step-11.md`
 13. `13-z3-retry-open-pairs.md`
 14. `14-z3-30s-open-pairs.md`
+15. `15-search-size-6-7-open-pairs.md`
 
 ## Layout
 

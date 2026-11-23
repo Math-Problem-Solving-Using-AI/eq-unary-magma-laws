@@ -56,6 +56,11 @@ Only the last one may be called a result. `known` means already in the literatur
   limit that gave the proof), label `z3-only`; with the closure they settle 20 pairs, still code 6 in
   `status_matrix.npz`. Check with `src/check_z3_retry.py` (consistency with the table and the ETP, not a
   proof check). `src/query.py` does not read this file.
+- `witnesses_open_6_7.json`: the search for counterexample tables of size 6 and 7 on the 872 open pairs
+  left after step 14 (`steps/15-search-size-6-7-open-pairs.md`, produced by `src/search_open_larger.py`).
+  Same format as `witnesses_larger_models.json`; no table was found, so every entry has `size` null and
+  only z3's answer per size in `tried` (`unsat` there is `z3-only`, `unknown` means nothing).
+  `src/verify_witnesses.py` reads it (0 certificates).
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
