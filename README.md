@@ -131,6 +131,14 @@ extra law of size 1 to 4 to `(x*y)*f(x) = y` and completing (8,804 tries) never 
 `unknown` after 120 s. **Nothing was settled; still 21 open pairs.** The search outcome is in
 `results/extra_laws_277.json` (no certificates).
 
+**The 17 open pairs without `f` (step 21).** Completion with larger limits still grows for all 7 source laws. The
+ETP answers all 17. The one "implies", `(x*(y*x))*x = y` implies `x*((y*x)*x) = y`, now has a 4-step derivation
+built from the ETP's Vampire proof and replayed by plain code (added to `results/derivations_open.json`, checked by
+`src/check_derivations.py`; same label as step 17). The 16 "does not imply" are all ETP "Austin pairs": B holds in
+every finite model of A, so any counterexample is infinite; the ETP builds them step by step (greedy constructions,
+in Lean). This repository has no check of its own for those 16 yet. `results/status_matrix.npz` still says code 6.
+**Still open after step 21: 20 pairs** (4 with `f`; 16 without `f`, which have an ETP answer).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -155,6 +163,7 @@ Read in order, `steps/`:
 18. `18-completion-new-symbols.md`
 19. `19-derivations-aimed-at-target.md`
 20. `20-counterexample-search-law-277.md`
+21. `21-pairs-without-f-left.md`
 
 ## Layout
 
