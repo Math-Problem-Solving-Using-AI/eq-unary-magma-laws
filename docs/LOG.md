@@ -146,6 +146,18 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
 - Dead end recorded: more z3 time did nothing for the pairs with `f` (3 proofs at 10 s in step 13, none
   added at 30 s). Next pieces: structure search of size 6 and 7, then infinite counterexamples.
 
+### Loop run 6 (step 15)
+
+- Open pairs, piece 3: z3 looked for counterexample tables of size 6 and 7 (10 s per size) on the 872 open
+  pairs, new resumable script `src/search_open_larger.py`, three runs. 0 found. Size 6: 718 `unsat`,
+  154 `unknown`; size 7: 395 `unsat`, 477 `unknown`. Positive control: the same search finds the two known
+  6-element certificates of step 11 in 0.1 s each.
+- Dead end recorded: whole rows (`f(x)*y = x`, `x*f(y) = y`, `f(f(x))*y = x`, `x*f(f(y)) = y`,
+  `f(x*x)*y = x`, `x*f(y*y) = y`) are `unsat` at both sizes for every target. Hand lead (not machine
+  checked): these laws make `f` one-to-one, hence onto in a finite table, which forces the targets; an
+  infinite structure (numbers, `f(n) = n+1`) refutes `f(x)*y = x` => `f(x*x) = x`. Larger finite searches
+  will not settle such pairs; piece 4 (infinite counterexamples with a checkable format) is next.
+
 ### Lessons for the hub
 
 - z3 results depend on the process state, not only on the time limit: a proof found in a pool worker

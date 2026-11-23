@@ -10,16 +10,17 @@ Settle the 872 open pairs (the finish line in `LOOP.md`: every pair answered wit
 
 ## Queue (take the first item)
 
-1. **872 open pairs left (code 6, 62 source laws; 854 with `f`), piece 3: structure search of size 6
-   and 7** (`src/resolve_open.py` with larger MAXN, or a resumable variant; check time per pair first).
-   Skip the 20 pairs settled in `results/z3_open_retry.json`. Every counterexample goes through
-   `src/verify_witnesses.py`. Steps 03 and 06 searched sizes up to 5, so any finite counterexample has at
-   least 6 elements; z3 at 10 s and 30 s (steps 13, 14) found none.
-2. **Open pairs, piece 4: "finite yes, infinite no" analysis** of the most frequent sources
+1. **Open pairs, piece 4: "finite yes, infinite no" analysis** of the most frequent sources
    (`f(x)*f(y) = x`, `f(x)*f(y) = y`, `f(x*y) = x`, `x*f(y) = y` ...): in a finite structure these force
    `f` to be one-to-one or onto, which an infinite structure need not be. Look for infinite
    counterexamples with a certificate format that plain code can check, as in the sibling repository
-   eq-laws-without-small-models (step 11 there).
+   eq-laws-without-small-models (step 11 there). Step 15 supports this: the rows of `f(x)*y = x`,
+   `x*f(y) = y`, `f(f(x))*y = x`, `x*f(f(y)) = y`, `f(x*x)*y = x`, `x*f(y*y) = y` have no counterexample of
+   size 6 or 7 for any target (`z3-only`); a hand lead for `f(x)*y = x` => `f(x*x) = x` is in step 15.
+2. **Open pairs, piece 5: the 477 pairs where z3 gave up at size 6 or 7** (step 15,
+   `results/witnesses_open_6_7.json`), mostly sources `f((x*y)*z) = z`, `f(x*(y*z)) = x`, `f((x*y)*z) = x`,
+   `f(x*(y*z)) = z`: retry those sizes with a longer limit, or size 8, after piece 4 (check time per pair
+   first; skip pairs piece 4 settles).
 3. **The nine laws with no small model are settled** (2026-11-23, see
    https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
    4-element models, 4 have infinite term models (`z3-only`). Update codes 5 from its results and
@@ -59,12 +60,15 @@ that already have a machine check, or extend the question.
 - 2026-11-23: step 14 (open pairs, piece 2): z3 with 30 s on the 879 pairs still `unknown`: 3 proofs, all
   without `f` and agreeing with the ETP; 20 pairs `z3-only` with chaining, 0 counterexamples. 872 pairs
   still open (854 with `f`).
+- 2026-11-23: step 15 (open pairs, piece 3): z3 looked for counterexample tables of size 6 and 7 on the
+  872 open pairs: none found (395 pairs `unsat` at both sizes, `z3-only`; 477 `unknown` at one size or
+  both). Positive control passed. 872 pairs still open.
 
 ## Last iteration
 
-2026-11-23, loop run 5, step 14: the solver z3 got 30 seconds on each of the 879 open pairs it could not decide in 10;
-it settled 2 more pairs as "implies" (z3's word only, all without `f`), so 872 pairs are still open, 854 of them with `f`.
-Next: search for counterexample tables with 6 and 7 elements on the open pairs (queue item 1), timing one pair first.
+2026-11-23, loop run 6, step 15: the solver z3 looked for counterexample tables with 6 and 7 elements for each of the 872 open pairs
+and found none, so all 872 are still open; for many of them a hand argument suggests only an infinite structure can be a counterexample.
+Next: look for infinite counterexamples, in a form plain code can check, for the laws that make `f` one-to-one (queue item 1).
 
 ## Blocked
 
