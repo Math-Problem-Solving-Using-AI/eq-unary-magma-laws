@@ -158,7 +158,26 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   infinite structure (numbers, `f(n) = n+1`) refutes `f(x)*y = x` => `f(x*x) = x`. Larger finite searches
   will not settle such pairs; piece 4 (infinite counterexamples with a checkable format) is next.
 
+### Loop run 7 (step 16)
+
+- Open pairs, piece 4 (infinite counterexamples), first part. Every open source law is "term = letter". Read
+  as a rule term -> letter, it defines an infinite structure T_A of formal terms (apply the rule once at the
+  top of each new term). If the rule's left side has no overlap with itself, T_A satisfies A (hand argument,
+  z3 on the term datatype for each law). 682 of 872 open pairs refuted, all source laws with `f`; 190 left
+  (26 source laws with overlaps). New search `src/refute_by_rewriting.py`, new checker
+  `src/check_term_rewriting.py` (mutation test 8 of 8), gate and CI.
+- Control against the table: for all 81 overlap-free laws, T_A's verdicts on all 712 targets contradict no
+  finite counterexample and no z3 implication (57,672 pairs).
+- Dead end: z3 with integers as elements and unknown functions gave `unknown` in 10 s on the example pair.
+- Slip caught: first mutation "witness letters all g0" was applied to a one-letter certificate and changed
+  nothing (accepted). Now picks a certificate with two letters.
+- Split recorded: piece 4 continues as piece 4b (overlapping rules, completion), queue item 1.
+
 ### Lessons for the hub
+
+- Before searching for an infinite counterexample, look at the source law as a rewrite rule. A law
+  "term = letter" whose term cannot overlap itself has an infinite model of formal terms that decides every
+  target at once; here it settled 682 pairs in seconds after finite searches up to size 7 found nothing.
 
 - z3 results depend on the process state, not only on the time limit: a proof found in a pool worker
   was not found again in a single process with the same limit, but was found at once in a fresh pool.

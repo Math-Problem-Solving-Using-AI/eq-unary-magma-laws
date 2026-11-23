@@ -6,21 +6,20 @@ finished: no   (`yes` when the finish line in `LOOP.md` holds; loop sessions the
 
 ## Focus
 
-Settle the 872 open pairs (the finish line in `LOOP.md`: every pair answered with a machine check).
+Settle the 190 open pairs left after step 16 (the finish line in `LOOP.md`: every pair answered with a machine check).
 
 ## Queue (take the first item)
 
-1. **Open pairs, piece 4: "finite yes, infinite no" analysis** of the most frequent sources
-   (`f(x)*f(y) = x`, `f(x)*f(y) = y`, `f(x*y) = x`, `x*f(y) = y` ...): in a finite structure these force
-   `f` to be one-to-one or onto, which an infinite structure need not be. Look for infinite
-   counterexamples with a certificate format that plain code can check, as in the sibling repository
-   eq-laws-without-small-models (step 11 there). Step 15 supports this: the rows of `f(x)*y = x`,
-   `x*f(y) = y`, `f(f(x))*y = x`, `x*f(f(y)) = y`, `f(x*x)*y = x`, `x*f(y*y) = y` have no counterexample of
-   size 6 or 7 for any target (`z3-only`); a hand lead for `f(x)*y = x` => `f(x*x) = x` is in step 15.
-2. **Open pairs, piece 5: the 477 pairs where z3 gave up at size 6 or 7** (step 15,
-   `results/witnesses_open_6_7.json`), mostly sources `f((x*y)*z) = z`, `f(x*(y*z)) = x`, `f((x*y)*z) = x`,
-   `f(x*(y*z)) = z`: retry those sizes with a longer limit, or size 8, after piece 4 (check time per pair
-   first; skip pairs piece 4 settles).
+1. **Open pairs, piece 4b: the 190 pairs whose source rule overlaps itself** (step 16). Step 16 settled the
+   682 pairs whose source law, read as a rule "term -> letter", has no overlap. For the 26 source laws left
+   (rows of 31: `(x*y)*f(z) = z`, `f(f(x)*y) = y`, `f(x)*(y*z) = x`, `f(x*f(y)) = x`; rows of 10:
+   `f(x*x)*y = x`, `x*f(y*y) = y`; 20 small rows), compute the overlaps, add the equations they produce
+   (Knuth-Bendix completion, with a step limit), and where this ends in a rule set without unresolved
+   overlaps, build the term structure from it as in step 16 (the checker must then check every rule of the
+   set and that each added rule follows from A). 18 of the 190 have no `f` and an ETP answer.
+2. **Open pairs, piece 5: pairs where z3 gave up at size 6 or 7** that piece 4b does not settle (of the 190,
+   131 had `unknown` at size 7 in step 15): retry those sizes with a longer limit, or size 8 (check time per
+   pair first).
 3. **The nine laws with no small model are settled** (2026-11-23, see
    https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): 3 collapse, 2 have
    4-element models, 4 have infinite term models (`z3-only`). Update codes 5 from its results and
@@ -41,6 +40,10 @@ that already have a machine check, or extend the question.
    owner's machine since 2026-11-23.
 4. **`query.py` reads `results/z3_open_retry.json`** (step 13), so the tool reports the 18 `z3-only`
    implications. It reports an answer that already has a machine check, so it is not loop work.
+5. **`query.py` reads `results/refutations_term_rewriting.json`** (step 16) and re-checks an entry before
+   reporting it. Same reason as item 4.
+6. **Derivations for the 546 "holds in T_A" verdicts** of the step 16 table control (implications obtained by
+   rewriting): store them as chains of steps for a derivation checker. Raises labels of answered pairs.
 
 ## Done
 
@@ -63,15 +66,19 @@ that already have a machine check, or extend the question.
 - 2026-11-23: step 15 (open pairs, piece 3): z3 looked for counterexample tables of size 6 and 7 on the
   872 open pairs: none found (395 pairs `unsat` at both sizes, `z3-only`; 477 `unknown` at one size or
   both). Positive control passed. 872 pairs still open.
+- 2026-11-23: step 16 (open pairs, piece 4, first part): infinite term structures built from each source law
+  read as a rewrite rule without overlap: 682 of the 872 open pairs are "does not imply" (`z3-only`;
+  `results/refutations_term_rewriting.json`, checker `src/check_term_rewriting.py`, mutation test 8 of 8,
+  now a gate and in CI). 190 pairs still open (172 with `f`).
 
 ## Last iteration
 
-2026-11-23, loop run 6, step 15: the solver z3 looked for counterexample tables with 6 and 7 elements for each of the 872 open pairs
-and found none, so all 872 are still open; for many of them a hand argument suggests only an infinite structure can be a counterexample.
-Next: look for infinite counterexamples, in a form plain code can check, for the laws that make `f` one-to-one (queue item 1).
+2026-11-23, loop run 7, step 16: for 682 of the 872 open pairs an infinite structure, made of formal expressions built from the first law, satisfies the first law but not the second, so the first law does not force the second; z3 and separate plain code check this.
+Next: the 190 pairs left come from laws whose pattern can overlap itself; the next run tries to repair those patterns (queue item 1).
 
 ## Blocked
 
 - Adding new codes to `results/status_matrix.npz` (for example 7 = `known (ETP)`, code 2 extended to the
   step 09 certificates) changes a published file format: the owner decides whether to do it. Until then
-  `query.py` reports those answers and the table still says "open" for them.
+  `query.py` reports those answers and the table still says "open" for them. The same holds for the 20
+  `z3-only` implications of steps 13 and 14 and the 682 non-implications of step 16 (still code 6).
