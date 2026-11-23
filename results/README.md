@@ -45,6 +45,10 @@ Only the last one may be called a result. `known` means already in the literatur
   `(x*y)*(y*z) = y`, which are still code 5 in `status_matrix.npz` (`steps/09-ffree-models-with-f.md`).
   Re-check with `src/verify_witnesses.py results/witnesses_ffree_models.json`. `src/query.py` reads this
   file for code-5 pairs and re-checks the entry before reporting it (`steps/10-query-reads-step-09.md`).
+- `witnesses_etp_magmas.json`: 2 certificates (6 elements) for pairs that are still code 6 in
+  `status_matrix.npz`, built from multiplication tables published by the ETP
+  (`steps/11-etp-magmas-with-f.md`, produced by `src/refute_from_etp_magmas.py`). Re-check with
+  `src/verify_witnesses.py results/witnesses_etp_magmas.json`. `src/query.py` does not read it yet.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 

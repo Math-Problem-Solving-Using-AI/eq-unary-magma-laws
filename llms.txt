@@ -1,6 +1,6 @@
 # eq-unary-magma-laws
 
-> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open in the stored table; of these, 1,256 (laws without `f`) are settled by the Equational Theories Project data and 608 more by new 4-element certificates (steps 08 and 09). The 164,800 decided pairs among laws without `f` agree with the ETP (0 disagreements).
+> Which short equational laws over one binary operation `*` and one unary operation `f` imply which. Scope: 712 laws up to size 3 (size = number of `*` and `f` symbols), 506,232 ordered pairs, each decided or marked open. EARLY and EXPERIMENTAL, nothing is checked in Lean. 335,885 non-implications have finite counterexamples re-checked by independent code. 163,054 implications rest on z3 alone. 7,293 pairs are open in the stored table; of these, 1,256 (laws without `f`) are settled by the Equational Theories Project data and 608 more by new 4-element certificates (steps 08 and 09); 2 open pairs without `f` also have 6-element certificates built from ETP tables (step 11). The 164,800 decided pairs among laws without `f` agree with the ETP (0 disagreements).
 
 ## Start here
 
@@ -27,6 +27,8 @@
   without `f`, and the ETP verdict for pairs open in our table. `query.py` prints it.
 - [results/witnesses_ffree_models.json](results/witnesses_ffree_models.json): 1,417 certificates for the rows of
   `(x*y)*(y*x) = y` and `(x*y)*(y*z) = y`. `query.py` reads them and re-checks each one before reporting it (step 10).
+- [results/witnesses_etp_magmas.json](results/witnesses_etp_magmas.json): 2 certificates for open (code 6) pairs,
+  built from ETP multiplication tables (step 11). `query.py` does not read them yet.
 
 ## How to trust it
 

@@ -59,6 +59,13 @@ by `src/verify_witnesses.py`). The 5 left are exactly the implications the ETP p
 are fully decided. `src/query.py` prints these certificates (step 10); `results/status_matrix.npz` still
 says code 5 for them.
 
+**ETP tables with every `f` (step 11).** Every finite multiplication table published by the ETP of size
+4 or 5, with every possible `f`, was tried against the 894 open pairs, and every ETP table of any size
+against the 35 open pairs without `f`. Result: 2 new certificates (both 6 elements, both pairs without
+`f`, both agreeing with the ETP), in `results/witnesses_etp_magmas.json`, re-checked by
+`src/verify_witnesses.py`. No pair that involves `f` was settled this way, which says nothing about
+whether those implications hold. `results/status_matrix.npz` still says code 6 for the 2 pairs.
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -73,6 +80,7 @@ Read in order, `steps/`:
 8. `08-etp-crosscheck.md`
 9. `09-ffree-models-with-f.md`
 10. `10-query-reads-step-09.md`
+11. `11-etp-magmas-with-f.md`
 
 ## Layout
 
@@ -106,6 +114,7 @@ python src/check_catalogue.py data/laws_3.json data/o3 1000
 python src/verify_small_refutations.py data/laws_3.json data/o3
 python src/verify_witnesses.py results/witnesses_larger_models.json
 python src/verify_witnesses.py results/witnesses_ffree_models.json
+python src/verify_witnesses.py results/witnesses_etp_magmas.json
 python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
 python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
 ```
