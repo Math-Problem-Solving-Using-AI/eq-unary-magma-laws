@@ -67,6 +67,14 @@ against the 35 open pairs without `f`. Result: 2 new certificates (both 6 elemen
 whether those implications hold. `src/query.py` prints these 2 certificates after re-checking them
 (step 12); `results/status_matrix.npz` still says code 6 for the 2 pairs.
 
+**z3 with 10 seconds per pair (step 13).** z3 was asked again about the 892 open pairs without a
+certificate, with 10 seconds each instead of 1. It proved 13 of them, and chaining those with the older
+proofs settles 5 more: 18 open pairs are now "implies", label `z3-only`. The 15 of them without `f` agree
+with the ETP; 3 of the 13 direct proofs were not repeated when z3 was asked again. The answers are in
+`results/z3_open_retry.json`, checked against the table and the ETP by `src/check_z3_retry.py`.
+`results/status_matrix.npz` still says code 6 for them. **Still open after step 13: 874 pairs** (20 without
+`f`, which have an ETP answer; 854 with `f`, with no answer).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -83,6 +91,7 @@ Read in order, `steps/`:
 10. `10-query-reads-step-09.md`
 11. `11-etp-magmas-with-f.md`
 12. `12-query-reads-step-11.md`
+13. `13-z3-retry-open-pairs.md`
 
 ## Layout
 
@@ -119,6 +128,8 @@ python src/verify_witnesses.py results/witnesses_ffree_models.json
 python src/verify_witnesses.py results/witnesses_etp_magmas.json
 python src/check_status_matrix.py data/laws_3.json data/o3 results/witnesses_larger_models.json results/status_matrix.npz
 python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
+python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json
+python src/check_z3_retry.py data/laws_3.json results/status_matrix.npz results/etp_crosscheck.json results/z3_open_retry.json results/witnesses_ffree_models.json results/witnesses_etp_magmas.json --selftest
 ```
 
 ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):
