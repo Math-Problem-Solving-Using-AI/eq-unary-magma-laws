@@ -47,7 +47,8 @@
 4. Do not claim novelty. A literature check was done on 2026-11-22 (`docs/PRIOR_WORK.md`): nothing
    found that covers this family, which is not proof that nothing exists. Parts are known: the laws
    without `f` are ETP laws, and two of them are classical (central groupoids, Stein's third law).
-5. Autonomous sessions follow `LOOP.md` and keep `STATE.md` current.
+5. Autonomous sessions follow `LOOP.md` and keep `STATE.md` current. They stop at the finish
+   line in `LOOP.md` and never take items from "Optional later" in `STATE.md`.
 6. Do not publish, push or change license without the owner.
 
 ## Optional
