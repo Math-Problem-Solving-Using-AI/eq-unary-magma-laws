@@ -25,3 +25,4 @@ jobs:
       - run: python src/selftest_verifiers.py data/laws_3.json data/o3 results/witnesses_larger_models.json
       - run: python src/query.py "x*y = x" "x*(y*z) = x"
       - run: python src/query.py "(x*y)*(y*x) = y" "f(x) = x" --witness
+      - run: python src/query.py "(x*(x*y))*y = x" "x*(y*y) = x*y" --witness
