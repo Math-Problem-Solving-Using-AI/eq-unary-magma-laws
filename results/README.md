@@ -111,6 +111,12 @@ Only the last one may be called a result. `known` means already in the literatur
   `mirror` (true: operation `f(x y^-1) y` instead of `f(y x^-1) x`), law `r` that fails at `x`, and the table link
   B implies r (B = r or code 3). Label: same as `completions_open.json`; the ETP's extension theorem is not re-run.
   The 10 pairs are still code 6 in `status_matrix.npz`.
+- `greedy_eq118.json`: the 2 finite seeds of the ETP's infinite models of `x*((y*x)*x) = y` (law 508) and the 4 open
+  pairs they settle, all "does not imply" (`steps/24-seeds-eq118.md`, checked by `src/check_greedy_eq118.py`).
+  `source`: ETP commit, Lean file and line numbers; `seeds`: name to `triples` (each [x, y, z] means x*y = z) and
+  `finsupp` (the numbers the seed may use); `pairs`: our pair, seed, `mirror` (true: x*y is read as the seed's
+  y*x, a model of law 143) and `env`, the values of x and y where law B fails. Label: same as `greedy_eq73.json`;
+  the ETP's construction is not re-run. The 4 pairs are still code 6 in `status_matrix.npz`.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 

@@ -156,6 +156,16 @@ not imply"** (`results/greedy_eq73.json`, gate and CI). Same label as step 17: t
 is a Lean proof that was read, not re-run here. `results/status_matrix.npz` still says code 6 for them. **Still
 open after step 23: 10 pairs** (4 with `f`; 6 without `f`, which rest on the ETP 118 and Asterix constructions).
 
+**The construction for `x*((y*x)*x) = y`, checked here (step 24).** The ETP builds its infinite models of this law
+on the numbers 0, 1, 2, ... from a short starting table of products ("seed", 2 or 4 entries) that meets 11 rules,
+and fills the table one product at a time with a new number each time. `src/check_greedy_eq118.py` checks with its
+own code that both seeds meet the 11 rules (copied verbatim from the Lean file, compared with it), that the target
+law fails using seed products only, and runs the extension step about 26,000 times per seed with laws 508 and 143
+evaluated directly (0 failures). **4 open pairs, from law 508 or its mirror law 143: "does not imply"**
+(`results/greedy_eq118.json`, gate and CI). Same label as step 23: the ETP's construction is a Lean proof that was
+read, not re-run here. `results/status_matrix.npz` still says code 6 for them. **Still open after step 24: 6 pairs**
+(4 with `f`; 2 without `f`, which rest on the ETP's "Asterix" model).
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -183,6 +193,7 @@ Read in order, `steps/`:
 21. `21-pairs-without-f-left.md`
 22. `22-trace-austin-pairs.md`
 23. `23-seeds-eq73.md`
+24. `24-seeds-eq118.md`
 
 ## Layout
 
