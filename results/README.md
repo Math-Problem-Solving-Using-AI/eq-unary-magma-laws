@@ -117,6 +117,12 @@ Only the last one may be called a result. `known` means already in the literatur
   `finsupp` (the numbers the seed may use); `pairs`: our pair, seed, `mirror` (true: x*y is read as the seed's
   y*x, a model of law 143) and `env`, the values of x and y where law B fails. Label: same as `greedy_eq73.json`;
   the ETP's construction is not re-run. The 4 pairs are still code 6 in `status_matrix.npz`.
+- `asterix_eq65.json`: the finite seed of the ETP's infinite "Asterix" model of `x*(y*(x*y)) = y` (law 598) and the 2
+  open pairs it settles, both "does not imply" (`steps/25-asterix-eq65.md`, checked by `src/check_asterix_eq65.py`).
+  `source`: ETP commit, Lean file and line numbers; `seed`: `E1`, the defined products (each [a, b, v] means
+  a*b = v), and `E0`, the pairs (a, b) where a*(b*(a*b)) = b already holds; `pairs`: our pair, `mirror` (true: x*y
+  is read as the seed's y*x, a model of law 88) and `env`, the value of x where law B fails. Label: same as
+  `greedy_eq73.json`; the ETP's construction is not re-run. The 2 pairs are still code 6 in `status_matrix.npz`.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 

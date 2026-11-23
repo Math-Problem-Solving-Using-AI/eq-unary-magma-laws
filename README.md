@@ -166,6 +166,17 @@ evaluated directly (0 failures). **4 open pairs, from law 508 or its mirror law 
 read, not re-run here. `results/status_matrix.npz` still says code 6 for them. **Still open after step 24: 6 pairs**
 (4 with `f`; 2 without `f`, which rest on the ETP's "Asterix" model).
 
+**The "Asterix" construction for `x*(y*(x*y)) = y`, checked here (step 25).** The ETP builds an infinite model of this
+law on the numbers 0, 1, 2, ... from a starting table of 18 products, 6 of them marked "closed" (the law already holds
+there), that meets 6 conditions, and adds products one at a time with a new number each time.
+`src/check_asterix_eq65.py` checks with its own code that the starting table meets the 6 conditions (copied verbatim
+from the Lean file and compared with it, as is the table itself), that the target law fails using its products only,
+and runs the extension step about 49,000 times with laws 598 and 88 evaluated directly (0 failures). **2 open pairs,
+598 -> 224 and its mirror 88 -> 579: "does not imply"** (`results/asterix_eq65.json`, gate and CI). Same label as
+step 23: the ETP's construction is a Lean proof that was read, not re-run here. `results/status_matrix.npz` still says
+code 6 for them. **Still open after step 25: 4 pairs, all with `f`** (`(x*y)*f(x) = y` and its mirror; no answer
+anywhere yet). All 16 ETP Austin pairs now have a check here.
+
 ## Steps (granular record)
 
 Read in order, `steps/`:
@@ -194,6 +205,7 @@ Read in order, `steps/`:
 22. `22-trace-austin-pairs.md`
 23. `23-seeds-eq73.md`
 24. `24-seeds-eq118.md`
+25. `25-asterix-eq65.md`
 
 ## Layout
 
@@ -244,6 +256,8 @@ python src/check_greedy_eq73.py data/laws_3.json results/status_matrix.npz resul
 python src/check_greedy_eq73.py data/laws_3.json results/status_matrix.npz results/greedy_eq73.json --selftest
 python src/check_greedy_eq118.py data/laws_3.json results/status_matrix.npz results/greedy_eq118.json
 python src/check_greedy_eq118.py data/laws_3.json results/status_matrix.npz results/greedy_eq118.json --selftest
+python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json
+python src/check_asterix_eq65.py data/laws_3.json results/status_matrix.npz results/asterix_eq65.json --selftest
 ```
 
 ETP cross-check (needs the ETP files, see `steps/08-etp-crosscheck.md`, not run in CI):
