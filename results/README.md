@@ -133,6 +133,10 @@ Only the last one may be called a result. `known` means already in the literatur
 - `derivations_nine_laws.json`: the other 16 pairs of those rows, all "implies", one replacement step each, in the
   format of `derivations_open.json` (checked by `src/check_derivations.py`). These 2,844 pairs are still code 5 in
   `status_matrix.npz`.
+- `derivations_collapse_laws.json`: the rows of the three code 5 laws that collapse (laws 110, 284, 415): for each, a
+  derivation of `x = y` and then every other law in one step, 2,133 pairs, all "implies", in the format of
+  `derivations_open.json` (`steps/28-rows-of-three-collapse-laws.md`, checked by `src/check_derivations.py`). Still
+  code 5 in `status_matrix.npz`.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
