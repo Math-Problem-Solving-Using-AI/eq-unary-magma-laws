@@ -347,6 +347,19 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   The sibling's checker also passes on its own two collapse proofs (run with `python -B`, sibling left clean).
 - Rows of 7 of the 9 code 5 laws now have a check here. Left: the 5 ETP-only implications of laws 250 and 257.
 
+### Loop run 20 (step 29)
+
+- Queue item "rows of laws 250 and 257". The 5 pairs without a step 09 certificate (250 -> 204; 257 -> 204, 206, 250,
+  253) are each the source law with letters made equal: one replacement step. `src/ffree_derivations.py` writes them
+  (`results/derivations_ffree_laws.json`), the unchanged `src/check_derivations.py` replays them. New
+  `src/selftest_ffree_laws.py`: coverage of both rows (1,417 + 5 = 1,422), control on the 4-element tables, mutation
+  test 10 of 10. Gates 35 of 35.
+- Finish line checked: conditions 1 and 2 hold; condition 3 does not (steps 01 to 09 have no "In plain words"; README
+  has no short plain-words answer). Queue items added for those; `finished` stays `no`.
+- Lesson: these 5 "ETP-only" pairs had been open since step 09 although each is a direct instance of the source law. Before
+  calling a pair open or "known elsewhere", run the cheap syntactic test "is B an instance of A (letters made equal)?".
+- Slip: Python `write_text` on Windows wrote LOOP.md, README.md and the CI file with CRLF; restored to LF before commit.
+
 ### Decisions taken by the loop (run 19)
 
 - The item said to write the sibling's collapse derivations in our format. The sibling's proofs use rules our checker
@@ -404,6 +417,9 @@ Nothing has passed the full protocol. Strongest evidence: 335,885 certified non-
   published format and stays on the safe side of the labels. Whether to add a rung is for the owner and the hub.
 
 ### Lessons for the hub
+
+- Before calling a pair open, or leaving it to outside data, test whether B is an instance of A (some letters made
+  equal). Here 5 pairs waited 20 steps for a check that is one replacement step each.
 
 - When completion of a law grows without end and some value `u` behaves like `v` in every rule found but is never
   made equal to it, try a structure whose elements carry an extra counter that tells `u` from `v` (here: pairs over

@@ -188,8 +188,8 @@ the counter rule over all cases, law 277 directly on 175 small elements (30,625 
 failures (`results/label_extension_277.json`, gate and CI, selftest 18 of 18). With `--z3`, z3 also proves the
 counter rule for every model of law 277. Label `z3-only` level, like steps 17 and 23 to 25; not Lean.
 `results/status_matrix.npz` still says code 6 for them. **All 894 pairs of the "unresolved" row now have an answer
-with a machine check here.** The 6,399 pairs of the row "A is one of the 9 open laws" rest on the other repository
-(eq-laws-without-small-models); bringing its answers and checks here is the next queue item.
+with a machine check here.** The 6,399 pairs of the row "A is one of the 9 open laws" rested at this point on the other repository
+(eq-laws-without-small-models); steps 27, 28 and 29 below give each of them a check here.
 
 **Rows of the four laws with only infinite models (step 27).** Four of the 9 laws with no small model,
 `(f(x)*y)*z = y` (law 135), `f((x*y)*z) = y` (law 336), `f(x*(y*z)) = y` (law 450) and `x*(y*f(z)) = y` (law 639),
@@ -208,9 +208,16 @@ chain of replacement steps derives `x = y` from each (2 steps for law 110; a hel
 two, following the sibling repository's hand proofs), and every other law then follows in one step. So **all 2,133
 pairs of their rows are "implies"** (`results/derivations_collapse_laws.json`, replayed by `src/check_derivations.py`,
 `z3-only` level at most, no z3 used; mutation test `src/selftest_collapse_laws.py` 14 of 14; gates and CI).
-`results/status_matrix.npz` still says code 5. **Rows of the 9 laws still without a full check here: 2 laws** with
-4-element models, `(x*y)*(y*x) = y` (law 250) and `(x*y)*(y*z) = y` (law 257): of their 1,422 pairs, 1,417 have
-certificates since step 09 and 5 rest on the ETP only.
+`results/status_matrix.npz` still says code 5.
+
+**Rows of the two laws with 4-element models (step 29).** For `(x*y)*(y*x) = y` (law 250) and `(x*y)*(y*z) = y`
+(law 257), 1,417 of their 1,422 pairs have 4-element certificates since step 09. The other 5 targets are the source
+law itself with some letters made equal (for example z := x in law 257 gives law 250), so **all 5 are "implies"** by a
+one-step derivation (`results/derivations_ffree_laws.json`, replayed by `src/check_derivations.py`, `z3-only` level at
+most, no z3 used; `src/selftest_ffree_laws.py` checks that both rows are fully covered, that every derived equation
+holds in the 4-element tables, and rejects 10 of 10 corrupted copies). Agrees with the ETP. `results/status_matrix.npz`
+still says code 5. **Every pair of the 9 code 5 laws (6,399) and of the unresolved row (894) now has an answer with a
+machine check here.**
 
 ## Steps (granular record)
 
@@ -244,6 +251,7 @@ Read in order, `steps/`:
 26. `26-label-extension-law-277.md`
 27. `27-rows-of-four-infinite-laws.md`
 28. `28-rows-of-three-collapse-laws.md`
+29. `29-last-five-pairs-laws-250-257.md`
 
 ## Layout
 

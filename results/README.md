@@ -137,6 +137,10 @@ Only the last one may be called a result. `known` means already in the literatur
   derivation of `x = y` and then every other law in one step, 2,133 pairs, all "implies", in the format of
   `derivations_open.json` (`steps/28-rows-of-three-collapse-laws.md`, checked by `src/check_derivations.py`). Still
   code 5 in `status_matrix.npz`.
+- `derivations_ffree_laws.json`: the 5 pairs of the rows of laws 250 and 257 without a step 09 certificate, all
+  "implies", one replacement step each (the target is the source law with letters made equal), in the format of
+  `derivations_open.json` (`steps/29-last-five-pairs-laws-250-257.md`, checked by `src/check_derivations.py`; coverage,
+  control and mutation test in `src/selftest_ffree_laws.py`). Still code 5 in `status_matrix.npz`.
 - Look things up with `src/query.py`, for example
   `python src/query.py "x*y = x" "x*(y*z) = x"`.
 
